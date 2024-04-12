@@ -1,3 +1,7 @@
+body{
+    background-color:#1f9ea8;
+}
+
 header{
     background-color: #001e27;
     width: 1536px;
@@ -45,4 +49,8 @@ header{
     top: -22%;
     width: 200px;
     top: -10px;
+}
+.banner1{
+    width: 90%;
+    margin-top: 20px;
 }

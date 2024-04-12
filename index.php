@@ -25,7 +25,7 @@
 </header>
 
 <main>
-
+<img class="banner1"src=" .Img/bannerr1.jpeg">
 
 </main>
 
