@@ -10,8 +10,8 @@
 
 <body>
 
-    <header>
-        <section>
+    <div class="comeco">
+        
             <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
 
             <!---Menu----->
@@ -19,9 +19,9 @@
                 <a class="conhecer" href="conhecer.php">Quero Conhecer</a>
                 <a class="entra" href="login.php">Entrar</a>
             </div>
-        </section>
+    
         <!---Fim---->
-    </header>
+    
     <main>
         <!-----------------LOGO----------------->
 
@@ -30,9 +30,8 @@
 
 
         <img class="banner1" src="Img/bannerr1.jpeg">
-
         <img class="banner2" src="Img/banner2.jpeg">
-
+ 
     </main>
 
     <footer>
