@@ -1,6 +1,6 @@
 body{
     background-color:#1f9ea8;
-    width: 100%;
+    
   
 }
 
@@ -54,11 +54,11 @@ body{
 }
 .banner1{
     width: 90%;
-    margin-top: 20px;
+    margin-top: 140px;
 }
 .banner2{
     width: 100%;
-    margin-top: 20px;
+    margin-top: -4px;
     height: 200%;
     margin-left: -0px;
 }

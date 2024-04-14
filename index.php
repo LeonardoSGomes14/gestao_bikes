@@ -19,7 +19,7 @@
                 <a class="conhecer" href="conhecer.php">Quero Conhecer</a>
                 <a class="entra" href="login.php">Entrar</a>
             </div>
-    
+            </div>
         <!---Fim---->
     
     <main>
