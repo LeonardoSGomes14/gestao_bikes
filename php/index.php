@@ -27,18 +27,16 @@
 
         <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
       
-
-
-
-
-
+      
         <div id="banner-container">
-    <?php
+            <div id="banner1"
+        <?php
     // Lista de URLs das imagens
     $imageURLs = array(
         '../Img/bannerr1.jpeg',
-        '#'
+        '../Img/banner2.jpeg'
        
+        
     );
 
     // Gera elementos de imagem dinamicamente
@@ -64,28 +62,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-<!----------
+<!-------------------
         <img class="banner1" src="../Img/bannerr1.jpeg">
         ---->
         <a href="#">
         <img class="banner2" src="../Img/banner2.jpeg">
-        </a>
+-->
+        <img class="logo" src="Img/bitrix-removebg-preview.png" width="300px">
 
+
+
+        <img class="banner1" src="Img/bannerr1.jpeg">
+        <img class="banner2" src="Img/banner2.jpeg">
+ 
     </main>
 
     <footer>

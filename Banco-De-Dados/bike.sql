@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Abr-2024 às 13:25
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.2.0
+-- Tempo de geração: 17/04/2024 às 16:23
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuariosadm`
+-- Estrutura para tabela `cadastro empresa`
+--
+
+CREATE TABLE `cadastro empresa` (
+  `id_empresa` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `servicos` varchar(255) NOT NULL,
+  `cnpj` varchar(255) NOT NULL,
+  `cep` varchar(255) NOT NULL,
+  `estado` varchar(255) NOT NULL,
+  `rua` varchar(255) NOT NULL,
+  `numero` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `usuariosadm`
 --
 
 CREATE TABLE `usuariosadm` (
@@ -36,7 +53,7 @@ CREATE TABLE `usuariosadm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Extraindo dados da tabela `usuariosadm`
+-- Despejando dados para a tabela `usuariosadm`
 --
 
 INSERT INTO `usuariosadm` (`id_usuario`, `usuario`, `senha`, `email`, `permissao`) VALUES
@@ -49,14 +66,26 @@ INSERT INTO `usuariosadm` (`id_usuario`, `usuario`, `senha`, `email`, `permissao
 --
 
 --
--- Índices para tabela `usuariosadm`
+-- Índices de tabela `cadastro empresa`
+--
+ALTER TABLE `cadastro empresa`
+  ADD PRIMARY KEY (`id_empresa`);
+
+--
+-- Índices de tabela `usuariosadm`
 --
 ALTER TABLE `usuariosadm`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `cadastro empresa`
+--
+ALTER TABLE `cadastro empresa`
+  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `usuariosadm`
