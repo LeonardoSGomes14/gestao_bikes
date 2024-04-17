@@ -48,7 +48,7 @@
 
 <div class="copy">
 
-<h1 class="text">@ 2024 Copyright  Bitrix</h1>
+<h1 class="text">@ 2024 Copyright  Bitrixx</h1>
 
 </div>
 
