@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/index.css">
+    <link rel="stylesheet" href="../Css/index.css">
     <title>Document</title>
 </head>
 
@@ -25,12 +25,12 @@
     <main>
         <!-----------------LOGO----------------->
 
-        <img class="logo" src="Img/bitrix-removebg-preview.png" width="300px">
+        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
 
 
 
-        <img class="banner1" src="Img/bannerr1.jpeg">
-        <img class="banner2" src="Img/banner2.jpeg">
+        <img class="banner1" src="../Img/bannerr1.jpeg">
+        <img class="banner2" src="../Img/banner2.jpeg">
  
     </main>
 
