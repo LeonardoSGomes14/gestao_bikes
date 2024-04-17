@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17/04/2024 às 16:23
--- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.2.12
+-- Tempo de geração: 17-Abr-2024 às 20:32
+-- Versão do servidor: 10.4.27-MariaDB
+-- versão do PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `cadastro empresa`
+-- Estrutura da tabela `cadastro_empresa`
 --
 
-CREATE TABLE `cadastro empresa` (
+CREATE TABLE `cadastro_empresa` (
   `id_empresa` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `servicos` varchar(255) NOT NULL,
@@ -41,7 +41,90 @@ CREATE TABLE `cadastro empresa` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuariosadm`
+-- Estrutura da tabela `comercial`
+--
+
+CREATE TABLE `comercial` (
+  `id_comercial` int(11) NOT NULL,
+  `nome` int(11) NOT NULL,
+  `descricao` int(11) NOT NULL,
+  `numerodopedido` int(11) NOT NULL,
+  `numerodafatura` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `contas`
+--
+
+CREATE TABLE `contas` (
+  `id_conta` int(11) NOT NULL,
+  `fatura` varchar(255) NOT NULL,
+  `condicoes` varchar(255) NOT NULL,
+  `historico` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `controleestoque`
+--
+
+CREATE TABLE `controleestoque` (
+  `id_estoque` int(11) NOT NULL,
+  `nomedoproduto` varchar(255) NOT NULL,
+  `quantidade` varchar(255) NOT NULL,
+  `preco` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `controlefiscal`
+--
+
+CREATE TABLE `controlefiscal` (
+  `id_fiscal` int(11) NOT NULL,
+  `transacoes` varchar(255) NOT NULL,
+  `fatura` varchar(255) NOT NULL,
+  `imposto` varchar(255) NOT NULL,
+  `orcamentos` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `controlefrota`
+--
+
+CREATE TABLE `controlefrota` (
+  `id_frota` int(11) NOT NULL,
+  `marca` varchar(255) NOT NULL,
+  `anodoveiculo` varchar(255) NOT NULL,
+  `modelo` varchar(255) NOT NULL,
+  `tipodeveiculo` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `controlepessoas`
+--
+
+CREATE TABLE `controlepessoas` (
+  `id_pessoas` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `datadenascimento` varchar(255) NOT NULL,
+  `sexo` varchar(255) NOT NULL,
+  `telefone` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuariosadm`
 --
 
 CREATE TABLE `usuariosadm` (
@@ -53,7 +136,7 @@ CREATE TABLE `usuariosadm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Despejando dados para a tabela `usuariosadm`
+-- Extraindo dados da tabela `usuariosadm`
 --
 
 INSERT INTO `usuariosadm` (`id_usuario`, `usuario`, `senha`, `email`, `permissao`) VALUES
@@ -66,26 +149,98 @@ INSERT INTO `usuariosadm` (`id_usuario`, `usuario`, `senha`, `email`, `permissao
 --
 
 --
--- Índices de tabela `cadastro empresa`
+-- Índices para tabela `cadastro_empresa`
 --
-ALTER TABLE `cadastro empresa`
+ALTER TABLE `cadastro_empresa`
   ADD PRIMARY KEY (`id_empresa`);
 
 --
--- Índices de tabela `usuariosadm`
+-- Índices para tabela `comercial`
+--
+ALTER TABLE `comercial`
+  ADD PRIMARY KEY (`id_comercial`);
+
+--
+-- Índices para tabela `contas`
+--
+ALTER TABLE `contas`
+  ADD PRIMARY KEY (`id_conta`);
+
+--
+-- Índices para tabela `controleestoque`
+--
+ALTER TABLE `controleestoque`
+  ADD PRIMARY KEY (`id_estoque`);
+
+--
+-- Índices para tabela `controlefiscal`
+--
+ALTER TABLE `controlefiscal`
+  ADD PRIMARY KEY (`id_fiscal`);
+
+--
+-- Índices para tabela `controlefrota`
+--
+ALTER TABLE `controlefrota`
+  ADD PRIMARY KEY (`id_frota`);
+
+--
+-- Índices para tabela `controlepessoas`
+--
+ALTER TABLE `controlepessoas`
+  ADD PRIMARY KEY (`id_pessoas`);
+
+--
+-- Índices para tabela `usuariosadm`
 --
 ALTER TABLE `usuariosadm`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT de tabela `cadastro empresa`
+-- AUTO_INCREMENT de tabela `cadastro_empresa`
 --
-ALTER TABLE `cadastro empresa`
+ALTER TABLE `cadastro_empresa`
   MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `comercial`
+--
+ALTER TABLE `comercial`
+  MODIFY `id_comercial` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `contas`
+--
+ALTER TABLE `contas`
+  MODIFY `id_conta` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `controleestoque`
+--
+ALTER TABLE `controleestoque`
+  MODIFY `id_estoque` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `controlefiscal`
+--
+ALTER TABLE `controlefiscal`
+  MODIFY `id_fiscal` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `controlefrota`
+--
+ALTER TABLE `controlefrota`
+  MODIFY `id_frota` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `controlepessoas`
+--
+ALTER TABLE `controlepessoas`
+  MODIFY `id_pessoas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `usuariosadm`
