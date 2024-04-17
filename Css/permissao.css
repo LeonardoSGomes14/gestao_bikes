@@ -52,35 +52,3 @@ body{
     width: 200px;
     top: -10px;
 }
-.banner1{
-    width: 90%;
-    margin-top: 140px;
-}
-.banner2{
-    width: 100%;
-    margin-top: -4px;
-    height: 200%;
-    margin-left: -0px;
-}
-@media screen and (max-width: 768px) {
-    .logo {
-        top: -10px;
-        width: 140px;
-        margin-left: 120px;
-    }
-}
-
-.banner1 {
-    margin-top: 170px; /* Mantém a margem original para telas maiores */
-}
-
-.banner2 {
-    margin-top: 12px; /* Mantém a margem original para telas maiores */
-    height: 200%; /* Mantém a altura original para telas maiores */
-    margin-left: -0px; /* Mantém a margem original para telas maiores */
-}
-@media screen and (max-width: 768px) {
-    .titulo {
-        display: none; /* Esconde o elemento em telas menores que 768 pixels de largura */
-    }
-}
