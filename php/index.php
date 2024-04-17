@@ -25,7 +25,7 @@
     <main>
         <!-----------------LOGO----------------->
 
-        <img class="logo" src="Img/bitrix-removebg-preview.png" width="300px">
+        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
 
 
 
