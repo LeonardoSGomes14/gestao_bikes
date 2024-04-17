@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Css/index.css">
+    <link rel="stylesheet" href="Css/index.css">
     <title>Document</title>
 </head>
 
@@ -17,19 +17,7 @@
             <!---Menu----->
             <div class="dois">
                 <a class="conhecer" href="conhecer.php">Quero Conhecer</a>
-
-            
-                <?php
-
-session_start(); 
-// Verifica se o usuário está logado
-if(isset($_SESSION['nome_usuario'])) {
-    $nome_usuario = $_SESSION['nome_usuario'];
-    echo '<a class="entra" href="perfil.php">' . $nome_usuario . '</a>'; 
-} else {
-    echo '<a class="entra" href="login.php">Entrar</a>';
-}
-?>
+                <a class="entra" href="login.php">Entrar</a>
             </div>
             </div>
         <!---Fim---->
@@ -78,6 +66,13 @@ if(isset($_SESSION['nome_usuario'])) {
         <img class="banner1" src="../Img/bannerr1.jpeg">
         <img class="banner2" src="../Img/banner2.jpeg">
 -->
+        <img class="logo" src="Img/bitrix-removebg-preview.png" width="300px">
+
+
+
+        <img class="banner1" src="Img/bannerr1.jpeg">
+        <img class="banner2" src="Img/banner2.jpeg">
+ 
     </main>
 
     <footer>
