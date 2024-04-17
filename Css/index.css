@@ -62,3 +62,24 @@ body{
     height: 200%;
     margin-left: -0px;
 }
+@media screen and (max-width: 768px) {
+    .logo {
+        top: -10px;
+        width: 140px;
+        margin-left: 120px;
+    }
+}
+.titulo {
+    font-size: 0px; /* Tamanho de fonte fixo para telas maiores */
+    left: 370px; /* Mantém o posicionamento original em telas maiores */
+    top: 30px; /* Mantém o posicionamento original em telas maiores */
+}
+.banner1 {
+    margin-top: 170px; /* Mantém a margem original para telas maiores */
+}
+
+.banner2 {
+    margin-top: 12px; /* Mantém a margem original para telas maiores */
+    height: 200%; /* Mantém a altura original para telas maiores */
+    margin-left: -0px; /* Mantém a margem original para telas maiores */
+}
