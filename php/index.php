@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/index.css">
+    <link rel="stylesheet" href="../Css/index.css">
     <title>Document</title>
 </head>
 
@@ -27,16 +27,18 @@
 
         <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
       
-      
+
+
+
+
+
         <div id="banner-container">
-            <div id="banner1"
-        <?php
+    <?php
     // Lista de URLs das imagens
     $imageURLs = array(
         '../Img/bannerr1.jpeg',
-        '../Img/banner2.jpeg'
+        '#'
        
-        
     );
 
     // Gera elementos de imagem dinamicamente
@@ -62,17 +64,28 @@
 
 
 
-<!-------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+<!----------
         <img class="banner1" src="../Img/bannerr1.jpeg">
+        ---->
+        <a href="#">
         <img class="banner2" src="../Img/banner2.jpeg">
--->
-        <img class="logo" src="Img/bitrix-removebg-preview.png" width="300px">
+        </a>
 
-
-
-        <img class="banner1" src="Img/bannerr1.jpeg">
-        <img class="banner2" src="Img/banner2.jpeg">
- 
     </main>
 
     <footer>
@@ -82,13 +95,6 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
 
 
 
@@ -116,3 +122,8 @@
             }
         });
     </script>
+
+
+
+
+
