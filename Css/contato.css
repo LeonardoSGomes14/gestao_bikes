@@ -4,15 +4,27 @@ body{
 }
 
 .centro{
-    margin-top: 50px;
-    width: 200px;
+    position: absolute;
+    margin-top: -430px;
+    margin-left: 350px;
+    width: 300px;
     
 }
 
-body{
-    background-color:#1f9ea8;
+.carta{
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 350px;
+    width: 100px;
     
-  
+}
+
+.fone{
+    position: absolute;
+    margin-top: -110px;
+    margin-left: 850px;
+    width: 100px;
+    
 }
 
 .comeco {
@@ -46,23 +58,24 @@ body{
 .quadrado {
     margin-left: 350px;
     margin-top: 500px;
-    width: 320px; 
-    height: 130px; 
+    width: 350px; 
+    height: 150px; 
     background-color: white; 
   }
 
   .quadrado2 {
     margin-left: 850px;
-    margin-top: -130px;
-    width: 320px; 
-    height: 130px; 
+    margin-top: -150px;
+    width: 350px; 
+    height: 150px; 
     background-color: white; 
   }
 
 .rodape{
-    
+  
+  margin-top: 20px;
   background-color: #001e27; 
-  padding: 34px 0; 
+  padding: 40px 0; 
   text-align: center; 
 }
 
@@ -79,3 +92,30 @@ body{
   
   }
 
+.texto2 {
+
+  width: 45vw;
+  text-align: justify;
+  padding-left: 310px;
+  font-family:'Times New Roman', Times, serif;
+  position: absolute;
+  margin-top: 120px;
+  left: -410px;
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.texto3 {
+
+    width: 45vw;
+    text-align: justify;
+    padding-left: 310px;
+    font-family:'Times New Roman', Times, serif;
+    position: absolute;
+    margin-top: -150px;
+    left: 510px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
