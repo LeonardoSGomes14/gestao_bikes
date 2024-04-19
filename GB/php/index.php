@@ -50,17 +50,17 @@
             <h4>Cadastros</h4>
             <a href="../MVC/Views/BikeViews.php">Cadastrar Bike</a>
             <a href="../cadastrar_empresa.php">Cadastrar Empresas</a>
-            <a href="#">Network</a>
+ 
         </div>
         <div class="column">
             <h4>Sobre nós</h4>
-            <a href="#">Channels</a>
+            <a href="../php/sobre.php">Sobre</a>
             <a href="#">Sponsors</a>
         </div>
         <div class="column">
             <h4>Contato</h4>
-            <a href="#">Página de Contato</a>
-            <a href="#">Politica de Privacidade</a>
+            <a href="../php/contato.php">Página de Contato</a>
+            <a href="../php/politica.php">Politica de Privacidade</a>
         </div>
     </footer>
     
