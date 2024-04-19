@@ -34,32 +34,11 @@
  
     </main>
 
-    <footer>
-
-
-<div class="barra"> .</div>
-
-<div class="icons">
-    <a href="#">
-    <img class="face" src="../Img/facebook-logo.png" width="30" ></a>
-    <a href="#">
-    <img class="face" src="../Img/x-logo.png" width="34"></a>
-    <a href="#">
-    <img class="face" src="../Img/youtube-logo.png" width="30"></a>
-    <a href="#">
-    <img class="face" src="../Img/pinterest-logo.png" width="30"></a>
-    <a href="#">
-    <img class="face" src="../Img/instagram-logo.png" width="30"></a>
-    <a href="#">
-    <img class="face" src="../Img/tiktok-logo.png" width="30"></a>
-</div>
+   
 
 
 
-
-</div>
-
-    </footer>
+    
 
     <footer class="container">
         <div class="column">
@@ -87,14 +66,29 @@
         </div>
     </footer>
 
-
-
+ <div class="barra">.</div>
+    <div class="icons">
+    <a href="#">
+    <img class="face" src="../Img/facebook-logo.png" width="30" ></a>
+    <a href="#">
+    <img class="face" src="../Img/x-logo.png" width="34"></a>
+    <a href="#">
+    <img class="face" src="../Img/youtube-logo.png" width="30"></a>
+    <a href="#">
+    <img class="face" src="../Img/pinterest-logo.png" width="30"></a>
+    <a href="#">
+    <img class="face" src="../Img/instagram-logo.png" width="30"></a>
+    <a href="#">
+    <img class="face" src="../Img/tiktok-logo.png" width="30"></a>
+</div>
     <div class="copy">
 
 <h1 class="text">@ 2024 Copyright  Bitrixx</h1>
 
-</body>
 
+
+
+</body>
 </html>
 
 
