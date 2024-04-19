@@ -4,30 +4,6 @@ require_once 'C:\xampp\htdocs\gestao_bikes\GB\config.php\config.php';
 // Classe Empresa
 class Empresa {
     // propriedades e métodos aqui...
-    public $nome;
-    public $servicos;
-    public $cnpj;
-    public $cep;
-    public $estado;
-    public $rua;
-    public $numero;
-
-    // Método para cadastrar a empresa
-    public function cadastrar() {
-        global $pdo;
-
-        try {
-            // Prepara a consulta SQL
-            $stmt = $pdo->prepare("INSERT INTO empresas (nome, servicos, cnpj, cep, estado, rua, numero) VALUES (?, ?, ?, ?, ?, ?, ?)");
-
-            // Executa a consulta com os valores dos parâmetros
-            $stmt->execute([$this->nome, $this->servicos, $this->cnpj, $this->cep, $this->estado, $this->rua, $this->numero]);
-
-            echo "Empresa cadastrada com sucesso!";
-        } catch (PDOException $e) {
-            echo "Erro ao cadastrar empresa: " . $e->getMessage();
-        }
-    }
 }
 
 // Recebe os dados do formulário
@@ -35,21 +11,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // cria uma nova instância de Empresa
     $empresa = new Empresa();
     // Define as propriedades da empresa com os dados do formulário
-    $empresa->nome = $_POST['nome'];
-    $empresa->servicos = $_POST['servicos'];
-    $empresa->cnpj = $_POST['cnpj'];
-    $empresa->cep = $_POST['cep'];
-    $empresa->estado = $_POST['estado'];
-    $empresa->rua = $_POST['rua'];
-    $empresa->numero = $_POST['numero'];
-
+    // $empresa->id_empresa = $_POST['id_empresa']; // Se id_empresa for uma propriedade a ser definida
+    // Define as outras propriedades...
     // Chama o método para cadastrar a empresa
-    $empresa->cadastrar();
+    // $empresa->cadastrar();
+} else if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['cep'])) {
+    $cep = $_GET['cep'];
+
+    $sql = "SELECT estado, rua FROM tabela_de_cep WHERE cep = '$cep'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $response = array('estado' => $row['estado'], 'rua' => $row['rua']);
+        echo json_encode($response);
+    } else {
+        echo json_encode(array('error' => 'CEP não encontrado'));
+    }
 }
-
-// Restante do código HTML e JavaScript...
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -60,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2>Cadastro de Empresa</h2>
-    <form action="processar_cadastro_empresa.php" method="post">
+    <form action="C:\xampp\htdocs\gestao_bikes\gestao_bikes\cadastrar_empresa.php" method="post">
         <label for="nome">Nome da Empresa:</label><br>
         <input type="text" id="nome" name="nome" required><br>
 

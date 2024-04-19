@@ -1,8 +1,13 @@
 <?php
+<<<<<<< HEAD:cadastrar_empresa.php
 require_once 'C:\xampp\htdocs\gestao_bikes\GB\config.php\config.php';
+=======
+require_once 'C:\xampp\htdocs\gestao_bikes\GB\confg.php\confg.php';
+>>>>>>> 515f13bf16318ec6c3880b463ba97c51f7748775:GB/processar_cadastro_empresa.php
 
 // Classe Empresa
 class Empresa {
+    // propriedades e métodos aqui...
     public $nome;
     public $servicos;
     public $cnpj;
@@ -15,23 +20,23 @@ class Empresa {
     public function cadastrar() {
         global $pdo;
 
-        // Insere os dados da empresa no banco de dados
-        $sql = "INSERT INTO cadastro_empresa (nome, servicos, cnpj, cep, estado, rua, numero)
-                VALUES ('$this->nome', '$this->servicos', '$this->cnpj', '$this->cep', '$this->estado', '$this->rua', '$this->numero')";
-        if ($pdo->query($sql) == TRUE) {
+        try {
+            // Prepara a consulta SQL
+            $stmt = $pdo->prepare("INSERT INTO empresas (nome, servicos, cnpj, cep, estado, rua, numero) VALUES (?, ?, ?, ?, ?, ?, ?)");
+
+            // Executa a consulta com os valores dos parâmetros
+            $stmt->execute([$this->nome, $this->servicos, $this->cnpj, $this->cep, $this->estado, $this->rua, $this->numero]);
+
             echo "Empresa cadastrada com sucesso!";
-            // Redirecionar para o index.php após o cadastro
-            header("Location: gestao_bikes\gestao_bikes\php\index.php ");
-            exit(); // Certificar-se de que o script termina após o redirecionamento
-        } else {
-            echo "Erro ao cadastrar empresa: ";
+        } catch (PDOException $e) {
+            echo "Erro ao cadastrar empresa: " . $e->getMessage();
         }
     }
 }
 
 // Recebe os dados do formulário
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Cria uma nova instância de Empresa
+    // cria uma nova instância de Empresa
     $empresa = new Empresa();
     // Define as propriedades da empresa com os dados do formulário
     $empresa->nome = $_POST['nome'];
@@ -45,7 +50,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Chama o método para cadastrar a empresa
     $empresa->cadastrar();
 }
+
+// Restante do código HTML e JavaScript...
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -56,8 +64,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2>Cadastro de Empresa</h2>
-    <form action="cadastrar_empresa.php" method="post">
-        <!-- Campos do formulário -->
+    <form action="processar_cadastro_empresa.php" method="post">
+        <label for="nome">Nome da Empresa:</label><br>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="servicos">Serviços:</label><br>
+        <input type="text" id="servicos" name="servicos" required><br>
+
+        <label for="cnpj">CNPJ:</label><br>
+        <input type="text" id="cnpj" name="cnpj" required><br>
+
+        <label for="cep">CEP:</label><br>
+        <input type="text" id="cep" name="cep" required>
+        <button type="button" onclick="consultarCEP()">Consultar</button><br> 
+
+        <label for="estado">Estado:</label><br>
+        <input type="text" id="estado" name="estado" readonly><br>
+
+        <label for="rua">Rua:</label><br>
+        <input type="text" id="rua" name="rua" readonly><br>
+
+        <label for="numero">Número:</label><br>
+        <input type="text" id="numero" name="numero" required><br>
+
         <input type="submit" value="Cadastrar">
     </form>
 

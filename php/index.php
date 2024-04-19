@@ -26,9 +26,9 @@
         <!-----------------LOGO----------------->
 
         <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
-      
-      
-      
+
+
+
         <img class="banner1" src="../Img/bannerr1.jpeg">
         <img class="banner2" src="../Img/banner2.jpeg">
  
@@ -48,7 +48,7 @@
 
 <div class="copy">
 
-<h1 class="text">@ 2024 Copyright  Bitrix</h1>
+<h1 class="text">@ 2024 Copyright  Bitrixx</h1>
 
 </div>
 
