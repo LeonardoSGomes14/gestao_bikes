@@ -140,3 +140,22 @@ body{
  .entra:hover {
     transform: scale(1.1); /* Aumentando o tamanho em 10% ao passar o mouse */
 }
+
+.text1{
+  position: absolute;
+  font-size:25px;
+  top: 130%;
+  left: 44%;
+}
+.text2{
+  position: absolute;
+  font-size:15px;
+  top: 299%;
+  left: 30%;
+}
+.text3{
+  position: absolute;
+  font-size:15px;
+  top: 299%;
+  left: 30%;
+}
