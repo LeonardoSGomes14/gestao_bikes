@@ -31,6 +31,7 @@
     <div class="texto">
 
     <h6>Fala com a gente!<br><br> Nossa equipe de atendimento<br>está sempre pronto para ajudar.</h6>
+    
 
     <div class="texto2">
 
@@ -40,6 +41,4 @@
 
     <h5>0800 942 7592<br><br> Nossos atendentes estão<br> preparados para tirar<br> sua dúvida.</h5>
 
-    <a class="entra" href="index.php">Voltar</a>
-
-    
+    <a class="entra" href="index.php">Voltar</a>   
