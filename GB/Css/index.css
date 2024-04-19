@@ -112,6 +112,22 @@ margin-top: -5px;
     font-size: 10px;
     left: 46%;
 }
+@media screen and (max-width: 768px) {
+    .copy {
+        margin-top: 110%; /* Ajuste a margem superior para telas menores */
+        height: 30px; /* Ajuste a altura para telas menores */
+        font-size: 8px; /* Ajuste o tamanho da fonte para telas menores */
+       margin-left: -20px;
+       width: 105%;
+    }
+    
+    .text {
+        margin-top: 10px; /* Ajuste a margem superior para telas menores */
+        height: 20px; /* Ajuste a altura para telas menores */
+        font-size: 8px; /* Ajuste o tamanho da fonte para telas menores */
+        margin-left: -20px;
+    }
+}
 
 .container{
     max-width: 1435px;
