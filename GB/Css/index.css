@@ -51,6 +51,14 @@ body{
     width: 200px;
     top: -10px;
 }
+
+.logorodape{
+    position: absolute;
+    top: -22%;
+    width: 230px;
+    top: -10px;
+}
+
 .banner1{
     width: 90%;
     margin-top: 140px;

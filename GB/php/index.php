@@ -42,7 +42,7 @@
 
     <footer class="container">
         <div class="column">
-        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
+        <img class="logorodape" src="../Img/bitrix-removebg-preview.png">
                 
             </div>
         </div>
@@ -54,15 +54,13 @@
         </div>
         <div class="column">
             <h4>Sobre nós</h4>
-            <a href="#">Blogs</a>
             <a href="#">Channels</a>
             <a href="#">Sponsors</a>
         </div>
         <div class="column">
             <h4>Contato</h4>
-            <a href="#">Contact Us</a>
-            <a href="#">Privicy Policy</a>
-            <a href="#">Terms & Conditions</a>
+            <a href="#">Página de Contato</a>
+            <a href="#">Politica de Privacidade</a>
         </div>
     </footer>
     
