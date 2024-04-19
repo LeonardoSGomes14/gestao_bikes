@@ -1,8 +1,10 @@
+<link rel="stylesheet" href="../GB/Css/cadasro_empresa.css">
 <?php
 require_once 'C:\xampp\htdocs\gestao_bikes\GB\config.php\config.php';
 
 // Classe Empresa
-class Empresa {
+class Empresa
+{
     // propriedades e métodos aqui...
 }
 
@@ -32,39 +34,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Empresa</title>
+    <link rel="stylesheet" href="../GB/Css/cadasro_empresa.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-    <h2>Cadastro de Empresa</h2>
-    <form action="processar_cadastro_empresa.php" method="post">
-        <label for="nome">Nome da Empresa:</label><br>
-        <input type="text" id="nome" name="nome" required><br>
 
-        <label for="servicos">Serviços:</label><br>
-        <input type="text" id="servicos" name="servicos" required><br>
+    <div class="top-banner"></div>
 
-        <label for="cnpj">CNPJ:</label><br>
-        <input type="text" id="cnpj" name="cnpj" required><br>
+    <!-- Novo banner azul escuro no topo -->
+    <div class="container">
 
-        <label for="cep">CEP:</label><br>
-        <input type="text" id="cep" name="cep" required>
-        <button type="button" onclick="consultarCEP()">Consultar</button><br> 
+        
+        <form action="processar_cadastro_empresa.php" method="post">
+            <h2>Cadastro de Empresa</h2>
+            <label for="nome">Nome da Empresa:</label><br>
+            <input type="text" id="nome" name="nome" required><br>
 
-        <label for="estado">Estado:</label><br>
-        <input type="text" id="estado" name="estado" readonly><br>
+            <label for="servicos">Serviços:</label><br>
+            <input type="text" id="servicos" name="servicos" required><br>
 
-        <label for="rua">Rua:</label><br>
-        <input type="text" id="rua" name="rua" readonly><br>
+            <label for="cnpj">CNPJ:</label><br>
+            <input type="text" id="cnpj" name="cnpj" required><br>
 
-        <label for="numero">Número:</label><br>
-        <input type="text" id="numero" name="numero" required><br>
+            <label for="cep">CEP:</label><br>
+            <input type="text" id="cep" name="cep" required><br>
+            <button type="button" onclick="consultarCEP()">Consultar</button><br>
 
-        <input type="submit" value="Cadastrar">
-    </form>
+            <label for="estado">Estado:</label><br>
+            <input type="text" id="estado" name="estado" readonly><br>
+
+            <label for="rua">Rua:</label><br>
+            <input type="text" id="rua" name="rua" readonly><br>
+
+            <label for="numero">Número:</label><br>
+            <input type="text" id="numero" name="numero" required><br>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+
+    </div>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><img src="icone_facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="icone_twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="icone_instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
 
     <script>
         function consultarCEP() {
@@ -88,4 +110,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </script>
 </body>
+
 </html>

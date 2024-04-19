@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="text" id="cnpj" name="cnpj" required><br>
 
         <label for="cep">CEP:</label><br>
-        <input type="text" id="cep" name="cep" required>
+        <input type="text" id="cep" name="cep" required><br>
         <button type="button" onclick="consultarCEP()">Consultar</button><br> 
 
         <label for="estado">Estado:</label><br>
