@@ -132,12 +132,12 @@ footer .column .logo{
 }
 
 footer .column p{
-    color: #ccc;
+    color: #001e27;
     margin-bottom: 2rem;
 }
 
 footer .column h4{
-    color: #fff;
+    color: #001e27;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -145,11 +145,11 @@ footer .column h4{
 
 footer .column > a{
     display: block;
-    color: #ccc;
+    color: #001e27;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
 
 footer .column > a:hover{
-    color: #1d4ed8;
+    color: #ffffff;
 }
