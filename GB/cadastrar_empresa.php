@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2>Cadastro de Empresa</h2>
-    <form action="C:\xampp\htdocs\gestao_bikes\gestao_bikes\cadastrar_empresa.php" method="post">
+    <form action="processar_cadastro_empresa.php" method="post">
         <label for="nome">Nome da Empresa:</label><br>
         <input type="text" id="nome" name="nome" required><br>
 
