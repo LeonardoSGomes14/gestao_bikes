@@ -37,11 +37,23 @@
     <footer>
 
 
+<div class="barra"> .</div>
 
 <div class="icons">
-
-
+    <a href="#">
+    <img class="face" src="../Img/facebook-logo.png" width="30" ></a>
+    <a href="#">
+    <img class="face" src="../Img/x-logo.png" width="34"></a>
+    <a href="#">
+    <img class="face" src="../Img/youtube-logo.png" width="30"></a>
+    <a href="#">
+    <img class="face" src="../Img/pinterest-logo.png" width="30"></a>
+    <a href="#">
+    <img class="face" src="../Img/instagram-logo.png" width="30"></a>
+    <a href="#">
+    <img class="face" src="../Img/tiktok-logo.png" width="30"></a>
 </div>
+
 
 
 
