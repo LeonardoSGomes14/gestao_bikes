@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Cadastro de Bicicleta</h2>
-    <form action="../Controller/BikeController.php?acao=cadastrar" method="POST">
+    <form action="../Controller/BikeController.php?acao=cadastrar" method="POST" enctype="multipart/form-data">
         <label for="marca">Marca:</label>
         <input type="text" id="marca" name="marca" required><br><br>
 
@@ -20,6 +20,7 @@
 
         <label for="tipodoproduto">Tipo de Produto:</label>
         <input type="text" id="tipodoproduto" name="tipodoproduto" required><br><br>
+
 
         <input type="submit" value="Cadastrar">
     </form>
