@@ -34,27 +34,62 @@
  
     </main>
 
-    <footer>
-
-<a href="contato.php">Contato</a>
+   
 
 
 
-<div class="icons">
+    
+
+    <footer class="container">
+        <div class="column">
+        <img class="logorodape" src="../Img/bitrix-removebg-preview.png">
+                
+            </div>
+        </div>
+        <div class="column">
+            <h4>Cadastros</h4>
+            <a href="../MVC/Views/BikeViews.php">Cadastrar Bike</a>
+            <a href="../cadastrar_empresa.php">Cadastrar Empresas</a>
+            <a href="#">Network</a>
+        </div>
+        <div class="column">
+            <h4>Sobre nós</h4>
+            <a href="#">Channels</a>
+            <a href="#">Sponsors</a>
+        </div>
+        <div class="column">
+            <h4>Contato</h4>
+            <a href="#">Página de Contato</a>
+            <a href="#">Politica de Privacidade</a>
+        </div>
+    </footer>
+    
+
+ <div class="barra">.</div>
 
 
+    <div class="icons">
+    <a href="#">
+    <img class="face" src="../Img/facebook-logo.png" width="30" ></a>
+    <a href="#">
+    <img class="face" src="../Img/x-logo.png" width="34"></a>
+    <a href="#">
+    <img class="face" src="../Img/youtube-logo.png" width="30"></a>
+    <a href="#">
+    <img class="face" src="../Img/pinterest-logo.png" width="30"></a>
+    <a href="#">
+    <img class="face" src="../Img/instagram-logo.png" width="30"></a>
+    <a href="#">
+    <img class="face" src="../Img/tiktok-logo.png" width="30"></a>
 </div>
-
-
-<div class="copy">
+    <div class="copy">
 
 <h1 class="text">@ 2024 Copyright  Bitrixx</h1>
 
-</div>
 
-    </footer>
+
+
 </body>
-
 </html>
 
 

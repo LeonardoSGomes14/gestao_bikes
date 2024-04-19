@@ -28,17 +28,11 @@
     <div class="rodape">
 
    
-    <div class="texto">
+ <h1 class="text1">Fala com a gente!<br><br> Nossa equipe de atendimento<br>está sempre pronto para ajudar.  </h1>
 
-    <h6>Fala com a gente!<br><br> Nossa equipe de atendimento<br>está sempre pronto para ajudar.</h6>
+  <h1 class="text2"> Contato.bitrixeleven@gmail.com<br><br> Nos mande um email<br>com sua Dúvida.   </h1>
 
-    <div class="texto2">
-
-    <h6>Contato.bitrixeleven@gmail.com<br> Nos mande um email<br>com sua Dúvida.</h6>
-
-    <div class="texto3"> 
-
-    <h5>0800 942 7592<br><br> Nossos atendentes estão<br> preparados para tirar<br> sua dúvida.</h5>
+  <h1 class="text3"> 0800 942 7592<br><br> Nossos atendentes estão<br> preparados para tirar<br> sua dúvida.    </h1>
 
     <a class="entra" href="index.php">Voltar</a>
 
