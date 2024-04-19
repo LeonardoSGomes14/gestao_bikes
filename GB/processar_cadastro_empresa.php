@@ -1,10 +1,9 @@
 <?php
+require_once 'C:\xampp\htdocs\gestao_bikes\GB\config.php\config.php';
 
-require_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
->>>>>>> 8898cfc23c6721074f4c30965e0ef3c128d4b3a3
-
+// Classe Empresa
 class Empresa {
- 
+    // propriedades e métodos aqui...
     public $nome;
     public $servicos;
     public $cnpj;
@@ -13,15 +12,15 @@ class Empresa {
     public $rua;
     public $numero;
 
-  
+    // Método para cadastrar a empresa
     public function cadastrar() {
         global $pdo;
 
         try {
-          
+            // Prepara a consulta SQL
             $stmt = $pdo->prepare("INSERT INTO cadastro_empresa (nome, servicos, cnpj, cep, estado, rua, numero) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-  
+            // Executa a consulta com os valores dos parâmetros
             $stmt->execute([$this->nome, $this->servicos, $this->cnpj, $this->cep, $this->estado, $this->rua, $this->numero]);
 
             echo "Empresa cadastrada com sucesso!";
@@ -31,10 +30,11 @@ class Empresa {
     }
 }
 
+// Recebe os dados do formulário
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   
+    // cria uma nova instância de Empresa
     $empresa = new Empresa();
-  
+    // Define as propriedades da empresa com os dados do formulário
     $empresa->nome = $_POST['nome'];
     $empresa->servicos = $_POST['servicos'];
     $empresa->cnpj = $_POST['cnpj'];
@@ -43,11 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $empresa->rua = $_POST['rua'];
     $empresa->numero = $_POST['numero'];
 
-  
+    // Chama o método para cadastrar a empresa
     $empresa->cadastrar();
 }
 
-
+// Restante do código HTML e JavaScript...
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="text" id="cnpj" name="cnpj" required><br>
 
         <label for="cep">CEP:</label><br>
-        <input type="text" id="cep" name="cep" required>
+        <input type="text" id="cep" name="cep" required><br>
         <button type="button" onclick="consultarCEP()">Consultar</button><br> 
 
         <label for="estado">Estado:</label><br>
