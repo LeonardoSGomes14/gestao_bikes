@@ -65,8 +65,11 @@
             <a href="#">Terms & Conditions</a>
         </div>
     </footer>
+    
 
  <div class="barra">.</div>
+
+
     <div class="icons">
     <a href="#">
     <img class="face" src="../Img/facebook-logo.png" width="30" ></a>
