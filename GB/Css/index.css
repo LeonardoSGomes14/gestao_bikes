@@ -112,3 +112,31 @@ margin-top: -5px;
     font-size: 10px;
     left: 46%;
 }
+.icons {
+    position: absolute;
+    left: 53%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    top: 86%;
+   
+  
+}
+
+.face {
+    margin-right: 60px; 
+ 
+    transition: transform 0.3s ease-in-out; /* Adiciona transição de transformação */
+}
+
+.face:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+.barra{
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    top: 84%;
+    height: 11%;
+}   
+

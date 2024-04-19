@@ -1,20 +1,14 @@
 <?php
 require_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
 
-// Classe Empresa
 class Empresa {
-    // propriedades e métodos aqui...
+
 }
 
-// Recebe os dados do formulário
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // cria uma nova instância de Empresa
+   
     $empresa = new Empresa();
-    // Define as propriedades da empresa com os dados do formulário
-    // $empresa->id_empresa = $_POST['id_empresa']; // Se id_empresa for uma propriedade a ser definida
-    // Define as outras propriedades...
-    // Chama o método para cadastrar a empresa
-    // $empresa->cadastrar();
+   
 } else if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['cep'])) {
     $cep = $_GET['cep'];
 
