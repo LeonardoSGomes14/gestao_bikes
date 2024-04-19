@@ -150,6 +150,7 @@ footer .column .logo{
 footer .column p{
     color: #001e27;
     margin-bottom: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 footer .column h4{
@@ -164,6 +165,7 @@ footer .column > a{
     color: #001e27;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 footer .column > a:hover{
