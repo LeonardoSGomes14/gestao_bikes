@@ -47,9 +47,9 @@
             </div>
         </div>
         <div class="column">
-            <h4>Company</h4>
-            <a href="#">Business</a>
-            <a href="#">Partnership</a>
+            <h4>Cadastros</h4>
+            <a href="../MVC/Views/BikeViews.php">Cadastrar Bike</a>
+            <a href="../cadastrar_empresa.php">Cadastrar Empresas</a>
             <a href="#">Network</a>
         </div>
         <div class="column">
