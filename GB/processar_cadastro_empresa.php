@@ -1,5 +1,7 @@
 <?php
+
 require_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
+>>>>>>> 8898cfc23c6721074f4c30965e0ef3c128d4b3a3
 
 class Empresa {
  
