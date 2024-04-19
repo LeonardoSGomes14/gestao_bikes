@@ -96,11 +96,12 @@ margin-top: -5px;
 }
 .copy{
     background-color: #e0e0e0;
-    width: 100%;
+    width: 101%;
     text-align: center;
     margin-top: 32%;
-    height: 44px;
+    height: 51px;
     font-size: 10px;
+    margin-left: -7px;
     
 }
 .text{
@@ -170,4 +171,30 @@ footer .column > a{
 
 footer .column > a:hover{
     color: #ffffff;
+}
+.icons {
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 430px;
+    
+}
+
+.face {
+    margin-right: 40px; /* Define a margem entre os ícones */
+    transition: transform 0.3s ease-in-out; /* Adiciona transição de transformação */
+}
+
+.face:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+.barra{
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    left: -1px;
+    margin-top: 27%;
+    height: 72px;
 }
