@@ -1,5 +1,5 @@
 <?php
-require_once 'C:\xampp\htdocs\gestao_bikes\gestao_bikes\confg.php\confg.php';
+require_once 'C:\xampp\htdocs\gestao_bikes\GB\confg.php\confg.php';
 
 // Classe Empresa
 class Empresa {
