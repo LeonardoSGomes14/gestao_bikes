@@ -1,6 +1,7 @@
 body{
     background-color:#1f9ea8;
   
+  
 }
 
 .centro{
@@ -121,3 +122,21 @@ body{
     font-family: Arial, Helvetica, sans-serif;
   
   }
+
+  .entra {
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 15px 40px;
+    font-size: 15px;
+    display: inline-block;
+    margin: 1px 390px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Adicionando uma transição suave para o tamanho */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ .entra:hover {
+    transform: scale(1.1); /* Aumentando o tamanho em 10% ao passar o mouse */
+}

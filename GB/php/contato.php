@@ -39,3 +39,7 @@
     <div class="texto3"> 
 
     <h5>0800 942 7592<br><br> Nossos atendentes estão<br> preparados para tirar<br> sua dúvida.</h5>
+
+    <a class="entra" href="index.php">Voltar</a>
+
+    
