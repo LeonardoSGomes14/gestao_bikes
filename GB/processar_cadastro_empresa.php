@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD:cadastrar_empresa.php
 require_once 'C:\xampp\htdocs\gestao_bikes\GB\config.php\config.php';
-=======
-require_once 'C:\xampp\htdocs\gestao_bikes\GB\confg.php\confg.php';
->>>>>>> 515f13bf16318ec6c3880b463ba97c51f7748775:GB/processar_cadastro_empresa.php
 
 // Classe Empresa
 class Empresa {
