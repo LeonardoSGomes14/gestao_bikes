@@ -13,19 +13,18 @@ class Empresa {
 
     // Método para cadastrar a empresa
     public function cadastrar() {
-        global $conn;
+        global $pdo;
 
         // Insere os dados da empresa no banco de dados
-        $sql = "INSERT INTO empresas (nome, servicos, cnpj, cep, estado, rua, numero)
+        $sql = "INSERT INTO cadastro_empresa (nome, servicos, cnpj, cep, estado, rua, numero)
                 VALUES ('$this->nome', '$this->servicos', '$this->cnpj', '$this->cep', '$this->estado', '$this->rua', '$this->numero')";
-
-        if ($conn->query($sql) === TRUE) {
+        if ($pdo->query($sql) == TRUE) {
             echo "Empresa cadastrada com sucesso!";
             // Redirecionar para o index.php após o cadastro
             header("Location: index.php");
             exit(); // Certificar-se de que o script termina após o redirecionamento
         } else {
-            echo "Erro ao cadastrar empresa: " . $conn->error;
+            echo "Erro ao cadastrar empresa: ";
         }
     }
 }
