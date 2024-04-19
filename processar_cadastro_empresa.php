@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD:cadastrar_empresa.php
 require_once 'C:\xampp\htdocs\gestao_bikes\GB\config.php\config.php';
-=======
-require_once 'C:\xampp\htdocs\gestao_bikes\GB\confg.php\confg.php';
->>>>>>> 515f13bf16318ec6c3880b463ba97c51f7748775:GB/processar_cadastro_empresa.php
 
 // Classe Empresa
 class Empresa {
@@ -22,7 +18,7 @@ class Empresa {
 
         try {
             // Prepara a consulta SQL
-            $stmt = $pdo->prepare("INSERT INTO empresas (nome, servicos, cnpj, cep, estado, rua, numero) VALUES (?, ?, ?, ?, ?, ?, ?)");
+            $stmt = $pdo->prepare("INSERT INTO cadastro_empresa (nome, servicos, cnpj, cep, estado, rua, numero) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
             // Executa a consulta com os valores dos parâmetros
             $stmt->execute([$this->nome, $this->servicos, $this->cnpj, $this->cep, $this->estado, $this->rua, $this->numero]);
@@ -64,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2>Cadastro de Empresa</h2>
-    <form action="processar_cadastro_empresa.php" method="post">
+    <form action="C:\xampp\htdocs\gestao_bikes\GB\processar_cadastro_empresa.php" method="post">
         <label for="nome">Nome da Empresa:</label><br>
         <input type="text" id="nome" name="nome" required><br>
 
