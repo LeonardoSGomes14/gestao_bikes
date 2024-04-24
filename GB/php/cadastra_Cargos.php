@@ -78,7 +78,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <select name="cargo" required>
                             <option value="" disabled selected>Selecione o Cargo</option>
                             <option value="CEO">CEO</option>
-                            <option value="Gerente">Gerente</option>
+                            <option value="Gerente">GERENTE</option>
+                            <option value="Gerente">ADMINISTRADOR</option>
+                            <option value="Gerente">ESTAGIÁRIO</option>
+                            <option value="Gerente">COMERCIAL</option>
+                            <option value="Gerente">FUNCIONARIO</option>
+
                             <!-- Adicione mais opções conforme necessário -->
                         </select>
                     </td>
