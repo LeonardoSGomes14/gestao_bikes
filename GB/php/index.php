@@ -25,7 +25,7 @@
     <main>
         <!-----------------LOGO----------------->
 
-        
+
         <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
 
 
@@ -73,17 +73,17 @@
 
 
     <div class="icons">
-    <a href="#">
+    <a href="https://www.facebook.com/" target="_blank">
     <img class="face" src="../Img/facebook-logo.png" width="30" ></a>
-    <a href="#">
+    <a href="https://twitter.com/login?lang=pt"target="_blank">
     <img class="face" src="../Img/x-logo.png" width="34"></a>
-    <a href="#">
+    <a href="https://www.youtube.com/"target="_blank">
     <img class="face" src="../Img/youtube-logo.png" width="30"></a>
-    <a href="#">
+    <a href="https://br.pinterest.com/"target="_blank">
     <img class="face" src="../Img/pinterest-logo.png" width="30"></a>
-    <a href="#">
+    <a href="https://www.instagram.com/"target="_blank">
     <img class="face" src="../Img/instagram-logo.png" width="30"></a>
-    <a href="#">
+    <a href="https://www.tiktok.com/pt-BR/"target="_blank">
     <img class="face" src="../Img/tiktok-logo.png" width="30"></a>
 </div>
     <div class="copy">
