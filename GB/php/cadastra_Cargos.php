@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Verifica se o usuário já está cadastrado no banco de dados
-    $stmt_check = $pdo->prepare("SELECT * FROM usuariosADM WHERE usuario = ?");
+    $stmt_check = $pdo->prepare("SELECT * FROM usuariosCargos WHERE usuario = ?");
     $stmt_check->execute([$usuario]);
 
     if ($stmt_check->rowCount() > 0) {
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt_insert->rowCount() > 0) {
             $_SESSION["usuario"] = $usuario;
             $mensagem = "Usuário cadastrado com sucesso!";
-            header("Location: #");
+            header("Location: Processa_Cadastro_cargo.php");
         } else {
             $mensagem = "Erro ao cadastrar o usuário. Tente novamente.";
         }
@@ -53,14 +53,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de login</title>
-    <link rel="stylesheet" href="../Css/cadastro.css">
+    <link rel="stylesheet" href="../Css/cadastro_cargo.css">
 </head>
 <body>
 <div class="background-container">
-    <img class="logo" src="../img/Gincanca-logo-complet.png" width="300px">
+    <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
     <div class="container">
-        <h1>Cadastrar</h1>
+        <h1>Cadastrar Cargos</h1>
         <h2><?php echo $mensagem; ?></h2>
+        
 
         <form method="post">
             <table>
@@ -79,12 +80,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <option value="" disabled selected>Selecione o Cargo</option>
                             <option value="CEO">CEO</option>
                             <option value="Gerente">GERENTE</option>
-                            <option value="Gerente">ADMINISTRADOR</option>
-                            <option value="Gerente">ESTAGIÁRIO</option>
-                            <option value="Gerente">COMERCIAL</option>
-                            <option value="Gerente">FUNCIONARIO</option>
+                            <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                            <option value="ESTAGIARIO">ESTAGIÁRIO</option>
+                            <option value="COMERCIAL">COMERCIAL</option>
+                            <option value="FUNCIONARIO">FUNCIONARIO</option>
 
-                            <!-- Adicione mais opções conforme necessário -->
                         </select>
                     </td>
                 </tr>
@@ -94,8 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </table>
         </form>
 
-        <h3>Já Tem Login? </h3>
-        <h2><a href="=CEO.php">Voltar</a></h2>
+        <h2><a href="index.php">Voltar</a></h2>
         
     </div>
 </div>
