@@ -1,25 +1,7 @@
-<?php
-session_start();
-
-
-if (isset($_SESSION['id'])) {
-    header("Location: logout.php");
-    exit();
-}
-
-include_once('config/config.php');
-
-if (isset($_POST['email']) && isset($_POST['senha'])) {
-}
-?>
-<?php
-require_once 'config/config.php';
-require_once 'app/Controller/userController.php';
-?>
 
 <?php
 
-include_once('config/config.php');
+include_once('../config/config.php');
 
 if (isset($_POST['email']) && isset($_POST['senha'])) {
     $email = $mysqli->real_escape_string($_POST['email']);
@@ -111,7 +93,7 @@ if (isset($_POST['submit'])) {
     <title>Signin/Signup</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="GB\Css\cad_user.css">
+    <link rel="stylesheet" href="../Css/cad_user.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
@@ -155,7 +137,7 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 
-    <script src="cadlog.js"></script>
+    <script src="../JS/cadlog.js"></script>
 
     </div>
 
