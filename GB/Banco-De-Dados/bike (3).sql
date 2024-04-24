@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Abr-2024 às 13:31
+-- Tempo de geração: 24-Abr-2024 às 14:35
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -147,28 +147,16 @@ CREATE TABLE `controlepessoas` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuariosadm`
+-- Estrutura da tabela `usuarioscargos`
 --
 
-CREATE TABLE `usuariosadm` (
+CREATE TABLE `usuarioscargos` (
   `id_usuario` int(11) NOT NULL,
   `usuario` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `cargo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Extraindo dados da tabela `usuariosadm`
---
-
-INSERT INTO `usuariosadm` (`id_usuario`, `usuario`, `senha`, `email`, `cargo`) VALUES
-(1, 'Mateus', '$2y$10$uDit8V9bxa.rJ./UdVztfeeIr1vaa7SwCIgQ68Uw798h2zl5Acfkq', 'lealshoes17@gmail.com', ''),
-(2, 'Mateussasa', '$2y$10$wnp5/IMoFTs4EWrrVIZRfOwd57JxJZqekjMXUkR2.p0xAcoVWtAcW', 'lealshoes822@gmail.com', ''),
-(3, 'Mateussasasfe', '$2y$10$kUPaauRplXSJKXvx6yB0X.JT4GnTZOD1jvpjm/ThaQEk5VGe3lvlu', 'lealshoes17@gmail.com', ''),
-(4, 'Mateusnhy', '$2y$10$4zSC/X5oNPLoAvchPBLlyeuUQ11qdQn49wJ2y3CBNPuMqaArDJyDG', 'anaaoliveeiraaug@gmail.com', 'CEO'),
-(5, 'admin', '$2y$10$agn1Sa/cI8vAJQAKksTgtu6dW5Cbf6.WfARP9igeGD1sF3SGE74J2', 'administrador@gmail.com', 'Gerente'),
-(6, 'Mateusddd', '$2y$10$j9JDaf0XWylm4mzxsimS6eUOH1eQj4APInARDIKO9Eek5qhgFlXBq', 'beneditoaugusto62@gmail.com', 'CEO');
 
 --
 -- Índices para tabelas despejadas
@@ -217,9 +205,9 @@ ALTER TABLE `controlepessoas`
   ADD PRIMARY KEY (`id_pessoas`);
 
 --
--- Índices para tabela `usuariosadm`
+-- Índices para tabela `usuarioscargos`
 --
-ALTER TABLE `usuariosadm`
+ALTER TABLE `usuarioscargos`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
@@ -269,10 +257,10 @@ ALTER TABLE `controlepessoas`
   MODIFY `id_pessoas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `usuariosadm`
+-- AUTO_INCREMENT de tabela `usuarioscargos`
 --
-ALTER TABLE `usuariosadm`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+ALTER TABLE `usuarioscargos`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
