@@ -11,6 +11,8 @@ body{
     margin-top: 10px;
     margin: 1 auto; /* Centralizar a tabela */
     animation: changeColor 5s infinite; /* Animar a troca de cor a cada 5 segundos */
+    
+
 }
 
 .container {
@@ -69,9 +71,9 @@ a:hover {
     text-decoration: underline; /* Sublinhado ao passar o mouse */
 }
 @keyframes changeColor {
-    0% { box-shadow: 0 0 10px red; }
-    33% { box-shadow: 0 0 10px green; }
-    66% { box-shadow: 0 0 10px blue; }
-    100% { box-shadow: 0 0 10px red; }
+    0% { box-shadow: 0 0 220px red; }
+    33% { box-shadow: 0 0 20px green; }
+    66% { box-shadow: 0 0 20px blue; }
+    100% { box-shadow: 0 0 20px red; }
 }
 

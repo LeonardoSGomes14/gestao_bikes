@@ -98,6 +98,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     </div>
 </div>
+<style>
+    body {
+        background-color: #1f9ea8;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .falling-shapes {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    
+    .falling-shape {
+        position: absolute;
+        width: 10px; /* Largura da forma */
+        height: 10px; /* Altura da forma */
+        background-color: #ffffff; /* Cor da forma */
+        border-radius: 50%; /* Forma circular */
+        animation: falling 5s linear infinite; /* Animação de queda */
+    }
+    
+    @keyframes falling {
+        0% { transform: translateY(-100px); opacity: 0; } /* Posição inicial */
+        100% { transform: translateY(100vh); opacity: 1; } /* Posição final */
+    }
+</style>
+<div class="falling-shapes">
+    <!-- Criar várias formas que caem -->
+    <div class="falling-shape" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="falling-shape" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="falling-shape" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="falling-shape" style="left: 40%; animation-delay: 3s;"></div>
+    <div class="falling-shape" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="falling-shape" style="left: 60%; animation-delay: 5s;"></div>
+    <div class="falling-shape" style="left: 70%; animation-delay: 6s;"></div>
+    <div class="falling-shape" style="left: 80%; animation-delay: 7s;"></div>
+    <div class="falling-shape" style="left: 90%; animation-delay: 8s;"></div>
+</div>
 </body>
 </html>
 
