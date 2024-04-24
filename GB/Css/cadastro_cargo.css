@@ -11,6 +11,7 @@ body{
     margin-top: 10px;
     margin: 1 auto; /* Centralizar a tabela */
     animation: changeColor 5s infinite; /* Animar a troca de cor a cada 5 segundos */
+    
 
 }
 
