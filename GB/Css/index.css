@@ -205,3 +205,46 @@ footer .column > a:hover{
     margin-top: 6%;
     height: 89px;
 }
+@media screen and (max-width: 1435px) {
+    .container {
+        padding: 5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 768px) {
+    .logorodape{
+        display: none; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .icons {
+        left: 50%; /* You may need to adjust this value based on your design */
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 768px) {
+    .barra {
+        /* Adjust properties for smaller screens */
+        margin-top: 91%; /* Example adjustment */
+        height: 60px; /* Example adjustment */
+    }
+}
+@media screen and (max-width: 768px) {
+    .icons {
+        left: 54%; /* Center horizontally */
+        transform: translateX(-50%);
+        margin-top: 95%; /* Adjust margin-top for smaller screens */
+    }
+}
