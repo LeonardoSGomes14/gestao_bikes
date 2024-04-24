@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Abr-2024 às 20:32
+-- Tempo de geração: 24-Abr-2024 às 14:35
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -37,6 +37,19 @@ CREATE TABLE `cadastro_empresa` (
   `rua` varchar(255) NOT NULL,
   `numero` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `cadastro_empresa`
+--
+
+INSERT INTO `cadastro_empresa` (`id_empresa`, `nome`, `servicos`, `cnpj`, `cep`, `estado`, `rua`, `numero`) VALUES
+(1, '222', '333', '222', '19703194', 'SP', 'Rua Herculano Azevedo', '132'),
+(2, 'Mateus', 'dsds', '1dwer3453', '19703194', 'SP', 'Rua Herculano Azevedo', '194'),
+(3, '42', '35454', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '143'),
+(4, '42', '35454', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '143'),
+(5, '42', '35454', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '143'),
+(6, 'ytryutr', 'gyhtrhtr', '576r4', '19703194', 'SP', 'Rua Herculano Azevedo', '987'),
+(7, 'ytryutr', 'gyhtrhtr', '576r4', '19703194', 'SP', 'Rua Herculano Azevedo', '987');
 
 -- --------------------------------------------------------
 
@@ -101,10 +114,20 @@ CREATE TABLE `controlefiscal` (
 CREATE TABLE `controlefrota` (
   `id_frota` int(11) NOT NULL,
   `marca` varchar(255) NOT NULL,
-  `anodoveiculo` varchar(255) NOT NULL,
+  `ano_fabricado` varchar(255) NOT NULL,
   `modelo` varchar(255) NOT NULL,
-  `tipodeveiculo` varchar(255) NOT NULL
+  `tipodoproduto` varchar(255) NOT NULL,
+  `imagem` longblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Extraindo dados da tabela `controlefrota`
+--
+
+INSERT INTO `controlefrota` (`id_frota`, `marca`, `ano_fabricado`, `modelo`, `tipodoproduto`, `imagem`) VALUES
+(1, '3', '33', '33', '33', ''),
+(2, 'dsd', 'sdsd', 'sdsd', 'sds', ''),
+(3, 'sasas', '23214', '324', 'ds', '');
 
 -- --------------------------------------------------------
 
@@ -124,25 +147,16 @@ CREATE TABLE `controlepessoas` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuariosadm`
+-- Estrutura da tabela `usuarioscargos`
 --
 
-CREATE TABLE `usuariosadm` (
+CREATE TABLE `usuarioscargos` (
   `id_usuario` int(11) NOT NULL,
   `usuario` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `permissao` varchar(255) NOT NULL
+  `cargo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Extraindo dados da tabela `usuariosadm`
---
-
-INSERT INTO `usuariosadm` (`id_usuario`, `usuario`, `senha`, `email`, `permissao`) VALUES
-(1, 'Mateus', '$2y$10$uDit8V9bxa.rJ./UdVztfeeIr1vaa7SwCIgQ68Uw798h2zl5Acfkq', 'lealshoes17@gmail.com', ''),
-(2, 'Mateussasa', '$2y$10$wnp5/IMoFTs4EWrrVIZRfOwd57JxJZqekjMXUkR2.p0xAcoVWtAcW', 'lealshoes822@gmail.com', ''),
-(3, 'Mateussasasfe', '$2y$10$kUPaauRplXSJKXvx6yB0X.JT4GnTZOD1jvpjm/ThaQEk5VGe3lvlu', 'lealshoes17@gmail.com', '');
 
 --
 -- Índices para tabelas despejadas
@@ -191,9 +205,9 @@ ALTER TABLE `controlepessoas`
   ADD PRIMARY KEY (`id_pessoas`);
 
 --
--- Índices para tabela `usuariosadm`
+-- Índices para tabela `usuarioscargos`
 --
-ALTER TABLE `usuariosadm`
+ALTER TABLE `usuarioscargos`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
@@ -204,7 +218,7 @@ ALTER TABLE `usuariosadm`
 -- AUTO_INCREMENT de tabela `cadastro_empresa`
 --
 ALTER TABLE `cadastro_empresa`
-  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `comercial`
@@ -234,7 +248,7 @@ ALTER TABLE `controlefiscal`
 -- AUTO_INCREMENT de tabela `controlefrota`
 --
 ALTER TABLE `controlefrota`
-  MODIFY `id_frota` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_frota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `controlepessoas`
@@ -243,10 +257,10 @@ ALTER TABLE `controlepessoas`
   MODIFY `id_pessoas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `usuariosadm`
+-- AUTO_INCREMENT de tabela `usuarioscargos`
 --
-ALTER TABLE `usuariosadm`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `usuarioscargos`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -59,33 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <h2>Cadastro de Empresa</h2>
-    <form action="C:\xampp\htdocs\gestao_bikes\GB\processar_cadastro_empresa.php" method="post">
-        <label for="nome">Nome da Empresa:</label><br>
-        <input type="text" id="nome" name="nome" required><br>
-
-        <label for="servicos">Serviços:</label><br>
-        <input type="text" id="servicos" name="servicos" required><br>
-
-        <label for="cnpj">CNPJ:</label><br>
-        <input type="text" id="cnpj" name="cnpj" required><br>
-
-        <label for="cep">CEP:</label><br>
-        <input type="text" id="cep" name="cep" required><br>
-        <button type="button" onclick="consultarCEP()">Consultar</button><br> 
-
-        <label for="estado">Estado:</label><br>
-        <input type="text" id="estado" name="estado" readonly><br>
-
-        <label for="rua">Rua:</label><br>
-        <input type="text" id="rua" name="rua" readonly><br>
-
-        <label for="numero">Número:</label><br>
-        <input type="text" id="numero" name="numero" required><br>
-
-        <input type="submit" value="Cadastrar">
-    </form>
-
+   <a class="volt" href="cadastrar_empresa.php">Voltar</a>
     <script>
         function consultarCEP() {
             var cep = document.getElementById('cep').value;
