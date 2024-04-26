@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Abr-2024 às 14:35
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.2.0
+-- Tempo de geração: 26-Abr-2024 às 15:10
+-- Versão do servidor: 10.4.32-MariaDB
+-- versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -132,31 +132,21 @@ INSERT INTO `controlefrota` (`id_frota`, `marca`, `ano_fabricado`, `modelo`, `ti
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `controlepessoas`
+-- Estrutura da tabela `usuarios`
 --
 
-CREATE TABLE `controlepessoas` (
-  `id_pessoas` int(11) NOT NULL,
-  `nome` varchar(255) NOT NULL,
-  `datadenascimento` varchar(255) NOT NULL,
-  `sexo` varchar(255) NOT NULL,
-  `telefone` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `usuarioscargos`
---
-
-CREATE TABLE `usuarioscargos` (
-  `id_usuario` int(11) NOT NULL,
-  `usuario` varchar(255) NOT NULL,
-  `senha` varchar(255) NOT NULL,
+CREATE TABLE `usuarios` (
+  `id_user` int(11) NOT NULL,
+  `nome_completo` varchar(255) NOT NULL,
+  `datadenascimento` date NOT NULL,
+  `cpf` varchar(255) NOT NULL,
+  `genero` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `cargo` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `senha` varchar(255) NOT NULL,
+  `tipo_funcionario` varchar(255) NOT NULL,
+  `foto_perfil` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tabelas despejadas
@@ -199,16 +189,10 @@ ALTER TABLE `controlefrota`
   ADD PRIMARY KEY (`id_frota`);
 
 --
--- Índices para tabela `controlepessoas`
+-- Índices para tabela `usuarios`
 --
-ALTER TABLE `controlepessoas`
-  ADD PRIMARY KEY (`id_pessoas`);
-
---
--- Índices para tabela `usuarioscargos`
---
-ALTER TABLE `usuarioscargos`
-  ADD PRIMARY KEY (`id_usuario`);
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -251,16 +235,10 @@ ALTER TABLE `controlefrota`
   MODIFY `id_frota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de tabela `controlepessoas`
+-- AUTO_INCREMENT de tabela `usuarios`
 --
-ALTER TABLE `controlepessoas`
-  MODIFY `id_pessoas` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `usuarioscargos`
---
-ALTER TABLE `usuarioscargos`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+ALTER TABLE `usuarios`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
