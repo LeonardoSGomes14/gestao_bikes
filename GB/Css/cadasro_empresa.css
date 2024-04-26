@@ -1,64 +1,168 @@
-/* Novo banner azul escuro no topo */
-.top-banner {
-    background-color: #001e27;
-    width: 100%;
-    height: 50px; /* Ajuste conforme necessário */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Garante que o banner fique acima do conteúdo */
-}
+    /* Novo banner azul escuro no topo */
+    .top-banner {
+        background-color: #001e27;
+        width: 100%;
+        height: 180px;
+        margin-left: -8px;
+        margin-top: -76px;
+        position: absolute;
+    }
 
-/* Modificações para tornar o layout responsivo e centralizado */
-body {
-    background-color: #1f9ea8;
-    margin: 0; /* Remover margens padrão */
-    text-align: center;
-}
+    /* Modificações para tornar o layout responsivo e centralizado */
+    body {
+        background-color: #1f9ea8;
+        text-align: center;
+    }
 
-.comeco {
-    display: none; /* Não é mais necessário */
-}
+    .container {
+        max-width: 50%; /* Defina a largura máxima do container */
+        height: 100%;
+        text-align: center;
+        margin: 0 auto; /* Centraliza o container horizontalmente */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+        font-weight: bold; /* Define a fonte como negrito */
+        font-size: 18px;
+    }
 
-.titulo {
-    display: none; /* Não é mais necessário */
-}
+    form {
+        background-color: white;
+        padding: 20px; /* do crud*/
+        width: 250px;
+        margin-top: 30%;
+    }
 
-.banner1,
-.banner2 {
-    width: 100%; /* Ocupa toda a largura disponível */
-}
-
-.logo {
-    width: 140px; /* Tamanho ajustável */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    display: block; /* Garante que a margem automática funcione */
-}
-
-.footer {
-    position: relative; /* Alteração para permitir o fluxo do conteúdo */
-    padding-top: 50px; /* Ajuste conforme a altura do banner */
-}
-.container {
-    max-width: 20%; /* Defina a largura máxima do container */
-    height: 100%;
-    text-align: center;
-    margin: 0 auto; /* Centraliza o container horizontalmente */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-form {
+   .footer {
     background-color: white;
-    padding: 20px;
-}
-
-.footer {
-    background-color: white;
-    padding: 20px 0;
-    padding-top: 50px; /* Ajuste conforme a altura do banner */
+    padding-top: 20px; /* Ajuste conforme a altura do banner */
     position: absolute;
+    bottom: 0; /* Posiciona o footer no fundo da página */
+    left: 0;
     width: 100%;
-    bottom: 0;
+    height: 70px;
+   }
+
+   .footer {
+    margin-top: 30%;
+   }
+
+    .logo {
+        position: absolute;
+        top: -22%;
+        width: 200px;
+        top: -10px;
+        margin-left: -50%;
+    }
+
+    .texto1 {
+        color: black;
+        margin-top:146px;
+        font-size:27px;
+        font-weight: bold; /* Define a fonte como negrito */
+    }
+    .imagens-img img {
+        height: 20px;
+        width: 20px;
+        padding: 10px;
+    }
+    .texto-banner {
+        color: white;
+        margin-top: 70px;
+    }
+    .cadastro-img img {}
+
+    .barra {
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        left: -1px;
+        margin-top: 6%;
+        height: 89px;
+    }
+    .icons {
+        position: absolute;
+        left: 52%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        margin-top: 110px;
+    }
+    .face {
+        margin-right: 40px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .face:hover {
+        transform: scale(1.2);
+    }
+
+    @media screen and (max-width: 1435px) {
+        .container {
+            padding: 5rem 1rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        footer {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        footer {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .logorodape{
+            display: none; 
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .icons {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .barra {
+            margin-top: 91%;
+            height: 60px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .icons {
+            left: 54%;
+            transform: translateX(-50%);
+            margin-top: 95%;
+        }
+    }
+    /* Adicione esta parte ao seu CSS existente */
+@media screen and (max-width: 768px) {
+    /* Oculta o texto do banner em telas menores que 768px */
+    .texto-banner {
+        display: none;
+    }
+
+    /* Centraliza a imagem do logo no banner em telas menores que 768px */
+    .logo {
+        top: 66%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+.texto1 {
+    margin-top:220px;
+}
+.barra {
+    margin-top:-50px;
+}
+.icons {
+    margin-top:-30px;
+}
 }
