@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../Css/sobre.css">
     <title>GESTÃO DE BIKES</title>
 </head>
-
 <body>
 
     <div class="comeco">

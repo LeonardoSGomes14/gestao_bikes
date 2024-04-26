@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Abr-2024 às 15:10
--- Versão do servidor: 10.4.32-MariaDB
--- versão do PHP: 8.2.12
+-- Tempo de geração: 26-Abr-2024 às 18:45
+-- Versão do servidor: 10.4.27-MariaDB
+-- versão do PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -49,7 +49,8 @@ INSERT INTO `cadastro_empresa` (`id_empresa`, `nome`, `servicos`, `cnpj`, `cep`,
 (4, '42', '35454', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '143'),
 (5, '42', '35454', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '143'),
 (6, 'ytryutr', 'gyhtrhtr', '576r4', '19703194', 'SP', 'Rua Herculano Azevedo', '987'),
-(7, 'ytryutr', 'gyhtrhtr', '576r4', '19703194', 'SP', 'Rua Herculano Azevedo', '987');
+(7, 'ytryutr', 'gyhtrhtr', '576r4', '19703194', 'SP', 'Rua Herculano Azevedo', '987'),
+(8, 'Mateus', 'ewewe', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '195');
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,10 @@ CREATE TABLE `controleestoque` (
   `id_estoque` int(11) NOT NULL,
   `nomedoproduto` varchar(255) NOT NULL,
   `quantidade` varchar(255) NOT NULL,
-  `preco` varchar(255) NOT NULL
+  `preco` varchar(255) NOT NULL,
+  `tipo` varchar(255) NOT NULL,
+  `data` date NOT NULL,
+  `fornecedor` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
@@ -202,7 +206,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `cadastro_empresa`
 --
 ALTER TABLE `cadastro_empresa`
-  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `comercial`

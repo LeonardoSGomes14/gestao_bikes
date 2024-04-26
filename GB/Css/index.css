@@ -198,7 +198,7 @@ footer .column > a:hover{
     transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
 }
 .barra{
-    background-color: white;
+    background-color: #1f9ea7;
     width: 100%;
     position: absolute;
     left: -1px;
