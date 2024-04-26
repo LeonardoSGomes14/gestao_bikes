@@ -52,12 +52,3 @@ function menuOnClick() {
     document.getElementById("menu-bg").classList.toggle("change-bg");
   }
   </script>
-
-<script>
-function confirmLogout() {
-    var confirmLogout = confirm("Você realmente deseja sair da sua conta?");
-    if (confirmLogout) {
-        window.location.href = 'logout.php';
-    }
-}
-</script>
