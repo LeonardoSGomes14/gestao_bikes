@@ -25,12 +25,7 @@
     <img src="../Img/Image 2024-04-17 at 08.04.01.jpeg" style="border-radius: 50%;" width="135px" height="120px">
     <a href="#" class="confirm-link" onclick="confirmLogout()">   
 <?php
-session_start();
 
-if (!isset($_SESSION["usuario"])) {
-    header("location: login.php");
-    exit;
-}
 
 echo "<h1 class='welcome-message'>Olá, " . $_SESSION["usuario"] . "</h1>";
 ?>
@@ -53,3 +48,11 @@ function menuOnClick() {
     document.getElementById("menu-bg").classList.toggle("change-bg");
   }
   </script>
+  <script>
+function confirmLogout() {
+    var confirmLogout = confirm("Você realmente deseja sair da sua conta?");
+    if (confirmLogout) {
+        window.location.href = 'logout.php';
+    }
+}
+</script>   
