@@ -7,7 +7,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
     $email = $mysqli->real_escape_string($_POST['email']);
     $senha = $mysqli->real_escape_string($_POST['senha']);
 
-    $sql_code = $pdo->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
+    $sql_code = $pdo->prepare("SELECT * FROM usuarioscomum WHERE email = ? AND senha = ?");
     $sql_code->execute([$email, $senha]);
 
     $quantidade = $sql_code->rowcount();
@@ -71,7 +71,7 @@ if (isset($_POST['submit'])) {
    $senha = $_POST['senha'];
    $alvl = $_POST['alvl'];
 
-    $stmt = $pdo->prepare('SELECT COUNT(*) FROM usuarios WHERE email = ? AND senha = ?');
+    $stmt = $pdo->prepare('SELECT COUNT(*) FROM usuarioscomum WHERE email = ? AND senha = ?');
     $stmt->execute([$email, $senha]);
     $count = $stmt->fetchColumn();
 

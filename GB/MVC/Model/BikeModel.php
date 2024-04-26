@@ -6,11 +6,11 @@ class BikeModel {
         $this->pdo = $pdo;
     }
 
-    public function cadastrarBike($marca, $ano_fabricado, $modelo, $tipodoproduto) {
+    public function cadastrarBike($marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_nome) {
         try {
-            $sql = "INSERT INTO controlefrota (marca, ano_fabricado, modelo, tipodoproduto) VALUES (?, ?, ?, ?)";
+            $sql = "INSERT INTO controlefrota (marca, ano_fabricado, modelo, tipodeveiculo, placaveiculo, imagem_nome) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$marca, $ano_fabricado, $modelo, $tipodoproduto]);
+            $stmt->execute([$marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_nome]);
             return true;
         } catch (PDOException $e) {
             return false;
