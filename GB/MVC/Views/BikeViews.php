@@ -3,17 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadastro de Bicicleta</title>
-
-
-
-
+<title>Cadastro de Frota</title>
+<!-- Adicione links para seus arquivos CSS aqui -->
 </head>
 <body>
-
-    <h3>Cadastro de Bicicleta</h3>
+    <h3>Cadastro de Frota</h3>
     <div class="background-container">
-    <img class="logo" src="../../Img/bitrix-removebg-preview.png" width="300px">
+        <img class="logo" src="../../Img/bitrix-removebg-preview.png" width="210px">
         <form action="../Controller/BikeController.php?acao=cadastrar" method="POST" enctype="multipart/form-data">
             <label for="marca">Marca:</label>
             <input type="text" id="marca" name="marca" required>
@@ -24,13 +20,20 @@
             <label for="modelo">Modelo:</label>
             <input type="text" id="modelo" name="modelo" required>
 
-            <label for="tipodoproduto">Tipo de Produto:</label>
-            <input type="text" id="tipodoproduto" name="tipodoproduto" required>
+            <label for="tipodeveiculo">Tipo de Veículo:</label>
+            <input type="text" id="tipodeveiculo" name="tipodeveiculo" required>
+
+            <label for="placaveiculo">Placa do Veículo:</label>
+            <input type="text" id="placaveiculo" name="placaveiculo" required>
+
+            <label for="imagem">Imagem:</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*" required>
 
             <input type="submit" value="Cadastrar">
         </form>
-<a class="volt" href="../../php/index.php">Voltar </a>
-
+    
+    <a class="volt" href="../../php/index.php">Voltar</a>
+</div>
 <div class="falling-shapes">
     <!-- Criar várias formas que caem -->
     <div class="falling-shape" style="left: 10%; animation-delay: 0s;"></div>
@@ -51,7 +54,7 @@
     h3{
         position: absolute;
         margin-left: 44%;
-        top: 40%;
+        top: 29%;
     }
     </style>
 
@@ -66,6 +69,7 @@
         padding: 10px;
         border-radius: 10px;
         max-width: 600px;
+        height: 630px;
         margin: 0 auto;
         margin-top: 30px;
         animation: changeColor 5s infinite;
