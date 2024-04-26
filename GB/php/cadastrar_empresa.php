@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../Css/cadasro_empresa.css">
+<link rel="stylesheet" href="../Css/cadastro_empresa.css">
 <?php
 require_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
 
