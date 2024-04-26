@@ -59,7 +59,6 @@
         <div class="column">
             <h4>Sobre nós</h4>
             <a href="../php/sobre.php">Sobre</a>
-            <a href="#">Sponsors</a>
         </div>
         <div class="column">
             <h4>Contato</h4>
