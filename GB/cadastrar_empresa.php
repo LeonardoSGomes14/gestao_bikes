@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../Css/cadastro_empresa.css">
+<link rel="stylesheet" href="../GB/Css/cadasro_empresa.css">
 <?php
 require_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
 
@@ -32,20 +32,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Empresa</title>
-    <link rel="stylesheet" href="../Css/cadastro_empresa.css">
+    <link rel="stylesheet" href="../GB/Css/cadasro_empresa.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
 
     <div class="top-banner">
-        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
-        <div class="texto-banner"> Sistema De Gestão ERP+controle de empresas e de pessoas </div>
-        <div class="texto1">Cadastro de Empresas</div>
+        <a img src ='GB/Img/bitrix-removebg-preview.png'></a>
     </div>
 
+    <!-- Novo banner azul escuro no topo -->
     <div class="container">
 
+        
         <form action="processar_cadastro_empresa.php" method="post">
+            <h2>Cadastro de Empresa</h2>
             <label for="nome">Nome da Empresa:</label><br>
             <input type="text" id="nome" name="nome" required><br>
 
@@ -56,8 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" id="cnpj" name="cnpj" required><br>
 
             <label for="cep">CEP:</label><br>
-            <input type="text" id="cep" name="cep" required><br><br>
-            <button type="button" onclick="consultarCEP()">Consultar</button><br><br>
+            <input type="text" id="cep" name="cep" required><br>
+            <button type="button" onclick="consultarCEP()">Consultar</button><br>
 
             <label for="estado">Estado:</label><br>
             <input type="text" id="estado" name="estado" readonly><br>
@@ -66,28 +68,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" id="rua" name="rua" readonly><br>
 
             <label for="numero">Número:</label><br>
-            <input type="text" id="numero" name="numero" required><br><br>
+            <input type="text" id="numero" name="numero" required><br>
 
-            <input type="image" src="../../GB/Img/seta.png" width="85" height="41" class="cadastro-img">
+            <input type="submit" value="Cadastrar">
         </form>
 
     </div>
-    <div class="barra">.</div>
 
-    <div class="icons">
-        <a href="https://www.facebook.com/" target="_blank">
-            <img class="face" src="../Img/facebook-logo.png" width="30"></a>
-        <a href="https://twitter.com/login?lang=pt" target="_blank">
-            <img class="face" src="../Img/x-logo.png" width="34"></a>
-        <a href="https://www.youtube.com/" target="_blank">
-            <img class="face" src="../Img/youtube-logo.png" width="30"></a>
-        <a href="https://br.pinterest.com/" target="_blank">
-            <img class="face" src="../Img/pinterest-logo.png" width="30"></a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img class="face" src="../Img/instagram-logo.png" width="30"></a>
-        <a href="https://www.tiktok.com/pt-BR/" target="_blank">
-            <img class="face" src="../Img/tiktok-logo.png" width="30"></a>
-    </div>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><img src="icone_facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="icone_twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="icone_instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
 
     <script>
         function consultarCEP() {
@@ -111,5 +105,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </script>
 </body>
-
 </html>
