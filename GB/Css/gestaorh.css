@@ -69,6 +69,7 @@ body {
     background: radial-gradient(circle, #05395a, #1F9EA7);
     opacity: 90%;
     transition: 0.3s ease;
+    margin-right: 40px;
   }
   
   .change {
@@ -122,3 +123,12 @@ body {
     left: 370px;
     top: 30px;
 }
+
+.quadrado-central {
+    width: 1305px; 
+    height: 558px; 
+    margin-left: 230px;
+    margin-top: 180px;
+    background-color: #ccc;
+}
+
