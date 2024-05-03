@@ -49,7 +49,7 @@
         </div>
         <div class="column">
             <h4>Cadastros</h4>
-            <a href="../MVC/Views/BikeViews.php">Cadastrar Bike</a>
+            <a href="../MVC/Views/BikeViews.php">Cadastrar Frota</a>
             <a href="cadastrar_empresa.php">Cadastrar Empresas</a>
             <a href="cadastra_Cargos.php">Cadastrar Cargo</a>
             <a href="#">Cadastrar </a>
