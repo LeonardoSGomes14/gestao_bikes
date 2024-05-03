@@ -198,7 +198,7 @@ footer .column > a:hover{
     transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
 }
 .barra{
-    background-color: white;
+    background-color: #1f9ea7;
     width: 100%;
     position: absolute;
     left: -1px;
@@ -247,4 +247,13 @@ footer .column > a:hover{
         transform: translateX(-50%);
         margin-top: 95%; /* Adjust margin-top for smaller screens */
     }
+    .logo {
+        margin-top:-10px;
+        margin-left:-28px;
+    }
+    .banner2 {
+        width: 650px;
+        margin-left:-8px;
+    }
+   
 }

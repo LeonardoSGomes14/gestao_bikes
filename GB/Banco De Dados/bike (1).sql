@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Abr-2024 às 15:10
+-- Tempo de geração: 26-Abr-2024 às 19:14
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.2.12
 
@@ -138,6 +138,7 @@ INSERT INTO `controlefrota` (`id_frota`, `marca`, `ano_fabricado`, `modelo`, `ti
 CREATE TABLE `usuarios` (
   `id_user` int(11) NOT NULL,
   `nome_completo` varchar(255) NOT NULL,
+  `nome_usuario` varchar(255) NOT NULL,
   `datadenascimento` date NOT NULL,
   `cpf` varchar(255) NOT NULL,
   `genero` varchar(255) NOT NULL,
@@ -145,6 +146,16 @@ CREATE TABLE `usuarios` (
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
   `tipo_funcionario` varchar(255) NOT NULL,
+  `cep` varchar(255) NOT NULL,
+  `cidade` varchar(255) NOT NULL,
+  `rua` varchar(255) NOT NULL,
+  `numero` varchar(255) NOT NULL,
+  `complemento` varchar(255) NOT NULL,
+  `hora_entrada` time NOT NULL,
+  `hora_saida` time NOT NULL,
+  `carga_horaria` int(11) NOT NULL,
+  `remuneração` varchar(255) NOT NULL,
+  `data_contratacao` date NOT NULL,
   `foto_perfil` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
