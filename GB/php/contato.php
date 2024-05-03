@@ -36,4 +36,15 @@
 
     <a class="entra" href="index.php">Voltar</a>
 
-    
+
+
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <div class="typing-indicator" id="typing-indicator"></div>
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+   
+
+    <script src="../JS/script.js"></script>
