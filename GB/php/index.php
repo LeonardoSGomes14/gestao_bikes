@@ -36,9 +36,6 @@
     </main>
 
    
-
-
-
     
 
     <footer class="container">
@@ -47,15 +44,7 @@
                 
             </div>
         </div>
-        <div class="column">
-            <h4>Cadastros</h4>
-            <a href="../MVC/Views/BikeViews.php">Cadastrar Bike</a>
-            <a href="cadastrar_empresa.php">Cadastrar Empresas</a>
-            <a href="cadastra_Cargos.php">Cadastrar Cargo</a>
-      <!------      <a href="#">Cadastrar </a>        ---->
-            
- 
-        </div>
+      
         <div class="column">
             <h4>Sobre nós</h4>
             <a href="../php/sobre.php">Sobre</a>
