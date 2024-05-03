@@ -132,15 +132,9 @@
         text-decoration: underline;
     }
 
-    @keyframes changeColor {
-        0% { box-shadow: 0 0 220px red; }
-        33% { box-shadow: 0 0 20px green; }
-        66% { box-shadow: 0 0 20px blue; }
-        100% { box-shadow: 0 0 20px red; }
-    }
    
     body {
-        background-color: #1f9ea8;
+        background-color: #001e27;
         overflow: hidden;
         margin: 0;
         padding: 0;

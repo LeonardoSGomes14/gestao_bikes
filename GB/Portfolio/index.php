@@ -51,7 +51,8 @@
                     <h1>Cadastros</h1>
                         <a href="../MVC/Views/BikeViews.php">Cadastrar Produtos</a>
                         <a href="cadastrar_empresa.php">Cadastrar Empresas</a>
-                        <a href="cadastra_Cargos.php">Cadastrar Cargo</a>
+                        <a href="GB/php/.php">Niveis de Acesso</a>
+                        <a href="../php/gestaorh.php">Gestão de RH</a>
                 </div>
             </div>
             <div class="card">
