@@ -23,6 +23,7 @@
             position: absolute;
             top: 0;
             left: 0;
+           margin-left:-2px;
         }
 
         /* Estilos para o título */
@@ -32,7 +33,7 @@
             font-size: 28px; /* Ajustando o tamanho do título */
             position: absolute;
             left: 50%; /* Centralizando horizontalmente */
-            top: 50%; /* Posicionando no centro verticalmente */
+            top: 39%; /* Posicionando no centro verticalmente */
             transform: translate(-50%, -50%); /* Centralizando horizontal e verticalmente */
         }
 
@@ -67,6 +68,17 @@
             line-height: 1.6;
             margin-bottom: 20px;
         }
+        @media screen and (max-width: 768px) {
+  /* Oculta o texto do banner em telas menores que 768px */
+  .titulo {
+      display: none;
+  }
+  .logo {
+      margin-left:33%;
+      width:185px;
+  }
+}
+
     </style>
 </head>
 

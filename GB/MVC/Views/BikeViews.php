@@ -47,9 +47,6 @@
     <div class="falling-shape" style="left: 90%; animation-delay: 8s;"></div>
 </div>
 
-
-
-<!-------------------CSS---------------------------------->
 <style>
     h3{
         position: absolute;
