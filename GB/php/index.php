@@ -52,7 +52,7 @@
             <a href="../MVC/Views/BikeViews.php">Cadastrar Bike</a>
             <a href="cadastrar_empresa.php">Cadastrar Empresas</a>
             <a href="cadastra_Cargos.php">Cadastrar Cargo</a>
-      <!------      <a href="#">Cadastrar </a>        ---->
+     <a href="cadastra-estoque.php">Cadastrar Estoque </a>        
             
  
         </div>
