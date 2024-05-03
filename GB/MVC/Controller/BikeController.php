@@ -20,18 +20,19 @@ try {
         // Processar a imagem
         $imagem_nome = $_FILES['imagem']['name'];
         $imagem_tmp = $_FILES['imagem']['tmp_name'];
-        $imagem_destino = 'C:/xampp/htdocs/gestao_bikes/GB/Img/' . $imagem_nome;
+        $imagem_destino = 'C:/xampp/htdocs/gestao_bikes/GB/MVC/public/frota' . $imagem_nome;
         move_uploaded_file($imagem_tmp, $imagem_destino);
 
         $bikeModel = new BikeModel($pdo);
         
         if ($bikeModel->cadastrarBike($marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_nome)) {
-            echo "Cadastro realizado com sucesso!";
+            echo "<script>alert('Cadastro realizado com sucesso!');</script>";
+            header('Location: ../../php/index.php');
         } else {
             echo "Erro ao cadastrar a bicicleta."; 
         }
     } else {
-        include 'cadastro_bike.php'; // Aqui você pode renderizar a visão de cadastro
+        include 'C:\xampp\htdocs\gestao_bikes\GB\MVC\Views\BikeViews.php'; // Aqui você pode renderizar a visão de cadastro
     }
 } catch (PDOException $e) {
     die("Erro ao conectar: " . $e->getMessage());
