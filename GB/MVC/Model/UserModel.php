@@ -11,15 +11,16 @@ class userModel
     public function criarUser($nome_completo, $nome_usuario, $datadenascimento, $cpf, $genero, $phone, $email, $senha, $tipo_funcionario, $cep, $cidade, $rua, $numero, $complemento, $hora_entrada, $hora_saida, $carga_horaria, $remuneracao, $data_contratacao, $foto_perfil)
     {
         $sql = "INSERT INTO usuarios (nome_completo, nome_usuario, datadenascimento, cpf, genero, phone, email, senha, tipo_funcionario, cep, cidade, rua, numero, complemento, hora_entrada, hora_saida, carga_horaria, remuneracao, data_contratacao, foto_perfil)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$nome_completo, $nome_usuario, $datadenascimento, $cpf, $genero, $phone, $email, $senha, $tipo_funcionario, $cep, $cidade, $rua, $numero, $complemento, $hora_entrada, $hora_saida, $carga_horaria, $remuneracao, $data_contratacao, $foto_perfil]);
     }
 
 
+
     public function listarUsers()
     {
-        $sql = "SELECT * FROM usuarios";
+        $sql = "SELECT * FROM usuarios";    
         $stmt = $this->pdo->query($sql);
         return $stmt->fetchALL(PDO::FETCH_ASSOC);
     }

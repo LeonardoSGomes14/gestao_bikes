@@ -16,7 +16,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     background-color: #d7d7d7;
-    color: #a0a5a8;
+    color: #bec0c2;
   }
   
   .main {
@@ -204,6 +204,12 @@
   }
   .switch__button {
     cursor: pointer;
+  }
+
+  label {
+    color: white;
+    font-weight: bold;
+    
   }
 
   .switch__button:active, .switch__button:focus {
