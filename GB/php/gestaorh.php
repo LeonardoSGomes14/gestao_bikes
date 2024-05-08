@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +10,15 @@
   <title>Document</title>
 </head>
 
-<div class="comeco">
+<div class="comeco"> 
+            <a href="login.php"><img src="img/user-ico.png"></a>
+            <a href="login.php"><?php if(isset($_SESSION['foto_perfil'])) {
+               echo "<img src='./app/public/upload/".$_SESSION["foto_perfil"]."'></a>"; 
+            } else {
+                echo "<img src='img/user-ico.png'></a>";
+            }?>
+            </div>
+</div>
   <div class="quadrado-cheio"></div>
 
   <div class="texto-centralizado">
