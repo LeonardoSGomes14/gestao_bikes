@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(array('error' => 'CEP não encontrado'));
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
