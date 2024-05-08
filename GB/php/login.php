@@ -27,7 +27,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
 
         switch ($tipo_funcionario) {
             case 0:
-                header("Location: index.php");
+                header("Location: ../Portifolio/");
                 break;
             case 1:
                 header("Location: adm.php");
