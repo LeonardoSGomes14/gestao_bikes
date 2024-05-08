@@ -32,7 +32,7 @@
             <input type="submit" value="Cadastrar">
         </form>
     
-    <a class="volt" href="../../php/index.php">Voltar</a>
+    <a class="volt" href="../../Portfolio/index.php">Voltar</a>
 </div>
 <div class="falling-shapes">
     <!-- Criar várias formas que caem -->
