@@ -12,6 +12,7 @@
 <body>
 
     <header>
+        
         <div id="particles"></div>
         <div class="info-text">
             <h1>Bem vindo!</h1>
@@ -81,6 +82,7 @@
                 </div>
             </div>
         </div>
+        <a class="entra" href="../php/logout.php">Logout</a>
     </section>
 
     <button class="scroll-top" onclick="scrollToTop()">
