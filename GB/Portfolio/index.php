@@ -74,7 +74,7 @@
                     <i class='bx bxs-component'></i>
                     <h1>informações</h1>
                     
-                    <a href="cadastra_Cargos.php">Politica de Privacidade</a>
+                    <a href="../php/politica.php">Politica de Privacidade</a>
                     <a href="cadastrar_empresa.php">Página de Contato</a>
                     <a href="../MVC/Views/BikeViews.php">Sobre</a>
                     
