@@ -204,3 +204,53 @@ button {
 .chat-box .user-message {
   color: #007bff; /* Cor azul */
 }
+@media screen and (max-width: 768px) {
+  /* Oculta o texto do banner em telas menores que 768px */
+  .titulo {
+      display: none;
+  }
+  .logo {
+    margin-left: 37%;
+  }
+  .centro {
+    margin-left:28%;
+    margin-top:-80%;
+    border-radius: 20px;
+  }
+  .text1 {
+    margin-left:-20%;
+  }
+  .rodape {
+    margin-top:17%;
+  }
+.text2 {
+  margin-top:12%;
+  margin-left:90px;
+}
+.entra {
+  margin-left:280px;
+}
+.quadrado {
+  margin-top: 570px; /* Margem superior na versão responsiva */
+  margin-left:158px;
+  border-radius: 20px;
+}
+.carta {
+  margin-left:174px;
+  margin-top:-46%;
+}
+.quadrado2 {
+ margin-top:4%;
+ margin-left:24%;
+ width: 355px;
+ border-radius: 20px;
+}
+.fone{
+  margin-left:27%;
+}
+.text3 {
+  margin-top:38%;
+  margin-left:-16%;
+}
+}
+
