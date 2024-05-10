@@ -10,7 +10,7 @@
     <h3>Cadastro de Frota</h3>
     <div class="background-container">
         <img class="logo" src="../../Img/bitrix-removebg-preview.png" width="210px">
-        <form action="../Controller/BikeController.php?acao=cadastrar" method="POST" enctype="multipart/form-data">
+        <form action="../Controller/FrotaController.php?acao=cadastrar" method="POST" enctype="multipart/form-data">
             <label for="marca">Marca:</label>
             <input type="text" id="marca" name="marca" required>
 
