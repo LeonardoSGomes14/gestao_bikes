@@ -51,7 +51,7 @@
                     <i class='bx bxs-devices'></i>
                     <h1>Cadastros</h1>
                         <a href="../MVC/Views/BikeViews.php">Cadastrar Produtos</a>
-                        <a href="cadastrar_empresa.php">Cadastrar Empresas</a>
+                        <a href="../php/cadastrar_empresa.php">Cadastrar Empresas</a>
                         <a href="GB/php/.php">Niveis de Acesso</a>
                         <a href="../php/gestaorh.php">Gestão de RH</a>
                 </div>
@@ -63,10 +63,10 @@
                     <h1>Controles</h1>
                    
                     <a href="../MVC/Views/BikeViews.php">Controle Estoque</a>
-                    <a href="cadastrar_empresa.php">Controle Fiscal</a>
-                    <a href="cadastra_Cargos.php">Controle Pessoas</a>
-                    <a href="cadastrar_empresa.php">Controle Frota</a>
-                    <a href="cadastra_Cargos.php">Controle Veiculo</a>
+                    <a href="../cadastrar_empresa.php">Controle Fiscal</a>
+                    <a href="../php/gestaorh.php">Controle Pessoas</a>
+                    <a href="../php/controle_frota.php">Controle Frota</a>
+                    <a href="../cadastrar_empresa.php">Controle Empresa</a>
                     
                 </div>
             </div>
@@ -76,8 +76,8 @@
                     <h1>informações</h1>
                     
                     <a href="../php/politica.php">Politica de Privacidade</a>
-                    <a href="cadastrar_empresa.php">Página de Contato</a>
-                    <a href="../MVC/Views/BikeViews.php">Sobre</a>
+                    <a href="../php/contato.php">Página de Contato</a>
+                    <a href="../php/sobre.php">Sobre</a>
                     
                 </div>
             </div>
