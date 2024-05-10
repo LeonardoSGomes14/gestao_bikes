@@ -75,9 +75,9 @@
                     <i class='bx bxs-component'></i>
                     <h1>informações</h1>
                     
-                    <a href="../php/politica.php">Politica de Privacidade</a>
-                    <a href="../php/contato.php">Página de Contato</a>
-                    <a href="../php/sobre.php">Sobre</a>
+                    <a href="../Portifolio/politica_adm.php">Politica de Privacidade</a>
+                    <a href="../Portifolio/contato_adm.php">Página de Contato</a>
+                    <a href="../Portifolio/sobre_adm.php">Sobre</a>
                     
                 </div>
             </div>
