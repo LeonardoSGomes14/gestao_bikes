@@ -33,7 +33,7 @@ class ControleEstoqueController {
         $imagem = $_FILES['imagem']['name'];
         $imagem_tmp = $_FILES['imagem']['tmp_name'];
 
-        move_uploaded_file($imagem_tmp, "../../public/Estoque/uploads$imagem");
+        move_uploaded_file($imagem_tmp, "../../public/Estoque/uploads/$imagem");
 
         if($this->model->cadastrarProduto($nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem)) {
             echo "Cadastro realizado com sucesso!";
