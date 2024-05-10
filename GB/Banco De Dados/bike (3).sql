@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Maio-2024 às 18:16
+-- Tempo de geração: 10/05/2024 às 15:14
 -- Versão do servidor: 10.4.32-MariaDB
--- versão do PHP: 8.2.12
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cadastro_empresa`
+-- Estrutura para tabela `cadastro_empresa`
 --
 
 CREATE TABLE `cadastro_empresa` (
@@ -39,7 +39,7 @@ CREATE TABLE `cadastro_empresa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `cadastro_empresa`
+-- Despejando dados para a tabela `cadastro_empresa`
 --
 
 INSERT INTO `cadastro_empresa` (`id_empresa`, `nome`, `servicos`, `cnpj`, `cep`, `estado`, `rua`, `numero`) VALUES
@@ -54,7 +54,7 @@ INSERT INTO `cadastro_empresa` (`id_empresa`, `nome`, `servicos`, `cnpj`, `cep`,
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `comercial`
+-- Estrutura para tabela `comercial`
 --
 
 CREATE TABLE `comercial` (
@@ -73,7 +73,7 @@ CREATE TABLE `comercial` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `contas`
+-- Estrutura para tabela `contas`
 --
 
 CREATE TABLE `contas` (
@@ -86,7 +86,7 @@ CREATE TABLE `contas` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `controleestoque`
+-- Estrutura para tabela `controleestoque`
 --
 
 CREATE TABLE `controleestoque` (
@@ -101,7 +101,7 @@ CREATE TABLE `controleestoque` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Extraindo dados da tabela `controleestoque`
+-- Despejando dados para a tabela `controleestoque`
 --
 
 INSERT INTO `controleestoque` (`id_estoque`, `nomedoproduto`, `quantidade`, `preco`, `tipo`, `data`, `fornecedor`, `imagem`) VALUES
@@ -110,7 +110,7 @@ INSERT INTO `controleestoque` (`id_estoque`, `nomedoproduto`, `quantidade`, `pre
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `controlefiscal`
+-- Estrutura para tabela `controlefiscal`
 --
 
 CREATE TABLE `controlefiscal` (
@@ -124,7 +124,7 @@ CREATE TABLE `controlefiscal` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `controlefrota`
+-- Estrutura para tabela `controlefrota`
 --
 
 CREATE TABLE `controlefrota` (
@@ -137,7 +137,7 @@ CREATE TABLE `controlefrota` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Extraindo dados da tabela `controlefrota`
+-- Despejando dados para a tabela `controlefrota`
 --
 
 INSERT INTO `controlefrota` (`id_frota`, `marca`, `ano_fabricado`, `modelo`, `tipodoproduto`, `imagem`) VALUES
@@ -148,22 +148,7 @@ INSERT INTO `controlefrota` (`id_frota`, `marca`, `ano_fabricado`, `modelo`, `ti
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `controlepessoas`
---
-
-CREATE TABLE `controlepessoas` (
-  `id_pessoas` int(11) NOT NULL,
-  `nome` varchar(255) NOT NULL,
-  `datadenascimento` varchar(255) NOT NULL,
-  `sexo` varchar(255) NOT NULL,
-  `telefone` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `usuarios`
+-- Estrutura para tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -191,7 +176,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `usuarios`
+-- Despejando dados para a tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id_user`, `nome_completo`, `nome_usuario`, `datadenascimento`, `cpf`, `genero`, `phone`, `email`, `senha`, `tipo_funcionario`, `cep`, `cidade`, `rua`, `numero`, `complemento`, `hora_entrada`, `hora_saida`, `carga_horaria`, `remuneracao`, `data_contratacao`, `foto_perfil`) VALUES
@@ -204,55 +189,49 @@ INSERT INTO `usuarios` (`id_user`, `nome_completo`, `nome_usuario`, `datadenasci
 --
 
 --
--- Índices para tabela `cadastro_empresa`
+-- Índices de tabela `cadastro_empresa`
 --
 ALTER TABLE `cadastro_empresa`
   ADD PRIMARY KEY (`id_empresa`);
 
 --
--- Índices para tabela `comercial`
+-- Índices de tabela `comercial`
 --
 ALTER TABLE `comercial`
   ADD PRIMARY KEY (`id_comercial`);
 
 --
--- Índices para tabela `contas`
+-- Índices de tabela `contas`
 --
 ALTER TABLE `contas`
   ADD PRIMARY KEY (`id_conta`);
 
 --
--- Índices para tabela `controleestoque`
+-- Índices de tabela `controleestoque`
 --
 ALTER TABLE `controleestoque`
   ADD PRIMARY KEY (`id_estoque`);
 
 --
--- Índices para tabela `controlefiscal`
+-- Índices de tabela `controlefiscal`
 --
 ALTER TABLE `controlefiscal`
   ADD PRIMARY KEY (`id_fiscal`);
 
 --
--- Índices para tabela `controlefrota`
+-- Índices de tabela `controlefrota`
 --
 ALTER TABLE `controlefrota`
   ADD PRIMARY KEY (`id_frota`);
 
 --
--- Índices para tabela `controlepessoas`
---
-ALTER TABLE `controlepessoas`
-  ADD PRIMARY KEY (`id_pessoas`);
-
---
--- Índices para tabela `usuarios`
+-- Índices de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
@@ -290,12 +269,6 @@ ALTER TABLE `controlefiscal`
 --
 ALTER TABLE `controlefrota`
   MODIFY `id_frota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT de tabela `controlepessoas`
---
-ALTER TABLE `controlepessoas`
-  MODIFY `id_pessoas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
