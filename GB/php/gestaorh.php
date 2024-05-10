@@ -1,6 +1,8 @@
-<?php session_start();?>
+<?php
+session_start(); // Certifique-se de iniciar a sessão em todas as páginas que usam sessões
 
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
