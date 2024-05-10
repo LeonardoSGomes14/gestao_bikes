@@ -7,7 +7,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <a class="volt" href="cadastrar_empresa.php">Voltar</a>
+
+    <a class="volt" href="../../Portifolio/index.php ">Voltar</a>
     <form action="" method="post">
         <label for="nome">Nome da Empresa:</label><br>
         <input type="text" id="nome" name="nome" required><br>
@@ -55,6 +56,60 @@
                 });
         }
     </script>
+
+
+
+
+
+
+
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], button[type="button"], button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="button"], button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button[type="button"]:hover, button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .volt {
+            display: block;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .volt:hover {
+            text-decoration: underline;
+        }
+    </style>
 </body>
 </html>
 
