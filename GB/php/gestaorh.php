@@ -1,5 +1,8 @@
-<?php session_start();?>
+<?php
+session_start(); // Certifique-se de iniciar a sessão em todas as páginas que usam sessões
 
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +79,17 @@
         <img src="../Img/Image 2024-04-17 at 08.04.01.jpeg" style="border-radius: 50%;" width="135px" height="120px">
         <a href="#" class="confirm-link" onclick="confirmLogout()">
 
-         
+        <a href="#" class="confirm-link" onclick="confirmLogout()">   
+<?php
+
+session_start();
+
+if (!isset($_SESSION["usuario"])) {
+    echo '<a class="conect" href="login.php">Conecte-se</a>';
+} else {
+    echo '<h1 class="conect">Olá, ' . $_SESSION["usuario"] . '</h1>';
+}
+?>
         </a>
         <li><a href="#">Home</a></li>
         <li><a href="#">Solicitações</a></li>

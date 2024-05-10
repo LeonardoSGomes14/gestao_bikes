@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,7 +52,7 @@
                     <i class='bx bxs-devices'></i>
                     <h1>Cadastros</h1>
                         <a href="../MVC/Views/BikeViews.php">Cadastrar Produtos</a>
-                        <a href="../php/cadastrar_empresa.php">Cadastrar Empresas</a>
+                        <a href="../MVC/Views/EmpresaViews.php">Cadastrar Empresas</a>
                         <a href="GB/php/.php">Niveis de Acesso</a>
                         <a href="../php/gestaorh.php">Gestão de RH</a>
                 </div>
@@ -75,9 +76,9 @@
                     <i class='bx bxs-component'></i>
                     <h1>informações</h1>
                     
-                    <a href="../php/politica.php">Politica de Privacidade</a>
-                    <a href="../php/contato.php">Página de Contato</a>
-                    <a href="../php/sobre.php">Sobre</a>
+                    <a href="../Portifolio/politica_adm.php">Politica de Privacidade</a>
+                    <a href="../Portifolio/contato_adm.php">Página de Contato</a>
+                    <a href="../Portifolio/sobre_adm.php">Sobre</a>
                     
                 </div>
             </div>
