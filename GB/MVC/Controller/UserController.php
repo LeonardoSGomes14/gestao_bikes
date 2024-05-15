@@ -1,13 +1,13 @@
 <?php
 require_once 'C:\xampp\htdocs\gestao_bikes\GB\MVC\Model\UserModel.php';
 
-class userController
+class usuarioController
 {
     private $usermodel;
 
     public function __construct($pdo)
     {
-        $this->usermodel = new userModel($pdo);
+        $this->usermodel = new usuarioModel($pdo);
     }
 
     public function criarUser($nome_completo, $nome_usuario, $datadenascimento, $cpf, $genero, $phone, $email, $senha, $tipo_funcionario, $cep, $cidade, $rua, $numero, $complemento, $hora_entrada, $hora_saida, $carga_horaria, $remuneracao, $data_contratacao, $foto_perfil)
