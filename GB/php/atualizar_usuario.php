@@ -22,7 +22,7 @@ if(isset($_GET['id'])) {
             $sql_code->execute(array($_POST['nome_completo'], $_POST['nome_usuario'], $_POST['datadenascimento'], $_POST['cpf'], $_POST['genero'], $_POST['phone'], $_POST['email'], $_POST['tipo_funcionario'], $_POST['cep'], $_POST['cidade'], $_POST['rua'], $_POST['numero'], $_POST['complemento'], $_POST['hora_entrada'], $_POST['hora_saida'], $_POST['carga_horaria'], $_POST['remuneracao'], $_POST['data_contratacao'], $id_usuario));
 
             // Redirecione de volta para a página de exibição de usuários
-            header("Location: exibir-usuarios.php");
+            header("Location: gestaorh.php");
             exit();
         }
     }
