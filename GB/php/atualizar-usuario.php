@@ -1,3 +1,4 @@
+
 <?php
 include_once('../config/config.php');
 
@@ -32,70 +33,122 @@ if(isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../GB/Css/atualizar_usuario.css">
     <title>Atualizar Usuário</title>
 </head>
 <body>
-<form method="post" action="">
-    <input type="hidden" name="id" value="<?php echo $usuario['id_user']; ?>">
+    <header>
+        <img class="logo" src="../Img/bitrix-removebg-preview.png" alt="Logo">
+        <h1>Atualizar Usuário</h1>
+    </header>
     
-    <label for="nome_completo">Nome Completo:</label>
-    <input type="text" name="nome_completo" value="<?php echo $usuario['nome_completo']; ?>"><br>
-    
-    <label for="nome_usuario">Nome de Usuário:</label>
-    <input type="text" name="nome_usuario" value="<?php echo $usuario['nome_usuario']; ?>"><br>
-    
-    <label for="datadenascimento">Data de Nascimento:</label>
-    <input type="date" name="datadenascimento" value="<?php echo $usuario['datadenascimento']; ?>"><br>
-    
-    <label for="cpf">CPF:</label>
-    <input type="text" name="cpf" value="<?php echo $usuario['cpf']; ?>"><br>
-    
-    <label for="genero">Gênero:</label>
-    <input type="text" name="genero" value="<?php echo $usuario['genero']; ?>"><br>
-    
-    <label for="phone">Telefone:</label>
-    <input type="text" name="phone" value="<?php echo $usuario['phone']; ?>"><br>
-    
-    <label for="email">Email:</label>
-    <input type="email" name="email" value="<?php echo $usuario['email']; ?>"><br>
-    
-    <label for="tipo_funcionario">Tipo de Funcionário:</label>
-    <input type="text" name="tipo_funcionario" value="<?php echo $usuario['tipo_funcionario']; ?>"><br>
-    
-    <label for="cep">CEP:</label>
-    <input type="text" name="cep" value="<?php echo $usuario['cep']; ?>"><br>
-    
-    <label for="cidade">Cidade:</label>
-    <input type="text" name="cidade" value="<?php echo $usuario['cidade']; ?>"><br>
-    
-    <label for="rua">Rua:</label>
-    <input type="text" name="rua" value="<?php echo $usuario['rua']; ?>"><br>
-    
-    <label for="numero">Número:</label>
-    <input type="text" name="numero" value="<?php echo $usuario['numero']; ?>"><br>
-    
-    <label for="complemento">Complemento:</label>
-    <input type="text" name="complemento" value="<?php echo $usuario['complemento']; ?>"><br>
-    
-    <label for="hora_entrada">Hora de Entrada:</label>
-    <input type="time" name="hora_entrada" value="<?php echo $usuario['hora_entrada']; ?>"><br>
-    
-    <label for="hora_saida">Hora de Saída:</label>
-    <input type="time" name="hora_saida" value="<?php echo $usuario['hora_saida']; ?>"><br>
-    
-    <label for="carga_horaria">Carga Horária:</label>
-    <input type="text" name="carga_horaria" value="<?php echo $usuario['carga_horaria']; ?>"><br>
-    
-    <label for="remuneracao">Remuneração:</label>
-    <input type="text" name="remuneracao" value="<?php echo $usuario['remuneracao']; ?>"><br>
-    
-    <label for="data_contratacao">Data de Contratação:</label>
-    <input type="date" name="data_contratacao" value="<?php echo $usuario['data_contratacao']; ?>"><br>
-    
-    <label for="foto_perfil">Foto de Perfil:</label>
-    <input type="text" name="foto_perfil" value="<?php echo $usuario['foto_perfil']; ?>"><br>
-    
-    <input type="submit" value="Atualizar">
-</form>
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <img src="../Img/Image 2024-04-17 at 08.04.01.jpeg" style="border-radius: 50%;" width="135px" height="120px">
+      <br>
+      <br>
+      <a href="#" class="confirm-link" onclick="confirmLogout()">
 
-   
+        <a href="#" class="confirm-link" onclick="confirmLogout()">
+          <?php
+
+
+
+if (!isset($_SESSION["usuario"])) {
+    echo '<a class="conect" href="login.php">Conecte-se</a>';
+} else {
+    echo '<h1 class="conect">Olá, ' . $_SESSION["usuario"] . '</h1>';
+}
+?>
+        </a>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Solicitações</a></li>
+        <li><a href="#">Recibo</a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+<div class="menu-bg" id="menu-bg"></div>
+
+<script>
+  function menuOnClick() {
+    document.getElementById("menu-bar").classList.toggle("change");
+    document.getElementById("nav").classList.toggle("change");
+    document.getElementById("menu-bg").classList.toggle("change-bg");
+  }
+</script>
+    <main>
+        <form method="post" action="">
+            <input type="hidden" name="id" value="<?php echo $usuario['id_user']; ?>">
+
+            <!-- Form fields -->
+            <label for="nome_completo">Nome Completo:</label>
+            <input type="text" name="nome_completo" value="<?php echo $usuario['nome_completo']; ?>"><br>
+            
+            <label for="nome_usuario">Nome de Usuário:</label>
+            <input type="text" name="nome_usuario" value="<?php echo $usuario['nome_usuario']; ?>"><br>
+            
+            <label for="datadenascimento">Data de Nascimento:</label>
+            <input type="date" name="datadenascimento" value="<?php echo $usuario['datadenascimento']; ?>"><br>
+            
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" value="<?php echo $usuario['cpf']; ?>"><br>
+            
+            <label for="genero">Gênero:</label>
+            <input type="text" name="genero" value="<?php echo $usuario['genero']; ?>"><br>
+            
+            <label for="phone">Telefone:</label>
+            <input type="text" name="phone" value="<?php echo $usuario['phone']; ?>"><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" value="<?php echo $usuario['email']; ?>"><br>
+            
+            <label for="tipo_funcionario">Tipo de Funcionário:</label>
+            <input type="text" name="tipo_funcionario" value="<?php echo $usuario['tipo_funcionario']; ?>"><br>
+            
+            <label for="cep">CEP:</label>
+            <input type="text" name="cep" value="<?php echo $usuario['cep']; ?>"><br>
+            
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" value="<?php echo $usuario['cidade']; ?>"><br>
+            
+            <label for="rua">Rua:</label>
+            <input type="text" name="rua" value="<?php echo $usuario['rua']; ?>"><br>
+            
+            <label for="numero">Número:</label>
+            <input type="text" name="numero" value="<?php echo $usuario['numero']; ?>"><br>
+            
+            <label for="complemento">Complemento:</label>
+            <input type="text" name="complemento" value="<?php echo $usuario['complemento']; ?>"><br>
+            
+            <label for="hora_entrada">Hora de Entrada:</label>
+            <input type="time" name="hora_entrada" value="<?php echo $usuario['hora_entrada']; ?>"><br>
+            
+            <label for="hora_saida">Hora de Saída:</label>
+            <input type="time" name="hora_saida" value="<?php echo $usuario['hora_saida']; ?>"><br>
+            
+            <label for="carga_horaria">Carga Horária:</label>
+            <input type="text" name="carga_horaria" value="<?php echo $usuario['carga_horaria']; ?>"><br>
+            
+            <label for="remuneracao">Remuneração:</label>
+            <input type="text" name="remuneracao" value="<?php echo $usuario['remuneracao']; ?>"><br>
+            
+            <label for="data_contratacao">Data de Contratação:</label>
+            <input type="date" name="data_contratacao" value="<?php echo $usuario['data_contratacao']; ?>"><br>
+            
+            <label for="foto_perfil">Foto de Perfil:</label>
+            <input type="text" name="foto_perfil" value="<?php echo $usuario['foto_perfil']; ?>"><br>
+            
+            <input type="submit" value="Atualizar">
+        </form>
+    </main>
+</body>
+</html>
