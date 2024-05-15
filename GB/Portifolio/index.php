@@ -82,7 +82,17 @@
                 </div>
             </div>
         </div>
-        <a class="entra" href="../php/logout.php">Logout</a>
+        <a href="#" class="confirm-link" onclick="confirmLogout()">   
+<?php
+
+session_start();
+
+if (!isset($_SESSION["nome"])) {
+    echo '<a class="conect" href=" ../php/login.php ">Conecte-se</a>';
+} else {
+    echo '<h1 class="conect">Olá, ' . $_SESSION["nome"] . '</h1>';
+}
+?>
     </section>
 
     <button class="scroll-top" onclick="scrollToTop()">
