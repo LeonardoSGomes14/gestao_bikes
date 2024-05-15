@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10/05/2024 às 15:14
--- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.2.12
+-- Tempo de geração: 15-Maio-2024 às 16:17
+-- Versão do servidor: 10.4.27-MariaDB
+-- versão do PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `cadastro_empresa`
+-- Estrutura da tabela `cadastro_empresa`
 --
 
 CREATE TABLE `cadastro_empresa` (
@@ -39,7 +39,7 @@ CREATE TABLE `cadastro_empresa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `cadastro_empresa`
+-- Extraindo dados da tabela `cadastro_empresa`
 --
 
 INSERT INTO `cadastro_empresa` (`id_empresa`, `nome`, `servicos`, `cnpj`, `cep`, `estado`, `rua`, `numero`) VALUES
@@ -49,19 +49,28 @@ INSERT INTO `cadastro_empresa` (`id_empresa`, `nome`, `servicos`, `cnpj`, `cep`,
 (4, '42', '35454', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '143'),
 (5, '42', '35454', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '143'),
 (6, 'ytryutr', 'gyhtrhtr', '576r4', '19703194', 'SP', 'Rua Herculano Azevedo', '987'),
-(7, 'ytryutr', 'gyhtrhtr', '576r4', '19703194', 'SP', 'Rua Herculano Azevedo', '987');
+(7, 'ytryutr', 'gyhtrhtr', '576r4', '19703194', 'SP', 'Rua Herculano Azevedo', '987'),
+(8, 'sas', 'asas', '4656', '19703194', 'SP', 'Rua Herculano Azevedo', '195'),
+(9, 'sas', 'asas', '4656', '19703194', 'SP', 'Rua Herculano Azevedo', '195'),
+(10, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
+(11, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
+(12, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
+(13, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
+(14, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
+(15, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
+(16, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
+(17, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `comercial`
+-- Estrutura da tabela `comercial`
 --
 
 CREATE TABLE `comercial` (
-  `id_comercial` int(11) NOT NULL,
-  `nome` varchar(255) NOT NULL,
+  `id_venda` int(11) NOT NULL,
+  `comprador` varchar(255) NOT NULL,
   `descricao` varchar(255) NOT NULL,
-  `numerodopedido` varchar(255) NOT NULL,
   `numerodafatura` varchar(255) NOT NULL,
   `id_produto` varchar(255) NOT NULL,
   `nome_produto` varchar(255) NOT NULL,
@@ -73,7 +82,7 @@ CREATE TABLE `comercial` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `contas`
+-- Estrutura da tabela `contas`
 --
 
 CREATE TABLE `contas` (
@@ -86,7 +95,7 @@ CREATE TABLE `contas` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `controleestoque`
+-- Estrutura da tabela `controleestoque`
 --
 
 CREATE TABLE `controleestoque` (
@@ -101,16 +110,16 @@ CREATE TABLE `controleestoque` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Despejando dados para a tabela `controleestoque`
+-- Extraindo dados da tabela `controleestoque`
 --
 
 INSERT INTO `controleestoque` (`id_estoque`, `nomedoproduto`, `quantidade`, `preco`, `tipo`, `data`, `fornecedor`, `imagem`) VALUES
-(12, 'eueee', '1000', '4000,', 'Eletrica', '2024-05-08', 'Mateus Oggi', '5043127-a-phone-icon-in-a-round-circle-vector-gratis-vetor.jpg');
+(35, 'r3', '434', '434', '434', '2024-05-15', 'asa', '5043127-a-phone-icon-in-a-round-circle-vector-gratis-vetor.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `controlefiscal`
+-- Estrutura da tabela `controlefiscal`
 --
 
 CREATE TABLE `controlefiscal` (
@@ -124,7 +133,7 @@ CREATE TABLE `controlefiscal` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `controlefrota`
+-- Estrutura da tabela `controlefrota`
 --
 
 CREATE TABLE `controlefrota` (
@@ -132,23 +141,61 @@ CREATE TABLE `controlefrota` (
   `marca` varchar(255) NOT NULL,
   `ano_fabricado` varchar(255) NOT NULL,
   `modelo` varchar(255) NOT NULL,
-  `tipodoproduto` varchar(255) NOT NULL,
-  `imagem` longblob NOT NULL
+  `tipodeveiculo` varchar(255) NOT NULL,
+  `placaveiculo` varchar(255) NOT NULL,
+  `imagem` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Despejando dados para a tabela `controlefrota`
+-- Extraindo dados da tabela `controlefrota`
 --
 
-INSERT INTO `controlefrota` (`id_frota`, `marca`, `ano_fabricado`, `modelo`, `tipodoproduto`, `imagem`) VALUES
-(1, '3', '33', '33', '33', ''),
-(2, 'dsd', 'sdsd', 'sdsd', 'sds', ''),
-(3, 'sasas', '23214', '324', 'ds', '');
+INSERT INTO `controlefrota` (`id_frota`, `marca`, `ano_fabricado`, `modelo`, `tipodeveiculo`, `placaveiculo`, `imagem`) VALUES
+(14, 'fiat', '2000', 'celta', 'utilitario', '77t55', 'spider.webp');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuarios`
+-- Estrutura da tabela `controlepessoas`
+--
+
+CREATE TABLE `controlepessoas` (
+  `id_pessoas` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `datadenascimento` varchar(255) NOT NULL,
+  `sexo` varchar(255) NOT NULL,
+  `telefone` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `solicitacao`
+--
+
+CREATE TABLE `solicitacao` (
+  `id_soli` int(11) NOT NULL,
+  `solicitante` varchar(255) NOT NULL,
+  `responsavel` varchar(255) NOT NULL,
+  `situacao` int(255) NOT NULL,
+  `criado` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Extraindo dados da tabela `solicitacao`
+--
+
+INSERT INTO `solicitacao` (`id_soli`, `solicitante`, `responsavel`, `situacao`, `criado`) VALUES
+(0, '4534', '43', 434, '2024-05-15'),
+(0, '32', '323', 2323, '2024-05-15'),
+(0, 'ewe', 'we', 323, '2024-05-15'),
+(0, '645', '65', 64, '2024-05-15');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -176,75 +223,79 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `usuarios`
+-- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id_user`, `nome_completo`, `nome_usuario`, `datadenascimento`, `cpf`, `genero`, `phone`, `email`, `senha`, `tipo_funcionario`, `cep`, `cidade`, `rua`, `numero`, `complemento`, `hora_entrada`, `hora_saida`, `carga_horaria`, `remuneracao`, `data_contratacao`, `foto_perfil`) VALUES
-(1, 'leonardo', 'leonardo', '0000-00-00', '5646464654', 'Outro', '18997027880', 'leo@gmail.com', '123', '0', '0', '0', '0', '0', '0', '00:00:00', '00:00:00', 0, '0', '0000-00-00', 'icons8-usuário-homem-com-círculo-96.png'),
-(2, 'lcd', 'lcd', '0000-00-00', 'jhb', 'Masculino', 'kmnb', 'jkb@lkjvnr', '12', '0', '0', '0', '0', '0', '0', '00:00:00', '00:00:00', 0, '0', '0000-00-00', 'pexels-pixabay-270557.jpg'),
-(3, 'cf', 'cf', '0000-00-00', 'bihb', 'Masculino', 'bib', 'cgch@noenfe', 'gyvgu', '0', '0', '0', '0', '0', '0', '00:00:00', '00:00:00', 0, '0', '0000-00-00', 'pexels-luis-gomes-546819.jpg');
+(7, 'Mateus oliveira', 'Mateus oliveira', '0000-00-00', '448.547.538-70', 'Masculino', '(18) 99742-9620', 'Mateus@g.com', 'mo123351', '0', '0', '0', '0', '0', '0', '03:00:00', '00:00:00', 0, '0', '0000-00-00', 'Captura de tela 2024-03-06 111628.png');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices de tabela `cadastro_empresa`
+-- Índices para tabela `cadastro_empresa`
 --
 ALTER TABLE `cadastro_empresa`
   ADD PRIMARY KEY (`id_empresa`);
 
 --
--- Índices de tabela `comercial`
+-- Índices para tabela `comercial`
 --
 ALTER TABLE `comercial`
-  ADD PRIMARY KEY (`id_comercial`);
+  ADD PRIMARY KEY (`id_venda`);
 
 --
--- Índices de tabela `contas`
+-- Índices para tabela `contas`
 --
 ALTER TABLE `contas`
   ADD PRIMARY KEY (`id_conta`);
 
 --
--- Índices de tabela `controleestoque`
+-- Índices para tabela `controleestoque`
 --
 ALTER TABLE `controleestoque`
   ADD PRIMARY KEY (`id_estoque`);
 
 --
--- Índices de tabela `controlefiscal`
+-- Índices para tabela `controlefiscal`
 --
 ALTER TABLE `controlefiscal`
   ADD PRIMARY KEY (`id_fiscal`);
 
 --
--- Índices de tabela `controlefrota`
+-- Índices para tabela `controlefrota`
 --
 ALTER TABLE `controlefrota`
   ADD PRIMARY KEY (`id_frota`);
 
 --
--- Índices de tabela `usuarios`
+-- Índices para tabela `controlepessoas`
+--
+ALTER TABLE `controlepessoas`
+  ADD PRIMARY KEY (`id_pessoas`);
+
+--
+-- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `cadastro_empresa`
 --
 ALTER TABLE `cadastro_empresa`
-  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `comercial`
 --
 ALTER TABLE `comercial`
-  MODIFY `id_comercial` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `contas`
@@ -256,7 +307,7 @@ ALTER TABLE `contas`
 -- AUTO_INCREMENT de tabela `controleestoque`
 --
 ALTER TABLE `controleestoque`
-  MODIFY `id_estoque` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_estoque` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de tabela `controlefiscal`
@@ -268,13 +319,19 @@ ALTER TABLE `controlefiscal`
 -- AUTO_INCREMENT de tabela `controlefrota`
 --
 ALTER TABLE `controlefrota`
-  MODIFY `id_frota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_frota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT de tabela `controlepessoas`
+--
+ALTER TABLE `controlepessoas`
+  MODIFY `id_pessoas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
