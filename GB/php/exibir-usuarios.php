@@ -1,7 +1,7 @@
 <?php
 include_once('../config/config.php');
 include_once('../MVC/Controller/UserController.php');
-include_once('../MVC/Model/UserModel.php');
+require_once('../MVC/Model/UserModel.php');
 
 // Consulta ao banco de dados para obter todas as pessoas cadastradas
 $sql_code = $pdo->prepare("SELECT * FROM usuarios");

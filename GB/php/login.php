@@ -2,7 +2,7 @@
 
     include_once('../config/config.php');
     include_once('../MVC/Controller/UserController.php');
-    include_once('../MVC/Model/UserModel.php');
+    require_once('../MVC/Model/UserModel.php');
 
 
     if (isset($_POST['email']) && isset($_POST['senha'])) {
@@ -113,7 +113,7 @@ if ($_FILES['foto_perfil']['name']){
         if ($count > 0) {
             echo 'Esse perfil já foi cadastrado.';
         } else {
-            $userController = new userController($pdo);
+            $userController = new usuarioController($pdo);
 
             $userController->criarUser($nome_completo, $nome_usuario, $datadenascimento, $cpf, $genero, $phone, $email, $senha, $tipo_funcionario, $cep, $cidade, $rua, $numero, $complemento, $hora_entrada, $hora_saida, $carga_horaria, $remuneracao, $data_contratacao, $img_nome);
             header("Location: login.php");

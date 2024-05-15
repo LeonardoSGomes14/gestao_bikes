@@ -1,6 +1,6 @@
 <?php
     
-class userModel
+class usuarioModel
 {
     private $pdo;
 

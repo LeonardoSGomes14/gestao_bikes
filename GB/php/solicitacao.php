@@ -59,5 +59,35 @@
                     </tr>
                 </tbody>
             </table>
+
+            <!DOCTYPE html>
+<html>
+<head>
+    <title>Solicitações</title>
+</head>
+<body>
+    <h1>Lista de Solicitações</h1>
+    <a href="../../../MVC/Views/SolicitacaoViews.php">Criar Nova Solicitação</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Solicitante</th>
+            <th>Responsável</th>
+            <th>Situação</th>
+            <th>Criado</th>
+        </tr>
+        <?php foreach ($solicitacoes as $solicitacao): ?>
+            <tr>
+                <td><?= htmlspecialchars($solicitacao['id_soli']) ?></td>
+                <td><?= htmlspecialchars($solicitacao['solicitante']) ?></td>
+                <td><?= htmlspecialchars($solicitacao['responsavel']) ?></td>
+                <td><?= htmlspecialchars($solicitacao['situacao']) ?></td>
+                <td><?= htmlspecialchars($solicitacao['criado']) ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</body>
+</html>
+
         </div>
     </div>

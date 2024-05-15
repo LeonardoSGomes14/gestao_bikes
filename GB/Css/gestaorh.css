@@ -6,6 +6,58 @@ body {
   #menu {
     z-index: 2;
   }
+
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+/* Estilo dos botões */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilo dos formulários */
+form {
+  margin-bottom: 15px;
+}
+
+form input[type="text"], form input[type="email"], form input[type="date"], form input[type="number"] {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 210px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
   
   #menu-bar {
     width: 45px;
@@ -98,9 +150,19 @@ body {
     transform: translate(-60%,-30%);
   }
 
+  a {
+    text-decoration: none;
+  }
+
+  .conect {
+    text-decoration: none;
+    color: black;
+    font-weight:bolder;
+  }
+
   .comeco {
     background-color: #001e27;
-    width: 100%; 
+    width: 132%; 
     height: 180px;
     margin-left: -8px;
     margin-top: -9px;
