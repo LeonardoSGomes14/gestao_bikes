@@ -45,9 +45,38 @@ $users = $userController->listarUsers();
 </div>
 
 
-<?php
-$userController->exibirListausers();
-?>
+  <div class="search-container">
+    <input type="text" placeholder="Pesquisar...">
+    <button type="submit">Pesquisar</button>
+  </div>
+
+
+  <div class="container">
+    <div class="row header">
+      <div class="column">Modelo</div>
+      <div class="column">Solicitante</div>
+      <div class="column">Responsável</div>
+      <div class="column">Situação</div>
+      <div class="column">Criado em</div>
+    </div>
+    <div class="row">
+      <div class="column">Tarefa 1</div>
+      <div class="column">João</div>
+      <div class="column">Maria</div>
+      <div class="column">Em progresso</div>
+      <div class="column">2024-04-30</div>
+    </div>
+    <div class="row">
+      <div class="column">Tarefa 2</div>
+      <div class="column">Carlos</div>
+      <div class="column">Ana</div>
+      <div class="column">Concluído</div>
+      <div class="column">2024-04-29</div>
+    </div>
+
+  </div>
+
+
 
 <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
 
@@ -70,12 +99,12 @@ $userController->exibirListausers();
 
 
 
-          if (!isset($_SESSION["usuario"])) {
-            echo '<a class="conect" href="login.php">Conecte-se</a>';
-          } else {
-            echo '<h1 class="conect">Olá, ' . $_SESSION["usuario"] . '</h1>';
-          }
-          ?>
+if (!isset($_SESSION["usuario"])) {
+    echo '<a class="conect" href="login.php">Conecte-se</a>';
+} else {
+    echo '<h1 class="conect">Olá, ' . $_SESSION["usuario"] . '</h1>';
+}
+?>
         </a>
         <li><a href="#">Home</a></li>
         <li><a href="#">Solicitações</a></li>
