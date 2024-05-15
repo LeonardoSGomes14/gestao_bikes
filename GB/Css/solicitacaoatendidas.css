@@ -1,0 +1,20 @@
+/* Estilos para a tabela */
+.table-container {
+    margin-top: 20px; /* Espaçamento acima da tabela */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse; /* Colapsar as bordas das células */
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd; /* Borda das células */
+    padding: 8px; /* Espaçamento interno */
+    text-align: left; /* Alinhamento do texto */
+}
+
+.table th {
+    background-color: #f2f2f2; /* Cor de fundo para cabeçalho */
+}
