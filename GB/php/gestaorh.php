@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               ?>
             </a>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Solicitações</a></li>
+            <li><a href="../MVC/Views/SolicitacaoViews.php">Solicitações</a></li>
             <li><a href="#">Recibo</a></li>
         </ul>
       </nav>
