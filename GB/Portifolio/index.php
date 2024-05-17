@@ -78,12 +78,11 @@
                     <a href="../Portifolio/contato_adm.php">Página de Contato</a>
                     <a href="../Portifolio/sobre_adm.php">Sobre</a>
                     
+                    
                 </div>
             </div>
         </div>
-        <a href="#" class="confirm-link" onclick="confirmLogout()">   
-<?php
-
+        <?php
 session_start();
 
 if (!isset($_SESSION["nome_completo"])) {
@@ -92,6 +91,7 @@ if (!isset($_SESSION["nome_completo"])) {
     echo '<h1 class="conect">Olá, ' . $_SESSION["nome_completo"] . '</h1>';
 }
 ?>
+
     </section>
 
     <button class="scroll-top" onclick="scrollToTop()">
