@@ -1,20 +1,51 @@
-/* Estilos para a tabela */
-.table-container {
-    margin-top: 20px; /* Espaçamento acima da tabela */
-}
+body{
+    background-color:#d6d6d6;
+  
+  
+  }
+  
+  
+  .comeco {
+    background-color: #001e27;
+    width: 100%; 
+    height: 180px;
+    margin-left: -8px;
+    margin-top: -9px;
+    position: absolute;
+  }
+  .titulo{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    left: 370px;
+    top: 30px;
+  }
+  .dois {
+    text-align: end;
+    margin-top: 110px;
+  }
+  
+  .logo{
+    position: absolute;
+    top: -22%;
+    width: 200px;
+    top: -10px;
+  }
 
-.table {
-    width: 100%;
-    border-collapse: collapse; /* Colapsar as bordas das células */
-}
+  .retangulo {
+    width: 13rem;
+    height: 46.1rem;
+    background:#001e27;
+ 
+  }
 
-.table th,
-.table td {
-    border: 1px solid #ddd; /* Borda das células */
-    padding: 8px; /* Espaçamento interno */
-    text-align: left; /* Alinhamento do texto */
-}
-
-.table th {
-    background-color: #f2f2f2; /* Cor de fundo para cabeçalho */
-}
+  .texto-centralizado {
+    position: absolute;
+    top: 120%; 
+    left: 20%; 
+    font-weight: bold;
+    transform: translate(-50%, -50%); 
+    color: black;
+    font-size: 24px; 
+  }
