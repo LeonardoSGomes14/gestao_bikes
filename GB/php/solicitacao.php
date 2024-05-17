@@ -11,83 +11,68 @@
 <body>
 
     <div class="comeco">
-
-        <div class="retangulo" 
-       
-
-        </div>
+        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">   
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
+        <div class="retangulo"></div> 
+        
+       
+     
 
-        <div class="texto-centralizado">
-            <h2>Solicitações</h2>
-        </div>
-
-        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
-
+        <div class="texto-centralizado ">
+            <br>
+        <h1 class="div">Lista de Solicitações</h1>
+        <a href="../MVC/Views/SolicitacaoViews.php">Criar Nova Solicitação</a>
         <div class="table-container">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Modelo</th>
+                        <th>ID</th>
                         <th>Solicitante</th>
                         <th>Responsável</th>
                         <th>Situação</th>
-                        <th>Criado em</th>
+                        <th>Criado</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Modelo 1</td>
-                        <td>Solicitante 1</td>
-                        <td>Responsável 1</td>
-                        <td>Situação 1</td>
-                        <td>2024-05-13</td>
-                    </tr>
-                    <tr>
-                        <td>Modelo 2</td>
-                        <td>Solicitante 2</td>
-                        <td>Responsável 2</td>
-                        <td>Situação 2</td>
-                        <td>2024-05-14</td>
-                    </tr>
-                    <tr>
-                        <td>Modelo 3</td>
-                        <td>Solicitante 3</td>
-                        <td>Responsável 3</td>
-                        <td>Situação 3</td>
-                        <td>2024-05-15</td>
-                    </tr>
+                <?php
+                include_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
+
+                // Crie uma conexão com o banco de dados
+                $conn = new mysqli($host, $username, $password, $dbname);
+
+                // Verifique a conexão
+                if ($conn->connect_error) {
+                    die("Conexão falhou: " . $conn->connect_error);
+                }
+
+                // Consulte a tabela solicitacao
+                $sql = "SELECT id_soli, solicitante, responsavel, situacao, criado FROM solicitacao";
+                $result = $conn->query($sql);
+
+                // Verifique se há resultados
+                if ($result->num_rows > 0) {
+                    // Itere sobre os resultados e crie linhas na tabela
+                    while($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . htmlspecialchars($row['id_soli']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['solicitante']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['responsavel']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['situacao']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['criado']) . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='5'>Nenhuma solicitação encontrada</td></tr>";
+                }
+
+                // Feche a conexão com o banco de dados
+                $conn->close();
+                ?>
                 </tbody>
             </table>
+        </div>
+</div>
+    </div>
 
-            <!DOCTYPE html>
-<html>
-<head>
-    <title>Solicitações</title>
-</head>
-<body>
-    <h1>Lista de Solicitações</h1>
-    <a href="../../../MVC/Views/SolicitacaoViews.php">Criar Nova Solicitação</a>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Solicitante</th>
-            <th>Responsável</th>
-            <th>Situação</th>
-            <th>Criado</th>
-        </tr>
-        <?php foreach ($solicitacoes as $solicitacao): ?>
-            <tr>
-                <td><?= htmlspecialchars($solicitacao['id_soli']) ?></td>
-                <td><?= htmlspecialchars($solicitacao['solicitante']) ?></td>
-                <td><?= htmlspecialchars($solicitacao['responsavel']) ?></td>
-                <td><?= htmlspecialchars($solicitacao['situacao']) ?></td>
-                <td><?= htmlspecialchars($solicitacao['criado']) ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
 </body>
 </html>
-
-        </div>
-    </div>
