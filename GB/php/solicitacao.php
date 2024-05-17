@@ -28,7 +28,7 @@
     <label for="responsavel">Responsável:</label>
     <input type="text" id="responsavel" name="responsavel" required><br>
     <label for="situacao">Situação:</label>
-    <input type="number" id="situacao" name="situacao" required><br>
+    <input type="text" id="situacao" name="situacao" required><br>
     <input type="submit" value="Criar">
 </form>
 </div>
