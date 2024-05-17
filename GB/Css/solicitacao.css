@@ -170,6 +170,7 @@ border-radius: 1vh;
 .container{
   margin-left: 790px;
   margin-top: 460px;
+  
 }
 /* Estilo do formulário */
 /* Estilo do formulário */
@@ -181,15 +182,17 @@ border-radius: 1vh;
   background: linear-gradient(145deg, #232526, #414345);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
+  margin-top: -59cap;
 }
 
-.form-solicitacao h1 {
+.form-solicitacao h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 36px;
   color: #ffffff;
   text-align: center;
   margin-bottom: 30px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 
@@ -247,7 +250,45 @@ border-radius: 1vh;
 .form-solicitacao input[type="submit"]:active {
   background-color: #e64a19;
 }
-h1{
-  color: white;
+h2{
+  color: rgb(0, 0, 0);
+  margin-top: -240px;
+  position: absolute;
   
+}
+
+
+.sidebar {
+  position: absolute;
+  top: 200px; /* Ajuste para não sobrepor a .comeco */
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar button {
+  width: 175px;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #1F9EA8 ;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.sidebar button:hover {
+  background-color: yellowgreen;
+
+}
+
+
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+  position: relative;
+  top: 220px; /* Ajuste conforme necessário */
 }

@@ -10,11 +10,19 @@
 
 <body>
   
-    <div class="comeco">
-        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">   
-        <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
-        <div class="retangulo"></div> 
-        
+<div class="comeco">
+        <div class="retangulo"></div>
+        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
+        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
+    </div>
+
+    <div class="sidebar">
+        <button onclick="window.location.href='home.php'">Home</button>
+        <button onclick="window.location.href='solicitacoes.php'">Solicitações</button>
+        <button onclick="window.location.href='recibo.php'">Recibo</button>
+    </div>
+
+        </div> 
        
      
 
