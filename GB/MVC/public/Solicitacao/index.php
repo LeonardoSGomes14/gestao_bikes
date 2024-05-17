@@ -3,10 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exibir a  Solicitação</title>
+    <title>Exibir a Solicitação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #ff0000;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .message {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-
 
     <?php
     // Conexão com o banco de dados
@@ -18,7 +51,7 @@
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
+
         // Verifica se o formulário foi enviado
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Coleta os dados do formulário
@@ -37,7 +70,7 @@
             ));
             
             // Feedback para o usuário
-            echo "<p>Solicitação cadastrada com sucesso!</p>";
+            echo "<p class='message'>Solicitação cadastrada com sucesso!</p>";
         }
 
         // Verifica se a solicitação de exclusão foi feita
@@ -45,18 +78,22 @@
             $idToDelete = $_GET['delete'];
             $stmt = $pdo->prepare("DELETE FROM solicitacao WHERE id_soli = ?");
             $stmt->execute([$idToDelete]);
-            echo "<p>Solicitação excluída com sucesso!</p>";
+
+            // Verifica se a exclusão foi bem-sucedida
+            if ($stmt->rowCount() > 0) {
+                echo "<p class='message'>Solicitação excluída com sucesso!</p>";
+            } else {
+                echo "<p class='message'>Erro ao excluir a solicitação.</p>";
+            }
         }
     } catch (PDOException $e) {
         die("Erro ao conectar: " . $e->getMessage());
     }
     ?>
 
-    
-
     <!-- Exibição das solicitações cadastradas -->
     <h2>Solicitações Cadastradas</h2>
-    <table border="1">
+    <table>
         <tr>
             <th>ID</th>
             <th>Solicitante</th>
