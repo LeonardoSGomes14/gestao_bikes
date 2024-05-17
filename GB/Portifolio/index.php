@@ -66,7 +66,7 @@
                     <a href="../cadastrar_empresa.php">Controle Fiscal</a>
                     <a href="../php/gestaorh.php">Controle Pessoas</a>
                     <a href="../php/controle_frota.php">Controle Frota</a>
-                    <a href="../MVC/Views/EmpresaViews.php">Controle Empresa</a>
+                    <a href="../php/controle_empresa.php">Controle Empresa</a>
                     
                 </div>
             </div>
