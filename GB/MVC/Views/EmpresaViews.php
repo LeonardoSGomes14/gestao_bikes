@@ -7,8 +7,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-
-    <a class="volt" href="../../Portifolio/index.php ">Voltar</a>
+<div class="comeco">
+<h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
+<img class="logo" src="../../Img/bitrix-removebg-preview.png" width="300px">
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="text-cadastro">Cadastro de Empresas</div>
+     <br>
     <form action="" method="post">
         <label for="nome">Nome da Empresa:</label><br>
         <input type="text" id="nome" name="nome" required><br>
@@ -35,6 +40,11 @@
         <input type="submit" value="Cadastrar">
     </form>
 
+
+    <div class="rodape">
+
+<a class="entra" href="index.php">Voltar</a>
+</div>
     <script>
         function consultarCEP() {
             var cep = document.getElementById('cep').value;
@@ -69,7 +79,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #1f9ea8;
         }
         form {
             max-width: 400px;
@@ -109,6 +119,80 @@
         .volt:hover {
             text-decoration: underline;
         }
+        .comeco {
+            background-color: #001e27;
+            width: 100%; 
+            height: 180px;
+            margin-left: -1px;
+            margin-top: -9px;
+            position: absolute;
+        }
+        .titulo{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            position: absolute;
+            left: 370px;
+            top: 30px;
+        }
+        .logo{
+  position: absolute;
+  top: -22%;
+  width: 200px;
+  top: -10px;
+}
+.rodape{
+
+margin-top: 150px;
+background-color: #001e27; 
+padding: 40px 0; 
+text-align: center; 
+}
+
+.entra {
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 15px 40px;
+    font-size: 15px;
+    display: inline-block;
+    margin: 11px 400px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Adicionando uma transição suave para o tamanho */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .entra:hover {
+    transform: scale(1.1); /* Aumentando o tamanho em 10% ao passar o mouse */
+  }
+  .text-cadastro{
+color:black;
+font-weight: bold;
+font-size:26px;
+margin-top:-45px;
+margin-left:41%;
+font-weight: 700;
+  }
+  @media screen and (max-width: 768px) {
+  /* Oculta o texto do banner em telas menores que 768px */
+  .titulo {
+      display: none;
+  }
+  .logo {
+      margin-left:35%;
+  }
+  .rodape  {
+      margin-top:100px;
+      margin-left:-30px;
+  }
+ .entra {
+      margin-left:298px;
+ }  
+ .text-cadastro {
+    margin-left:27%;
+ }
+}
     </style>
 </body>
 </html>
