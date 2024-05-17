@@ -43,7 +43,7 @@
 
     <div class="rodape">
 
-<a class="entra" href="index.php">Voltar</a>
+<a class="entra" href="../../../GB/Portifolio/index.php">Voltar</a>
 </div>
     <script>
         function consultarCEP() {
