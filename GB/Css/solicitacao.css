@@ -157,7 +157,7 @@ a{
   width: 32vh;
   display: flex;
   margin-left: 30vh;
-  color: black;
+  color: rgb(0, 0, 0);
 text-decoration: none;
 padding: 10px;
 border: 1px solid #adadad;
@@ -166,4 +166,88 @@ border-radius: 1vh;
 }
 .div{
   margin-left: 30vh;
+}
+.container{
+  margin-left: 790px;
+  margin-top: 460px;
+}
+/* Estilo do formulário */
+/* Estilo do formulário */
+.form-solicitacao {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #232526, #414345);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
+}
+
+.form-solicitacao h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.form-solicitacao label {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Estilo dos campos de entrada */
+.form-solicitacao input[type="text"],
+.form-solicitacao input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
+}
+@keyframes borderAnimation {
+  0% { border-color: rgb(255, 100, 100); }
+  25% { border-color: rgb(100, 255, 100); }
+  50% { border-color: rgb(100, 100, 255); }
+  75% { border-color: rgb(255, 255, 100); }
+  100% { border-color: rgb(255, 100, 255); }
+}
+
+/* Estilo do botão de envio */
+.form-solicitacao input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #1f9ea7;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+/* Estilo do botão de envio ao passar o mouse */
+.form-solicitacao input[type="submit"]:hover {
+  background-color: #0f575d;
+}
+
+/* Estilo do botão de envio quando pressionado */
+.form-solicitacao input[type="submit"]:active {
+  background-color: #e64a19;
+}
+h1{
+  color: white;
+  
 }
