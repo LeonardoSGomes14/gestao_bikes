@@ -23,11 +23,11 @@
             <div class="container">
             <h2>Criar Nova Solicitação</h2>
 <form action="../MVC/public/Solicitacao/index.php?action=create" method="POST" class="form-solicitacao">
-    <label for="solicitante">Solicitante:</label>
+    <label for="solicitante">Solicitante (Não obrigatório):</label>
     <input type="text" id="solicitante" name="solicitante" required><br>
     <label for="responsavel">Responsável:</label>
     <input type="text" id="responsavel" name="responsavel" required><br>
-    <label for="situacao">Situação:</label>
+    <label for="situacao">Pedido:</label>
     <input type="text" id="situacao" name="situacao" required><br>
     <input type="submit" value="Criar">
 </form>
