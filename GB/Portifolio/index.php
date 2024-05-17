@@ -50,7 +50,7 @@
                 <div class="info">   
                     <i class='bx bxs-devices'></i>
                     <h1>Cadastros</h1>
-                        <a href="../MVC/Views/BikeViews.php">Cadastrar Produtos</a>
+                        <a href="../MVC/Views/EstoqueViews.php">Cadastrar Produtos</a>
                         <a href="../MVC/Views/EmpresaViews.php">Cadastrar Empresas</a>
                         <a href="GB/php/.php">Niveis de Acesso</a>
                         <a href="../php/gestaorh.php">Gestão de RH</a>
@@ -62,11 +62,11 @@
 
                     <h1>Controles</h1>
                 
-                    <a href="../MVC/Views/BikeViews.php">Controle Estoque</a>
+                    <a href="gerenciar-estoque.php">Controle Estoque</a>
                     <a href="../cadastrar_empresa.php">Controle Fiscal</a>
                     <a href="../php/gestaorh.php">Controle Pessoas</a>
                     <a href="../php/controle_frota.php">Controle Frota</a>
-                    <a href="../cadastrar_empresa.php">Controle Empresa</a>
+                    <a href="../MVC/Views/EmpresaViews.php">Controle Empresa</a>
                     
                 </div>
             </div>
