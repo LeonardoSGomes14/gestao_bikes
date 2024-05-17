@@ -1,20 +1,40 @@
 <?php
-require_once '/MVC/Model/EmpresaModel.php';
+require_once 'C:\xampp\htdocs\gestao_bikes\GB\MVC\Model\EmpresaModel.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $empresa = new Empresa();
-    $empresa->nome = $_POST['nome'];
-    $empresa->servicos = $_POST['servicos'];
-    $empresa->cnpj = $_POST['cnpj'];
-    $empresa->cep = $_POST['cep'];
-    $empresa->estado = $_POST['estado'];
-    $empresa->rua = $_POST['rua'];
-    $empresa->numero = $_POST['numero'];
+class empresaController
+{
+    private $empresamodel;
 
-    $empresa->cadastrar();
-}
+    public function __construct($pdo)
+    {
+        $this->empresamodel = new empresaModel($pdo);
+    }
+
+    public function criarEmpresa($nome, $servicos, $cnpj, $cep, $estado, $rua, $numero)
+    {
+        $this->empresamodel->criarEmpresa($nome, $servicos, $cnpj, $cep, $estado, $rua, $numero);
+    }
+
+    public function listarProdutos()
+    {
+        return $this->empresamodel->listarEmpresas();
+    }
+
+    public function exibirListaempresas()
+    {
+        $users = $this->empresamodel->listarEmpresas();
+        include 'C:\xampp\htdocs\gestao_bikes\GB\MVC\Views\EmpresaViews.php';
+    }
+
+    public function atualizarEmpresa($id_empresa, $nome, $servicos, $cnpj, $cep, $estado, $rua, $numero)
+    {
+        $this->empresamodel->atualizarEmpresa($id_empresa, $nome, $servicos, $cnpj, $cep, $estado, $rua, $numero);
+    }
 
     
-header("Location: ../MVC/Views/EmpresaViews.php");
-exit();
-?>
+    public function deletarEmpresa($id_empresa)
+    {
+        $this->empresamodel->deletarEmpresa($id_empresa);
+    }
+
+}
