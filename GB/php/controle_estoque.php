@@ -40,16 +40,21 @@ try {
         // Loop através dos resultados da consulta
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             echo "<tr>";
-            echo "<td>" . $row['nomedoproduto'] . "</td>";
-            echo "<td>" . $row['quantidade'] . "</td>";
-            echo "<td>" . $row['preco'] . "</td>";
-            echo "<td>" . $row['tipo'] . "</td>";
-            echo "<td>" . $row['data'] . "</td>";
-            echo "<td>" . $row['fornecedor'] . "</td>";
-            
-            echo "<td><img src='../MVC/public/Estoque/uploads/{$row['imagem']}' width='100'></td>";
-            
-         
+            echo "<form method='POST' action='atualizar_estoque.php' enctype='multipart/form-data'>";
+            echo "<td><input type='text' name='nomedoproduto' value='" . $row['nomedoproduto'] . "'></td>";
+            echo "<td><input type='number' name='quantidade' value='" . $row['quantidade'] . "'></td>";
+            echo "<td><input type='text' name='preco' value='" . $row['preco'] . "'></td>";
+            echo "<td><input type='text' name='tipo' value='" . $row['tipo'] . "'></td>";
+            echo "<td><input type='date' name='data' value='" . $row['data'] . "'></td>";
+            echo "<td><input type='text' name='fornecedor' value='" . $row['fornecedor'] . "'></td>";
+            echo "<td><input type='file' name='imagem'></td>";
+            echo "<td>
+                    <input type='hidden' name='id_estoque' value='" . $row['id_estoque'] . "'>
+                    <input type='hidden' name='imagem_atual' value='" . $row['imagem'] . "'>
+                    <input type='submit' value='Atualizar'>
+                  </td>";
+            echo "</form>";
+            echo "</tr>";
         }
 
         echo "</table>";
