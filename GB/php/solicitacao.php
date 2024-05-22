@@ -29,8 +29,8 @@
         <div class="texto-centralizado ">
           
             <div class="container">
-    <form action="../MVC/public/Solicitacao/index.php?action=create" method="POST" class="form-solicitacao">
-    <h2 class="h2">Criar Nova Solicitação</h2>
+            <h2>Criar Nova Solicitação</h2>
+<form action="../MVC/public/Solicitacao/index.php?action=create" method="POST" class="form-solicitacao">
     <label for="solicitante">Solicitante (Não obrigatório):</label>
     <input type="text" id="solicitante" name="solicitante" required><br>
     <label for="responsavel">Responsável:</label>

@@ -31,11 +31,12 @@ class SolicitacaoController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $solicitante = $_POST['solicitante'];
             $responsavel = $_POST['responsavel'];
+            $pedido = $_POST['pedido'];
             $situacao = $_POST['situacao'];
             $criado = date('Y-m-d');
 
             $solicitacaoModel = new Solicitacao($this->pdo);
-            $solicitacaoModel->create($solicitante, $responsavel, $situacao, $criado);
+            $solicitacaoModel->create($solicitante, $responsavel,$pedido, $situacao, $criado);
             header('Location: index.php');
         } else {
             include '../../../MVC/Views/SolicitacaoViews.php';

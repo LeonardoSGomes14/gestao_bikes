@@ -1,34 +1,46 @@
 <?php
-require_once 'C:\xampp\htdocs\gestao_bikes\GB\MVC\Model\EstoqueModel.php';
+require_once '../..//Model/EstoqueModel.php';
 
-class estoqueController
-{
-    private $estoquemodel;
+class ControleEstoqueController {
+    private $model;
 
-    public function __construct($pdo)
-    {
-        $this->estoquemodel = new estoqueModel($pdo);
+    public function __construct() {
+        $this->model = new ControleEstoqueModel($this->getConnection());
     }
 
-    public function criarProduto($nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem_produto)
-    {
-        $this->estoquemodel->criarProduto($nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem_produto);
+    private function getConnection() {
+        $host = 'localhost';
+        $dbname = 'bike';
+        $username = 'root';
+        $password = '';
+
+        try {
+            $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $conn;
+        } catch(PDOException $e) {
+            echo "Erro na conexão: " . $e->getMessage();
+        }
     }
 
-    public function listarProdutos()
-    {
-        return $this->estoquemodel->listarProdutos();
-    }
+    public function cadastrarProduto($dados_produto) {
+        $nome_produto = $dados_produto['nome_produto'];
+        $quantidade = $dados_produto['quantidade'];
+        $preco = $dados_produto['preco'];
+        $tipo = $dados_produto['tipo'];
+        $data = $dados_produto['data'];
+        $fornecedor = $dados_produto['fornecedor'];
+        $imagem = $_FILES['imagem']['name'];
+        $imagem_tmp = $_FILES['imagem']['tmp_name'];
 
-    public function exibirListaprodutos()
-    {
-        $users = $this->estoquemodel->listarProdutos();
-        include 'C:\xampp\htdocs\gestao_bikes\GB\MVC\Views\EstoqueViews.php';
-    }
+        move_uploaded_file($imagem_tmp, "../../public/Estoque/uploads/$imagem");
 
-    public function atualizarProduto($id_estoque, $nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem_produto)
-    {
-        $this->estoquemodel->atualizarProduto($id_estoque, $nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem_produto);
+        if($this->model->cadastrarProduto($nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem)) {
+            echo "Cadastro realizado com sucesso!";
+        } else {
+            echo "Erro ao cadastrar produto!";
+        }
     }
-
 }
+
+?>
