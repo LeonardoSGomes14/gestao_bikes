@@ -14,16 +14,16 @@
         
             <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
 
-            <!---Menu----->
+          
             <div class="dois">
                 <a class="conhecer" href="sobre.php">Quero Conhecer</a>
                 <a class="entra" href="login.php">Entrar</a>
             </div>
             </div>
-        <!---Fim---->
+     
     
     <main>
-        <!-----------------LOGO----------------->
+
 
 
         <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
