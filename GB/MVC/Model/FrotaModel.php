@@ -1,5 +1,5 @@
 <?php
-class FrotaModel
+class frotaModel
 {
     private $pdo;
 
@@ -8,13 +8,46 @@ class FrotaModel
         $this->pdo = $pdo;
     }
 
-    public function cadastrarFrota($marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_nome)
+    public function criarFrota($marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_frota)
     {
 
-        $sql = "INSERT INTO controlefrota (marca, ano_fabricado, modelo, tipodeveiculo, placaveiculo, imagem) VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO controlefrota (marca, ano_fabricado, modelo, tipodeveiculo, placaveiculo, imagem_frota) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_nome]);
+        $stmt->execute([$marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_frota]);
 
         return $stmt->rowCount();
+    }
+
+    
+    public function listarFrotas()
+    {
+        $sql = "SELECT * FROM controlefrota";    
+        $stmt = $this->pdo->query($sql);
+        return $stmt->fetchALL(PDO::FETCH_ASSOC);
+    }
+
+
+    public function
+    atualizarFrota(
+    $id_frota,
+    $marca,
+    $ano_fabricado,
+    $modelo,
+    $tipodeveiculo,
+    $placaveiculo,
+    $imagem_frota,
+    ) {
+        $sql = "UPDATE controlefrota SET marca = ?, ano_fabricado = ?, modelo = ?, tipodeveiculo = ?, placaveiculo = ?, imagem_frota = ?)
+    WHERE id_frota = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_frota, $id_frota]);
+
+    }
+ 
+    public function deletarFrota($id_frota)
+    {
+        $sql = "DELETE FROM controlefrota WHERE id_frota = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$id_frota]);
     }
 }

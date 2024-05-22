@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
   <div class="comeco">
-    <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
+  <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
 
     <div id="menu">
       <div id="menu-bar" onclick="menuOnClick()">
@@ -108,15 +108,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<td>" . $pessoa['foto_perfil'] . "</td>";
 
 
-        // Botão para deletar
-        // Botão para deletar
+       
     echo "<td>";
-    echo "<form method='post' action='deletar_usuario.php'>"; // Formulário para enviar a solicitação de deletar
-    echo "<input type='hidden' name='id_usuario' value='" . $pessoa['id_user'] . "'>"; // Envia o ID do usuário a ser deletado
-    echo "<button type='submit'>Deletar</button>"; // Botão de deletar
+    echo "<form method='post' action='deletar_usuario.php'>"; 
+    echo "<input type='hidden' name='id_usuario' value='" . $pessoa['id_user'] . "'>"; 
+    echo "<button type='submit'>Deletar</button>"; 
     echo "</form>";
     echo "<td>";
-    echo "<a href='atualizar-usuario.php?id=" . $pessoa['id_user'] . "'>Atualizar</a>";
+    echo "<a href='atualizar_usuario.php?id=" . $pessoa['id_user'] . "'>Atualizar</a>";
     echo "</td>";
     
     echo "</td>";

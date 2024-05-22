@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../Css/cadastro_empresa.css">
 <?php
 require_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
 
@@ -39,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
     <div class="top-banner">
-        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
+    <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
         <div class="texto-banner"> Sistema De Gestão ERP+controle de empresas e de pessoas </div>
         <div class="texto1">Cadastro de Empresas</div>
     </div>
