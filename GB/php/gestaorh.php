@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
   <div class="comeco">
-    <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
+  <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
 
     <div id="menu">
       <div id="menu-bar" onclick="menuOnClick()">
