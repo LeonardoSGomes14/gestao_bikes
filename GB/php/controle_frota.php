@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_vehicle'])) {
     $tipodeveiculo = $_POST['tipodeveiculo'];
     $imagem = addslashes(file_get_contents($_FILES['imagem']['tmp_name']));
 
-    $sql = "INSERT INTO frota (marca, ano_fabricado, modelo, tipodeveiculo, imagem)
+    $sql = "INSERT INTO controlefrota (marca, ano_fabricado, modelo, tipodeveiculo, imagem)
             VALUES ('$marca', '$ano_fabricado', '$modelo', '$tipodeveiculo', '$imagem')";
 
     if ($conn->query($sql) === TRUE) {
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_vehicle'])) {
     $tipodeveiculo = $_POST['tipodeveiculo'];
     $imagem = addslashes(file_get_contents($_FILES['imagem']['tmp_name']));
 
-    $sql = "UPDATE frota SET marca='$marca', ano_fabricado='$ano_fabricado', modelo='$modelo', tipodeveiculo='$tipodeveiculo', imagem='$imagem' WHERE id_frota=$id_frota";
+    $sql = "UPDATE controlefrota SET marca='$marca', ano_fabricado='$ano_fabricado', modelo='$modelo', tipodeveiculo='$tipodeveiculo', imagem='$imagem' WHERE id_frota=$id_frota";
 
     if ($conn->query($sql) === TRUE) {
         echo "Veículo atualizado com sucesso";
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_vehicle'])) {
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['delete_vehicle'])) {
     $id_frota = $_GET['id_frota'];
 
-    $sql = "DELETE FROM frota WHERE id_frota=$id_frota";
+    $sql = "DELETE FROM controlefrota WHERE id_frota=$id_frota";
 
     if ($conn->query($sql) === TRUE) {
         echo "Veículo deletado com sucesso";

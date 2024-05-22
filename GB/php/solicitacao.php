@@ -10,18 +10,26 @@
 
 <body>
   
-    <div class="comeco">
-        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">   
-        <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
-        <div class="retangulo"></div> 
-        
+<div class="comeco">
+        <div class="retangulo"></div>
+        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
+        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
+    </div>
+
+    <div class="sidebar">
+    <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
+        <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações</button>
+        <button onclick="window.location.href='../php/recibosolicitacao.php'">Recibo</button>
+    </div>
+
+        </div> 
        
      
 
         <div class="texto-centralizado ">
           
             <div class="container">
-            <h2>Criar Nova Solicitação</h2>
+      
 <form action="../MVC/public/Solicitacao/index.php?action=create" method="POST" class="form-solicitacao">
 <label for="solicitante">Solicitante:</label>
             <input type="text" id="solicitante" name="solicitante" required><br>
