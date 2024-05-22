@@ -24,14 +24,14 @@
     
     <h1>Criar Nova Solicitação</h1>
     <form action="../../MVC/public/Solicitacao/index.php?action=create" method="POST">
-        <label for="solicitante">Solicitante:</label>
-        <input type="text" id="solicitante" name="solicitante" required><br>
-        <label for="responsavel">Responsável:</label>
-        <input type="text" id="responsavel" name="responsavel" required><br>
-        <label for="situacao">Situação:</label>
-        <input type="number" id="situacao" name="situacao" required><br>
-        <input type="submit" value="Criar">
-    </form>
+            <label for="solicitante">Solicitante:</label>
+            <input type="text" id="solicitante" name="solicitante" required><br>
+            <label for="responsavel">Responsável:</label>
+            <input type="text" id="responsavel" name="responsavel" required><br>
+            <label for="pedido">Pedido:</label>
+            <input type="text" id="pedido" name="pedido" required><br>
+            <input type="submit" value="Criar">
+        </form>
     <a href="index.php">Voltar</a>
 </body>
 </html>
