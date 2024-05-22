@@ -62,11 +62,12 @@
 
                     <h1>Controles</h1>
                 
-                    <a href="gerenciar-estoque.php">Controle Estoque</a>
+                    <a href="gerenciar_estoque.php">Controle Estoque</a>
                     <a href="../cadastrar_empresa.php">Controle Fiscal</a>
-                    <a href="../php/gestaorh.php">Controle Pessoas</a>
                     <a href="../php/controle_frota.php">Controle Frota</a>
                     <a href="../php/controle_empresa.php">Controle Empresa</a>
+                    <a href="../php/solicitacao.php">Realizar solicitações</a>
+                    <a href="../php/solicitacaoatendidas.php">Solicitações atendidas</a>
                     
                 </div>
             </div>
@@ -86,11 +87,10 @@
         <?php
 session_start();
 
-if (!isset($_SESSION["nome"])) {
-    echo '<a class="conect" href="../php/login.php">Conecte-se</a>';
+if (!isset($_SESSION["nome_completo"])) {
+    echo '<a class="conect" href=" ../php/login.php ">Conecte-se</a>';
 } else {
-    echo '<h1 class="conect">Olá, ' . $_SESSION["nome"] . '</h1>';
-    echo '<a href="#" class="confirm-link" onclick="confirmLogout()">Logout</a>';
+    echo '<h1 class="conect">Olá, ' . $_SESSION["nome_completo"] . '</h1>';
 }
 ?>
 

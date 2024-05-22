@@ -1,40 +1,38 @@
 <?php
-include_once 'C:/xampp/htdocs/gestao_bikes/GB/MVC/Model/FrotaModel.php';
+require_once 'C:\xampp\htdocs\gestao_bikes\GB\MVC\Model\FrotaModel.php';
 
-$host = 'localhost';
-$dbname = 'bike';
-$username = 'root';
-$password = '';
+class frotaController
+{
+    private $frotamodel;
 
-
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    
-    if (isset($_GET['acao']) && $_GET['acao'] == 'cadastrar') {
-        $marca = $_POST['marca'];
-        $ano_fabricado = $_POST['ano_fabricado'];
-        $modelo = $_POST['modelo'];
-        $tipodeveiculo = $_POST['tipodeveiculo'];
-        $placaveiculo = $_POST['placaveiculo'];
-
-        // Processar a imagem
-        $imagem_nome = $_FILES['imagem']['name'];
-        $imagem_tmp = $_FILES['imagem']['tmp_name'];
-        $imagem_destino = 'C:/xampp/htdocs/gestao_bikes/GB/MVC/public/frota' . $imagem_nome;
-        move_uploaded_file($imagem_tmp, $imagem_destino);
-
-        $FrotaModel = new FrotaModel($pdo);
-       
-        $resultado = $FrotaModel->cadastrarFrota($marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_nome);
-       
-        if ($resultado !== 0) {
-            echo "<script>alert('Cadastro realizado com sucesso!');</script>";
-            header('Location: ../../php/index.php');
-        } else {
-            echo "Erro ao cadastrar a Frota."; 
-        }
-    } else {
-        include 'C:\xampp\htdocs\gestao_bikes\GB\MVC\Views\FrotaViews.php'; // Aqui você pode renderizar a visão de cadastro
+    public function __construct($pdo)
+    {
+        $this->frotamodel = new frotaModel($pdo);
     }
-?>
+
+    public function criarFrota($marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_frota)
+    {
+        $this->frotamodel->criarFrota($marca, $ano_fabricado, $modelo, $tipodeveiculo, $placaveiculo, $imagem_frota);
+    }
+
+    public function listarFrotas()
+    {
+        return $this->frotamodel->listarFrotas();
+    }
+
+    public function exibirListafrotas()
+    {
+        $users = $this->frotamodel->listarFrotas();
+        include 'C:\xampp\htdocs\gestao_bikes\GB\MVC\Views\FrotasViews.php';
+    }
+
+    public function atualizarFrota($id_user, $nome_completo,  $nome_usuario, $datadenascimento, $cpf, $genero, $phone, $email, $senha, $tipo_funcionario, $cep, $cidade, $rua, $numero, $complemento, $hora_entrada, $hora_saida, $carga_horaria, $remuneracao, $data_contratacao, $foto_perfil)
+    {
+        $this->frotamodel->atualizarFrota($id_user, $nome_completo, $nome_usuario, $datadenascimento, $cpf, $genero, $phone, $email, $senha, $tipo_funcionario, $cep, $cidade, $rua, $numero, $complemento, $hora_entrada, $hora_saida, $carga_horaria, $remuneracao, $data_contratacao, $foto_perfil);
+    }
+
+    public function deletarFrota($id_frota)
+    {
+        $this->frotamodel->deletarFrota($id_frota);
+    }
+}

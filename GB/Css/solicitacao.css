@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body{
   background-color:#d6d6d6;
 }
@@ -154,33 +159,37 @@ background-color: #f9f9f9;
 background-color: #f1f1f1;
 }
 a{
-width: 32vh;
-display: flex;
-margin-left: 30vh;
-color: rgb(0, 0, 0);
+  width: 32vh;
+  display: flex;
+  margin-left: 30vh;
+  color: rgb(0, 0, 0);
 text-decoration: none;
 padding: 10px;
 border: 1px solid #adadad;
 background-color: #f1f1f1;
 border-radius: 1vh;  
+margin-top: -46vh;
+margin-left: 0vh;
 }
 .div{
 margin-left: 30vh;
 }
 .container{
-margin-left: 790px;
-margin-top: 460px;
+  margin-left: 790px;
+  margin-top: 460px;
+  
 }
 /* Estilo do formulário */
 /* Estilo do formulário */
 .form-solicitacao {
-max-width: 400px;
-margin: 0 auto;
-padding: 30px;
-border-radius: 20px;
-background: linear-gradient(145deg, #232526, #414345);
-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #232526, #414345);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
+  margin-top: -59cap;
 }
 
 .form-solicitacao h1 {
@@ -216,11 +225,11 @@ color: #ffffff;
 animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
 }
 @keyframes borderAnimation {
-0% { border-color: rgb(255, 100, 100); }
-25% { border-color: rgb(100, 255, 100); }
-50% { border-color: rgb(100, 100, 255); }
-75% { border-color: rgb(255, 255, 100); }
-100% { border-color: rgb(255, 100, 255); }
+  0% { border-color: rgb(255, 100, 100); }
+  25% { border-color: rgb(100, 255, 100); }
+  50% { border-color: rgb(100, 100, 255); }
+  75% { border-color: rgb(255, 255, 100); }
+  100% { border-color: rgb(255, 100, 255); }
 }
 
 /* Estilo do botão de envio */
@@ -247,7 +256,45 @@ background-color: #0f575d;
 .form-solicitacao input[type="submit"]:active {
 background-color: #e64a19;
 }
-h1{
-color: white;
+h2{
+  color: rgb(0, 0, 0);
+  margin-top: -240px;
+  position: absolute;
+  
+}
 
+
+.sidebar {
+  position: absolute;
+  top: 200px; /* Ajuste para não sobrepor a .comeco */
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar button {
+  width: 175px;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #1F9EA8 ;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.sidebar button:hover {
+  background-color: yellowgreen;
+
+}
+
+
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+  position: relative;
+  top: 220px; /* Ajuste conforme necessário */
 }
