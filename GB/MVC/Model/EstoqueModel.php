@@ -1,48 +1,29 @@
-    <?php
-    
-    class EstoqueModel
-{
-    private $pdo;
+<?php
+class ControleEstoqueModel {
+    private $conn;
 
-    public function __construct($pdo)
-    {
-        $this->pdo = $pdo;
+    public function __construct($conn) {
+        $this->conn = $conn;
     }
 
-    public function  criarProduto($nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem_produto)
-    {
-        $sql = "INSERT INTO controleestoque (nomedoproduto, quantidade, preco, tipo, data, fornecedor, imagem_produto)
-    VALUES (?, ?, ?, ?, ?, ?, ?)";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem_produto]);
+    public function cadastrarProduto($nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem) {
+        try {
+            $stmt = $this->conn->prepare("INSERT INTO controleestoque (nomedoproduto, quantidade, preco, tipo, data, fornecedor, imagem) VALUES (:nome_produto, :quantidade, :preco, :tipo, :data, :fornecedor, :imagem)");
+
+            $stmt->bindParam(':nome_produto', $nome_produto);
+            $stmt->bindParam(':quantidade', $quantidade);
+            $stmt->bindParam(':preco', $preco);
+            $stmt->bindParam(':tipo', $tipo);
+            $stmt->bindParam(':data', $data);
+            $stmt->bindParam(':fornecedor', $fornecedor);
+            $stmt->bindParam(':imagem', $imagem);
+
+            $stmt->execute();
+
+            return true;
+        } catch(PDOException $e) {
+            return false;
+        }
     }
-
-
-
-    public function listarProdutos()
-    {
-        $sql = "SELECT * FROM controleestoque";    
-        $stmt = $this->pdo->query($sql);
-        return $stmt->fetchALL(PDO::FETCH_ASSOC);
-    }
-
-
-    public function
-    atualizarProduto(
-    $id_estoque,
-    $nome_produto,
-    $quantidade,
-    $preco, 
-    $tipo,
-    $data,
-    $fornecedor,
-    $imagem_produto
-    ) {
-        $sql = "UPDATE controleestoque SET nome_produto = ?, quantidade = ?, preco = ?, tipo = ?, data = ?, fornecedor = ?, imagem_produto = ?)
-    WHERE id_estoque = ?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor,  $imagem_produto, $id_estoque]);
-    }
-
 }
 ?>
