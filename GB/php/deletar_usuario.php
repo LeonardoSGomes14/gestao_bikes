@@ -46,4 +46,4 @@ if (isset($_POST['id_usuario'])) {
 
 // Fecha a conexão MySQLi
 $mysqli->close();
-?>
+

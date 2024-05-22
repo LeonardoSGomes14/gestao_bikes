@@ -3,7 +3,7 @@ $userInput = $_POST["userInput"];
 
 // Associative array mapping user questions to bot responses
 $responses = array(
-    "ola" => "Bem-vindo ao Gestão de Bike! Sua plataforma dedicada a facilitar e otimizar a gestão de bicicletas. Seja você um entusiasta, um profissional da área ou uma empresa, estamos aqui para simplificar o controle, manutenção e logística das suas bicicletas. Prepare-se para uma jornada mais eficiente e sustentável sobre duas rodas",
+    "ola" => "Bem-vindo ao Gestão de Empresas Bitrix! Sua plataforma dedicada a facilitar e otimizar a gestão de bicicletas. Seja você um entusiasta, um profissional da área ou uma empresa, estamos aqui para simplificar o controle, manutenção e logística das suas bicicletas. Prepare-se para uma jornada mais eficiente e sustentável sobre duas rodas",
     "como voce esta?" => "Estou bem, obrigado por perguntar!",
     "qual o seu nome?" => "Meu nome é ChatGPT. Eu sou um assistente virtual.",
     "quem te criou?" => "Fui criado pela OpenAI.",
@@ -17,10 +17,10 @@ $responses = array(
 );
 
 // Check if the user's input matches any key in the responses array
-$botResponse = isset($responses[$userInput]) ? $responses[$userInput] : "Desculpa. N entendi";
+$botResponse = isset($responses[$userInput]) ? $responses[$userInput] : "Desculpa. Não entendi";
 
 // Simulate some delay for a more natural conversation
 usleep(1000000);
 
 echo $botResponse;
-?>
+

@@ -50,7 +50,7 @@
                 <div class="info">   
                     <i class='bx bxs-devices'></i>
                     <h1>Cadastros</h1>
-                        <a href="../MVC/Views/BikeViews.php">Cadastrar Produtos</a>
+                        <a href="../MVC/Views/EstoqueViews.php">Cadastrar Produtos</a>
                         <a href="../MVC/Views/EmpresaViews.php">Cadastrar Empresas</a>
                         <a href="GB/php/.php">Niveis de Acesso</a>
                         <a href="../php/gestaorh.php">Gestão de RH</a>
@@ -62,11 +62,12 @@
 
                     <h1>Controles</h1>
                 
-                    <a href="../MVC/Views/BikeViews.php">Controle Estoque</a>
+                    <a href="gerenciar_estoque.php">Controle Estoque</a>
                     <a href="../cadastrar_empresa.php">Controle Fiscal</a>
-                    <a href="../php/gestaorh.php">Controle Pessoas</a>
                     <a href="../php/controle_frota.php">Controle Frota</a>
-                    <a href="../cadastrar_empresa.php">Controle Empresa</a>
+                    <a href="../php/controle_empresa.php">Controle Empresa</a>
+                    <a href="../php/solicitacao.php">Realizar solicitações</a>
+                    <a href="../php/solicitacaoatendidas.php">Solicitações atendidas</a>
                     
                 </div>
             </div>
@@ -79,20 +80,20 @@
                     <a href="../Portifolio/contato_adm.php">Página de Contato</a>
                     <a href="../Portifolio/sobre_adm.php">Sobre</a>
                     
+                    
                 </div>
             </div>
         </div>
-        <a href="#" class="confirm-link" onclick="confirmLogout()">   
-<?php
-
+        <?php
 session_start();
 
-if (!isset($_SESSION["nome"])) {
+if (!isset($_SESSION["nome_completo"])) {
     echo '<a class="conect" href=" ../php/login.php ">Conecte-se</a>';
 } else {
-    echo '<h1 class="conect">Olá, ' . $_SESSION["nome"] . '</h1>';
+    echo '<h1 class="conect">Olá, ' . $_SESSION["nome_completo"] . '</h1>';
 }
 ?>
+
     </section>
 
     <button class="scroll-top" onclick="scrollToTop()">
