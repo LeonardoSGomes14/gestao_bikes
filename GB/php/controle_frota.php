@@ -1,98 +1,169 @@
 <?php
+// Conexão com o banco de dados
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "bike";
 
-require_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
+$conn = new mysqli($servername, $username, $password, $dbname);
 
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
 
-// Classe Frota
-class Frota {
-    // propriedades e métodos aqui...
-    public $marca;
-    public $anodefabricacao;
-    public $modelo;
-    public $tipodeveiculo;
-    public $placadoveiculo;
-    public $imagem_frota;
-    
+// Função para adicionar veículo
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_vehicle'])) {
+    $marca = $_POST['marca'];
+    $ano_fabricado = $_POST['ano_fabricado'];
+    $modelo = $_POST['modelo'];
+    $tipodeveiculo = $_POST['tipodeveiculo'];
+    $imagem = addslashes(file_get_contents($_FILES['imagem']['tmp_name']));
 
-    // Método para cadastrar a frota
-    public function cadastrar() {
-        global $pdo;
+    $sql = "INSERT INTO frota (marca, ano_fabricado, modelo, tipodeveiculo, imagem)
+            VALUES ('$marca', '$ano_fabricado', '$modelo', '$tipodeveiculo', '$imagem')";
 
-        try {
-            // Prepara a consulta SQL
-            $stmt = $pdo->prepare("INSERT INTO controlefrota (marca, anodefabricacao, modelo, tipodeveiculo, placadoveiculo, imagem_frota) VALUES (?, ?, ?, ?, ?, ?, ?)");
-
-            // Executa a consulta com os valores dos parâmetros
-            $stmt->execute([$this->marca, $this->anodefabricacao, $this->modelo, $this->tipodeveiculo, $this->placadoveiculo, $this->imagem_frota]);
-
-            echo "Frota cadastrada com sucesso!";
-        } catch (PDOException $e) {
-            echo "Erro ao cadastrar frota: " . $e->getMessage();
-        }
+    if ($conn->query($sql) === TRUE) {
+        echo "Novo veículo adicionado com sucesso";
+    } else {
+        echo "Erro: " . $sql . "<br>" . $conn->error;
     }
 }
 
-// Recebe os dados do formulário
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // cria uma nova instância de Frota
-    $frota = new Frota();
-    // Define as propriedades da frota com os dados do formulário
-    $frota->marca = $_POST['marca'];
-    $frota->anodefabricacao = $_POST['anodefabricacao'];
-    $frota->modelo = $_POST['modelo'];
-    $frota->tipodeveiculo = $_POST['tipodeveiculo'];
-    $frota->placadoveiculo = $_POST['placadoveiculo'];
-    $frota->imagem_frota = $_POST['imagem_frota '];
-    
+// Função para atualizar veículo
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_vehicle'])) {
+    $id_frota = $_POST['id_frota'];
+    $marca = $_POST['marca'];
+    $ano_fabricado = $_POST['ano_fabricado'];
+    $modelo = $_POST['modelo'];
+    $tipodeveiculo = $_POST['tipodeveiculo'];
+    $imagem = addslashes(file_get_contents($_FILES['imagem']['tmp_name']));
 
-    // Chama o método para cadastrar a frota
-    $frota->cadastrar();
+    $sql = "UPDATE frota SET marca='$marca', ano_fabricado='$ano_fabricado', modelo='$modelo', tipodeveiculo='$tipodeveiculo', imagem='$imagem' WHERE id_frota=$id_frota";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Veículo atualizado com sucesso";
+    } else {
+        echo "Erro: " . $sql . "<br>" . $conn->error;
+    }
 }
 
-// Restante do código HTML e JavaScript...
+// Função para deletar veículo
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['delete_vehicle'])) {
+    $id_frota = $_GET['id_frota'];
 
+    $sql = "DELETE FROM frota WHERE id_frota=$id_frota";
 
+    if ($conn->query($sql) === TRUE) {
+        echo "Veículo deletado com sucesso";
+    } else {
+        echo "Erro: " . $sql . "<br>" . $conn->error;
+    }
+}
 
+// Função para pegar dados do veículo a ser editado
+$vehicle_to_edit = null;
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['edit_vehicle'])) {
+    $id_frota = $_GET['id_frota'];
+    $sql = "SELECT * FROM frota WHERE id_frota=$id_frota";
+    $result = $conn->query($sql);
+    $vehicle_to_edit = $result->fetch_assoc();
+}
 ?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de Frota de Bicicletas</title>
-        
+    <link rel="stylesheet" href="../Css/controlefrota.css">
+    <title>GESTÃO DE BIKES</title>
 </head>
+
 <body>
+    <div class="comeco">
+        <div class="retangulo"></div>
+        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
+        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
+    </div>
+
+  
+
+    <div class="content">
+        <div class="container">
+            <h1>Controle de Frota</h1>
+            <div class="form-veiculos-container">
+                <div class="form-container">
+                    <h2>Adicionar Veículo</h2>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="add_vehicle" value="1">
+                        <label for="marca">Marca:</label>
+                        <input type="text" id="marca" name="marca" required><br>
+                        <label for="ano_fabricado">Ano Fabricado:</label>
+                        <input type="text" id="ano_fabricado" name="ano_fabricado" required><br>
+                        <label for="modelo">Modelo:</label>
+                        <input type="text" id="modelo" name="modelo" required><br>
+                        <label for="tipodeveiculo">Tipo do Produto:</label>
+                        <input type="text" id="tipodeveiculo" name="tipodeveiculo" required><br>
+                        <label for="imagem">Imagem:</label>
+                        <input type="file" id="imagem" name="imagem" required><br>
+                        <input type="submit" value="Adicionar Veículo">
+                    </form>
+
+                    <?php if ($vehicle_to_edit): ?>
+                        <h2>Editar Veículo</h2>
+                        <form method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="edit_vehicle" value="1">
+                            <input type="hidden" name="id_frota" value="<?php echo $vehicle_to_edit['id_frota']; ?>">
+                            <label for="marca">Marca:</label>
+                            <input type="text" id="marca" name="marca" value="<?php echo $vehicle_to_edit['marca']; ?>" required><br>
+                            <label for="ano_fabricado">Ano Fabricado:</label>
+                            <input type="text" id="ano_fabricado" name="ano_fabricado" value="<?php echo $vehicle_to_edit['ano_fabricado']; ?>" required><br>
+                            <label for="modelo">Modelo:</label>
+                            <input type="text" id="modelo" name="modelo" value="<?php echo $vehicle_to_edit['modelo']; ?>" required><br>
+                            <label for="tipodeveiculo">Tipo do Produto:</label>
+                            <input type="text" id="tipodeveiculo" name="tipodeveiculo" value="<?php echo $vehicle_to_edit['tipodeveiculo']; ?>" required><br>
+                            <label for="imagem">Imagem:</label>
+                            <input type="file" id="imagem" name="imagem" required><br>
+                            <input type="submit" value="Atualizar Veículo">
+                        </form>
+                    <?php endif; ?>
+                </div>
+
+                <div class="veiculos-container">
+                    <h2>Veículos na Frota</h2>
+                    <?php
+                    $sql = "SELECT * FROM controlefrota";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            echo "<div class='veiculo'>";
+                            echo "<div class='info'>";
+                            echo "<p>ID: " . $row["id_frota"] . "</p>";
+                            echo "<p>Marca: " . $row["marca"] . "</p>";
+                            echo "<p>Ano: " . $row["ano_fabricado"] . "</p>";
+                            echo "<p>Modelo: " . $row["modelo"] . "</p>";
+                            echo "<p>Tipo: " . $row["tipodeveiculo"] . "</p>";
+                            echo "</div>";
+                            echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['imagem'] ).'"/>';
+                            echo '<div class="actions">';
+                            echo '<a href="frota.php?edit_vehicle=1&id_frota='.$row["id_frota"].'">Editar</a> | <a href="frota.php?delete_vehicle=1&id_frota='.$row["id_frota"].'">Deletar</a>';
+                            echo '</div>';
+                            echo "</div>";
+                        }
+                    } else {
+                        echo "0 resultados";
+                    }
+                    $conn->close();
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
     
-    <header>
-        <h1>Controle de Frota de Bicicletas</h1>
-    </header>
-    <h3>Cadastro de Frota</h3>
-    <div class="background-container">
-        <img class="logo" src="../../Img/bitrix-removebg-preview.png" width="210px">
-        <form  method="POST" enctype="multipart/form-data">
-            <label for="marca">Marca:</label>
-            <input type="text" id="marca" name="marca" required>
-
-            <label for="anodefabricacao">Ano de Fabricação:</label>
-            <input type="text" id="anodefabricacao" name="anodefabricacao" required>
-
-            <label for="modelo">Modelo:</label>
-            <input type="text" id="modelo" name="modelo" required>
-
-            <label for="tipodeveiculo">Tipo de Veículo:</label>
-            <input type="text" id="tipodeveiculo" name="tipodeveiculo" required>
-
-            <label for="placadoveiculo">Placa do Veículo:</label>
-            <input type="text" id="placadoveiculo" name="placadoveiculo" required>
-
-            <label for="imagem_frota">Imagem:</label>
-            <input type="file" id="imagem_frota" name="imagem_frota" accept="image_frota/*" required>
-
-            <input type="submit" value="Cadastrar">
-        </form>
-    
-    <a class="volt" href="../../Portifolio/index.php">Voltar</a>
-   
 </body>
+
 </html>
