@@ -24,18 +24,6 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
         var_dump($_SESSION['permissao']);
         $tipo_funcionario = $pdo['tipo_funcionario'];
 
-
-        switch ($tipo_funcionario) {
-            case 0:
-                header("Location: ../Portifolio/");
-                break;
-            case 1:
-                header("Location: adm.php");
-                break;
-            default:
-                echo "USUÁRIO SEM PERMISSÃO, FAVOR CONTATAR O ADMIN!!";
-                break;
-        }
     } else {
         echo '
             <script>

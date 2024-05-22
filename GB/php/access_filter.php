@@ -27,7 +27,6 @@ function FiltroNav()
                 <a href="../cadastrar_empresa.php">Controle Fiscal</a>
                 <a href="../php/controle_frota.php">Controle Frota</a>
                 <a href="../php/controle_empresa.php">Controle Empresa</a>
-                <a href="../php/solicitacao.php">Realizar solicitações</a>
                 <a href="../php/solicitacaoatendidas.php">Solicitações atendidas</a>
                 
             </div>
@@ -61,7 +60,6 @@ HTML;
                 <i class='bx bxs-devices'></i>
                 <h1>Cadastros</h1>
                     <a href="../MVC/Views/EstoqueViews.php">Cadastrar Produtos</a>
-                    <a href="../php/gestaorh.php">Gestão de RH</a>
             </div>
         </div>
         <div class="card">
@@ -73,6 +71,8 @@ HTML;
                 <a href="gerenciar_estoque.php">Controle Estoque</a>
                 <a href="../cadastrar_empresa.php">Controle Fiscal</a>
                 <a href="../php/controle_frota.php">Controle Frota</a>
+                <a href="../php/solicitacao.php">Realizar solicitações</a>             
+
                 
     </div>
         </div>
@@ -104,9 +104,6 @@ HTML;
                 <i class='bx bxs-devices'></i>
                 <h1>Cadastros</h1>
                     <a href="../MVC/Views/EstoqueViews.php">Cadastrar Produtos</a>
-                    <a href="../MVC/Views/EmpresaViews.php">Cadastrar Empresas</a>
-                    <a href="GB/php/.php">Niveis de Acesso</a>
-                    <a href="../php/gestaorh.php">Gestão de RH</a>
             </div>
         </div>
         <div class="card">
@@ -114,14 +111,9 @@ HTML;
                 <i class='bx bx-code-alt'></i>
 
                 <h1>Controles</h1>
-            
                 <a href="gerenciar_estoque.php">Controle Estoque</a>
-                <a href="../cadastrar_empresa.php">Controle Fiscal</a>
-                <a href="../php/controle_frota.php">Controle Frota</a>
-                <a href="../php/controle_empresa.php">Controle Empresa</a>
-                <a href="../php/solicitacao.php">Realizar solicitações</a>
-                <a href="../php/solicitacaoatendidas.php">Solicitações atendidas</a>
-                
+                <a href="../cadastrar_empresa.php">Controle Fiscal</a>   
+                <a href="../php/solicitacao.php">Realizar solicitações</a>                          
             </div>
         </div>
         <div class="card">
@@ -150,9 +142,6 @@ HTML;
             <div class="info">   
                 <i class='bx bxs-devices'></i>
                 <h1>Cadastros</h1>
-                    <a href="../MVC/Views/EstoqueViews.php">Cadastrar Produtos</a>
-                    <a href="../MVC/Views/EmpresaViews.php">Cadastrar Empresas</a>
-                    <a href="GB/php/.php">Niveis de Acesso</a>
                     <a href="../php/gestaorh.php">Gestão de RH</a>
             </div>
         </div>
@@ -161,14 +150,7 @@ HTML;
                 <i class='bx bx-code-alt'></i>
 
                 <h1>Controles</h1>
-            
-                <a href="gerenciar_estoque.php">Controle Estoque</a>
-                <a href="../cadastrar_empresa.php">Controle Fiscal</a>
-                <a href="../php/controle_frota.php">Controle Frota</a>
-                <a href="../php/controle_empresa.php">Controle Empresa</a>
-                <a href="../php/solicitacao.php">Realizar solicitações</a>
-                <a href="../php/solicitacaoatendidas.php">Solicitações atendidas</a>
-                
+                <a href="../php/solicitacao.php">Realizar solicitações</a>             
             </div>
         </div>
         <div class="card">
@@ -193,27 +175,12 @@ HTML;
         $tf5 = <<<'HTML'
         <div class="feature-cards">
                 <div class="card">
-                    <div class="info">   
-                        <i class='bx bxs-devices'></i>
-                        <h1>Cadastros</h1>
-                            <a href="../MVC/Views/EstoqueViews.php">Cadastrar Produtos</a>
-                            <a href="../MVC/Views/EmpresaViews.php">Cadastrar Empresas</a>
-                            <a href="GB/php/.php">Niveis de Acesso</a>
-                            <a href="../php/gestaorh.php">Gestão de RH</a>
-                    </div>
-                </div>
-                <div class="card">
                     <div class="info">
                         <i class='bx bx-code-alt'></i>
         
                         <h1>Controles</h1>
                     
-                        <a href="gerenciar_estoque.php">Controle Estoque</a>
-                        <a href="../cadastrar_empresa.php">Controle Fiscal</a>
-                        <a href="../php/controle_frota.php">Controle Frota</a>
-                        <a href="../php/controle_empresa.php">Controle Empresa</a>
                         <a href="../php/solicitacao.php">Realizar solicitações</a>
-                        <a href="../php/solicitacaoatendidas.php">Solicitações atendidas</a>
                         
                     </div>
                 </div>
