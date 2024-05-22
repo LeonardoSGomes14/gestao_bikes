@@ -55,22 +55,28 @@
         // Verifica se o formulário foi enviado
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Coleta os dados do formulário
-            $solicitante = $_POST['solicitante'];
-            $responsavel = $_POST['responsavel'];
-            $situacao = $_POST['situacao'];
-            $criado = date('Y-m-d');
+            if (isset($_POST['solicitante']) && isset($_POST['responsavel']) && isset($_POST['pedido']) && isset($_POST['situacao'])) {
+                $solicitante = $_POST['solicitante'];
+                $responsavel = $_POST['responsavel'];
+                $pedido = $_POST['pedido'];
+                $situacao = $_POST['situacao'];
+                $criado = date('Y-m-d');
 
-            // Prepara e executa a inserção no banco de dados
-            $stmt = $pdo->prepare("INSERT INTO solicitacao (solicitante, responsavel, situacao, criado) VALUES (:solicitante, :responsavel, :situacao, :criado)");
-            $stmt->execute(array(
-                ':solicitante' => $solicitante,
-                ':responsavel' => $responsavel,
-                ':situacao' => $situacao,
-                ':criado' => $criado
-            ));
-            
-            // Feedback para o usuário
-            echo "<p class='message'>Solicitação cadastrada com sucesso!</p>";
+                // Prepara e executa a inserção no banco de dados
+                $stmt = $pdo->prepare("INSERT INTO solicitacao (solicitante, responsavel, pedido, situacao, criado) VALUES (:solicitante, :responsavel, :pedido, :situacao, :criado)");
+                $stmt->execute(array(
+                    ':solicitante' => $solicitante,
+                    ':responsavel' => $responsavel,
+                    ':pedido' => $pedido,
+                    ':situacao' => $situacao,
+                    ':criado' => $criado
+                ));
+                
+                // Feedback para o usuário
+                echo "<p class='message'>Solicitação cadastrada com sucesso!</p>";
+            } else {
+                echo "<p class='message'>Por favor, preencha todos os campos.</p>";
+            }
         }
 
         // Verifica se a solicitação de exclusão foi feita
@@ -98,6 +104,7 @@
             <th>ID</th>
             <th>Solicitante</th>
             <th>Responsável</th>
+            <th>Pedido</th>
             <th>Situação</th>
             <th>Criado</th>
             <th>Ações</th>
@@ -110,6 +117,7 @@
             echo "<td>".$row['id_soli']."</td>";
             echo "<td>".$row['solicitante']."</td>";
             echo "<td>".$row['responsavel']."</td>";
+            echo "<td>".$row['pedido']."</td>";
             echo "<td>".$row['situacao']."</td>";
             echo "<td>".$row['criado']."</td>";
             echo "<td><a href='?delete=".$row['id_soli']."'>Excluir</a></td>";

@@ -13,6 +13,7 @@ class Solicitacao {
                 id_soli INT(11) AUTO_INCREMENT PRIMARY KEY,
                 solicitante VARCHAR(255) NOT NULL,
                 responsavel VARCHAR(255) NOT NULL,
+                pedido longtext,
                 situacao INT(11) NOT NULL,
                 criado DATE NOT NULL
             );
@@ -25,14 +26,15 @@ class Solicitacao {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function create($solicitante, $responsavel, $situacao, $criado) {
+    public function create($solicitante, $responsavel,$pedido, $situacao, $criado) {
         $stmt = $this->pdo->prepare("
-            INSERT INTO solicitacao (solicitante, responsavel, situacao, criado) 
+            INSERT INTO solicitacao (solicitante, responsavel, pedido,situacao, criado) 
             VALUES (:solicitante, :responsavel, :situacao, :criado)
         ");
         $stmt->execute([
             ':solicitante' => $solicitante,
             ':responsavel' => $responsavel,
+            ':pedido' => $pedido,
             ':situacao' => $situacao,
             ':criado' => $criado,
         ]);

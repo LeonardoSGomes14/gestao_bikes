@@ -16,9 +16,9 @@
     </div>
 
     <div class="sidebar">
-        <button onclick="window.location.href='home.php'">Home</button>
-        <button onclick="window.location.href='solicitacoes.php'">Solicitações</button>
-        <button onclick="window.location.href='recibo.php'">Recibo</button>
+    <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
+        <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações</button>
+        <button onclick="window.location.href='../php/recibosolicitacao.php'">Recibo</button>
     </div>
 
     <div class="main-content">

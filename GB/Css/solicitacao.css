@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body{
     background-color:#d6d6d6;
   }
@@ -63,7 +68,7 @@ body{
 
   .texto-centralizado {
     position: absolute;
-    top: 120%; 
+    top: 100%; 
     left: 20%; 
     font-weight: bold;
     transform: translate(-50%, -50%); 
@@ -153,8 +158,8 @@ body{
 .table tbody tr:hover {
   background-color: #f1f1f1;
 }
-a{
-  width: 32vh;
+.a{
+  width: 15vh;
   display: flex;
   margin-left: 30vh;
   color: rgb(0, 0, 0);
@@ -163,6 +168,8 @@ padding: 10px;
 border: 1px solid #adadad;
 background-color: #f1f1f1;
 border-radius: 1vh;  
+margin-top: -46vh;
+margin-left: 0vh;
 }
 .div{
   margin-left: 30vh;
@@ -170,19 +177,22 @@ border-radius: 1vh;
 .container{
   margin-left: 790px;
   margin-top: 460px;
-  
+  justify-content: center;
+
 }
 /* Estilo do formulário */
 /* Estilo do formulário */
 .form-solicitacao {
-  max-width: 400px;
+  max-width: 350px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 25px;
   border-radius: 20px;
   background: linear-gradient(145deg, #232526, #414345);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
-  margin-top: -59cap;
+  margin-top: -137vh;
+  align-items:center;
+  justify-content: center;
 }
 
 .form-solicitacao h2 {
@@ -219,7 +229,7 @@ border-radius: 1vh;
   animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
 }
 @keyframes borderAnimation {
-  0% { border-color: rgb(255, 100, 100); }
+  0% { border-color: rgb(113, 100, 255); }
   25% { border-color: rgb(100, 255, 100); }
   50% { border-color: rgb(100, 100, 255); }
   75% { border-color: rgb(255, 255, 100); }
@@ -250,13 +260,6 @@ border-radius: 1vh;
 .form-solicitacao input[type="submit"]:active {
   background-color: #e64a19;
 }
-h2{
-  color: rgb(0, 0, 0);
-  margin-top: -240px;
-  position: absolute;
-  
-}
-
 
 .sidebar {
   position: absolute;
@@ -290,5 +293,4 @@ h2{
   margin-left: 220px;
   padding: 20px;
   position: relative;
-  top: 220px; /* Ajuste conforme necessário */
 }
