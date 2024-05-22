@@ -126,4 +126,16 @@ body{
 .table tbody td:last-child {
     font-weight: bold;
 }
+.div{
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: -50vh;
+  margin-left: 30vh;
+  color: black; 
+padding: 10px;
+border: 1px solid #adadad;
+background-color: #f1f1f1;
+border-radius: 1vh; 
+}
 
