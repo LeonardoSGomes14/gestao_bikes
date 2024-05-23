@@ -38,7 +38,7 @@ if(isset($_GET['id'])) {
 </head>
 <body>
     <header>
-        <img class="logo" src="../Img/bitrix-removebg-preview.png" alt="Logo">
+    <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
         <h1>Atualizar Usuário</h1>
     </header>
     

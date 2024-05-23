@@ -59,4 +59,4 @@ try {
 } catch (PDOException $e) {
     die("Erro ao executar a consulta: " . $e->getMessage());
 }
-?>
+

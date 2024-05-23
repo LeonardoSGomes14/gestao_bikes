@@ -25,13 +25,15 @@
         margin-top: 5%;
         font-weight: bold; /* Define a fonte como negrito */
         font-size: 18px;
+        
     }
 
     form {
         background-color: white;
         padding: 20px; /* do crud*/
-        width: 250px;
+        width: 350px;
         margin-top: 30%;
+        border-radius: 15px;
     }
 
    .footer {
@@ -71,7 +73,7 @@
         color: white;
         margin-top: 70px;
     }
-    .cadastro-img img {}
+  
 
     .barra {
         background-color: white;
@@ -166,3 +168,39 @@
     margin-top:-30px;
 }
 }
+
+.retangulo {
+    width: 13rem;
+    height: 46.1rem;
+    background: #001e27;
+    position: absolute;
+    top: 110px;
+    left: 0;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 200px; /* Ajuste para não sobrepor a .comeco */
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar button {
+    width: 175px;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #1F9EA8 ;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  .sidebar button:hover {
+    background-color: yellowgreen;
+  
+  }
