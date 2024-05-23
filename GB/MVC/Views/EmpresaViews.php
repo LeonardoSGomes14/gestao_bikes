@@ -11,7 +11,12 @@
 <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
 <img class="logo" src="../../Img/bitrix-removebg-preview.png" width="300px">
       </div>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="retangulo"></div>
+    <div class="sidebar">
+        <button onclick="window.location.href='../../portifolio/index.php'">Home</button>
+        <button onclick="window.location.href='../../php/listar_empresas.php'">Empresas Cadastradas</button>
+        
+    </div>
       <div class="text-cadastro">Cadastro de Empresas</div>
      <br>
     <form action="" method="post">
@@ -83,7 +88,7 @@
         }
         form {
             max-width: 400px;
-            margin: 20px auto;
+            margin: 170px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -102,6 +107,16 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        
+.retangulo {
+    width: 13rem;
+    height: 66.1rem;
+    background: #001e27;
+    position: absolute;
+    top: 110px;
+    left: 0;
+  }
+
         button[type="button"], button[type="submit"] {
             background-color: #007bff;
             color: #fff;
@@ -133,13 +148,13 @@
             font-size: 15px;
             position: absolute;
             left: 370px;
-            top: 30px;
+            top: 80px;
         }
         .logo{
   position: absolute;
   top: -22%;
-  width: 200px;
-  top: -10px;
+  width: 170px;
+  top: 27px;
 }
 .rodape{
 
@@ -193,6 +208,33 @@ font-weight: 700;
     margin-left:27%;
  }
 }
+.sidebar {
+    position: absolute;
+    top: 200px; /* Ajuste para não sobrepor a .comeco */
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar button {
+    width: 175px;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #1F9EA8 ;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  .sidebar button:hover {
+    background-color: yellowgreen;
+  
+  }
+
     </style>
 </body>
 </html>
