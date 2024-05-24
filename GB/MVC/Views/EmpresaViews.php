@@ -11,14 +11,8 @@
 <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
 <img class="logo" src="../../Img/bitrix-removebg-preview.png" width="300px">
       </div>
-      <div class="retangulo"></div>
-    <div class="sidebar">
-        <button onclick="window.location.href='../../portifolio/index.php'">Home</button>
-        <button onclick="window.location.href='../../php/listar_empresas.php'">Empresas Cadastradas</button>
-        
-    </div>
-      <div class="text-cadastro">Cadastro de Empresas</div>
      <br>
+     <br><br><br><br><br>
     <form action="" method="post">
         <label for="nome">Nome da Empresa:</label><br>
         <input type="text" id="nome" name="nome" required><br>
@@ -50,6 +44,13 @@
 
 <a class="entra" href="../../../GB/Portifolio/index.php">Voltar</a>
 </div>
+<div class="retangulo"></div>
+    <div class="sidebar">
+        <button onclick="window.location.href='../../portifolio/index.php'">Home</button>
+        <button onclick="window.location.href='../../php/listar_empresas.php'">Empresas Cadastradas</button>
+        
+    </div>
+<div class="text-cadastro">Cadastro de Empresas</div>
     <script>
         function consultarCEP() {
             var cep = document.getElementById('cep').value;
@@ -110,10 +111,10 @@
         
 .retangulo {
     width: 13rem;
-    height: 66.1rem;
+    height: 68.1rem;
     background: #001e27;
     position: absolute;
-    top: 110px;
+    top: 170px;
     left: 0;
   }
 
@@ -139,7 +140,7 @@
             width: 100%; 
             height: 180px;
             margin-left: -1px;
-            margin-top: -9px;
+            margin-top: 1px;
             position: absolute;
         }
         .titulo{
@@ -148,17 +149,15 @@
             font-size: 15px;
             position: absolute;
             left: 370px;
-            top: 80px;
+            top: 30px;
         }
         .logo{
   position: absolute;
-  top: -22%;
   width: 170px;
-  top: 27px;
 }
 .rodape{
 
-margin-top: 150px;
+margin-top: -45px;
 background-color: #001e27; 
 padding: 40px 0; 
 text-align: center; 
@@ -185,9 +184,18 @@ text-align: center;
 color:black;
 font-weight: bold;
 font-size:26px;
-margin-top:-45px;
+margin-top:-74%;
 margin-left:41%;
 font-weight: 700;
+  }
+ 
+.sidebar {
+    position: absolute;
+    top: 200px; /* Ajuste para não sobrepor a .comeco */
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   @media screen and (max-width: 768px) {
   /* Oculta o texto do banner em telas menores que 768px */
@@ -198,24 +206,14 @@ font-weight: 700;
       margin-left:35%;
   }
   .rodape  {
-      margin-top:100px;
+      margin-top:1380px;
       margin-left:-30px;
   }
  .entra {
-      margin-left:298px;
- }  
- .text-cadastro {
-    margin-left:27%;
+      margin-left:300px;
+ } 
+
  }
-}
-.sidebar {
-    position: absolute;
-    top: 200px; /* Ajuste para não sobrepor a .comeco */
-    left: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   .sidebar button {
     width: 175px;
@@ -228,6 +226,7 @@ font-weight: 700;
     text-align: center;
     border-radius: 10px;
     font-weight: bold;
+
   }
   
   .sidebar button:hover {
