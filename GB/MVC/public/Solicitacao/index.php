@@ -109,6 +109,7 @@
             <th>Criado</th>
             <th>Ações</th>
         </tr>
+</table>
         <?php
         // Consulta as solicitações cadastradas
         $stmt = $pdo->query("SELECT * FROM solicitacao");
