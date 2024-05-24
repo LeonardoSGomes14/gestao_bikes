@@ -57,11 +57,13 @@ include_once '../php/access_filter.php';
         <?php
 
 
-if (!isset($_SESSION["id_user"])) {
-    var_dump($_SESSION["id_user"]);
-    echo '<a class="conect" href="../php/login.php ">Conecte-se</a>';
+if (isset($_SESSION["id_user"])) {
+    echo '<h1 class="conect">Olá, ' . $_SESSION["nome_completo"] . '</h1>';
+
+    FiltroAccss();
+
 } else {
-    echo '<h1 class="conect">Olá, ' . $_SESSION["nome_usuario"] . '</h1>';
+    echo '<a class="conect" href="../php/login.php">Conecte-se</a>';
 }
 ?>
 
