@@ -13,7 +13,7 @@
 <div class="comeco">
         <div class="retangulo"></div>
         <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
-       <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
+       <img class="logo" src="../Img/bitrix-removebg-preview.png"></a> 
     </div>
 
     <div class="sidebar">

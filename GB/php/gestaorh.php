@@ -1,139 +1,108 @@
 <?php
 session_start();
 
-
 include_once('../config/config.php');
 include_once('../MVC/Controller/UserController.php');
 require_once('../MVC/Model/UserModel.php');
-
-
 
 $sql_code = $pdo->prepare("SELECT * FROM usuarios");
 $sql_code->execute();
 $pessoas = $sql_code->fetchAll(PDO::FETCH_ASSOC);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (
+    isset($_POST['id']) && isset($_POST['nome_completo']) && isset($_POST['nome_usuario']) && 
+    isset($_POST['datadenascimento']) && isset($_POST['cpf']) && isset($_POST['genero']) && 
+    isset($_POST['phone']) && isset($_POST['email']) && isset($_POST['tipo_funcionario']) && 
+    isset($_POST['cep']) && isset($_POST['cidade']) && isset($_POST['rua']) && 
+    isset($_POST['numero']) && isset($_POST['complemento']) && isset($_POST['hora_entrada']) && 
+    isset($_POST['hora_saida']) && isset($_POST['carga_horaria']) && isset($_POST['remuneracao']) && 
+    isset($_POST['data_contratacao'])
+  ) {
+    $sql_code = $pdo->prepare(
+      "UPDATE usuarios SET 
+      nome_completo=?, nome_usuario=?, datadenascimento=?, cpf=?, genero=?, phone=?, email=?, 
+      tipo_funcionario=?, cep=?, cidade=?, rua=?, numero=?, complemento=?, hora_entrada=?, 
+      hora_saida=?, carga_horaria=?, remuneracao=?, data_contratacao=? WHERE id_user=?"
+    );
 
-  if (isset($_POST['id']) && isset($_POST['nome_completo']) && isset($_POST['nome_usuario']) && isset($_POST['datadenascimento']) && isset($_POST['cpf']) && isset($_POST['genero']) && isset($_POST['phone']) && isset($_POST['email']) && isset($_POST['tipo_funcionario']) && isset($_POST['cep']) && isset($_POST['cidade']) && isset($_POST['rua']) && isset($_POST['numero']) && isset($_POST['complemento']) && isset($_POST['hora_entrada']) && isset($_POST['hora_saida']) && isset($_POST['carga_horaria']) && isset($_POST['remuneracao']) && isset($_POST['data_contratacao'])) {
-
-
-
-    $sql_code = $pdo->prepare("UPDATE usuarios SET nome_completo=?, nome_usuario=?, datadenascimento=?, cpf=?, genero=?, phone=?, email=?, tipo_funcionario=?, cep=?, cidade=?, rua=?, numero=?, complemento=?, hora_entrada=?, hora_saida=?, carga_horaria=?, remuneracao=?, data_contratacao=? WHERE id_user=?");
-
-    $sql_code->execute(array($_POST['nome_completo'], $_POST['nome_usuario'], $_POST['datadenascimento'], $_POST['cpf'], $_POST['genero'], $_POST['phone'], $_POST['email'], $_POST['tipo_funcionario'], $_POST['cep'], $_POST['cidade'], $_POST['rua'], $_POST['numero'], $_POST['complemento'], $_POST['hora_entrada'], $_POST['hora_saida'], $_POST['carga_horaria'], $_POST['remuneracao'], $_POST['data_contratacao'], $_POST['id']));
+    $sql_code->execute([
+      $_POST['nome_completo'], $_POST['nome_usuario'], $_POST['datadenascimento'], $_POST['cpf'], 
+      $_POST['genero'], $_POST['phone'], $_POST['email'], $_POST['tipo_funcionario'], $_POST['cep'], 
+      $_POST['cidade'], $_POST['rua'], $_POST['numero'], $_POST['complemento'], $_POST['hora_entrada'], 
+      $_POST['hora_saida'], $_POST['carga_horaria'], $_POST['remuneracao'], $_POST['data_contratacao'], 
+      $_POST['id']
+    ]);
 
     header("Location: gestaorh.php");
     exit();
   }
 }
-
 ?>
 
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../Css/gestaorh.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/gestaorh.css">
+    <title>GESTÃO DE BIKES</title>
 </head>
-
 <body>
+    <div class="comeco">
+        <div class="retangulo"></div>
+        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
+       <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
+    </div>
 
-  <div class="comeco">
-  <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
-
-    <div id="menu">
-      <div id="menu-bar" onclick="menuOnClick()">
-        <div id="bar1" class="bar"></div>
-        <div id="bar2" class="bar"></div>
-        <div id="bar3" class="bar"></div>
+    <div class="sidebar">
+    <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
+        <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações</button>
+        <button onclick="window.location.href='../php/recibosolicitacao.php'">Recibo</button>
+    </div>
+    <div class="content">
+  <h2>Pessoas Cadastradas</h2>
+  <div class="pessoas-container">
+    <?php foreach ($pessoas as $pessoa): ?>
+      <div class="pessoa">
+        <div><strong>ID:</strong> <?php echo $pessoa['id_user']; ?></div>
+        <div><strong>Nome Completo:</strong> <?php echo $pessoa['nome_completo']; ?></div>
+        <div><strong>Nome de Usuário:</strong> <?php echo $pessoa['nome_usuario']; ?></div>
+        <div><strong>Data de Nascimento:</strong> <?php echo $pessoa['datadenascimento']; ?></div>
+        <div><strong>CPF:</strong> <?php echo $pessoa['cpf']; ?></div>
+        <div><strong>Gênero:</strong> <?php echo $pessoa['genero']; ?></div>
+        <div><strong>Telefone:</strong> <?php echo $pessoa['phone']; ?></div>
+        <div><strong>Email:</strong> <?php echo $pessoa['email']; ?></div>
+        <div><strong>Tipo de Funcionário:</strong> <?php echo $pessoa['tipo_funcionario']; ?></div>
+        <div><strong>CEP:</strong> <?php echo $pessoa['cep']; ?></div>
+        <div><strong>Cidade:</strong> <?php echo $pessoa['cidade']; ?></div>
+        <div><strong>Rua:</strong> <?php echo $pessoa['rua']; ?></div>
+        <div><strong>Número:</strong> <?php echo $pessoa['numero']; ?></div>
+        <div><strong>Complemento:</strong> <?php echo $pessoa['complemento']; ?></div>
+        <div><strong>Hora de Entrada:</strong> <?php echo $pessoa['hora_entrada']; ?></div>
+        <div><strong>Hora de Saída:</strong> <?php echo $pessoa['hora_saida']; ?></div>
+        <div><strong>Carga Horária:</strong> <?php echo $pessoa['carga_horaria']; ?></div>
+        <div><strong>Remuneração:</strong> <?php echo $pessoa['remuneracao']; ?></div>
+        <div><strong>Data de Contratação:</strong> <?php echo $pessoa['data_contratacao']; ?></div>
+        <div><strong>Foto de Perfil:</strong> <?php echo $pessoa['foto_perfil']; ?></div>
+        <div>
+          <form method="post" action="deletar_usuario.php">
+            <input type="hidden" name="id_usuario" value="<?php echo $pessoa['id_user']; ?>">
+            <button type="submit">Deletar</button>
+          </form>
+        </div>
+        <div><a href="atualizar_usuario.php?id=<?php echo $pessoa['id_user']; ?>">Atualizar</a></div>
       </div>
-      <nav class="nav" id="nav">
-        <ul>
-          <img src="../Img/Image 2024-04-17 at 08.04.01.jpeg" style="border-radius: 50%;" width="135px" height="120px">
-          <a href="#" class="confirm-link" onclick="confirmLogout()">
+    <?php endforeach; ?>
+  </div>
+</div>
 
-            <a href="#" class="confirm-link" onclick="confirmLogout()">
-              <?php
-
-
-
-              if (!isset($_SESSION["usuario"])) {
-                echo '<a class="conect" href="login.php">Conecte-se</a>';
-              } else {
-                echo '<h1 class="conect">Olá, ' . $_SESSION["usuario"] . '</h1>';
-              }
-              ?>
-            </a>
-            <li><a href="#">Home</a></li>
-            <li><a href="../MVC/Views/SolicitacaoViews.php">Solicitações</a></li>
-            <li><a href="#">Recibo</a></li>
-        </ul>
-      </nav>
-    </div>
-    </div>
-
-
-<br><br><br><br><br><br><br><br><br><br><br>
-
-      <?php
-      echo "<h2>Pessoas Cadastradas</h2>";
-      echo "<table>";
-      echo "<tr><th>ID</th><th>Nome Completo</th><th>Nome de Usuário</th><th>Data de Nascimento</th><th>CPF</th><th>Gênero</th><th>Telefone</th><th>Email</th><th>Tipo de Funcionário</th><th>CEP</th><th>Cidade</th><th>Rua</th><th>Número</th><th>Complemento</th><th>Hora de Entrada</th><th>Hora de Saída</th><th>Carga Horária</th><th>Remuneração</th><th>Data de Contratação</th><th>Foto de Perfil</th><th>Deletar</th><th>Atualizar</th></tr>";
-
-      foreach ($pessoas as $pessoa) {
-        echo "<tr>";
-        echo "<td>" . $pessoa['id_user'] . "</td>";
-        echo "<td>" . $pessoa['nome_completo'] . "</td>";
-        echo "<td>" . $pessoa['nome_usuario'] . "</td>";
-        echo "<td>" . $pessoa['datadenascimento'] . "</td>";
-        echo "<td>" . $pessoa['cpf'] . "</td>";
-        echo "<td>" . $pessoa['genero'] . "</td>";
-        echo "<td>" . $pessoa['phone'] . "</td>";
-        echo "<td>" . $pessoa['email'] . "</td>";
-        echo "<td>" . $pessoa['tipo_funcionario'] . "</td>";
-        echo "<td>" . $pessoa['cep'] . "</td>";
-        echo "<td>" . $pessoa['cidade'] . "</td>";
-        echo "<td>" . $pessoa['rua'] . "</td>";
-        echo "<td>" . $pessoa['numero'] . "</td>";
-        echo "<td>" . $pessoa['complemento'] . "</td>";
-        echo "<td>" . $pessoa['hora_entrada'] . "</td>";
-        echo "<td>" . $pessoa['hora_saida'] . "</td>";
-        echo "<td>" . $pessoa['carga_horaria'] . "</td>";
-        echo "<td>" . $pessoa['remuneracao'] . "</td>";
-        echo "<td>" . $pessoa['data_contratacao'] . "</td>";
-        echo "<td>" . $pessoa['foto_perfil'] . "</td>";
-
-
-       
-    echo "<td>";
-    echo "<form method='post' action='deletar_usuario.php'>"; 
-    echo "<input type='hidden' name='id_usuario' value='" . $pessoa['id_user'] . "'>"; 
-    echo "<button type='submit'>Deletar</button>"; 
-    echo "</form>";
-    echo "<td>";
-    echo "<a href='atualizar_usuario.php?id=" . $pessoa['id_user'] . "'>Atualizar</a>";
-    echo "</td>";
-    
-    echo "</td>";
-    
-    echo "</tr>";
-
-        echo "</table>";
+    <script>
+      function menuOnClick() {
+        document.getElementById("menu-bar").classList.toggle("change");
+        document.getElementById("nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
       }
-      ?>
-
-      </section>
+    </script>
 </body>
-
 </html>
-<script>
-  function menuOnClick() {
-    document.getElementById("menu-bar").classList.toggle("change");
-    document.getElementById("nav").classList.toggle("change");
-    document.getElementById("menu-bg").classList.toggle("change-bg");
-  }
-</script>

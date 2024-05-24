@@ -52,7 +52,6 @@ include_once '../php/access_filter.php';
       
         </div>
         <div class="feature-cards">
-        
         </div>
 
         <?php

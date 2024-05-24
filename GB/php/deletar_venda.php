@@ -1,34 +1,22 @@
 <?php
-$host = 'localhost';
-$dbname = 'bike';
-$username = 'root';
-$password = '';
+// Verifique se o ID da venda está presente na URL
+if(isset($_GET['id'])) {
+    // Inclua o arquivo de configuração do banco de dados
+    require_once '../config/config.php';
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erro ao conectar: " . $e->getMessage());
-}
+    try {
+        // Prepare uma declaração SQL para excluir a venda
+        $sql = "DELETE FROM vendas WHERE id_venda = ?";
 
-// Verifica se o ID fiscal foi passado via GET
-if (!isset($_GET['id']) || empty($_GET['id'])) {
-    die("ID fiscal não fornecido.");
-}
+        // Preparar e executar a declaração
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$_GET['id']]);
 
-$id_fiscal = $_GET['id'];
-
-try {
-    // Exclui o registro da tabela controlefiscal
-    $sql = "DELETE FROM controlefiscal WHERE id_fiscal = :id_fiscal";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':id_fiscal', $id_fiscal);
-    $stmt->execute();
-
-    // Redireciona de volta para a página principal após a exclusão
-    header('Location: controle_fiscal.php');
-    exit();
-} catch (PDOException $e) {
-    die("Erro ao excluir registro: " . $e->getMessage());
+        echo "Venda deletada com sucesso.";
+    } catch (PDOException $e) {
+        echo "Erro ao deletar a venda: " . $e->getMessage();
+    }
+} else {
+    echo "ID da venda não fornecido.";
 }
 ?>
