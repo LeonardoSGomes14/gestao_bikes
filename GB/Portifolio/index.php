@@ -54,6 +54,13 @@ include_once '../php/access_filter.php';
         <div class="feature-cards">
         
         </div>
+
+        <style>
+          a{
+            text-decoration: none;
+          }
+            </style>
+        <a href="#" class="confirm-link" onclick="confirmLogout()">   
         <?php
 
 
@@ -80,3 +87,11 @@ if (isset($_SESSION["id_user"])) {
 </body>
 
 </html>
+<script>
+function confirmLogout() {
+    var confirmLogout = confirm("Realmente que Sair dessa Pagina?");
+    if (confirmLogout) {
+        window.location.href = '../php/logout.php';
+    }
+}
+</script>
