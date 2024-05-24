@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include_once '../php/access_filter.php';
 ?>
 
@@ -55,13 +55,19 @@ include_once '../php/access_filter.php';
         
         </div>
         <?php
-
+session_start();
 
 include_once('../config/config.php');
 include_once('../MVC/Controller/UserController.php');
 require_once('../MVC/Model/UserModel.php');
 
+if (isset($_POST['submit'])) {
+    // Processo de cadastro aqui
+} elseif (isset($_POST['signin'])) {
+    // Processo de login aqui
+}
 
+// Verifica se o usuário está logado
 if (isset($_SESSION["id_user"])) {
     echo '<h1 class="conect">Olá, ' . $_SESSION["nome_usuario"] . '</h1>';
 } else {
