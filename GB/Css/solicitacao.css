@@ -176,7 +176,11 @@ margin-left: 30vh;
 }
 .container{
   margin-left: 790px;
-  margin-top: 460px;
+  margin-top: 460px; 
+   align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: -10px;
   
 }
 /* Estilo do formulário */
@@ -190,6 +194,7 @@ margin-left: 30vh;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
   margin-top: -63cap;
+
 }
 
 .form-solicitacao h1 {
