@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['edit_vehicle'])) {
     <div class="comeco">
         <div class="retangulo"></div>
         <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
-        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
+        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
     </div>
 
     <div class="content">
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['edit_vehicle'])) {
                     <h2>Adicionar Veículo</h2>
                     <form method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="add_vehicle" value="1">
-                        <label for="marca">Marca:</label>
+                        <label for="marca">Marca:</label>   
                         <input type="text" id="marca" name="marca" required><br>
                         <label for="ano_fabricado">Ano Fabricado:</label>
                         <input type="text" id="ano_fabricado" name="ano_fabricado" required><br>

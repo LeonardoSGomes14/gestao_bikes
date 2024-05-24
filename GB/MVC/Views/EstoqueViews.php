@@ -14,13 +14,15 @@
     <div class="top-banner">
     <a href="../Portifolio/index.php"><img class="logo" src="../../Img/bitrix-removebg-preview.png" width="300px"></a> 
         <div class="texto-banner"> Sistema De Gestão ERP+controle de empresas e de pessoas </div>
-        <div class="texto1">Cadastro de Empresas</div>
+        <div class="texto1">Cadastro de Produto</div>
     </div>
+<style>
 
+    </style>
     <div class="sidebar">
-        <button onclick="window.location.href='home.php'">Home</button>
-        <button onclick="window.location.href='solicitacoes.php'">Solicitações</button>
-        <button onclick="window.location.href='recibo.php'">Recibo</button>
+        <button onclick="window.location.href='../../portifolio/index.php'">Home</button>
+        <button onclick="window.location.href='../../php/listar_produtos.php'">Produtos Cadastradas</button>
+        
     </div>
 
 

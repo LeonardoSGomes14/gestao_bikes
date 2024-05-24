@@ -1,9 +1,8 @@
 <?php
-
-include_once ('../config/config.php');
-include_once ('../MVC/Controller/UserController.php');
-require_once ('../MVC/Model/UserModel.php');
-
+include_once('../config/config.php');
+include_once('../MVC/Controller/UserController.php');
+require_once('../MVC/Model/UserModel.php');
+session_start();
 
 if (isset($_POST['email']) && isset($_POST['senha'])) {
     $email = $mysqli->real_escape_string($_POST['email']);
@@ -12,65 +11,54 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
     $sql_code = $pdo->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
     $sql_code->execute([$email, $senha]);
 
-    $quantidade = $sql_code->rowcount();
+    $quantidade = $sql_code->rowCount();
 
     if ($quantidade > 0) {
-        $pdo = $sql_code->fetch(PDO::FETCH_ASSOC);
+  
+        $usuario = $sql_code->fetch(PDO::FETCH_ASSOC);
 
+ 
+        if ($usuario && isset($usuario['id_user'], $usuario['nome_completo'], $usuario['tipo_funcionario'])) {
+            // variáveis de sessão
+            $_SESSION['id_user'] = $usuario['id_user'];
+            $_SESSION['nome_completo'] = $usuario['nome_completo'];
+            $_SESSION['tipo_funcionario'] = $usuario['tipo_funcionario'];
+            var_dump($_SESSION['tipo_funcionario']);
+            $tipo_funcionario = $usuario['tipo_funcionario'];
+        } else {
 
-        $_SESSION['id'] = $pdo['id'];
-        $_SESSION['nome'] = $pdo['nome'];
-        $_SESSION['permissao'] = $pdo['tipo_funcionario'];
-        var_dump($_SESSION['permissao']);
-        $tipo_funcionario = $pdo['tipo_funcionario'];
-
-
-        switch ($tipo_funcionario) {
-            case 0:
-                header("Location: ../Portifolio/");
-                break;
-            case 1:
-                header("Location: adm.php");
-                break;
-            default:
-                echo "USUÁRIO SEM PERMISSÃO, FAVOR CONTATAR O ADMIN!!";
-                break;
+            echo 'Erro ao buscar os dados do usuário.';
         }
     } else {
+  
         echo '
             <script>
                 function verificarCondicao() {
-                // Simulação de uma condição qualquer
-                var condicao = true;
-                if (condicao) {
-                    exibirCaixaDialogo();
+                    var condicao = true;
+                    if (condicao) {
+                        exibirCaixaDialogo();
+                    }
                 }
-                }
-                // Função para exibir a caixa de diálogo
                 function exibirCaixaDialogo() {
-                var resposta = confirm("Algumas de sua credenciais estão incorretas, tente novamente!");
-                if (resposta == true) {
-                
-                } else {
-            
-                }
+                    var resposta = confirm("Algumas de suas credenciais estão incorretas, tente novamente!");
+                    if (resposta == true) {
+                        // Redirecionar ou outras ações
+                    }
                 }
                 window.onload = verificarCondicao;
             </script>
-            ';
+        ';
     }
 }
 ?>
 
-
 <?php
 
-//CADASTRO
-
+// CADASTRO
 
 if (isset($_POST['submit'])) {
     $nome_completo = $_POST['nome_completo'];
-    $nome_usuario = $_POST['nome_completo'];
+    $nome_usuario = $_POST['nome_usuario'];
     $datadenascimento = $_POST['datadenascimento'];
     $cpf = $_POST['cpf'];
     $genero = $_POST['genero'];
@@ -90,7 +78,6 @@ if (isset($_POST['submit'])) {
     $data_contratacao = $_POST['data_contratacao'];
     $foto_perfil = $_POST['foto_perfil'];
 
-    // Verificar se uma imagem foi enviada
     if ($_FILES['foto_perfil']['name']) {
         $img_nome = $_FILES['foto_perfil']['name'];
         $img_tmp = $_FILES['foto_perfil']['tmp_name'];
@@ -99,7 +86,6 @@ if (isset($_POST['submit'])) {
         $destination = $upload_dir . $img_nome;
         move_uploaded_file($img_tmp, $destination);
     }
-
 
     $stmt = $pdo->prepare('SELECT COUNT(*) FROM usuarios WHERE nome_completo = ? AND nome_usuario = ? AND email = ? AND senha = ?');
     $stmt->execute([$nome_completo, $nome_usuario, $email, $senha]);
@@ -115,6 +101,7 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -153,7 +140,7 @@ if (isset($_POST['submit'])) {
                 <input class="form__input" type="text" id="cpf" placeholder="CPF" name="cpf" required>
 
                 <label for="genero">Gênero</label>
-                <select id="genero" placeholder="Gênero" name="genero" placeholder="Gênero">
+                <select class="form__input" id="genero" placeholder="Gênero" name="genero" placeholder="Gênero">
                     <option value="Masculino">Masculino</option>
                     <option value="Feminino">Feminino</option>
                     <option value="Outro">Outro</option>
@@ -166,7 +153,7 @@ if (isset($_POST['submit'])) {
 
                 <input class="form__input" type="password" id="senha" placeholder="Senha" name="senha" required>
 
-                <input type="hidden" id="tipo_funcionario" name="tipo_funcionario" value="0">
+                <input type="hidden" id="tipo_funcionario" name="tipo_funcionario" value="5">
 
                 <input type="hidden" class="form__input" type="text" id="cep" placeholder="" name="cep" value="0">
 
@@ -202,7 +189,7 @@ if (isset($_POST['submit'])) {
 
         </div>
         <div class="container b-container" id="b-container">
-            <form class="form" id="b-form" method="post">
+            <form action="../Portifolio/index.php" class="form" id="b-form" method="post">
                 <h2 class="form_title title">Iniciar uma sessão</h2>
                 <div class="form__icons"><img class="form__icon"
                         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACd0lEQVR4nO2Zv2sUQRTHP+evwigSrCyiAWOpTXpBxcRcCkn8BVrZif+AjUJQSA5Jo4VpbMQiJtrE/CCojZ3YGEQx9nYaE6PRxOJWBp4Qwu7czuzb3Tm4L3zhmn1vPszsm7fvoKWWgtceoArUgGlgEfgO/BWb35+A58AI0CfPBKGKLGgSWAciR/8BJoAzEqsUXQDeeyw+yQvAYJEAR4BXigBb/QLoyhviHLCSI0QkXgUu5wFgzu9QAQDRFtc03x0TaKwEiEj8QAtmpESISHwnK8SlACAi8ZUs1emn0iLMffFQSraJux/YB7QDncBRYLRBjB/AYR8QrRL7EjiQIt/VFLHmXSHOK0HMAjtS5kwDYjyQFqKidGN/kyOEMsi7tFWsT2k3hh0gXEAioDdNwEklkGOWHN3Afcn1328dYo83gtjr2cXGVZjtFoiNjPF/A7ttIFXFTjZJj5Ry9NhAakpJXltyfCniHZxWSjKXEL8iX4saOaZsIJ8V74847VKKH8lnc6KWmgjkqw1ko4lA1rVBBqT522zbdKQ9wXcd85q1JmrZA+Q0Onri0QIlarFEENNDueT9aAs2WxLINmBNs/wOlwRySPvzt98j4HXpnza7y3Ihdsf4mkfeXhuIacR+eQQtuvyuAW2NtvlpE4BMkEI9TQByKg2IOccfAgZZwEFnAwapUuA4KC+QeTzUKVPxUEBWgIN4yjSE9QBA6sBFMup2ACBDKOleiSCjKOuGwzHTAKlr7kTcX2/LBYAsucx4s3SqMzmCTAEdFKh+y5jTB+SNzJ1L03HgsYxJXUFWZfJoYgQjs8iTwE0pDHHaCTwDbgEn5JmWWiJg/QOlYrQmouYwLQAAAABJRU5ErkJggg=="><img

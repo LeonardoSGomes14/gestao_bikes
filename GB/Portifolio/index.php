@@ -1,3 +1,9 @@
+<?php
+session_start();
+include_once '../php/access_filter.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,51 +52,16 @@
       
         </div>
         <div class="feature-cards">
-            <div class="card">
-                <div class="info">   
-                    <i class='bx bxs-devices'></i>
-                    <h1>Cadastros</h1>
-                        <a href="../MVC/Views/EstoqueViews.php">Cadastrar Produtos</a>
-                        <a href="../MVC/Views/EmpresaViews.php">Cadastrar Empresas</a>
-                        <a href="GB/php/.php">Niveis de Acesso</a>
-                        <a href="../php/gestaorh.php">Gestão de RH</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="info">
-                    <i class='bx bx-code-alt'></i>
-
-                    <h1>Controles</h1>
-                
-                    <a href="gerenciar_estoque.php">Controle Estoque</a>
-                    <a href="../cadastrar_empresa.php">Controle Fiscal</a>
-                    <a href="../php/controle_frota.php">Controle Frota</a>
-                    <a href="../php/controle_empresa.php">Controle Empresa</a>
-                    <a href="../php/solicitacao.php">Realizar solicitações</a>
-                    <a href="../php/solicitacaoatendidas.php">Solicitações atendidas</a>
-                    
-                </div>
-            </div>
-            <div class="card">
-                <div class="info">
-                    <i class='bx bxs-component'></i>
-                    <h1>informações</h1>
-                    
-                    <a href="../Portifolio/politica_adm.php">Politica de Privacidade</a>
-                    <a href="../Portifolio/contato_adm.php">Página de Contato</a>
-                    <a href="../Portifolio/sobre_adm.php">Sobre</a>
-                    
-                    
-                </div>
-            </div>
+        
         </div>
         <?php
-session_start();
 
-if (!isset($_SESSION["nome_completo"])) {
-    echo '<a class="conect" href=" ../php/login.php ">Conecte-se</a>';
+
+if (!isset($_SESSION["id_user"])) {
+    var_dump($_SESSION["id_user"]);
+    echo '<a class="conect" href="../php/login.php ">Conecte-se</a>';
 } else {
-    echo '<h1 class="conect">Olá, ' . $_SESSION["nome_completo"] . '</h1>';
+    echo '<h1 class="conect">Olá, ' . $_SESSION["nome_usuario"] . '</h1>';
 }
 ?>
 
