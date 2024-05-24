@@ -1,5 +1,5 @@
 <?php
-include_once 'C:\xampp\htdocs\grupo2\app\Controller\controllerusuarios.php'
+include_once '../../MVC/Controller/UserController.php'
 ?>
 
 <!DOCTYPE html>
