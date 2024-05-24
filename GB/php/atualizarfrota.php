@@ -14,22 +14,22 @@ if ($conn->connect_error) {
 // Função para atualizar veículo
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_vehicle'])) {
     $id_frota = $_POST['id_frota'];
-    $marca = $_POST['marca'];
-    $ano_fabricado = $_POST['ano_fabricado'];
-    $modelo = $_POST['modelo'];
-    $tipodeveiculo = $_POST['tipodeveiculo'];
+    $marca = $conn->real_escape_string($_POST['marca']);
+    $ano_fabricado = $conn->real_escape_string($_POST['ano_fabricado']);
+    $modelo = $conn->real_escape_string($_POST['modelo']);
+    $tipodeveiculo = $conn->real_escape_string($_POST['tipodeveiculo']);
 
     if ($_FILES['imagem']['tmp_name']) {
-        $imagem = addslashes(file_get_contents($_FILES['imagem']['tmp_name']));
+        $imagem = $conn->real_escape_string(file_get_contents($_FILES['imagem']['tmp_name']));
         $sql = "UPDATE controlefrota SET marca='$marca', ano_fabricado='$ano_fabricado', modelo='$modelo', tipodeveiculo='$tipodeveiculo', imagem='$imagem' WHERE id_frota=$id_frota";
     } else {
         $sql = "UPDATE controlefrota SET marca='$marca', ano_fabricado='$ano_fabricado', modelo='$modelo', tipodeveiculo='$tipodeveiculo' WHERE id_frota=$id_frota";
     }
 
     if ($conn->query($sql) === TRUE) {
-        echo "Veículo atualizado com sucesso";
+        echo "";
     } else {
-        echo "Erro: " . $sql . "<br>" . $conn->error;
+        echo "Erro ao atualizar veículo: " . $conn->error;
     }
 }
 
@@ -39,7 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id_frota'])) {
     $id_frota = $_GET['id_frota'];
     $sql = "SELECT * FROM controlefrota WHERE id_frota=$id_frota";
     $result = $conn->query($sql);
-    $vehicle_to_edit = $result->fetch_assoc();
+    if ($result->num_rows > 0) {
+        $vehicle_to_edit = $result->fetch_assoc();
+    } else {
+        echo "Veículo não encontrado.";
+    }
 }
 ?>
 
@@ -72,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id_frota'])) {
                     <input type="submit" value="Atualizar Veículo">
                 </form>
             <?php else: ?>
-                <p>Veículo não encontrado.</p>
+                <p>Veículo atualizado com sucesso!  <a href="controle_frota.php">Voltar</a></p>
             <?php endif; ?>
         </div>
     </div>
