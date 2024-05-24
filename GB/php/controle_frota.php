@@ -179,5 +179,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['edit_vehicle'])) {
             </div>
         </div>
     </div>
+    <div class="rodape">
+    <a class="entra" href="../Portifolio/index.php">Voltar</a>
 </body>
 </html>
