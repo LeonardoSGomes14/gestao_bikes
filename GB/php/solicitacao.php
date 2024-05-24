@@ -13,7 +13,7 @@
 <div class="comeco">
         <div class="retangulo"></div>
         <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
-        <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
+       <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
     </div>
 
     <div class="sidebar">
@@ -35,7 +35,7 @@
             <input type="text" id="solicitante" name="solicitante" required><br>
             <label for="responsavel">Responsável:</label>
             <input type="text" id="responsavel" name="responsavel" required><br>
-            <label for="pedido">Pedido:</label>
+            <label for="pedido">Pedido:</label> 
             <input type="text" id="pedido" name="pedido" required><br>
             <label for="situacao">Situação:</label>
         <input type="text" id="situacao" name="situacao" required><br>
