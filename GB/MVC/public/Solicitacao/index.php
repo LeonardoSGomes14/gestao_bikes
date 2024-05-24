@@ -4,44 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exibir a Solicitação</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        a {
-            color: #ff0000;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .message {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-    </style>
+   
 </head>
 <body>
+<style>
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-    <?php
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+.message {
+    text-align: center;
+    color: green;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+a {
+    color: #d9534f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #c9302c;
+}
+
+/* Feedback Messages */
+.message {
+    margin: 20px auto;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid green;
+    background-color: #dff0d8;
+    color: #3c763d;
+    text-align: center;
+}
+
+    </style>
+  <?php
     // Conexão com o banco de dados
     $host = 'localhost';
     $dbname = 'bike';
@@ -109,7 +145,6 @@
             <th>Criado</th>
             <th>Ações</th>
         </tr>
-</table>
         <?php
         // Consulta as solicitações cadastradas
         $stmt = $pdo->query("SELECT * FROM solicitacao");

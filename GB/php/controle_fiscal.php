@@ -25,6 +25,7 @@ try {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="../Css/fiscal.css">
 <head>
     <meta charset="UTF-8">
     <title>Exibir Dados Fiscais</title>
@@ -39,6 +40,7 @@ try {
             <th>Imposto</th>
             <th>Gasto Total</th>
             <th>Atualizar</th>
+            <th>Excluir</th> 
         </tr>
         <?php foreach ($dados as $dado): ?>
         <tr>
@@ -47,8 +49,8 @@ try {
             <td><?php echo htmlspecialchars($dado['fatura']); ?></td>
             <td><?php echo htmlspecialchars($dado['imposto']); ?></td>
             <td><?php echo htmlspecialchars($dado['orcamentos']); ?></td>
-            <td><a href="atualizar_vendas.php?id=<?php echo $dado['id_fiscal']; ?>">Atualizar</a>
-            <a href="deletar_venda.php?id=<?php echo $dado['id_fiscal']; ?>">Excluir</a></td>
+            <td><a href="atualizar_vendas.php?id=<?php echo $dado['id_fiscal']; ?>">Atualizar</a></td>
+            <td>  <a href="deletar_venda.php?id=<?php echo $dado['id_fiscal']; ?>">Excluir</a></td>
             
         </tr>
         <?php endforeach; ?>
@@ -85,6 +87,9 @@ $stmt = $pdo->query($sql);
 $vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -103,6 +108,8 @@ $vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <th>Quantidade</th>
                 <th>Total</th>
                 <th>Data</th>
+                <th>Atualizar</th>
+                <th>Deletar</th> <!-- Coluna adicional para o botão de atualizar -->
             </tr>
         </thead>
         <tbody>
@@ -114,13 +121,37 @@ $vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo $venda['quantidade']; ?></td>
                     <td><?php echo $venda['total']; ?></td>
                     <td><?php echo $venda['data']; ?></td>
+                    <td>
+                    
+    <a href="atualizar_vendas.php?id=<?php echo $venda['id_venda']; ?>&produto=<?php echo $venda['produto']; ?>&valor=<?php echo $venda['valor']; ?>&quantidade=<?php echo $venda['quantidade']; ?>&total=<?php echo $venda['total']; ?>&data=<?php echo $venda['data']; ?>">Atualizar</a></td>
+    <td>  <a href="deletar_venda.php?id=<?php echo $venda['id_venda']; ?>">Deletar</a>
+</td>
+
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+
+
+
+
+    <img class="logorodape" src="../Img/bitrix-removebg-preview.png">
+
+    <a class="entra" href="index.php">Voltar</a>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
-
 
 
 

@@ -52,7 +52,6 @@ include_once '../php/access_filter.php';
       
         </div>
         <div class="feature-cards">
-        
         </div>
 
         <style>
@@ -60,6 +59,7 @@ include_once '../php/access_filter.php';
             text-decoration: none;
           }
             </style>
+
         <a href="#" class="confirm-link" onclick="confirmLogout()">   
         <?php
 
