@@ -2,7 +2,7 @@
 function FiltroAccss()
 {
     //ADM
-    if ($_SESSION['tipo_funcionario'] === 1) {
+    if ($_SESSION['tipo_funcionario'] == 1) {
 
         $tf1 = <<<'HTML'
 <div class="feature-cards">
@@ -51,7 +51,7 @@ HTML;
 
 
     //GERENTE
-    elseif ($_SESSION['tipo_funcionario'] === 2) {
+    elseif ($_SESSION['tipo_funcionario'] == 2) {
 
         $tf2 = <<<'HTML'
 <div class="feature-cards">
@@ -95,7 +95,7 @@ HTML;
     }
 
     //Funcionario Comercial
-    elseif ($_SESSION['tipo_funcionario'] === 3) {
+    elseif ($_SESSION['tipo_funcionario'] == 3) {
 
         $tf3 = <<<'HTML'
 <div class="feature-cards">
@@ -135,7 +135,7 @@ HTML;
     }
 
     //RH
-    elseif ($_SESSION['tipo_funcionario'] === 4) {
+    elseif ($_SESSION['tipo_funcionario'] == 4) {
         $tf4 = <<<'HTML'
 <div class="feature-cards">
         <div class="card">
@@ -171,7 +171,7 @@ HTML;
     }
 
     //Funcionario Comum
-    elseif ($_SESSION['tipo_funcionario'] === 5) {
+    elseif ($_SESSION['tipo_funcionario'] == 5) {
         $tf5 = <<<'HTML'
         <div class="feature-cards">
                 <div class="card">
@@ -207,7 +207,7 @@ HTML;
 function FiltroPessoas()
 {
 
-    if ($_SESSION['tipo_funcionario'] === 3) {
+    if ($_SESSION['tipo_funcionario'] == 3) {
         header('Location: ../pg.php');
     }
 }
@@ -215,7 +215,7 @@ function FiltroPessoas()
 function FiltroComercial()
 {
 
-    if ($_SESSION['tipo_funcionario'] === 4) {
+    if ($_SESSION['tipo_funcionario'] == 4) {
         header('Location: ../pg.php');
     }
 }
@@ -223,7 +223,7 @@ function FiltroComercial()
 function FiltroContas()
 {
 
-    if ($_SESSION['tipo_funcionario'] === 4) {
+    if ($_SESSION['tipo_funcionario'] == 4) {
         header('Location: ../pg.php');
     }
 }
@@ -231,7 +231,7 @@ function FiltroContas()
 function FiltroEmpresa()
 {
 
-    if ($_SESSION['tipo_funcionario'] === 4) {
+    if ($_SESSION['tipo_funcionario'] == 4) {
         header('Location: ../pg.php');
     }
 }
@@ -239,7 +239,7 @@ function FiltroEmpresa()
 function FiltroEstoque()
 {
 
-    if ($_SESSION['tipo_funcionario'] === 4) {
+    if ($_SESSION['tipo_funcionario'] == 4) {
         header('Location: ../pg.php');
     }
 }
@@ -247,7 +247,7 @@ function FiltroEstoque()
 function FiltroFiscal()
 {
 
-    if ($_SESSION['tipo_funcionario'] === 4) {
+    if ($_SESSION['tipo_funcionario'] == 4) {
         header('Location: ../pg.php');
     }
 }
@@ -255,7 +255,7 @@ function FiltroFiscal()
 function FiltroFrota()
 {
 
-    if ($_SESSION['tipo_funcionario'] === 4) {
+    if ($_SESSION['tipo_funcionario'] == 4) {
         header('Location: ../pg.php');
     }
 }
@@ -263,7 +263,7 @@ function FiltroFrota()
 function FiltroRh()
 {
 
-    if ($_SESSION['tipo_funcionario'] === 3) {
+    if ($_SESSION['tipo_funcionario'] == 3) {
         header('Location: ../pg.php');
     }
 }

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once '../php/access_filter.php';
 ?>
 
@@ -54,22 +54,21 @@ include_once '../php/access_filter.php';
         <div class="feature-cards">
         
         </div>
+
+        <style>
+          a{
+            text-decoration: none;
+          }
+            </style>
+        <a href="#" class="confirm-link" onclick="confirmLogout()">   
         <?php
-session_start();
 
-include_once('../config/config.php');
-include_once('../MVC/Controller/UserController.php');
-require_once('../MVC/Model/UserModel.php');
 
-if (isset($_POST['submit'])) {
-    // Processo de cadastro aqui
-} elseif (isset($_POST['signin'])) {
-    // Processo de login aqui
-}
-
-// Verifica se o usuário está logado
 if (isset($_SESSION["id_user"])) {
-    echo '<h1 class="conect">Olá, ' . $_SESSION["nome_usuario"] . '</h1>';
+    echo '<h1 class="conect">Olá, ' . $_SESSION["nome_completo"] . '</h1>';
+
+    FiltroAccss();
+
 } else {
     echo '<a class="conect" href="../php/login.php">Conecte-se</a>';
 }
@@ -88,3 +87,11 @@ if (isset($_SESSION["id_user"])) {
 </body>
 
 </html>
+<script>
+function confirmLogout() {
+    var confirmLogout = confirm("Realmente que Sair dessa Pagina?");
+    if (confirmLogout) {
+        window.location.href = '../php/logout.php';
+    }
+}
+</script>
