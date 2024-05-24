@@ -303,3 +303,9 @@ header .info-text .scroll::before{
     outline: none;
     box-shadow: 0 0 5px #45a049;
 }
+
+.conect {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
