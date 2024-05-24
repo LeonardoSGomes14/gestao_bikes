@@ -96,6 +96,8 @@ if (isset($_POST['submit'])) {
     } else {
         $userController = new usuarioController($pdo);
 
+
+
         $userController->criarUser($nome_completo, $nome_usuario, $datadenascimento, $cpf, $genero, $phone, $email, $senha, $tipo_funcionario, $cep, $cidade, $rua, $numero, $complemento, $hora_entrada, $hora_saida, $carga_horaria, $remuneracao, $data_contratacao, $img_nome);
         header("Location: login.php");
     }
