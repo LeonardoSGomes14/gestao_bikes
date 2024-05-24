@@ -33,7 +33,7 @@ body{
 
 .comeco {
   background-color: #001e27;
-  width: 100%; 
+  width: 100.5%; 
   height: 180px;
   margin-left: -8px;
   margin-top: -9px;
@@ -60,15 +60,15 @@ body{
 }
 
 .retangulo {
-  width: 13rem;
-  height: 46.1rem;
+  width: 30vh;
+  height: 101.2vh;
   background:#001e27;
 
 }
 
 .texto-centralizado {
   position: absolute;
-  top: 120%; 
+  top: 100%; 
   left: 20%; 
   font-weight: bold;
   transform: translate(-50%, -50%); 
@@ -87,8 +87,8 @@ body{
 
 /* Estilos para a tabela */
 .table {
-  width:1000px; /* Largura da tabela aumentada - ajuste conforme necessário */
-  max-width: 1200px; /* Definindo uma largura máxima para evitar que a tabela fique muito larga */
+  width:100%; /* Largura da tabela aumentada - ajuste conforme necessário */
+  max-width: 100%; /* Definindo uma largura máxima para evitar que a tabela fique muito larga */
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
@@ -132,7 +132,7 @@ body{
 
 .table-container {
 margin: 20px auto;
-width: 180%;
+width: 100%;
 margin-left: 30vh;
 }
 
@@ -189,7 +189,7 @@ margin-left: 30vh;
   background: linear-gradient(145deg, #232526, #414345);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
-  margin-top: -59cap;
+  margin-top: -63cap;
 }
 
 .form-solicitacao h1 {

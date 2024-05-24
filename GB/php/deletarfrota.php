@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id_frota'])) {
     $sql = "DELETE FROM controlefrota WHERE id_frota=$id_frota";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Veículo deletado com sucesso";
+        echo "";
     } else {
         echo "Erro: " . $sql . "<br>" . $conn->error;
     }
