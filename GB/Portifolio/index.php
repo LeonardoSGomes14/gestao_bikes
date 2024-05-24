@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once '../php/access_filter.php';
 ?>
 
@@ -51,17 +52,16 @@ include_once '../php/access_filter.php';
       
         </div>
         <div class="feature-cards">
-            <?php
-            $access = FiltroNav();
-            ?>
+        
         </div>
         <?php
-session_start();
 
-if (!isset($_SESSION["nome_completo"])) {
-    echo '<a class="conect" href=" ../php/login.php ">Conecte-se</a>';
+
+if (!isset($_SESSION["id_user"])) {
+    var_dump($_SESSION["id_user"]);
+    echo '<a class="conect" href="../php/login.php ">Conecte-se</a>';
 } else {
-    echo '<h1 class="conect">Olá, ' . $_SESSION["nome_completo"] . '</h1>';
+    echo '<h1 class="conect">Olá, ' . $_SESSION["nome_usuario"] . '</h1>';
 }
 ?>
 
