@@ -304,8 +304,29 @@ header .info-text .scroll::before{
     box-shadow: 0 0 5px #45a049;
 }
 
+
+a{
+    text-decoration: none;
+  }
+  
 .conect {
     text-decoration: none;
     color: white;
     font-weight: bold;
+}
+
+.logoutbttn {
+    font-weight: bold;
+    background-color: rgb(172, 11, 11);
+    color: white;
+    border: 0.25px solid rgb(34, 32, 32);
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.logoutbttn:hover {
+    transform: scale(110%);
+    transition: 0.25s;
+    background-color: rgb(204, 22, 22);
 }

@@ -8,12 +8,12 @@ class empresaModel
         $this->pdo = $pdo;
     }
 
-    public function criarEmpresa($nome, $servicos, $cnpj, $cep, $estado, $rua, $numero)
+    public function criarEmpresa($nome, $servicos, $cnpj, $senha_emp, $cep, $estado, $rua, $numero)
     {
 
-        $sql = "INSERT INTO cadastro_empresa (nome, servicos, cnpj, cep, estado, rua, numero) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO cadastro_empresa (nome, servicos, cnpj, senha_emp, cep, estado, rua, numero) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$nome, $servicos, $cnpj, $cep, $estado, $rua, $numero]);
+        $stmt->execute([$nome, $servicos, $cnpj, $senha_emp, $cep, $estado, $rua, $numero]);
 
         return $stmt->rowCount();
     }
@@ -34,15 +34,16 @@ class empresaModel
     $nome,
     $servicos,
     $cnpj,
+    $senha_emp,
     $cep,
     $estado,
     $rua,
     $numero
     ) {
-        $sql = "UPDATE cadastro_empresa  SET nome = ?, servicos = ?, cnpj = ?, cep = ?, estado = ?, rua = ?, numero = ?)
+        $sql = "UPDATE cadastro_empresa  SET nome = ?, servicos = ?, cnpj = ?, senha_emp = ?, cep = ?, estado = ?, rua = ?, numero = ?)
     WHERE id_empresa = ?";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$nome, $servicos, $cnpj, $cep, $estado, $rua, $numero, $id_empresa]);
+        $stmt->execute([$nome, $servicos, $cnpj, $senha_emp, $cep, $estado, $rua, $numero, $id_empresa]);
 
     }
  

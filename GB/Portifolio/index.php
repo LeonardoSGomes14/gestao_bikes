@@ -55,12 +55,6 @@ include_once '../php/access_filter.php';
         
         </div>
 
-        <style>
-          a{
-            text-decoration: none;
-          }
-            </style>
-        <a href="#" class="confirm-link" onclick="confirmLogout()">   
         <?php
 
 
@@ -74,6 +68,8 @@ if (isset($_SESSION["id_user"])) {
 }
 ?>
 
+<br><br><br>
+       <button class="logoutbttn "><a href="#" class="conect" onclick="confirmLogout()"> Logout  </a></button> 
     </section>
 
     <button class="scroll-top" onclick="scrollToTop()">

@@ -164,7 +164,7 @@ if (isset($_POST['submit'])) {
 
                 <input class="form__input" type="password" id="senha" placeholder="Senha" name="senha" required>
 
-                <input type="hidden" id="tipo_funcionario" name="tipo_funcionario" value="0">
+                <input type="hidden" id="tipo_funcionario" name="tipo_funcionario" value="5">
 
                 <input type="hidden" class="form__input" type="text" id="cep" placeholder="" name="cep" value="0">
 

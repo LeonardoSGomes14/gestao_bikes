@@ -17,7 +17,7 @@
           
             <div class="dois">
                 <a class="conhecer" href="sobre.php">Quero Conhecer</a>
-                <a class="entra" href="login.php">Entrar</a>
+                <a class="entra" href="login_empresa.php">Entrar</a>
             </div>
             </div>
      
