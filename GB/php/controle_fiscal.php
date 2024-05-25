@@ -25,12 +25,19 @@ try {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="../Css/fiscal.css">
+<link rel="stylesheet" href="../Css/controlefrota.css">
 <head>
     <meta charset="UTF-8">
     <title>Exibir Dados Fiscais</title>
 </head>
 <body>
+    
+<div class="comeco">
+        <div class="retangulo"></div>
+        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
+        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
+    </div>
+    
     <h1>Gastos</h1>
     <table>
         <tr>
@@ -136,19 +143,9 @@ $vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-    <img class="logorodape" src="../Img/bitrix-removebg-preview.png">
-
-    <a class="entra" href="index.php">Voltar</a>
 
 
-
-
-
-
-
-
-
-
+    <a class="entra" href="../Portifolio/index.php">Voltar</a>
 
 </body>
 </html>

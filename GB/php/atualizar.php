@@ -1,3 +1,5 @@
+
+
 <?php
 $host = 'localhost';
 $dbname = 'bike';
@@ -103,96 +105,97 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Atualizar Produto</title>
 </head>
 <body>
-    <h2>Atualizar Produto</h2>
-    <form method="post" action="atualizar.php" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id_estoque']); ?>">
-        <label for="nomedoproduto">Nome do Produto:</label>
-        <input type="text" name="nomedoproduto" value="<?php echo htmlspecialchars($row['nomedoproduto']); ?>"><br>
-        <label for="quantidade">Quantidade:</label>
-        <input type="text" name="quantidade" value="<?php echo htmlspecialchars($row['quantidade']); ?>"><br>
-        <label for="preco">Preço:</label>
-        <input type="text" name="preco" value="<?php echo htmlspecialchars($row['preco']); ?>"><br>
-        <label for="tipo">Tipo:</label>
-        <input type="text" name="tipo" value="<?php echo htmlspecialchars($row['tipo']); ?>"><br>
-        <label for="data">Data:</label>
-        <input type="text" name="data" value="<?php echo htmlspecialchars($row['data']); ?>"><br>
-        <label for="fornecedor">Fornecedor:</label>
-        <input type="text" name="fornecedor" value="<?php echo htmlspecialchars($row['fornecedor']); ?>"><br>
-        <label for="imagem">Imagem:</label>
-        <input type="file" name="imagem"><br>
-        <input type="submit" value="Atualizar">
-    </form>
-
-
-    <style>
-
+  <style>
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    padding: 30px;
 }
 
 h2 {
-    color: #333;
-    margin-top: 0;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
 }
 
 form {
-    margin-top: 20px;
+    background: rgba(44, 62, 80, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    max-width: 500px;
+    width: 100%;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    color: #666;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 input[type="text"],
 input[type="file"] {
     width: 100%;
     padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px solid #4ca1af;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #1abc9c;
+    outline: none;
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    padding: 12px 20px;
+    width: 100%;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: #ffffff;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
+    transition: background 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background: linear-gradient(135deg, #16a085, #1abc9c);
 }
 
-.error {
-    color: #f44336;
-    margin-top: 5px;
-    font-size: 14px;
+.a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-decoration:none;
 }
 
-.success {
-    color: #4caf50;
-    margin-top: 5px;
-    font-size: 14px;
+.a:hover {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
 }
 
-</style>
+
+    </style>
+<a class="aa" href="controle_estoque.php">Voltar</a>
+
 </body>
 </html>
