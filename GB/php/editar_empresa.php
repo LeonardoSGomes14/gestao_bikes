@@ -6,7 +6,95 @@
     <title>Editar Empresa</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        /* Estilos CSS omitidos para brevidade */
+      /* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Estilo do cabeçalho */
+.comeco {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+/* Estilo do formulário */
+.text-cadastro {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button[type="button"],
+form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button[type="button"]:hover,
+form button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Estilo do rodapé */
+.rodape {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.rodape a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
     </style>
 </head>
 <body>
@@ -65,7 +153,7 @@
     </form>
 
     <div class="rodape">
-        <a class="entra" href="../../../GB/Portifolio/index.php">Voltar</a>
+        <a class="entra" href="controle_empresa.php">Voltar</a>
     </div>
 
     <script>
