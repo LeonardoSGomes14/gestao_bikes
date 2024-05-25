@@ -54,7 +54,8 @@ try {
                     <th>Data</th>
                     <th>Fornecedor</th>
                     <th>Imagem</th>
-                    <th>Ação</th>
+                    <th>Atualizar</th>
+                    <th>Deletar</th>
                 </tr>";
 
         // Loop através dos resultados da consulta
@@ -69,6 +70,7 @@ try {
             
             echo "<td><img src='../MVC/public/Estoque/uploads/{$row['imagem']}' width='100'></td>";
             echo "<td><a href='atualizar_estoque.php?id=" . $row['id_estoque'] . "'>Atualizar</a></td>";
+            echo "<td><a href='deletar_produto.php?id=" . $row['id_estoque'] . "'>Deletar</a></td>";
             
          
         }

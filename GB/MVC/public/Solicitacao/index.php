@@ -3,81 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exibir a Solicitação</title>
-   
+    <link rel="stylesheet" href="../../../Css/solicitacaoatendidas.css">
+    
+    <title>Solicitação Pendentes</title>
+      
+<div class="comeco">
+        <div class="retangulo"></div>
+        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
+       <a href="../../../Portifolio/index.php"><img class="logo" src="../../../Img/bitrix-removebg-preview.png" width="300px"></a> 
+    </div>
+    <div class="sidebar">
+    <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
+        <button onclick="window.location.href='#'">Solicitações Pendentes</button>
+        <button onclick="window.location.href='../../../php/solicitacaoatendidas.php'">Solicitações Atendidas</button>
+        <button onclick="window.location.href='../php/recibosolicitacao.php'">Recibo</button>
+    </div>
 </head>
 <body>
-<style>
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
 
-h2 {
-    text-align: center;
-    color: #333;
-    margin-top: 20px;
-}
 
-.message {
-    text-align: center;
-    color: green;
-}
-
-/* Table Styles */
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
-}
-
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-a {
-    color: #d9534f;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #c9302c;
-}
-
-/* Feedback Messages */
-.message {
-    margin: 20px auto;
-    padding: 10px;
-    width: 80%;
-    border: 1px solid green;
-    background-color: #dff0d8;
-    color: #3c763d;
-    text-align: center;
-}
-
-    </style>
-  <?php
+<div class="main-content">
+        <div class="table-container">
+            <h2>Solicitações Pendentes</h2>
+            <table>
+                <thead>
+                    <tr>
+                     
+                    </tr>
+                </thead>
+                <tbody>
+                  
+    <?php
     // Conexão com o banco de dados
     $host = 'localhost';
     $dbname = 'bike';
@@ -134,7 +90,7 @@ a:hover {
     ?>
 
     <!-- Exibição das solicitações cadastradas -->
-    <h2>Solicitações Cadastradas</h2>
+    
     <table>
         <tr>
             <th>ID</th>
@@ -143,23 +99,27 @@ a:hover {
             <th>Pedido</th>
             <th>Situação</th>
             <th>Criado</th>
-            <th>Ações</th>
         </tr>
         <?php
         // Consulta as solicitações cadastradas
         $stmt = $pdo->query("SELECT * FROM solicitacao");
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            echo "<tr>";
-            echo "<td>".$row['id_soli']."</td>";
-            echo "<td>".$row['solicitante']."</td>";
-            echo "<td>".$row['responsavel']."</td>";
-            echo "<td>".$row['pedido']."</td>";
-            echo "<td>".$row['situacao']."</td>";
-            echo "<td>".$row['criado']."</td>";
-            echo "<td><a href='?delete=".$row['id_soli']."'>Excluir</a></td>";
-            echo "</tr>";
+            if ($row['situacao'] == 0) { // Verifica se a situação é 1
+                echo "<tr>";
+                echo "<td>".$row['id_soli']."</td>";
+                echo "<td>".$row['solicitante']."</td>";
+                echo "<td>".$row['responsavel']."</td>";
+                echo "<td>".$row['pedido']."</td>";
+                echo "<td>".$row['situacao']."</td>";
+                echo "<td>".$row['criado']."</td>";
+                echo "</tr>";
+            }
         }
         ?>
     </table>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

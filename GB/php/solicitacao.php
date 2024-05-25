@@ -18,7 +18,8 @@
 
     <div class="sidebar">
     <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
-        <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações</button>
+        <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações Pendentes</button>
+        <button onclick="window.location.href='../php/solicitacaoatendidas.php'">Solicitações Atendidas</button>
         <button onclick="window.location.href='../php/recibosolicitacao.php'">Recibo</button>
     </div>
 
