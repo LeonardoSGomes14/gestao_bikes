@@ -178,7 +178,7 @@
     </div>
     <div class="sidebar">
         <button onclick="window.location.href='../../portifolio/index.php'">Home</button>
-        <button onclick="window.location.href='../../php/listar_produtos.php'">Produtos Cadastrados</button>
+        <button onclick="window.location.href='../../php/controle_estoque.php'">Produtos Cadastrados</button>
     </div>
     <div class="container">
         <div class="form-container">
