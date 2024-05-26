@@ -32,10 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die("O arquivo não é uma imagem.");
         }
 
-        // Verificar se o arquivo já existe
-        if (file_exists($target_file)) {
-            die("Desculpe, o arquivo já existe.");
-        }
 
         // Tamanho máximo do arquivo (5MB)
         if ($_FILES['imagem']['size'] > 5000000) {
@@ -101,9 +97,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Atualizar Produto</title>
+    <link rel="stylesheet" href="../Css/estoque.css">
 </head>
 <body>
-    <h2>Atualizar Produto</h2>
+    <h2 class="h2center">Atualizar Produto</h2>
     <form method="post" action="atualizar.php" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id_estoque']); ?>">
         <label for="nomedoproduto">Nome do Produto:</label>
@@ -123,76 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="submit" value="Atualizar">
     </form>
 
+    <button><a href="controle_estoque.php">Voltar</a></button>
 
-    <style>
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-}
-
-h2 {
-    color: #333;
-    margin-top: 0;
-}
-
-form {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #666;
-}
-
-input[type="text"],
-input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-.error {
-    color: #f44336;
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-.success {
-    color: #4caf50;
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-</style>
 </body>
 </html>

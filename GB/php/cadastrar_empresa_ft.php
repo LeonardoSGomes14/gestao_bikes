@@ -10,16 +10,14 @@
 </head>
 
 <body>
-
     <div class="comeco">
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
-        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
+        <a href="index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
     </div>
 
     <section>
         <div class="sidebar">
-            <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
-            <button onclick="window.location.href='controle_empresa.php'">Controle de empresas</button>
+            <button onclick="window.location.href='login_empresa.php'">Login</button>
 
         </div>
         <div class="center_form ">

@@ -1,66 +1,93 @@
 body {
+    height: 100vh;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1f9ea8;
 }
+.center_form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+}
+
+.center_form h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
 form {
-    max-width: 400px;
-    margin: 170px auto;
+    display: flex;
+    flex-direction: column;
+    margin: 60px ;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 label {
-    display: block;
-    margin-bottom: 5px;
+    display: flex;
+    align-self: center;
     font-weight: bold;
 }
-input[type="text"],input[type="password"], button[type="button"], button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+
+input[type="text"],
+input[type="password"],
+button[type="button"],
+button[type="submit"] {
+    display: flex;
+    align-self: center;
+    width: 90%;
+    padding: 9px;
+    margin-bottom: 3px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.retangulo {
-width: 13rem;
-height: 66.1rem;
-background: #001e27;
-position: absolute;
-top: 110px;
-left: 0;
+section {
+    display: flex;
 }
 
-button[type="button"], button[type="submit"] {
+
+button[type="button"],
+button[type="submit"] {
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
 }
-button[type="button"]:hover, button[type="submit"]:hover {
+
+button[type="button"]:hover,
+button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
 .volt {
     display: block;
     margin-bottom: 20px;
     color: #007bff;
     text-decoration: none;
 }
+
 .volt:hover {
     text-decoration: underline;
 }
+
 .comeco {
+    display: flex;
+    justify-content: flex-start;
     background-color: #001e27;
-    width: 100%; 
-    height: 180px;
+    width: 100%;
+    height: 20%;
     margin-left: -1px;
     margin-top: -9px;
-    position: absolute;
 }
-.titulo{
+
+.titulo {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
@@ -68,88 +95,104 @@ button[type="button"]:hover, button[type="submit"]:hover {
     left: 370px;
     top: 80px;
 }
-.logo{
-position: absolute;
-top: -22%;
-width: 170px;
-top: 27px;
-}
-.rodape{
 
-margin-top: 150px;
-background-color: #001e27; 
-padding: 40px 0; 
-text-align: center; 
+.logo {     
+  width: 100%;
+  height: 100%;
+}
+
+.rodape {
+
+    margin-top: 150px;
+    background-color: #001e27;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .entra {
-text-decoration: none;
-background-color: transparent;
-color: rgb(255, 255, 255);
-border: 1px solid rgb(255, 255, 255);
-border-radius: 30px;
-padding: 15px 40px;
-font-size: 15px;
-display: inline-block;
-margin: 11px 400px;
-transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Adicionando uma transição suave para o tamanho */
-font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 15px 40px;
+    font-size: 15px;
+    display: inline-block;
+    margin: 11px 400px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    /* Adicionando uma transição suave para o tamanho */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .entra:hover {
-transform: scale(1.1); /* Aumentando o tamanho em 10% ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumentando o tamanho em 10% ao passar o mouse */
 }
-.text-cadastro{
-color:black;
-font-weight: bold;
-font-size:26px;
-margin-top:-45px;
-margin-left:41%;
-font-weight: 700;
-}
-@media screen and (max-width: 768px) {
-/* Oculta o texto do banner em telas menores que 768px */
-.titulo {
-display: none;
-}
-.logo {
-margin-left:35%;
-}
-.rodape  {
-margin-top:100px;
-margin-left:-30px;
-}
-.entra {
-margin-left:298px;
-}  
+
 .text-cadastro {
-margin-left:27%;
+    color: black;
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: -45px;
+    margin-left: 41%;
+    font-weight: 700;
 }
+
+@media screen and (max-width: 768px) {
+
+    /* Oculta o texto do banner em telas menores que 768px */
+    .titulo {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 35%;
+    }
+
+    .rodape {
+        margin-top: 100px;
+        margin-left: -30px;
+    }
+
+    .entra {
+        margin-left: 298px;
+    }
+
+    .text-cadastro {
+        margin-left: 27%;
+    }
 }
+
 .sidebar {
-position: absolute;
-top: 200px; /* Ajuste para não sobrepor a .comeco */
-left: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
+    background-color:  #001e27;;
+    padding-top: 4%;
+    display: flex;
+    height: 110vh;
+    width: 13vw;
+    top: 200px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sidebar button {
-width: 175px;
-padding: 12px;
-margin: 10px 0;
-background-color: #1F9EA8 ;
-color: white;
-border: none;
-cursor: pointer;
-text-align: center;
-border-radius: 10px;
-font-weight: bold;
+    display: flex;
+    width: 70%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin: 10% 15% 10% 15%;
+    background-color: #1F9EA8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
 .sidebar button:hover {
-background-color: yellowgreen;
+    background-color: rgb(50, 205, 166);
 
 }
 

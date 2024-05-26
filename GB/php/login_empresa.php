@@ -62,69 +62,34 @@ if (isset($_POST['cnpj']) && isset($_POST['senha_emp'])) {
 <body>
     <div class="comeco">
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
-        <a href="index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a>
+        <a href="index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" ></a>
     </div>
-    <div class="retangulo"></div>
-    <div class="sidebar">
-       <button><a class="conect" href="../Portifolio/politica_adm.php">Politica de Privacidade</a></button> 
-       <button><a class="conect" href="../Portifolio/contato_adm.php">Página de Contato</a></button> 
-       <button><a class="conect" href="../Portifolio/sobre_adm.php">Sobre</a></button> 
+    <section>
+            <div class="sidebar">
+                <button><a class="conect" href="politica.php">Politica de Privacidade</a></button>
+                <button><a class="conect" href="contato.php">Página de Contato</a></button>
+                <button><a class="conect" href="sobre.php">Sobre</a></button>
+            </div>
 
+        
+        <div class="center_form ">
+<h1>Login de empresa</h1>
+        <form method="post">
 
-    </div>
-    <div class="text-cadastro">Login de Empresas</div>
-    <br>
+            <label for="cnpj">CNPJ:</label><br>
+            <input type="text" id="cnpj" name="cnpj" required><br>
 
-    <form method="post">
+            <label for="nome">Senha:</label><br>
+            <input type="password" id="senha_emp" name="senha_emp" required><br>
 
-        <label for="cnpj">CNPJ:</label><br>
-        <input type="text" id="cnpj" name="cnpj" required><br>
+            <button type="submit" name="signin"> Entrar </button>
 
-        <label for="nome">Senha:</label><br>
-        <input type="password" id="senha_emp" name="senha_emp" required><br>
+            <p> Sua empresa ainda não tem conta? Realize o <a href="cadastrar_empresa_ft.php"> Cadastro </a></p>
+        </form>
 
-        <button type="submit" name="signin"> Entrar </button> 
-    </form>
+        </div>
+    </section>
 
-    </div>
-    <div class="barra">.</div>
-
-    <div class="icons">
-        <a href="https://www.facebook.com/" target="_blank">
-            <img class="face" src="../Img/facebook-logo.png" width="30"></a>
-        <a href="https://twitter.com/login?lang=pt" target="_blank">
-            <img class="face" src="../Img/x-logo.png" width="34"></a>
-        <a href="https://www.youtube.com/" target="_blank">
-            <img class="face" src="../Img/youtube-logo.png" width="30"></a>
-        <a href="https://br.pinterest.com/" target="_blank">
-            <img class="face" src="../Img/pinterest-logo.png" width="30"></a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img class="face" src="../Img/instagram-logo.png" width="30"></a>
-        <a href="https://www.tiktok.com/pt-BR/" target="_blank">
-            <img class="face" src="../Img/tiktok-logo.png" width="30"></a>
-    </div>
-
-    <script>
-        function consultarCEP() {
-            var cep = document.getElementById('cep').value;
-            var url = 'https://viacep.com.br/ws/' + cep + '/json/';
-
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.erro) {
-                        alert('CEP não encontrado.');
-                    } else {
-                        document.getElementById('estado').value = data.uf;
-                        document.getElementById('rua').value = data.logradouro;
-                    }
-                })
-                .catch(error => {
-                    console.error('Erro ao consultar o CEP:', error);
-                    alert('Erro ao consultar o CEP.');
-                });
-        }
-    </script>
 </body>
 
 </html>

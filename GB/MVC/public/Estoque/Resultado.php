@@ -12,12 +12,11 @@ $controller->cadastrarProduto($_POST);
     <title>Document</title>
 </head>
 <body>
-
-<a href="../../Views/EstoqueViews.php">Voltar</a>
+<h1><a href="../../Views/EstoqueViews.php">Voltar</a></h1>
 <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: whitesmoke;
             margin: 0;
             padding: 0;
             text-align: center;

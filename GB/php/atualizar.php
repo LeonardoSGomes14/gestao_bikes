@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Atualizar Produto</title>
+    <title> Produto atualizado! </title>
 </head>
 <body>
   <style>
@@ -194,8 +194,22 @@ input[type="submit"]:hover {
 }
 
 
+.conect {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+button {
+    background-color: blue;
+    border: 0.5px;
+    box-shadow: 0.25px 0.5px 0.25px 0.5px;
+    margin: 15px;
+}
+
     </style>
-<a class="aa" href="controle_estoque.php">Voltar</a>
+    <br> 
+<button><a class="conect" href="controle_estoque.php">  Voltar</a></button>
 
 </body>
 </html>
