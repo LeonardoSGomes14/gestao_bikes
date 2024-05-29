@@ -1,3 +1,11 @@
+<?php
+require '../../php/verificar_permissao.php';
+
+verificarPermissao([1, 2, 3]);
+ 
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -43,6 +51,7 @@
             </div>
         </div>
     </section>
+
 </body>
 
 </html>

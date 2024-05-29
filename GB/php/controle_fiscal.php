@@ -1,4 +1,11 @@
 <?php
+require 'verificar_permissao.php';
+
+verificarPermissao([1,2,3]);
+ 
+?>
+
+<?php
 // Configuração do Banco de Dados
 $host = 'localhost';
 $dbname = 'bike';

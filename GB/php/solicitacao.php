@@ -1,3 +1,21 @@
+<?php
+require 'verificar_permissao.php';
+
+verificarPermissao([1,2,3,4,5]);
+ 
+?>
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +37,7 @@
     <div class="sidebar">
     <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
         <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações Pendentes</button>
-        <button onclick="window.location.href='../php/solicitacaoatendidas.php'">Solicitações Atendidas</button>
-        <button onclick="window.location.href='../php/recibosolicitacao.php'">Recibo</button>
+        <button onclick="window.location.href='../php/solicitacaoatendidas.php'">Recibos Das Solicitações </button>
     </div>
 
         </div> 
