@@ -1,6 +1,10 @@
+
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #6C7A86;
+  height: 100vh;
+  background-color: #1f9ea8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 #menu {
@@ -159,21 +163,20 @@ a {
   font-weight:bolder;
 }
 
+
 .comeco {
+  display: flex;
+  justify-content: flex-start;
   background-color: #001e27;
-  width: 132%; 
-  height: 180px;
-  margin-left: -8px;
+  width: 100%;
+  height: 20%;
+  margin-left: -1px;
   margin-top: -9px;
-  position: absolute;
 }
 
 .logo {
-  position: absolute;
-  top: -22%;
-  width: 160px;
-  top: 12px;
-  left: 100px;
+width: 100%;
+height: 100%;
 }
 
 .titulo {
@@ -205,8 +208,12 @@ a {
 }
 
 .sidebar {
-  position: absolute;
-  top: 200px; /* Ajuste para não sobrepor a .comeco */
+  background-color:  #001e27;;
+  padding-top: 4%;
+  display: flex;
+  height: 110vh;
+  width: 13vw;
+  top: 200px;
   left: 10px;
   display: flex;
   flex-direction: column;
@@ -214,20 +221,22 @@ a {
 }
 
 .sidebar button {
-  width: 175px;
-  padding: 12px;
-  margin: 10px 0;
-  background-color: #1F9EA8 ;
+  display: flex;
+  width: 70%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin: 10% 15% 10% 15%;
+  background-color: #1F9EA8;
   color: white;
   border: none;
   cursor: pointer;
-  text-align: center;
+  justify-content: center;
   border-radius: 10px;
   font-weight: bold;
 }
 
 .sidebar button:hover {
-  background-color: yellowgreen;
+  background-color: rgb(50, 205, 166);
 
 }
 
@@ -319,6 +328,18 @@ a {
 
 .pessoa strong {
   margin-right: 5px;
+}
+
+
+.showinfo {
+  display: flex;
+
+}
+
+
+.h2center {
+  color: black;
+  font-weight: bolder;
 }
 
 

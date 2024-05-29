@@ -65,19 +65,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+
   <div class="comeco">
-    <div class="retangulo"></div>
+
     <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
     <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a>
   </div>
-
+  <section class="showinfo">
   <div class="sidebar">
     <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
     <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações</button>
     <button onclick="window.location.href='../php/recibosolicitacao.php'">Recibo</button>
   </div>
-  <div class="content">
-    <h2>Pessoas Cadastradas</h2>
+
+  <div class="">
+    <h2 class="h2center">Pessoas Cadastradas</h2>
     <div class="pessoas-container">
       <?php foreach ($pessoas as $pessoa): ?>
         <div class="pessoa">
@@ -109,10 +111,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <div><a href="atualizar_usuario.php?id=<?php echo $pessoa['id_user']; ?>">Atualizar</a></div>
         </div>
-      <?php endforeach; ?>
-    </div>
+        <?php endforeach; ?>
+    </div>  </section>
   </div>
-
   <script>
     function menuOnClick() {
       document.getElementById("menu-bar").classList.toggle("change");
