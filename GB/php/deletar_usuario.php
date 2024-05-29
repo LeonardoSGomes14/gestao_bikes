@@ -29,21 +29,11 @@ if (isset($_POST['id_usuario'])) {
     // Deleta o usuário usando PDO
     try {
         $pdo->exec($sql);
-        echo "Usuário deletado com sucesso usando PDO";
+        echo 'Usuário deletado com sucesso usando PDO <br><br> <a href="gestaorh.php">voltar</a>';
     } catch (PDOException $e) {
-        echo "Erro ao deletar usuário usando PDO: " . $e->getMessage();
+        echo 'Erro ao deletar usuário usando PDO: ' . $e->getMessage();
     }
 
-    // Deleta o usuário usando MySQLi
-    if ($mysqli->query($sql) === TRUE) {
-        echo "Usuário deletado com sucesso usando MySQLi";
-    } else {
-        echo "Erro ao deletar usuário usando MySQLi: " . $mysqli->error;
-    }
-} else {
-    echo "ID de usuário não fornecido";
 }
 
-// Fecha a conexão MySQLi
-$mysqli->close();
 

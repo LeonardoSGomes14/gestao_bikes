@@ -1,4 +1,16 @@
 <?php
+require 'verificar_permissao.php';
+
+verificarPermissao([1,2]);
+ 
+?>
+
+
+
+
+
+
+<?php
 // Conexão com o banco de dados
 $servername = "localhost";
 $username = "root";

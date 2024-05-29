@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Maio-2024 às 15:06
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.2.0
+-- Tempo de geração: 24/05/2024 às 20:36
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cadastro_empresa`
+-- Estrutura para tabela `cadastro_empresa`
 --
 
 CREATE TABLE `cadastro_empresa` (
@@ -32,6 +32,7 @@ CREATE TABLE `cadastro_empresa` (
   `nome` varchar(255) NOT NULL,
   `servicos` varchar(255) NOT NULL,
   `cnpj` varchar(255) NOT NULL,
+  `senha_emp` varchar(255) NOT NULL,
   `cep` varchar(255) NOT NULL,
   `estado` varchar(255) NOT NULL,
   `rua` varchar(255) NOT NULL,
@@ -39,33 +40,19 @@ CREATE TABLE `cadastro_empresa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `cadastro_empresa`
+-- Despejando dados para a tabela `cadastro_empresa`
 --
 
-INSERT INTO `cadastro_empresa` (`id_empresa`, `nome`, `servicos`, `cnpj`, `cep`, `estado`, `rua`, `numero`) VALUES
-(1, '222', '333', '222', '19703194', 'SP', 'Rua Herculano Azevedo', '132'),
-(2, 'Mateus', 'dsds', '1dwer3453', '19703194', 'SP', 'Rua Herculano Azevedo', '194'),
-(3, '42', '35454', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '143'),
-(4, '42', '35454', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '143'),
-(5, '42', '35454', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '143'),
-(6, 'ytryutr', 'gyhtrhtr', '576r4', '19703194', 'SP', 'Rua Herculano Azevedo', '987'),
-(7, 'ytryutr', 'gyhtrhtr', '576r4', '19703194', 'SP', 'Rua Herculano Azevedo', '987'),
-(8, 'sas', 'asas', '4656', '19703194', 'SP', 'Rua Herculano Azevedo', '195'),
-(9, 'sas', 'asas', '4656', '19703194', 'SP', 'Rua Herculano Azevedo', '195'),
-(10, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
-(11, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
-(12, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
-(13, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
-(14, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
-(15, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
-(16, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
-(17, '3', '3', '33', '19703-194', 'SP', 'Rua Herculano Azevedo', '195244'),
-(18, 'Mateus', 'hard', '000000001', '19703194', 'SP', 'Rua Herculano Azevedo', '195');
+INSERT INTO `cadastro_empresa` (`id_empresa`, `nome`, `servicos`, `cnpj`, `senha_emp`, `cep`, `estado`, `rua`, `numero`) VALUES
+(2, 'Mateus', 'dsds', '1dwer3453', '123', '19703194', 'SP', 'Rua Herculano Azevedo', '194'),
+(19, 'kmfe', 'cjdjv', 'vjdovdi', '', '19703-164', 'SP', 'Rua Salmen Zauy', '895'),
+(20, 'kmfe', 'cjdjv', 'vjdovdi', '', '19703-164', 'SP', 'Rua Salmen Zauy', '895'),
+(21, 'knoinoinio', 'oinon', '789', '987', '19703-164', 'SP', 'Rua Salmen Zauy', '546');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `comercial`
+-- Estrutura para tabela `comercial`
 --
 
 CREATE TABLE `comercial` (
@@ -83,7 +70,7 @@ CREATE TABLE `comercial` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `contas`
+-- Estrutura para tabela `contas`
 --
 
 CREATE TABLE `contas` (
@@ -96,7 +83,7 @@ CREATE TABLE `contas` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `controleestoque`
+-- Estrutura para tabela `controleestoque`
 --
 
 CREATE TABLE `controleestoque` (
@@ -111,7 +98,7 @@ CREATE TABLE `controleestoque` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Extraindo dados da tabela `controleestoque`
+-- Despejando dados para a tabela `controleestoque`
 --
 
 INSERT INTO `controleestoque` (`id_estoque`, `nomedoproduto`, `quantidade`, `preco`, `tipo`, `data`, `fornecedor`, `imagem`) VALUES
@@ -122,7 +109,7 @@ INSERT INTO `controleestoque` (`id_estoque`, `nomedoproduto`, `quantidade`, `pre
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `controlefiscal`
+-- Estrutura para tabela `controlefiscal`
 --
 
 CREATE TABLE `controlefiscal` (
@@ -134,7 +121,7 @@ CREATE TABLE `controlefiscal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Extraindo dados da tabela `controlefiscal`
+-- Despejando dados para a tabela `controlefiscal`
 --
 
 INSERT INTO `controlefiscal` (`id_fiscal`, `transacoes`, `fatura`, `imposto`, `orcamentos`) VALUES
@@ -143,7 +130,7 @@ INSERT INTO `controlefiscal` (`id_fiscal`, `transacoes`, `fatura`, `imposto`, `o
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `controlefrota`
+-- Estrutura para tabela `controlefrota`
 --
 
 CREATE TABLE `controlefrota` (
@@ -157,7 +144,7 @@ CREATE TABLE `controlefrota` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Extraindo dados da tabela `controlefrota`
+-- Despejando dados para a tabela `controlefrota`
 --
 
 INSERT INTO `controlefrota` (`id_frota`, `marca`, `ano_fabricado`, `modelo`, `tipodeveiculo`, `placaveiculo`, `imagem`) VALUES
@@ -166,7 +153,7 @@ INSERT INTO `controlefrota` (`id_frota`, `marca`, `ano_fabricado`, `modelo`, `ti
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `controlepessoas`
+-- Estrutura para tabela `controlepessoas`
 --
 
 CREATE TABLE `controlepessoas` (
@@ -181,7 +168,7 @@ CREATE TABLE `controlepessoas` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `solicitacao`
+-- Estrutura para tabela `solicitacao`
 --
 
 CREATE TABLE `solicitacao` (
@@ -194,7 +181,7 @@ CREATE TABLE `solicitacao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Extraindo dados da tabela `solicitacao`
+-- Despejando dados para a tabela `solicitacao`
 --
 
 INSERT INTO `solicitacao` (`id_soli`, `solicitante`, `responsavel`, `pedido`, `situacao`, `criado`) VALUES
@@ -206,7 +193,7 @@ INSERT INTO `solicitacao` (`id_soli`, `solicitante`, `responsavel`, `pedido`, `s
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuarios`
+-- Estrutura para tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -234,16 +221,17 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `usuarios`
+-- Despejando dados para a tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id_user`, `nome_completo`, `nome_usuario`, `datadenascimento`, `cpf`, `genero`, `phone`, `email`, `senha`, `tipo_funcionario`, `cep`, `cidade`, `rua`, `numero`, `complemento`, `hora_entrada`, `hora_saida`, `carga_horaria`, `remuneracao`, `data_contratacao`, `foto_perfil`) VALUES
-(8, 'Mateus oliveira', 'Mateus oliveira', '0000-00-00', '448.547.538-70', 'Masculino', '(18) 99742-9620', 'Mateus@g.com', 'mo123351', '0', '19703194', '0', '0', '1', 'casa', '04:00:00', '05:00:00', 24, '1500', '2024-05-16', NULL);
+(8, 'Mateus oliveira', 'Mateus oliveira', '0000-00-00', '448.547.538-70', 'Masculino', '(18) 99742-9620', 'Mateus@g.com', 'mo123351', '5', '19703194', '0', '0', '1', 'casa', '04:00:00', '05:00:00', 24, '1500', '2024-05-16', NULL),
+(10, 'Leonardo Silveira Gomes', 'Leonardo Silveira Gomes', '0000-00-00', '63164949', 'Masculino', '18996447880', 'leo@gmail.com', '123', '1', '0', '0', '0', '0', '0', '00:00:00', '00:00:00', 0, '0', '0000-00-00', 'icons8-task-100.png');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `vendas`
+-- Estrutura para tabela `vendas`
 --
 
 CREATE TABLE `vendas` (
@@ -256,7 +244,7 @@ CREATE TABLE `vendas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Extraindo dados da tabela `vendas`
+-- Despejando dados para a tabela `vendas`
 --
 
 INSERT INTO `vendas` (`id_venda`, `produto`, `valor`, `quantidade`, `total`, `data`) VALUES
@@ -270,74 +258,74 @@ INSERT INTO `vendas` (`id_venda`, `produto`, `valor`, `quantidade`, `total`, `da
 --
 
 --
--- Índices para tabela `cadastro_empresa`
+-- Índices de tabela `cadastro_empresa`
 --
 ALTER TABLE `cadastro_empresa`
   ADD PRIMARY KEY (`id_empresa`);
 
 --
--- Índices para tabela `comercial`
+-- Índices de tabela `comercial`
 --
 ALTER TABLE `comercial`
   ADD PRIMARY KEY (`id_venda`);
 
 --
--- Índices para tabela `contas`
+-- Índices de tabela `contas`
 --
 ALTER TABLE `contas`
   ADD PRIMARY KEY (`id_conta`);
 
 --
--- Índices para tabela `controleestoque`
+-- Índices de tabela `controleestoque`
 --
 ALTER TABLE `controleestoque`
   ADD PRIMARY KEY (`id_estoque`);
 
 --
--- Índices para tabela `controlefiscal`
+-- Índices de tabela `controlefiscal`
 --
 ALTER TABLE `controlefiscal`
   ADD PRIMARY KEY (`id_fiscal`);
 
 --
--- Índices para tabela `controlefrota`
+-- Índices de tabela `controlefrota`
 --
 ALTER TABLE `controlefrota`
   ADD PRIMARY KEY (`id_frota`);
 
 --
--- Índices para tabela `controlepessoas`
+-- Índices de tabela `controlepessoas`
 --
 ALTER TABLE `controlepessoas`
   ADD PRIMARY KEY (`id_pessoas`);
 
 --
--- Índices para tabela `solicitacao`
+-- Índices de tabela `solicitacao`
 --
 ALTER TABLE `solicitacao`
   ADD PRIMARY KEY (`id_soli`);
 
 --
--- Índices para tabela `usuarios`
+-- Índices de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Índices para tabela `vendas`
+-- Índices de tabela `vendas`
 --
 ALTER TABLE `vendas`
   ADD PRIMARY KEY (`id_venda`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `cadastro_empresa`
 --
 ALTER TABLE `cadastro_empresa`
-  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de tabela `comercial`
@@ -385,7 +373,7 @@ ALTER TABLE `solicitacao`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `vendas`

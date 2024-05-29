@@ -36,11 +36,9 @@ class ControleEstoqueController {
         move_uploaded_file($imagem_tmp, "../../public/Estoque/uploads/$imagem");
 
         if($this->model->cadastrarProduto($nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem)) {
-            echo "Cadastro realizado com sucesso!";
+            echo "<h1> Cadastro realizado com sucesso! </h1>";
         } else {
-            echo "Erro ao cadastrar produto!";
+            echo "<h1> Erro ao cadastrar produto! </h1>";
         }
     }
 }
-
-?>

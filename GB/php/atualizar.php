@@ -1,3 +1,5 @@
+
+
 <?php
 $host = 'localhost';
 $dbname = 'bike';
@@ -32,6 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die("O arquivo não é uma imagem.");
         }
 
+        // Verificar se o arquivo já existe
+        if (file_exists($target_file)) {
+            die("Desculpe, o arquivo já existe.");
+        }
 
         // Tamanho máximo do arquivo (5MB)
         if ($_FILES['imagem']['size'] > 5000000) {
@@ -96,31 +102,114 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Atualizar Produto</title>
-    <link rel="stylesheet" href="../Css/estoque.css">
+    <title> Produto atualizado! </title>
 </head>
 <body>
-    <h2 class="h2center">Atualizar Produto</h2>
-    <form method="post" action="atualizar.php" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id_estoque']); ?>">
-        <label for="nomedoproduto">Nome do Produto:</label>
-        <input type="text" name="nomedoproduto" value="<?php echo htmlspecialchars($row['nomedoproduto']); ?>"><br>
-        <label for="quantidade">Quantidade:</label>
-        <input type="text" name="quantidade" value="<?php echo htmlspecialchars($row['quantidade']); ?>"><br>
-        <label for="preco">Preço:</label>
-        <input type="text" name="preco" value="<?php echo htmlspecialchars($row['preco']); ?>"><br>
-        <label for="tipo">Tipo:</label>
-        <input type="text" name="tipo" value="<?php echo htmlspecialchars($row['tipo']); ?>"><br>
-        <label for="data">Data:</label>
-        <input type="text" name="data" value="<?php echo htmlspecialchars($row['data']); ?>"><br>
-        <label for="fornecedor">Fornecedor:</label>
-        <input type="text" name="fornecedor" value="<?php echo htmlspecialchars($row['fornecedor']); ?>"><br>
-        <label for="imagem">Imagem:</label>
-        <input type="file" name="imagem"><br>
-        <input type="submit" value="Atualizar">
-    </form>
+  <style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-    <button><a href="controle_estoque.php">Voltar</a></button>
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+form {
+    background: rgba(44, 62, 80, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    max-width: 500px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #4ca1af;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #1abc9c;
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #16a085, #1abc9c);
+}
+
+.a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-decoration:none;
+}
+
+.a:hover {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+
+
+.conect {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+button {
+    background-color: blue;
+    border: 0.5px;
+    box-shadow: 0.25px 0.5px 0.25px 0.5px;
+    margin: 15px;
+}
+
+    </style>
+    <br> 
+<button><a class="conect" href="controle_estoque.php">  Voltar</a></button>
 
 </body>
 </html>
