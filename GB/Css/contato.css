@@ -217,7 +217,7 @@ button {
   }
   .text1 {
     margin-left:400px;
-    margin-top:-30%;
+    margin-top:-25%;
   }
  .container{
   height: 300%;
@@ -240,7 +240,7 @@ button {
     z-index:1;
   }
 .carta {
-  margin-top:175px;
+  margin-top:135px;
   margin-left:-35%;
   z-index:1;
 }
