@@ -83,7 +83,7 @@ p {
 
 <div id="loading-screen">
         <div class="spinner"></div>
-        <div class="loading-text">Entrando...</div>
+        <div class="loading-text">Loading...</div>
     </div>
 
 
