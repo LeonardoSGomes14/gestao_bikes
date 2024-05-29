@@ -9,7 +9,20 @@ if (isset($_GET['id']) && isset($_GET['produto']) && isset($_GET['valor']) && is
     $total = $_GET['total'];
     $data = $_GET['data'];
 
-    // Exibir as informações da venda
+    ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar vendas</title>
+    <link rel="stylesheet" href="../Css/atualizar_usuario.css">
+</head>
+<body>
+
+
+<?php
     echo "<h2>Atualizar Venda</h2>";
     echo "<form action='atualizar_venda_processamento.php' method='POST'>";
     echo "<input type='hidden' name='id_venda' value='$id_venda'>";
@@ -29,3 +42,6 @@ if (isset($_GET['id']) && isset($_GET['produto']) && isset($_GET['valor']) && is
     echo "Informações da venda não especificadas.";
 }
 ?>
+
+</body>
+</html>

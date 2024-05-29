@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,33 +12,44 @@
 
     <div class="comeco">
 
-        <div class="quadrado"></div>
-        <div class="quadrado2"></div>
-
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
 
         <a href="index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a>
+    </div>
 
-        <img class="bike" src="../Img/cuadro-de.webp" width="300px">
 
-        <img class="bike2" src="../Img/grafico.webp" width="300px">
 
-        <h1 class="text1">Sobre a Bitrix </h1>
+
+    <h1>Sobre a Bitrix </h1>
+
+    <section>
+        <div class="conteudo">
+
+            <p>Somos uma empresa dedicada a fornecer soluções integradas de gerenciamento empresarial, semelhante ao SAP, para negócios de todos os portes. <br> Nossa plataforma oferece ferramentas completas para otimização de processos, gestão financeira, controle gestão eficaz do estoque e a manutenção de relacionamnetos sólidos com os clientes até de estoque, recursos humanos e muito mais. <br> Com tecnologia de ponta e uma interface amigável.</p>
+
+            <img class="img_emp" src="../Img/cuadro-de.webp" width="300px">
+
+        </div>
+
+        <div class="conteudo2">
+            <img class="img_emp2" src="../Img/grafico.webp" width="300px">
+            <p> Nosso compromisso é simplificar a complexidade dos negócios modernos, oferecendo suporte contínuo e personalização
+                de acordo com as necessidades específicas de cada empresa. Com anos de experiência no mercado e uma
+                equipe de especialistas dedicada, estamos prontos para transformar a maneira como você gerencia seu negócio. Com tecnologia de ponta e uma interface amigável, capacitamos nossos
+                clientes a alcançar eficiência operacional e crescimento sustentável.
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer>
 
         <div class="rodape">
 
             <a class="entra" href="index.php">Voltar</a>
 
-            <element class="conteudo">
-           
-                <p>Somos uma empresa dedicada a fornecer soluções integradas <br>de gerenciamento empresarial, semelhante ao SAP, para negócios de<br> todos os portes. Nossa plataforma oferece ferramentas<br> completas para otimização de processos, gestão financeira, controle  <br>gestão eficaz do estoque
-                    e a manutenção de relacionamnetos sólidos com os clientes até<br>de estoque, recursos humanos e muito mais. Com tecnologia de ponta e uma interface amigável.</p>
-                    
+    </footer>
+</body>
 
-                <element class="conteudo2">
-                    <p> Nosso compromisso é simplificar a complexidade dos negócios modernos, oferecendo suporte contínuo e personalização 
-                        de acordo com as necessidades específicas de cada empresa. Com anos de experiência no mercado e uma 
-                        equipe de especialistas dedicada, estamos prontos para transformar a maneira como você gerencia seu negócio. Com tecnologia de ponta e uma interface amigável, capacitamos nossos
-                         clientes a alcançar eficiência operacional e crescimento sustentável.
-
-</p>
+</html>
