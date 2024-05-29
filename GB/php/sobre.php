@@ -1,3 +1,14 @@
+<?php
+require 'verificar_permissao.php';
+
+verificarPermissao([1,2,3,4,5]);
+ 
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 

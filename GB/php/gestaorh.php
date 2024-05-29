@@ -1,4 +1,14 @@
 <?php
+require '../../php/verificar_permissao.php';
+
+verificarPermissao([1,4]);
+ 
+?>
+
+
+
+
+<?php
 session_start();
 
 include_once ('../config/config.php');

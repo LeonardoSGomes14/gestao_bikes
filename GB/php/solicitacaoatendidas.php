@@ -1,3 +1,14 @@
+<?php
+require 'verificar_permissao.php';
+
+verificarPermissao([1]);
+ 
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
