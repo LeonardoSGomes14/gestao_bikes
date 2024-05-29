@@ -86,10 +86,8 @@ if (isset($_POST['cnpj']) && isset($_POST['senha_emp'])) {
 
             <p> Sua empresa ainda não tem conta? Realize o <a href="cadastrar_empresa_ft.php"> Cadastro </a></p>
         </form>
-
         </div>
     </section>
 
 </body>
-
 </html>
