@@ -143,19 +143,19 @@ form input[type="submit"]:hover {
     padding: 40px 0; 
     text-align: center; 
     }
-    table {
-        width: 100%;
-        border-collapse: collapse;
+   
+    /* Estilos para os botões */
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #1F9EA7; /* Cor de fundo */
+        color: white; /* Cor do texto */
+        text-decoration: none;
+        border-radius: 5px; /* Borda arredondada */
+        transition: background-color 0.3s; /* Transição suave */
     }
-
-    th,
-    td {
-        border: 5px solid #ddd;
-        padding: 10px;
-        text-align: center;
+    
+    .button:hover {
+        background-color: #6a11cb; /* Cor de fundo ao passar o mouse */
     }
-
-    th {
-        background-color:#001e27;
-        color: #ddd;
-    }
+    

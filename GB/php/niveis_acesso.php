@@ -86,7 +86,7 @@
     </div>
 
     <div class="rodape">
-        <a class="entra" href="index.php">Voltar</a>
+        <a class="entra" href="../Portifolio/index.php">Voltar</a>
     </div>
 
 </body>

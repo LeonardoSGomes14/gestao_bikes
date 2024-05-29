@@ -1,48 +1,54 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
-  background-color:#d6d6d6;
+body {
+  height: 100vh;
+  background-color: #1f9ea8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-img{
+
+img {
   width: 300px;
 }
 
-.centro{
+.centro {
   position: absolute;
   margin-top: -430px;
   margin-left: 350px;
   width: 300px;
-  
+
 }
 
-.carta{
+.carta {
   position: absolute;
   margin-top: -120px;
   margin-left: 350px;
   width: 100px;
-  
+
 }
 
-.fone{
+.fone {
   position: absolute;
   margin-top: -110px;
   margin-left: 850px;
   width: 100px;
-  
+
 }
 
 .comeco {
   background-color: #001e27;
-  width: 100.5%; 
+  width: 100.5%;
   height: 180px;
   margin-left: -8px;
   margin-top: -9px;
   position: absolute;
 }
-.titulo{
+
+.titulo {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -50,34 +56,19 @@ img{
   left: 370px;
   top: 30px;
 }
+
 .dois {
   text-align: end;
   margin-top: 110px;
 }
 
-.logo{
+.logo {
   position: absolute;
   top: -22%;
   width: 200px;
   top: -10px;
 }
 
-.retangulo {
-  width: 30vh;
-  height: 101.2vh;
-  background:#001e27;
-
-}
-
-.texto-centralizado {
-  position: absolute;
-  top: 100%; 
-  left: 20%; 
-  font-weight: bold;
-  transform: translate(-50%, -50%); 
-  color: black;
-  font-size: 24px; 
-}
 
 /* Estilos para centralizar a tabela */
 .table-container {
@@ -90,8 +81,10 @@ img{
 
 /* Estilos para a tabela */
 .table {
-  width:100%; /* Largura da tabela aumentada - ajuste conforme necessário */
-  max-width: 100%; /* Definindo uma largura máxima para evitar que a tabela fique muito larga */
+  width: 100%;
+  /* Largura da tabela aumentada - ajuste conforme necessário */
+  max-width: 100%;
+  /* Definindo uma largura máxima para evitar que a tabela fique muito larga */
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
@@ -134,147 +127,176 @@ img{
 }
 
 .table-container {
-margin: 20px auto;
-width: 100%;
-margin-left: 30vh;
+  margin: 20px auto;
+  width: 100%;
+  margin-left: 30vh;
 }
 
 .table {
-width: 100%;
-border-collapse: collapse;
-text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
 }
 
-.table th, .table td {
-padding: 10px;
-border: 1px solid #ddd;
+.table th,
+.table td {
+  padding: 10px;
+  border: 1px solid #ddd;
 }
 
 .table th {
-background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .table tbody tr:nth-child(even) {
-background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .table tbody tr:hover {
-background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
-a{
-  width: 32vh;
-  display: flex;
+
+
+.div {
   margin-left: 30vh;
-  color: rgb(0, 0, 0);
-text-decoration: none;
-padding: 10px;
-border: 1px solid #adadad;
-background-color: #f1f1f1;
-border-radius: 1vh;  
-margin-top: -46vh;
-margin-left: 0vh;
 }
-.div{
-margin-left: 30vh;
-}
-.container{
-  margin-left: 790px;
-  margin-top: 460px; 
-   align-items: center;
-  justify-content: center;
+
+.container {
+  max-width: 50%;
+  height: 100%;
   text-align: center;
-  padding: -10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  font-weight: bold;
+  font-size: 18px;
   
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 60px ;
+  padding: 20px;
 }
 /* Estilo do formulário */
 /* Estilo do formulário */
 .form-solicitacao {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 30px;
   border-radius: 20px;
   background: linear-gradient(145deg, #232526, #414345);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
-  margin-top: -63cap;
+  animation: borderAnimation 5s infinite alternate;
 
 }
 
 .form-solicitacao h1 {
-font-family: 'Roboto', sans-serif;
-font-size: 36px;
-color: #ffffff;
-text-align: center;
-margin-bottom: 30px;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
 .form-solicitacao label {
-display: block;
-font-family: 'Roboto', sans-serif;
-font-size: 18px;
-color: #ffffff;
-margin-bottom: 10px;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 
 /* Estilo dos campos de entrada */
 .form-solicitacao input[type="text"],
 .form-solicitacao input[type="number"] {
-width: calc(100% - 20px);
-padding: 15px;
-margin-bottom: 20px;
-border: 2px solid;
-border-radius: 10px;
-background-color: rgba(255, 255, 255, 0.1);
-font-family: 'Roboto', sans-serif;
-font-size: 16px;
-color: #ffffff;
-animation: borderAnimation 5s infinite alternate; /* Adicionando animação */
+  width: calc(100% - 20px);
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  animation: borderAnimation 5s infinite alternate;
+  /* Adicionando animação */
 }
+
 @keyframes borderAnimation {
-  0% { border-color: rgb(255, 100, 100); }
-  25% { border-color: rgb(100, 255, 100); }
-  50% { border-color: rgb(100, 100, 255); }
-  75% { border-color: rgb(255, 255, 100); }
-  100% { border-color: rgb(255, 100, 255); }
+  0% {
+    border-color: rgb(255, 100, 100);
+  }
+
+  25% {
+    border-color: rgb(100, 255, 100);
+  }
+
+  50% {
+    border-color: rgb(100, 100, 255);
+  }
+
+  75% {
+    border-color: rgb(255, 255, 100);
+  }
+
+  100% {
+    border-color: rgb(255, 100, 255);
+  }
 }
 
 /* Estilo do botão de envio */
 .form-solicitacao input[type="submit"] {
-width: 100%;
-padding: 15px;
-background-color: #1f9ea7;
-color: #ffffff;
-border: none;
-border-radius: 10px;
-font-family: 'Roboto', sans-serif;
-font-size: 18px;
-cursor: pointer;
-transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 15px;
+  background-color: #1f9ea7;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 
 }
 
 /* Estilo do botão de envio ao passar o mouse */
 .form-solicitacao input[type="submit"]:hover {
-background-color: #0f575d;
+  background-color: #0f575d;
 }
 
 /* Estilo do botão de envio quando pressionado */
 .form-solicitacao input[type="submit"]:active {
-background-color: #e64a19;
+  background-color: #e64a19;
 }
-h2{
+
+h2 {
   color: rgb(0, 0, 0);
   margin-top: -240px;
   position: absolute;
-  
+
 }
 
 
+.comeco {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #001e27;
+  width: 100%;
+  height: 20%;
+  margin-left: -1px;
+  margin-top: -9px;
+}
+
 .sidebar {
-  position: absolute;
-  top: 200px; /* Ajuste para não sobrepor a .comeco */
+  background-color:  #001e27;;
+  padding-top: 4%;
+  display: flex;
+  height: 110vh;
+  width: 13vw;
+  top: 200px;
   left: 10px;
   display: flex;
   flex-direction: column;
@@ -282,20 +304,38 @@ h2{
 }
 
 .sidebar button {
-  width: 175px;
-  padding: 12px;
-  margin: 10px 0;
-  background-color: #1F9EA8 ;
+  display: flex;
+  width: 70%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin: 10% 15% 10% 15%;
+  background-color: #1F9EA8;
   color: white;
   border: none;
   cursor: pointer;
-  text-align: center;
+  justify-content: center;
   border-radius: 10px;
   font-weight: bold;
 }
 
 .sidebar button:hover {
-  background-color: yellowgreen;
+  background-color: rgb(50, 205, 166);
+
+}
+
+.conect {
+  text-decoration: none;
+  color: white;
+}
+
+.h2center {
+  color: black;
+  font-weight: bolder;
+}
+
+.showinfo {
+  display: flex;
+  justify-content: center;
 
 }
 
@@ -304,40 +344,40 @@ h2{
   margin-left: 220px;
   padding: 20px;
   position: relative;
-  top: 220px; 
+  top: 220px;
 }
 
 @media screen and (max-width: 950px) {
-body{
-  width: 100%;
-  height: 100%  ;
-}
-.logo{
-  width: 150px;
-}
-  .comeco{
-  background: none;
-}
-.titulo{
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  position: absolute;
-  left: 175px;
-  top: 20px;
-}
-div{
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-}
-.retangulo{
-  height: 20vh;
-  width: 120vw;
-}
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .comeco {
+    background: none;
+  }
+
+  .titulo {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    left: 175px;
+    top: 20px;
+  }
+
+  div {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
 
 
-  .form-solicitacao{
+  .form-solicitacao {
     display: flex;
     flex-direction: column;
     margin-top: -180%;
@@ -345,7 +385,7 @@ div{
     width: 300px;
   }
 
-  .container{
+  .container {
     margin-left: 30%;
     margin-top: auto;
     align-items: center;
@@ -355,9 +395,9 @@ div{
   }
 
   .table-container {
-    margin-top: 200px; 
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .sidebar {
@@ -374,25 +414,25 @@ div{
   }
 
   .main-content {
-    margin-left: 20px; 
-    margin-right: 20px; 
-    top: 100px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    top: 100px;
   }
 
   .texto-centralizado {
     position: absolute;
-    top: 100%; 
-    left: 66%; 
+    top: 100%;
+    left: 66%;
     font-weight: bold;
     color: black;
-    font-size: 24px; 
+    font-size: 24px;
   }
 
   .sidebar button {
     width: 16vh;
     padding: 12px;
     margin: 10px 0;
-    background-color: #1F9EA8 ;
+    background-color: #1F9EA8;
     color: white;
     border: none;
     cursor: pointer;

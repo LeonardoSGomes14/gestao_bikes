@@ -10,9 +10,9 @@ class empresaController
         $this->empresamodel = new empresaModel($pdo);
     }
 
-    public function criarEmpresa($nome, $servicos, $cnpj, $cep, $estado, $rua, $numero)
+    public function criarEmpresa($nome, $servicos, $cnpj, $senha_emp, $cep, $estado, $rua, $numero)
     {
-        $this->empresamodel->criarEmpresa($nome, $servicos, $cnpj, $cep, $estado, $rua, $numero);
+        $this->empresamodel->criarEmpresa($nome, $servicos, $cnpj, $senha_emp, $cep, $estado, $rua, $numero);
     }
 
     public function listarProdutos()
@@ -26,9 +26,9 @@ class empresaController
         include 'C:\xampp\htdocs\gestao_bikes\GB\MVC\Views\EmpresaViews.php';
     }
 
-    public function atualizarEmpresa($id_empresa, $nome, $servicos, $cnpj, $cep, $estado, $rua, $numero)
+    public function atualizarEmpresa($id_empresa, $nome, $servicos, $cnpj, $senha_emp, $cep, $estado, $rua, $numero)
     {
-        $this->empresamodel->atualizarEmpresa($id_empresa, $nome, $servicos, $cnpj, $cep, $estado, $rua, $numero);
+        $this->empresamodel->atualizarEmpresa($id_empresa, $nome, $servicos, $cnpj, $senha_emp, $cep, $estado, $rua, $numero);
     }
 
     

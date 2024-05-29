@@ -38,43 +38,11 @@ if(isset($_GET['id'])) {
 </head>
 <body>
     <header>
-    <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
+ 
         <h1>Atualizar Usuário</h1>
     </header>
     
-<div id="menu">
-  <div id="menu-bar" onclick="menuOnClick()">
-    <div id="bar1" class="bar"></div>
-    <div id="bar2" class="bar"></div>
-    <div id="bar3" class="bar"></div>
-  </div>
-  <nav class="nav" id="nav">
-    <ul>
-      <img src="../Img/Image 2024-04-17 at 08.04.01.jpeg" style="border-radius: 50%;" width="135px" height="120px">
-      <br>
-      <br>
-      <a href="#" class="confirm-link" onclick="confirmLogout()">
 
-        <a href="#" class="confirm-link" onclick="confirmLogout()">
-          <?php
-
-
-
-if (!isset($_SESSION["usuario"])) {
-    echo '<a class="conect" href="login.php">Conecte-se</a>';
-} else {
-    echo '<h1 class="conect">Olá, ' . $_SESSION["usuario"] . '</h1>';
-}
-?>
-        </a>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Solicitações</a></li>
-        <li><a href="#">Recibo</a></li>
-
-
-    </ul>
-  </nav>
-</div>
 
 <div class="menu-bg" id="menu-bg"></div>
 
