@@ -89,5 +89,10 @@ if (isset($_POST['cnpj']) && isset($_POST['senha_emp'])) {
         </div>
     </section>
 
+    <div class="rodape">
+    <a class="entra" href="index.php">Voltar</a>
+<div>
+
+
 </body>
 </html>
