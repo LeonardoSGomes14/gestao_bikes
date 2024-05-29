@@ -9,7 +9,7 @@ verificarPermissao([1,4]);
 
 
 <?php
-session_start();
+
 
 include_once ('../config/config.php');
 include_once ('../MVC/Controller/UserController.php');
