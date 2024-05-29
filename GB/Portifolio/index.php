@@ -87,7 +87,7 @@ if (isset($_SESSION["id_user"])) {
 function confirmLogout() {
     var confirmLogout = confirm("Realmente que Sair dessa Pagina?");
     if (confirmLogout) {
-        window.location.href = '../php/logout.php';
+        window.location.href = '../php/logout_profile.php';
     }
 }
 </script>
