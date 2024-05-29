@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +10,11 @@
 
 <body>
 
-    <div class="comeco">
-        <h1 class="titulo">Política de Privacidade</h1>
-        <a href="index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
+<div class="comeco">
+        <h1 class="titulo">Politica de Privacidade</h1>
+        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
     </div>
+
 
     <div class="conteudo">
         <h2>Informações que coletamos</h2>

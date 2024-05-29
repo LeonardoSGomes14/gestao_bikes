@@ -99,6 +99,12 @@ body{
   .logo {
       margin-left:35%;
   }
+  .text1 {
+    position: inherit;
+  position: ;
+    margin-left:49%;
+    margin-top:-30%;
+   }
   .rodape  {
       margin-top:1380px;
       margin-left:-30px;

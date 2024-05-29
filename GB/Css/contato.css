@@ -1,64 +1,65 @@
 body{
   background-color:#1f9ea8;
-
+margin:0%;
 
 }
 
 .centro{
-  position: absolute;
-  margin-top: -430px;
-  margin-left: 350px;
-  width: 300px;
+  border-radius: 100px;
+  margin-top: 30px;
+  margin-left: -600px;
+  width: 260px;
+  height:210px
   
 }
 
 .carta{
-  position: absolute;
-  margin-top: -120px;
-  margin-left: 350px;
+  margin-top: 150px;
+  margin-left: -793px;
   width: 100px;
   
 }
 
 .fone{
-  position: absolute;
-  margin-top: -110px;
-  margin-left: 850px;
+  margin-top: -90px;
+  margin-left: 350px;
   width: 100px;
   
 }
 
 .comeco {
   background-color: #001e27;
-  width: 100%; 
+  width: 101%;
   height: 180px;
-  margin-left: -8px;
-  margin-top: -9px;
-  position: absolute;
+  position: relative;
+margin-left:-1px;
 }
-.titulo{
+
+.titulo {
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  position: absolute;
-  left: 370px;
-  top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    left: 370px;
+    top: 30px;
 }
+
 .dois {
   text-align: end;
   margin-top: 110px;
 }
 
-.logo{
+
+.logo {
   position: absolute;
-  top: -22%;
+  top: -10px;  /* Ajuste conforme necessário */
+  left: 10px;  /* Ajuste conforme necessário */
   width: 200px;
-  top: -10px;
 }
 
 .quadrado {
-  margin-left: 350px;
-  margin-top: 500px;
+  margin-left: -550px;
+  margin-top: 60px;
   width: 350px; 
   height: 150px; 
   border-radius: 5px;
@@ -66,7 +67,7 @@ body{
 }
 
 .quadrado2 {
-  margin-left: 850px;
+  margin-left: 550px;
   margin-top: -150px;
   width: 350px; 
   height: 150px; 
@@ -75,12 +76,14 @@ body{
 }
 
 .rodape{
-
-margin-top: 20px;
-background-color: #001e27; 
-padding: 40px 0; 
-text-align: center; 
-}
+  margin-top: 200px;
+  background-color: #001e27; 
+  padding: 40px 0; 
+  width: 101%;
+  margin-left:-8px;
+  text-align: center; 
+  
+  }
 
 .texto {
   width: 45vw;
@@ -95,29 +98,23 @@ text-align: center;
 
 }
 
-.texto2 {
-
+.text2 {
 width: 45vw;
 text-align: justify;
-padding-left: 310px;
 font-family:'Times New Roman', Times, serif;
-position: absolute;
-margin-top: 120px;
-left: -410px;
+margin-top: -275px;
+margin-left:420px;
 font-size: 23px;
 font-family: Arial, Helvetica, sans-serif;
 
 }
 
-.texto3 {
-
+.text3 {
   width: 45vw;
   text-align: justify;
-  padding-left: 310px;
   font-family:'Times New Roman', Times, serif;
-  position: absolute;
-  margin-top: -150px;
-  left: 510px;
+  margin-top: -90px;
+margin-left:1000px;
   font-size: 22px;
   font-family: Arial, Helvetica, sans-serif;
 
@@ -142,19 +139,18 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .text1{
-  position: absolute;
-  font-size:25px;
-  top: 130%;
-  left: 44%;
+  font-size:26px;
+  margin-top:-27%;
+  margin-left:330px;
 }
 .text2{
-  position: absolute;
+ 
   font-size:15px;
   top: 299%;
   left: 30%;
 }
 .text3{
-  position: absolute;
+
   font-size:15px;
   top: 291%;
   left: 65%;
@@ -213,44 +209,81 @@ button {
     margin-left: 37%;
   }
   .centro {
-    margin-left:28%;
-    margin-top:-80%;
-    border-radius: 20px;
+    margin-left:-50%;
+    margin-top: 10%;
+    border-radius: 200px;
+    width: 300px;
+    height:250px;
   }
   .text1 {
-    margin-left:-20%;
+    margin-left:400px;
+    margin-top:-30%;
   }
+ .container{
+  height: 300%;
+ }
   .rodape {
-    margin-top:17%;
+    margin-top:50%;
+    display: flex;
+    justify-content: center;
   }
-.text2 {
-  margin-top:12%;
-  margin-left:90px;
-}
-.entra {
-  margin-left:280px;
-}
-.quadrado {
-  margin-top: 570px; /* Margem superior na versão responsiva */
-  margin-left:158px;
-  border-radius: 20px;
-}
+ 
+  .quadrado{
+    position:absolute;
+    margin-top:80%;
+    margin-left:-20px;
+  }
+  .quadrado2{
+    position:absolute;
+    margin-top:50%;
+    margin-left:-20px;
+    z-index:1;
+  }
 .carta {
-  margin-left:174px;
-  margin-top:-46%;
+  margin-top:175px;
+  margin-left:-35%;
+  z-index:1;
 }
-.quadrado2 {
- margin-top:4%;
- margin-left:24%;
- width: 355px;
- border-radius: 20px;
-}
-.fone{
-  margin-left:27%;
+.text2 {
+  position: absolute;
+  z-index:3;
+margin-top:-1325px;
+margin-left:11%;
 }
 .text3 {
-  margin-top:38%;
-  margin-left:-16%;
+  z-index:1;
+  margin-top:-137%;
+  margin-left:-20%;
+  position: absolute;
 }
+.fone {
+  margin-top:150px;
+  margin-left:-35%;
+  z-index:1;
+}
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #1f9ea8;
+
+height: 600px;
+margin-top:1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  border-radius: 4px;
+}
