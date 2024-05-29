@@ -98,7 +98,7 @@
             echo "<label for='quantidade'>Quantidade:</label>";
             echo "<input type='text' name='quantidade' value='$quantidade'><br>";
             echo "<label for='total'>Total:</label>";
-            echo "<input type='' name='total' value='$total'><br>";
+            echo "<input type='text' name='total' value='$total'><br>";
             echo "<label for='data'>Data:</label>";
             echo "<input type='text' name='data' value='$data'><br>";
             echo "<input type='submit' value='Atualizar'>";

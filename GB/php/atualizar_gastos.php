@@ -99,3 +99,16 @@ if (isset($_GET['id'])) {
     exit();
 }
 ?>
+<script>
+        function calcularCampos() {
+            let transacoes = document.getElementById('transacoes').value;
+            let fatura = document.getElementById('fatura').value;
+            let imposto = document.getElementById('imposto').value;
+
+            // Exemplo de cálculo automático
+            if(transacoes && fatura && imposto) {
+                let orcamentos = (parseFloat(transacoes) + parseFloat(fatura) + parseFloat(imposto)).toFixed(2);
+                document.getElementById('orcamentos').value = orcamentos;
+            }
+        }
+    </script>
