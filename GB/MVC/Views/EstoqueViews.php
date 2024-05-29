@@ -17,7 +17,6 @@ verificarPermissao([1, 2, 3]);
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
-
 <body>
     <div class="comeco">
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
