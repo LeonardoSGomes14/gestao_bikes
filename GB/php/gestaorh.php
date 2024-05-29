@@ -82,14 +82,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a>
   </div>
   <section class="showinfo">
-  <div class="sidebar">
-    <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
-    <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações</button>
-    <button onclick="window.location.href='../php/recibosolicitacao.php'">Recibo</button>
-  </div>
+
 
   <div class="">
-    <h2 class="h2center">Pessoas Cadastradas</h2>
+    <h1 class="h2center">Pessoas Cadastradas</h1>
     <div class="pessoas-container">
       <?php foreach ($pessoas as $pessoa): ?>
         <div class="pessoa">

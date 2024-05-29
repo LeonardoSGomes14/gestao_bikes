@@ -16,7 +16,7 @@
     <button onclick="window.location.href='../../../Portifolio/index.php'">Home</button>
         <button onclick="window.location.href='#'">Solicitações Pendentes</button>
         <button onclick="window.location.href='../../../php/solicitacaoatendidas.php'">Solicitações Atendidas</button>
-        <button onclick="window.location.href='../../../php/recibosolicitacao.php'">Recibo</button>
+       
     </div>
 </head>
 <body>
