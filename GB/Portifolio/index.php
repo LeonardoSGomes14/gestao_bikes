@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once 'verify_emp.php';
 include_once '../php/access_filter.php';
 ?>
 
