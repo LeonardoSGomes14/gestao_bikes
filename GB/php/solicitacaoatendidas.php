@@ -29,7 +29,7 @@ verificarPermissao([1]);
     <div class="sidebar">
     <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
         <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações Pendentes</button>
-        <button onclick="window.location.href='../php/solicitacaoatendidas.php'">Recibos Das Solicitações </button>
+
        
     </div>
     <div class="main-content">

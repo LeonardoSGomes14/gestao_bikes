@@ -5,6 +5,86 @@ verificarPermissao([1]);
  
 ?>
 
+<style>
+
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    margin-left: -2px;
+    margin-top:-2px;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite, color-change 3s infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes color-change {
+    0% { border-top-color: #3498db; }
+    25% { border-top-color: #e74c3c; }
+    50% { border-top-color: #f1c40f; }
+    75% { border-top-color: #2ecc71; }
+    100% { border-top-color: #3498db; }
+}
+
+.loading-text {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: color-text-change 3s infinite;
+}
+
+@keyframes color-text-change {
+    0% { color: #3498db; }
+    25% { color: #e74c3c; }
+    50% { color: #f1c40f; }
+    75% { color: #2ecc71; }
+    100% { color: #3498db; }
+}
+
+#content {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 24px;
+}
+</style>
+
+<div id="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
+
+    <script src="../JS/script.js"></script>
+
 
 
 <!DOCTYPE html>
