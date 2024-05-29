@@ -44,3 +44,23 @@ function sendToPHP(userInput) {
     };
     xhr.send("userInput=" + userInput);
 }
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var loadingScreen = document.getElementById("loading-screen");
+    var content = document.getElementById("content");
+
+    
+    setTimeout(function() {
+        loadingScreen.style.display = 'none';
+        content.style.display = 'block';
+    }, 4000); // Atraso de 3 segundos
+});

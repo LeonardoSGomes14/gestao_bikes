@@ -104,8 +104,7 @@
         // Consulta as solicitações cadastradas
         $stmt = $pdo->query("SELECT * FROM solicitacao");
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            if ($row['situacao'] == 0) { // Verifica se a situação é 1
-                echo "<tr>";
+            if ($row['situacao'] == 0) { 
                 echo "<td>".$row['id_soli']."</td>";
                 echo "<td>".$row['solicitante']."</td>";
                 echo "<td>".$row['responsavel']."</td>";
