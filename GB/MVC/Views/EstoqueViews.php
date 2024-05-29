@@ -26,7 +26,7 @@ verificarPermissao([1, 2, 3]);
 
     <section>
         <div class="sidebar">
-            <button onclick="window.location.href='../../portifolio/index.php'">Home</button>
+            <button onclick="window.location.href='../../php/portifolio/index.php'">Home</button>
             <button onclick="window.location.href='../../php/controle_estoque.php'">Produtos Cadastrados</button>
         </div>
         <div class="container">
