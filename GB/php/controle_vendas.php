@@ -1,4 +1,9 @@
+<?php
+require 'verificar_permissao.php';
 
+verificarPermissao([1,2,3]);
+ 
+?>
 <?php
 // Configuração de conexão com o banco de dados
 $host = 'localhost';
@@ -41,7 +46,7 @@ $vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
         <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a>
     </div>
-    
+
     <h1>Listar Vendas</h1>
     <table border="1">
         <thead>
