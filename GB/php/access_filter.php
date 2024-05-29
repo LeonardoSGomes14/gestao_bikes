@@ -22,7 +22,7 @@ function FiltroAccss()
 
                 <h1>Controles</h1>
             
-                <a href="gerenciar_estoque.php">Controle Estoque</a>
+                <a href="../php/controle_estoque.php">Controle Estoque</a>
                 <a href="../cadastrar_empresa.php">Controle Fiscal</a>
                 <a href="../php/controle_frota.php">Controle Frota</a>
                 <a href="../php/controle_empresa.php">Controle Empresa</a>
