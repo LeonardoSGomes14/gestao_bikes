@@ -7,11 +7,6 @@ verificarPermissao([1]);
 
 
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
