@@ -9,7 +9,6 @@ if (isset($_GET['id']) && isset($_GET['produto']) && isset($_GET['valor']) && is
     $total = $_GET['total'];
     $data = $_GET['data'];
 
-    // Exibir as informações da venda
     echo "<h2>Atualizar Venda</h2>";
     echo "<form action='atualizar_venda_processamento.php' method='POST'>";
     echo "<input type='hidden' name='id_venda' value='$id_venda'>";
