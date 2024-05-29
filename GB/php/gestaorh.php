@@ -1,5 +1,5 @@
 <?php
-require '../../php/verificar_permissao.php';
+require 'verificar_permissao.php';
 
 verificarPermissao([1,4]);
  
