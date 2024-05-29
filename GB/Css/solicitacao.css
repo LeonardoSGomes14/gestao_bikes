@@ -363,7 +363,13 @@ div{
   .sidebar {
     display: flex;
     flex-direction: row;
-    top: 12vh;
+    top: 12
+    
+    
+    
+    
+    
+    vh;
 
   }
 
