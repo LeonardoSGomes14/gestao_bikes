@@ -1,3 +1,11 @@
+<?php
+require '../../php/verificar_permissao.php';
+
+verificarPermissao([1, 2, 3]);
+ 
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,7 +17,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
-
 <body>
     <div class="comeco">
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
@@ -18,7 +25,7 @@
 
     <section>
         <div class="sidebar">
-            <button onclick="window.location.href='../../portifolio/index.php'">Home</button>
+            <button onclick="window.location.href='../../Portifolio/index.php'">Home</button>
             <button onclick="window.location.href='../../php/controle_estoque.php'">Produtos Cadastrados</button>
         </div>
         <div class="container">
@@ -43,6 +50,7 @@
             </div>
         </div>
     </section>
+
 </body>
 
 </html>

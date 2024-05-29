@@ -1,5 +1,15 @@
 <?php
-session_start();
+require 'verificar_permissao.php';
+
+verificarPermissao([1,4]);
+ 
+?>
+
+
+
+
+<?php
+
 
 include_once ('../config/config.php');
 include_once ('../MVC/Controller/UserController.php');
