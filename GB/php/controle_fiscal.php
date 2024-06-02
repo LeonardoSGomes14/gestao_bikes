@@ -44,13 +44,13 @@ try {
 
 <body>
 
-    <div class="comeco">
-        <div class="retangulo"></div>
-        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
-        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a>
+  
+<div class="comeco">
+        <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
+        <a href="../Portifolio/index.php"><img class="logo" src=" ../Img/bitrix-removebg-preview.png"></a>
     </div>
-
-    <h1>Gastos</h1>
+   
+    <h1 class="h2center">Gastos</h1>
     <table>
         <tr>
             <th>ID Fiscal</th>
@@ -86,6 +86,9 @@ try {
     <a href="controle_vendas.php"> Ver Vendas </a>
 </body>
 
+<div class="rodape">
+    <a class="entra" href="../Portifolio/index.php">Voltar</a>
+    </div>
 </html>
 
 

@@ -14,7 +14,8 @@
         margin: 0;
         padding: 0;
         text-align: center;
-    }
+      }
+
 
     .container {
         max-width: 50%;
@@ -38,6 +39,8 @@
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top:-4%;
+        margin-left:-8%;
     }
 
    .footer {
@@ -95,88 +98,37 @@
     .face:hover {
         transform: scale(1.2);
     }
-
-    @media screen and (max-width: 1435px) {
-        .container {
-            padding: 5rem 1rem;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        footer {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media screen and (max-width: 576px) {
-        footer {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .logorodape{
-            display: none; 
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .icons {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .barra {
-            margin-top: 91%;
-            height: 60px;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .icons {
-            left: 54%;
-            transform: translateX(-50%);
-            margin-top: 95%;
-        }
-    }
-@media screen and (max-width: 768px) {
-
-    .texto-banner {
+    @media screen and (max-width: 796px) {
+        /* Oculta o texto do banner em telas menores que 768px */
+        .titulo {
         display: none;
-    }
-
-    .logo {
-        margin-left:270%;
-    }
-
-.texto1 {
-    margin-top:220px;
+        }
+        .logo{
+            margin-left:35%;
+            margin-top:2%;
+        }
+        .comeco {
+        margin-left:-1%;
+        width: 102%;
+        margin-top:-2%;
+        }
+        .rodape {
+            width: 103%;
+            margin-left:-2%;
+        }
 }
-.barra {
-    margin-top:-50px;
-}
-.icons {
-    margin-top:-30px;
-}
-.titulo {
-    display: none;
-}
-.form {
-    margin-top:-30%;
-}
-}
-
 
 section {
     display: flex;
 }
 
   
-  .logo {
-    width: 100%;
-    height: 100%;
+ 
+.logo {
+    position: absolute;
+    top: -10px;  /* Ajuste conforme necessário */
+    left: 10px;  /* Ajuste conforme necessário */
+    width: 200px;
   }
 
 input[type="text"],
@@ -225,34 +177,34 @@ input[type="submit"]:active {
     padding: 15px 40px;
     font-size: 15px;
     display: inline-block;
-    margin: 11px 400px;
+    margin: 11px 150px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    font-family: Arial, Helvetica, sans-serif;}
 
 .entra:hover {
     transform: scale(1.1);
 }
 
+
+
 .titulo {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    position: absolute;
-    left: 370px;
-    top: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      position: absolute;
+      left: 370px;
+      top: 30px;
   }
-  
 
 
-.text-cadastro {
-    color: black;
-    font-weight: bold;
-    font-size: 26px;
-    margin-left: 1%;
-    font-weight: 700;
-    margin-top: -63%;
-}
+    .text {
+        font-size: 200%;
+        font-weight: bold;
+        text-align: center; /* Para centralizar o texto */
+        margin-left: 9%; /* Ou qualquer porcentagem adequada */
+    }
+    
+
 
 .form-container input[type="submit"] {
     background: linear-gradient(45deg, #6a11cb, #2575fc);
@@ -320,26 +272,25 @@ table tbody tr.active-row {
 }
 
 
+
 .comeco {
-    display: flex;
-    justify-content: flex-start;
     background-color: #001e27;
-    width: 100%;
-    height: 20%;
-    margin-left: -1px;
-    margin-top: -9px;
+    width: 101%;
+    height: 180px;
+    position: relative;
+  margin-left:-1px;
   }
 .sidebar {
     background-color:  #001e27;;
     padding-top: 4%;
     display: flex;
-    height: 110vh;
-    width: 13vw;
+    width: 15vw;
     top: 200px;
     left: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top:-10%;
 }
 
 .sidebar button {
@@ -356,6 +307,11 @@ table tbody tr.active-row {
     border-radius: 10px;
     font-weight: bold;
 }
+@media screen and (max-width: 796px) {
+    .sidebar button {
+        width:90%; /* Reduza a largura dos botões */
+    }
+}
 
 .sidebar button:hover {
     background-color: rgb(50, 205, 166);
@@ -368,8 +324,9 @@ table tbody tr.active-row {
 }
 
 .h2center {
-    color: black;
-    font-weight: bolder;
+  color: black;
+  font-weight: bolder;
+  font-size:34px;
 }
 
 .showinfo {
@@ -377,3 +334,68 @@ table tbody tr.active-row {
     justify-content: center;
 
 }
+.rodape{
+    margin-top: 50px;
+    background-color: #001e27; 
+    padding: 40px 0; 
+    width: 101%;
+    margin-left:-8px;
+    text-align: center; 
+    margin:0;
+    
+    }
+
+    @media screen and (max-width: 796px) {
+        /* Adicione margem esquerda aos campos do formulário */
+        form {
+            margin-left: 3%; /* Ou qualquer valor adequado */
+        }
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    @media screen and (max-width: 900px) {
+        /* Estilos para dispositivos menores */
+        .table-container {
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch; /* Para suporte ao iOS */
+        }
+        th, td {
+            font-size: 12px;
+        }
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    @media screen and (max-width: 900px) {
+        /* Estilos para dispositivos menores */
+        .table-container {
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch; /* Para suporte ao iOS */
+        }
+        th, td {
+            font-size: 12px;
+        }
+    }
+    
+  

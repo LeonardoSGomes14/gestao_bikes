@@ -28,6 +28,7 @@ verificarPermissao([1]);
 
     <h2 class="h2center">Controle De Empresas</h2>
     <section class="showinfo">
+    <div class="table-container">
         <?php
         require_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
 
@@ -58,6 +59,10 @@ verificarPermissao([1]);
         echo "</table>";
         ?>
     </section>
+
+    <div class="rodape">
+    <a class="entra" href="../Portifolio/index.php">Voltar</a>
+    </div>
 </body>
 
 </html>

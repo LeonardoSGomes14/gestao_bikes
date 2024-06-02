@@ -75,12 +75,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+<div class="comeco">
+        <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
+        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
+    </div>
 
-  <div class="comeco">
-
-    <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
-    <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a>
-  </div>
   <section class="showinfo">
 
 
@@ -127,6 +126,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       document.getElementById("menu-bg").classList.toggle("change-bg");
     }
   </script>
+    <div class="rodape">
+    <a class="entra" href="../Portifolio/index.php">Voltar</a></div>
 </body>
 
 </html>

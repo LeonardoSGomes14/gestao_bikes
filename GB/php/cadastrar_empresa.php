@@ -111,8 +111,9 @@ p {
             <button onclick="window.location.href='controle_empresa.php'">Controle de empresas</button>
 
         </div>
+        
         <div class="center_form ">
-            <h1>Cadastro de empresa</h1>
+        <div class="text">Cadastrar Empresas</div>
             <form action="" method="post">
                 <label for="nome">Nome da Empresa:</label><br>
                 <input type="text" id="nome" name="nome" required><br>
@@ -201,3 +202,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
+<div class="rodape">
+    <a class="entra" href="../Portifolio/index.php">Voltar</a>
+</div>

@@ -56,7 +56,7 @@ if (isset($_POST['cnpj']) && isset($_POST['senha_emp'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login de Empresa</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="../Css/cadastro_empresa.css">
+    <link rel="stylesheet" href="../Css/cadastro_login.css">
 </head>
 
 <body>
