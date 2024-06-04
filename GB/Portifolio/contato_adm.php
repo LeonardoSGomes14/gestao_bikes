@@ -34,7 +34,7 @@
 
   <h1 class="text3"> 0800 942 7592<br><br> Nossos atendentes estão<br> preparados para tirar<br> sua dúvida.    </h1>
 
-    <a class="entra" href="../Portifolio/index.php">Voltar</a>
+    <a class="entra" href="index.php">Voltar</a>
 
 
 
