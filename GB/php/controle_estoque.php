@@ -25,8 +25,9 @@ verificarPermissao([1,2,3]);
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
         <a href="../Portifolio/index.php"><img class="logo" src=" ../Img/bitrix-removebg-preview.png"></a>
     </div>
+
    
-    <h1 class="h2center">Pessoas Cadastradas</h1>
+    <h1 class="h2center">Produtos Cadastrados</h1>
     <section class="showinfo">
     <div class="table-container">
         <?php
@@ -95,10 +96,9 @@ verificarPermissao([1,2,3]);
         ?>
 
     </section>
-
-    <div class="rodape">
+    <footer class="rodape">
     <a class="entra" href="../Portifolio/index.php">Voltar</a>
-    </div>
+    </footer>
 </body>
 
 </html>

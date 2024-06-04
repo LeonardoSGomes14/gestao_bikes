@@ -203,6 +203,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<div class="rodape">
-    <a class="entra" href="../Portifolio/index.php">Voltar</a>
-</div>

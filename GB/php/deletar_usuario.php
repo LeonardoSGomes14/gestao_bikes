@@ -34,6 +34,7 @@ if (isset($_POST['id_usuario'])) {
         echo 'Erro ao deletar usuário usando PDO: ' . $e->getMessage();
     }
 
+    header('Location: ../Portifolio/index.php');
 }
 
 

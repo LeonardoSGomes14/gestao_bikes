@@ -26,6 +26,17 @@
            margin-left:-2px;
         }
 
+        .rodape{
+    margin-top: 50px;
+    background-color: #001e27; 
+    padding: 40px 0; 
+    width: 100%;
+    margin-left:-8px;
+    text-align: center; 
+    margin:0;
+    }
+
+
         /* Estilos para o título */
         .titulo {
             color: white;

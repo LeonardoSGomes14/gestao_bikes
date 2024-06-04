@@ -60,9 +60,9 @@ verificarPermissao([1]);
         ?>
     </section>
 
-    <div class="rodape">
+    <footer class="rodape">
     <a class="entra" href="../Portifolio/index.php">Voltar</a>
-    </div>
+    </footer>
 </body>
 
 </html>
