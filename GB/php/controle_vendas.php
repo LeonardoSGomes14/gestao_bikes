@@ -83,11 +83,13 @@ $vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </table>
 
 
-
-
-
-
+    <div class="rodape">
     <a class="entra" href="../Portifolio/index.php">Voltar</a>
+    </div>
+
+
+
+  
 
 </body>
 

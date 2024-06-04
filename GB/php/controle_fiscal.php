@@ -2,10 +2,7 @@
 require 'verificar_permissao.php';
 
 verificarPermissao([1, 2, 3]);
- 
-?>
 
-<?php
 // Configuração do Banco de Dados
 $host = 'localhost';
 $dbname = 'bike';
@@ -26,6 +23,12 @@ try {
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Calcular o total dos gastos
+    $totalGastos = 0;
+    foreach ($dados as $dado) {
+        $totalGastos += $dado['orcamentos'];
+    }
 } catch (PDOException $e) {
     die("Erro ao recuperar dados: " . $e->getMessage());
 }
@@ -41,13 +44,13 @@ try {
 
 <body>
 
-    <div class="comeco">
-        <div class="retangulo"></div>
-        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
-        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a>
+  
+<div class="comeco">
+        <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
+        <a href="../Portifolio/index.php"><img class="logo" src=" ../Img/bitrix-removebg-preview.png"></a>
     </div>
-
-    <h1>Gastos</h1>
+   
+    <h1 class="h2center">Gastos</h1>
     <table>
         <tr>
             <th>ID Fiscal</th>
@@ -57,6 +60,7 @@ try {
             <th>Gasto Total</th>
             <th>Atualizar</th>
             <th>Excluir</th>
+            <th>Pagar Faturas</th>
         </tr>
         <?php foreach ($dados as $dado) : ?>
             <tr>
@@ -72,10 +76,19 @@ try {
 
             </tr>
         <?php endforeach; ?>
+        <tr>
+            <td colspan="4"><strong>Total de Gastos:</strong></td>
+            <td><strong><?php echo htmlspecialchars(number_format($totalGastos, 2, ',', '.')); ?></strong></td>
+            <td colspan="2"></td>
+            <td> <a href="#">Gerar Boleto</a>  </td>
+        </tr>
     </table>
     <a href="controle_vendas.php"> Ver Vendas </a>
 </body>
 
+<div class="rodape">
+    <a class="entra" href="../Portifolio/index.php">Voltar</a>
+    </div>
 </html>
 
 
