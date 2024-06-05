@@ -31,24 +31,28 @@ verificarPermissao([1, 2, 3, 4, 5]);
         <div class="container">
             <div class="form-container">
 
+    <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a> 
+        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
+    </div>
 
 
-                <form class="formstyle" action="../MVC/public/Solicitacao/index.php?action=create" method="POST"
-                    class="form-solicitacao">
-                    <label for="solicitante">Solicitante:</label>
-                    <input type="text" id="solicitante" name="solicitante" required><br>
-                    <label for="responsavel">Responsável:</label>
-                    <input type="text" id="responsavel" name="responsavel" required><br>
-                    <label for="pedido">Pedido:</label>
-                    <input type="text" id="pedido" name="pedido" required><br>
-                    <label for="situacao">Situação:</label>
-                    <input type="text" id="situacao" name="situacao" required><br>
-                    <input type="submit" value="Criar">
-                </form>
-            </div>
         </div>
-        </section>
-
+          
+            <div class="container">
+      
+<form action="../MVC/public/Solicitacao/index.php?action=create" method="POST" class="form-solicitacao">
+<label for="solicitante">Solicitante:</label>
+            <input type="text" id="solicitante" name="solicitante" required><br>
+            <label for="responsavel">Responsável:</label>
+            <input type="text" id="responsavel" name="responsavel" required><br>
+            <label for="pedido">Pedido:</label> 
+            <input type="text" id="pedido" name="pedido" required><br>
+            <label for="situacao">Situação:</label>
+        <input type="text" id="situacao" name="situacao" required><br>
+            <input type="submit" value="Criar">
+        </form>
+</div>
+   </section>
 </body>
 
 </html>
