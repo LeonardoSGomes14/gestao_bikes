@@ -62,11 +62,27 @@ if (isset($_GET['id'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="../Css/estoque.css">
 <head>
-    <meta charset="UTF-8">
-    <title>Atualizar Dados Fiscais</title>
+<body>
+<div class="comeco">
+        <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
+        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
+    </div><br><br>
 
-    <h2>Atualizar Dados Fiscais</h2>
+    <section>
+        <div class="sidebar">
+            <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
+            <button onclick="window.location.href='../php/controle_estoque.php'">Produtos Cadastrados</button>
+        </div>
+        <div class="container">
+            <div class="form-container">
+     
+    <meta charset="UTF-8">
+    <title>Atualizar Gastos</title>
+
+
+    <form class="formstyle" method="post" action="atualizar.php" enctype="multipart/form-data">
     <form id="formAtualizar" method="post">
         <input type="hidden" name="id" value="<?php echo $id_fiscal; ?>">
         <label for="transacoes">Transações:</label><br>

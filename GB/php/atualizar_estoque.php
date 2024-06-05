@@ -110,6 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
         <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
     </div><br><br>
+<div class="text">Cadastrar Produtos</div>
     <section>
         <div class="sidebar">
             <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
@@ -118,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="container">
             <div class="form-container">
      
-<h2 class="h2center">Atualizar Produto</h2>
+
 <form class="formstyle" method="post" action="atualizar.php" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id_estoque']); ?>">
     <label for="nomedoproduto">Nome do Produto:</label>
