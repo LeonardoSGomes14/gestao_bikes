@@ -18,7 +18,6 @@
         /* Estilos para a área de cabeçalho */
         .comeco {
             background-color: #001e27;
-            width: 102%;
             height: 180px;
             position: absolute;
             top: 0;
@@ -30,7 +29,6 @@
     margin-top: 50px;
     background-color: #001e27; 
     padding: 40px 0; 
-    width: 100%;
     margin-left:-8px;
     text-align: center; 
     margin:0;

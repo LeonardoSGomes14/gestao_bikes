@@ -67,13 +67,13 @@
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
         <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
     </div><br><br>
-<div class="text">Editar empresas</div>
     <section>
         <div class="sidebar">
             <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
             <button onclick="window.location.href='../php/controle_empresa.php'">Controle de empresas</button>
         </div>
         <div class="container">
+            <div class="text">Editar empresas</div>
             <div class="form-container">
            
         <form class="formstyle" id="formEmpresa" action="atualizar_empresa.php" method="post">
