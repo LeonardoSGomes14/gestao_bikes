@@ -54,7 +54,7 @@ if(isset($_GET['id'])) {
   }
 </script>
     <main>
-        <form method="post" action="">
+        <form method="post" >
             <input type="hidden" name="id" value="<?php echo $usuario['id_user']; ?>">
 
             <!-- Form fields -->

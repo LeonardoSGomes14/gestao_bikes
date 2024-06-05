@@ -1,46 +1,49 @@
+.top-banner {
+    background-color: #001e27;
+    width: 100%;
+    height: 180px;
+    margin-left: -8px;
+    margin-top: -76px;
+    position: absolute;
+}
 
-    .top-banner {
-        background-color: #001e27;
-        width: 100%;
-        height: 180px;
-        margin-left: -8px;
-        margin-top: -76px;
-        position: absolute;
-    }
 
-    body {
-        height: 100vh;
-        background-color: #1f9ea8;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
+body {
+    background-color: #1f9ea8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
-    .container {
-        max-width: 50%;
-        height: 100%;
-        text-align: center;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 5%;
-        font-weight: bold;
-        font-size: 18px;
-        
-    }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        margin: 60px ;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
 
-   .footer {
+.container {
+    max-width: 50%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.formstyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.footer {
     background-color: white;
     padding-top: 20px;
     position: absolute;
@@ -48,120 +51,78 @@
     left: 0;
     width: 100%;
     height: 70px;
-   }
+}
 
-   .footer {
+.footer {
     margin-top: 30%;
-   }
+}
 
 
-    .texto1 {
-        color: black;
-        margin-top:146px;
-        font-size:27px;
-        font-weight: bold; /* Define a fonte como negrito */
-    }
-    .imagens-img img {
-        height: 20px;
-        width: 20px;
-        padding: 10px;
-    }
-    .texto-banner {
-        color: white;
-        margin-top: 70px;
-    }
-  
+.texto1 {
+    color: black;
+    margin-top: 146px;
+    font-size: 27px;
+    font-weight: bold;
+    /* Define a fonte como negrito */
+}
 
-    .barra {
-        background-color: white;
-        width: 100%;
-        position: absolute;
-        left: -1px;
-        margin-top: 6%;
-        height: 89px;
-    }
-    .icons {
-        position: absolute;
-        left: 52%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: center;
-        margin-top: 110px;
-    }
-    .face {
-        margin-right: 40px;
-        transition: transform 0.3s ease-in-out;
-    }
-    .face:hover {
-        transform: scale(1.2);
-    }
+.imagens-img img {
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+}
 
-    @media screen and (max-width: 1435px) {
-        .container {
-            padding: 5rem 1rem;
-        }
-    }
+.texto-banner {
+    color: white;
+    margin-top: 70px;
+}
 
-    @media screen and (max-width: 768px) {
-        footer {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
 
-    @media screen and (max-width: 576px) {
-        footer {
-            grid-template-columns: 1fr;
-        }
-    }
+.barra {
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    left: -1px;
+    margin-top: 6%;
+    height: 89px;
+}
 
-    @media screen and (max-width: 768px) {
-        .logorodape{
-            display: none; 
-        }
-    }
+.icons {
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+}
 
-    @media screen and (max-width: 768px) {
-        .icons {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
+.face {
+    margin-right: 40px;
+    transition: transform 0.3s ease-in-out;
+}
 
-    @media screen and (max-width: 768px) {
-        .barra {
-            margin-top: 91%;
-            height: 60px;
-        }
-    }
+.face:hover {
+    transform: scale(1.2);
+}
 
-    @media screen and (max-width: 768px) {
-        .icons {
-            left: 54%;
-            transform: translateX(-50%);
-            margin-top: 95%;
-        }
-    }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 796px) {
 
-    .texto-banner {
+    /* Oculta o texto do banner em telas menores que 768px */
+    .titulo {
         display: none;
     }
 
     .logo {
-        top: 66%;
-        left: 100%;
-        transform: translate(-50%, -50%);
+        margin-left: 35%;
+        margin-top: 2%;
     }
 
-.texto1 {
-    margin-top:220px;
-}
-.barra {
-    margin-top:-50px;
-}
-.icons {
-    margin-top:-30px;
-}
+    .comeco {
+        margin-left: -1%;
+        margin-top: -2%;
+    }
+
+ 
 }
 
 section {
@@ -169,10 +130,15 @@ section {
 }
 
 
-.logo {     
-    width: 100%;
-    height: 100%;
-  }
+
+.logo {
+    position: absolute;
+    top: -10px;
+    /* Ajuste conforme necessário */
+    left: 10px;
+    /* Ajuste conforme necessário */
+    width: 200px;
+}
 
 input[type="text"],
 input[type="number"],
@@ -220,7 +186,7 @@ input[type="submit"]:active {
     padding: 15px 40px;
     font-size: 15px;
     display: inline-block;
-    margin: 11px 400px;
+    margin: 11px 150px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -228,6 +194,8 @@ input[type="submit"]:active {
 .entra:hover {
     transform: scale(1.1);
 }
+
+
 
 .titulo {
     color: white;
@@ -239,14 +207,16 @@ input[type="submit"]:active {
 }
 
 
-.text-cadastro {
-    color: black;
+.text {
+    font-size: 200%;
     font-weight: bold;
-    font-size: 26px;
-    margin-left: 1%;
-    font-weight: 700;
-    margin-top: -63%;
+    text-align: center;
+    /* Para centralizar o texto */
+    margin-left: 9%;
+    /* Ou qualquer porcentagem adequada */
 }
+
+
 
 .form-container input[type="submit"] {
     background: linear-gradient(45deg, #6a11cb, #2575fc);
@@ -284,7 +254,7 @@ table {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-table thead  {
+table thead {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
@@ -314,27 +284,25 @@ table tbody tr.active-row {
 }
 
 
+
 .comeco {
-    display: flex;
-    justify-content: flex-start;
     background-color: #001e27;
-    width: 100%;
-    height: 20%;
+    height: 180px;
     margin-left: -1px;
-    margin-top: -9px;
 }
 
 .sidebar {
-    background-color:  #001e27;;
+    background-color: #001e27;
+    
     padding-top: 4%;
     display: flex;
-    height: 110vh;
-    width: 13vw;
+    width: 15vw;
     top: 200px;
     left: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -10%;
 }
 
 .sidebar button {
@@ -352,6 +320,14 @@ table tbody tr.active-row {
     font-weight: bold;
 }
 
+@media screen and (max-width: 796px) {
+    .sidebar button {
+        width: 80%;
+        /* Reduza a largura dos botões */
+        margin: 10% 15% 10% 15%;
+    }
+}
+
 .sidebar button:hover {
     background-color: rgb(50, 205, 166);
 
@@ -365,10 +341,90 @@ table tbody tr.active-row {
 .h2center {
     color: black;
     font-weight: bolder;
+    font-size: 34px;
 }
 
 .showinfo {
     display: flex;
     justify-content: center;
 
+}
+
+.rodape {
+    margin-top: 30%;
+    background-color: #001e27;
+    padding: 40px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 796px) {
+
+    /* Adicione margem esquerda aos campos do formulário */
+    form {
+        margin-left: 3%;
+
+        /* Ou qualquer valor adequado */
+    }
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 900px) {
+
+    /* Estilos para dispositivos menores */
+    .table-container {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        /* Para suporte ao iOS */
+    }
+
+    th,
+    td {
+        font-size: 12px;
+    }
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 900px) {
+
+    /* Estilos para dispositivos menores */
+    .table-container {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        /* Para suporte ao iOS */
+    }
+
+    th,
+    td {
+        font-size: 12px;
+    }
 }

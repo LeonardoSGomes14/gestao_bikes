@@ -1,45 +1,40 @@
 <?php
 require 'verificar_permissao.php';
 
-verificarPermissao([1,2,3,4,5]);
- 
+verificarPermissao([1, 2, 3, 4, 5]);
+
 ?>
 
 
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Css/solicitacao.css">
-    <title>GESTÃO DE BIKES</title>
+    <title>Cadastro de Empresas</title>
+    <link rel="stylesheet" href="../Css/estoque.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
-  
-<div class="comeco">
+    <div class="comeco">
+        <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
+        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
+    </div><br><br>
+    <div class="text">Cadastrar Empresas</div>
+    
+        <div class="sidebar">
+            <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
+        </div>
+        <div class="container">
+            <div class="form-container">
 
     <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a> 
         <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
     </div>
 
-    <section>
-    <div class="sidebar">
-    <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
-        <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações Pendentes</button>
-        <button onclick="window.location.href='../php/solicitacaoatendidas.php'">Recibos Das Solicitações </button>
-    </div>
 
         </div>
           
@@ -59,4 +54,5 @@ verificarPermissao([1,2,3,4,5]);
 </div>
    </section>
 </body>
+
 </html>

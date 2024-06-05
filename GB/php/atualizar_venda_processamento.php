@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':quantidade', $quantidade);
         $stmt->bindParam(':total', $total);
         $stmt->bindParam(':data', $data);
-        ;
+        $stmt->bindParam(':id_venda', $id_venda); // Add this line
         $stmt->execute();
 
         // Redirecionar de volta para a página de listagem de vendas após a atualização

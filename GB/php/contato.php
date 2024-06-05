@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,31 +11,41 @@
 <body>
 
     <div class="comeco">
+        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
+        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
+    </div>
 
-    <div class="quadrado"></div>
-    <div class="quadrado2"></div>
+    <div class="container">
+        <img src="../Img/Image 2024-04-17 at 08.04.01.jpeg" alt="Imagem" height="280PX" width="310PX">
+        <div class="texto">
+            <h1>Fala com a gente!<br><br> Nossa equipe de atendimento<br>está sempre pronta para ajudar.</h1>
+        </div>
+    </div>
 
-    <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
+    <div class="container2">
+        <div class="quadrado"> <img class="imagem2" src="../Img/carta.jpeg"><div class="texto2">
+            <p>Contato.bitrixeleven@gmail.com<br><br> Nos mande um email<br>com sua Dúvida.</p>
+        </div></div>
+        <div class="quadrado2"> <img class="imagem3" src="../Img/fone.jpeg"><div class="texto3">
+            <p>0800 942 7592<br><br> Nossos atendentes estão<br> preparados para tirar<br> sua dúvida.</p>
+        </div></div>
 
-    <img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px">
-
-    <img class="centro" src="../Img/Image 2024-04-17 at 08.04.01.jpeg">
-
-    <img class="carta" src="../Img/carta.jpeg">
-
-    <img class="fone" src="../Img/fone.jpeg">
+        
+    </div>
 
     <div class="rodape">
+        <a class="entra" href="index.php">Voltar</a>
+    </div>
 
-   
- <h1 class="text1">Fala com a gente!<br><br> Nossa equipe de atendimento<br>está sempre pronto para ajudar.  </h1>
+</body>
 
-  <h1 class="text2"> Contato.bitrixeleven@gmail.com<br><br> Nos mande um email<br>com sua Dúvida.   </h1>
-
-  <h1 class="text3"> 0800 942 7592<br><br> Nossos atendentes estão<br> preparados para tirar<br> sua dúvida.    </h1>
-
-    <a class="entra" href="index.php">Voltar</a>
+</html>
+  
+ 
 
 
+
+
+ 
 
   

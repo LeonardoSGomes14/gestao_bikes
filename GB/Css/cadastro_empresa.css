@@ -1,5 +1,4 @@
 body {
-    height: 100vh;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -51,6 +50,9 @@ button[type="submit"] {
 
 section {
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 50%;
 }
 
 
@@ -77,38 +79,37 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
+
 .comeco {
-    display: flex;
-    justify-content: flex-start;
     background-color: #001e27;
-    width: 100%;
-    height: 20%;
-    margin-left: -1px;
-    margin-top: -9px;
-}
+    height: 180px;
+  margin-left:-1px;
+  }
 
-.titulo {
+  .titulo {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      position: absolute;
+      left: 370px;
+      top: 30px;
+  }
+
+  .logo {
     position: absolute;
-    left: 370px;
-    top: 80px;
-}
-
-.logo {     
-  width: 100%;
-  height: 100%;
-}
-
-.rodape {
-
-    margin-top: 150px;
-    background-color: #001e27;
-    padding: 40px 0;
-    text-align: center;
-}
-
+    top: -10px;  /* Ajuste conforme necessário */
+    left: 10px;  /* Ajuste conforme necessário */
+    width: 200px;
+  }
+  .rodape{
+    margin-top: 50px;
+    background-color: #001e27; 
+    padding: 40px 0; 
+    margin-left:-8px;
+    text-align: center; 
+    margin:0;
+    
+    }
 .entra {
     text-decoration: none;
     background-color: transparent;
@@ -132,13 +133,11 @@ button[type="submit"]:hover {
 .text-cadastro {
     color: black;
     font-weight: bold;
-    font-size: 26px;
-    margin-top: -45px;
-    margin-left: 41%;
+    font-size: 26px; 
     font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 796px) {
 
     /* Oculta o texto do banner em telas menores que 768px */
     .titulo {
@@ -150,24 +149,29 @@ button[type="submit"]:hover {
     }
 
     .rodape {
-        margin-top: 100px;
-        margin-left: -30px;
-    }
+        margin-top:-2%;
+        display: flex;
+        justify-content: center;
+      }
 
     .entra {
-        margin-left: 298px;
+        justify-content: center;
     }
 
     .text-cadastro {
         margin-left: 27%;
     }
+    .form {
+        width: 500px;
+    }
+
 }
 
 .sidebar {
     background-color:  #001e27;;
     padding-top: 4%;
     display: flex;
-    height: 110vh;
+    height: 210vh;
     width: 13vw;
     top: 200px;
     left: 10px;
@@ -199,4 +203,22 @@ button[type="submit"]:hover {
 .conect {
     text-decoration: none;
     color: white;
+}
+.text {
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center; /* Para centralizar o texto */
+    margin-left: -2%; /* Ou qualquer porcentagem adequada */
+    margin-top:-25%;
+}
+@media screen and (max-width: 796px) {
+    /* Adicione margem esquerda aos campos do formulário */
+    form {
+        margin-left: -6%; /* Ou qualquer valor adequado */
+        margin-top:10%;
+    }
+    .text {
+        margin-top:5%;
+        margin-left:-25%;
+    }
 }

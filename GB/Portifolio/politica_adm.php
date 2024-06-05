@@ -68,7 +68,7 @@
             line-height: 1.6;
             margin-bottom: 20px;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 796px) {
   /* Oculta o texto do banner em telas menores que 768px */
   .titulo {
       display: none;

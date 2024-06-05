@@ -21,20 +21,21 @@ verificarPermissao([1,2,3]);
 
 <body>
 
-
-    <div class="comeco">
-        <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
-        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a>
+<div class="comeco">
+        <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
+        <a href="../Portifolio/index.php"><img class="logo" src=" ../Img/bitrix-removebg-preview.png"></a>
     </div>
 
-    <h2>Informações Cadastradas</h2>
+   
+    <h1 class="h2center">Produtos Cadastrados</h1>
     <section class="showinfo">
+    <div class="table-container">
         <?php
         $host = 'localhost';
         $dbname = 'bike';
         $username = 'root';
         $password = '';
-
+        
         try {
             $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -80,7 +81,7 @@ verificarPermissao([1,2,3]);
 
                     echo "<td><img src='../MVC/public/Estoque/uploads/{$row['imagem']}' width='100'></td>";
                     echo "<td><a class='conect' href='atualizar_estoque.php?id=" . $row['id_estoque'] . "'>Atualizar</a></td>";
-                    echo "<td><a class='conect' href='deletar_produto.php?id=" . $row['id_estoque'] . "'>Deletar</a></td>";
+                    echo "<td><a  class='conect' href='deletar_produto.php?id=" .   htmlspecialchars($row['id_estoque'])  . "' onclick='return confirm(\"Tem certeza que deseja deletar este produto?\")'>Deletar</a></td>";
 
 
                 }
@@ -93,7 +94,11 @@ verificarPermissao([1,2,3]);
             die("Erro ao executar a consulta: " . $e->getMessage());
         }
         ?>
+
     </section>
+    <footer class="rodape">
+    <a class="entra" href="../Portifolio/index.php">Voltar</a>
+    </footer>
 </body>
 
 </html>

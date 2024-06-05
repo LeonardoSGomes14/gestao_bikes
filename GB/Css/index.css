@@ -76,6 +76,7 @@ body{
         width: 140px;
         margin-left: 120px;
     }
+
 }
 
 .banner1 {
@@ -87,7 +88,7 @@ body{
     height: 200%; /* Mantém a altura original para telas maiores */
     margin-left: -0px; /* Mantém a margem original para telas maiores */
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 796px) {
     .titulo {
         display: none; /* Esconde o elemento em telas menores que 768 pixels de largura */
     }
@@ -121,13 +122,13 @@ margin-top: -5px;
     font-size: 10px;
     left: 46%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 796px) {
     .copy {
-        margin-top: 110%; /* Ajuste a margem superior para telas menores */
+        
         height: 30px; /* Ajuste a altura para telas menores */
         font-size: 8px; /* Ajuste o tamanho da fonte para telas menores */
        margin-left: -20px;
-       width: 105%;
+       width: 150%;
     }
     
     .text {
@@ -249,12 +250,17 @@ footer .column > a:hover{
         margin-top: 95%; /* Adjust margin-top for smaller screens */
     }
     .logo {
-        margin-top:-10px;
-        margin-left:-28px;
+        margin-top:5px;
+        margin-left:10px;
+        height: 200px;
+        width: 200px;
     }
     .banner2 {
         width: 650px;
         margin-left:-8px;
     }
-   
+   .comeco {
+    margin-left:-7px;
+    width: 103%;
+   }
 }

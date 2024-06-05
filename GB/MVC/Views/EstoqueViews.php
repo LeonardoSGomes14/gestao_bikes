@@ -12,17 +12,17 @@ verificarPermissao([1, 2, 3]);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Empresa</title>
+    <title>Cadastro de Produtos</title>
     <link rel="stylesheet" href="../../Css/estoque.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
-    <div class="comeco">
+<div class="comeco">
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
-        <a href="../../Portifolio/index.php"><img class="logo" src="../../Img/bitrix-removebg-preview.png"></a>
-    </div>
-
+        <a href="../Portifolio/index.php"><img class="logo" src="../../Img/bitrix-removebg-preview.png"></a>
+    </div><br><br>
+<div class="text">Cadastrar Produtos</div>
     <section>
         <div class="sidebar">
             <button onclick="window.location.href='../../Portifolio/index.php'">Home</button>
@@ -30,7 +30,7 @@ verificarPermissao([1, 2, 3]);
         </div>
         <div class="container">
             <div class="form-container">
-                <form action="../public/Estoque/Resultado.php" method="POST" enctype="multipart/form-data">
+                <form class="formstyle" action="../public/Estoque/Resultado.php" method="POST" enctype="multipart/form-data">
                     <label for="nome_produto">Nome do Produto:</label>
                     <input type="text" id="nome_produto" name="nome_produto" required>
                     <label for="quantidade">Quantidade:</label>
