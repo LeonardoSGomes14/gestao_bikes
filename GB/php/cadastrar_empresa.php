@@ -1,4 +1,4 @@
-<input´´?php
+<?php
 require 'verificar_permissao.php';
 
 verificarPermissao([1]);
@@ -157,7 +157,7 @@ verificarPermissao([1]);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Empresas</title>
-    <link rel="stylesheet" href="../Css/estoque.css">
+    <link rel="stylesheet" href="../Css/cadastros_empresa.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -167,15 +167,17 @@ verificarPermissao([1]);
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
         <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
     </div><br><br>
-    <div class="text">Cadastrar Empresas</div>
+
     <section>
         <div class="sidebar">
             <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
             <button onclick="window.location.href='../php/controle_empresa.php'">Empresas Cadastradas</button>
         </div>
+     
         <div class="container">
+     
             <div class="form-container">
-
+            <div class="text">Cadastrar Empresas</div>  
 
                 <form class="formstyle" method="post">
                     <label for="nome">Nome da Empresa:</label><br>
@@ -210,6 +212,10 @@ verificarPermissao([1]);
         </div>
     </section>
 
+    
+    <div class="rodape">
+    <a class="entra" href="index.php">Voltar</a>
+<div>
 </body>
 
 <script>

@@ -1,6 +1,5 @@
 
 body {
-    height: 100vh;
     background-color: #1f9ea8;
     margin: 0;
     padding: 0;
@@ -9,10 +8,9 @@ body {
 
   .comeco {
     background-color: #001e27;
-    width: 101%;
     height: 180px;
     position: relative;
-  margin-left:-1px;
+  margin-left:-0px;
   }
 
 .titulo {
@@ -142,13 +140,13 @@ form input[type="submit"]:hover {
     transform: scale(1.1); /* Aumentando o tamanho em 10% ao passar o mouse */
   }
 
-  .rodape{
 
-    margin-top: 20px;
-    background-color: #001e27; 
-    padding: 40px 0; 
-    text-align: center; 
-    }
+  .rodape {
+    margin-top: 30%;
+    background-color: #001e27;
+    padding: 40px 0;
+    text-align: center;
+}
    
     /* Estilos para os botões */
     .button {
@@ -182,4 +180,7 @@ form input[type="submit"]:hover {
             width: 103%;
             margin-left:-2%;
         }
+}
+a{
+    text-decoration: none;
 }

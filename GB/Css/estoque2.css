@@ -23,7 +23,6 @@ body {
     text-align: center;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 5%;
@@ -37,11 +36,11 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    margin-bottom: 15%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top:-15%;
+    margin-top:-13%;
+    margin-left:-9%;
 }
 @media screen and (max-width: 796px) {
     /* Oculta o texto do banner em telas menores que 768px */
@@ -218,7 +217,9 @@ input[type="submit"]:active {
     font-size: 200%;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 10%;
+    /* Para centralizar o texto */
+    margin-left: 12%;
+    /* Ou qualquer porcentagem adequada */
 }
 
 
@@ -236,7 +237,6 @@ input[type="submit"]:active {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     text-transform: uppercase;
-    align-items: center;
 }
 
 .form-container input[type="submit"]:hover {
@@ -290,6 +290,7 @@ table tbody tr.active-row {
 }
 
 
+
 .comeco {
     background-color: #001e27;
     height: 180px;
@@ -298,6 +299,7 @@ table tbody tr.active-row {
 
 .sidebar {
     background-color: #001e27;
+    height: 980px;
     padding-top: 4%;
     display: flex;
     width: 15vw;
@@ -306,7 +308,7 @@ table tbody tr.active-row {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -5%;
+    margin-top: -10%;
 }
 
 .sidebar button {
@@ -314,7 +316,7 @@ table tbody tr.active-row {
     width: 70%;
     padding-top: 10%;
     padding-bottom: 10%;
-    margin: 20% 15% 10% 15%;
+    margin: 10% 15% 10% 15%;
     background-color: #1F9EA8;
     color: white;
     border: none;
@@ -355,7 +357,7 @@ table tbody tr.active-row {
 }
 
 .rodape {
-    margin-top: 10%;
+    margin-top: -6%;
     background-color: #001e27;
     padding: 40px 0;
     text-align: center;

@@ -65,10 +65,10 @@ try {
         <?php foreach ($dados as $dado) : ?>
             <tr>
                 <td><?php echo htmlspecialchars($dado['id_fiscal']); ?></td>
-                <td><?php echo htmlspecialchars($dado['transacoes']); ?></td>
-                <td><?php echo htmlspecialchars($dado['fatura']); ?></td>
-                <td><?php echo htmlspecialchars($dado['imposto']); ?></td>
-                <td><?php echo htmlspecialchars($dado['orcamentos']); ?></td>
+                <td>R$<?php echo htmlspecialchars($dado['transacoes']); ?></td>
+                <td>R$<?php echo htmlspecialchars($dado['fatura']); ?></td>
+                <td>R$<?php echo htmlspecialchars($dado['imposto']); ?></td>
+                <td>R$<?php echo htmlspecialchars($dado['orcamentos']); ?></td>
                 <td><a class="button" href="atualizar_gastos.php?id=<?php echo $dado['id_fiscal']; ?>">Atualizar</a></td>
                 <td><a class="button" href="excluir_registro.php?id=<?php echo $dado['id_fiscal']; ?>">Excluir</a></td>
                
@@ -78,7 +78,7 @@ try {
         <?php endforeach; ?>
         <tr>
             <td colspan="4"><strong>Total de Gastos:</strong></td>
-            <td><strong><?php echo htmlspecialchars(number_format($totalGastos, 2, ',', '.')); ?></strong></td>
+            <td><strong>R$<?php echo htmlspecialchars(number_format($totalGastos, 2, ',', '.')); ?></strong></td>
             <td colspan="2"></td>
             <td> <a href="boleto-pdf.php">Gerar Boleto</a>  </td>
         </tr>
