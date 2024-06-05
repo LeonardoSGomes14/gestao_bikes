@@ -66,9 +66,9 @@ $vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <tr>
                     <td><?php echo $venda['id_venda']; ?></td>
                     <td><?php echo $venda['produto']; ?></td>
-                    <td><?php echo $venda['valor']; ?></td>
+                    <td>R$<?php echo $venda['valor']; ?></td>
                     <td><?php echo $venda['quantidade']; ?></td>
-                    <td><?php echo $venda['total']; ?></td>
+                    <td>R$<?php echo $venda['total']; ?></td>
                     <td><?php echo $venda['data']; ?></td>
                     
                     <td><a class="button" href="atualizar_vendas.php?id=<?php echo $venda['id_venda']; ?>&produto=<?php echo $venda['produto']; ?>&valor=<?php echo $venda['valor']; ?>&quantidade=<?php echo $venda['quantidade']; ?>&total=<?php echo $venda['total']; ?>&data=<?php echo $venda['data']; ?>">Atualizar</a></td>

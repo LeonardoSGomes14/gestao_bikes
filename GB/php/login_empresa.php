@@ -73,9 +73,9 @@ if (isset($_POST['cnpj']) && isset($_POST['senha_emp'])) {
 
         
         <div class="center_form ">
-<h1>Login de empresa</h1>
+        <div class="textoo">Login Empresa</div>
         <form method="post">
-
+      
             <label for="cnpj">CNPJ:</label><br>
             <input type="text" id="cnpj" name="cnpj" required><br>
 

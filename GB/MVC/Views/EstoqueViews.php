@@ -13,7 +13,7 @@ verificarPermissao([1, 2, 3]);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produtos</title>
-    <link rel="stylesheet" href="../../Css/estoque.css">
+    <link rel="stylesheet" href="../../Css/estoque2.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -50,7 +50,8 @@ verificarPermissao([1, 2, 3]);
             </div>
         </div>
     </section>
-
+    <div class="rodape">
+    <a class="entra" href="../Portifolio/index.php">Voltar</a>
 </body>
 
 </html>
