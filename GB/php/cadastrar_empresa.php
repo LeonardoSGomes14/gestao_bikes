@@ -173,10 +173,11 @@ verificarPermissao([1]);
             <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
             <button onclick="window.location.href='../php/controle_empresa.php'">Empresas Cadastradas</button>
         </div>
+     
         <div class="container">
-        <div class="text">Cadastrar Empresas</div>  
+     
             <div class="form-container">
-
+            <div class="text">Cadastrar Empresas</div>  
 
                 <form class="formstyle" method="post">
                     <label for="nome">Nome da Empresa:</label><br>
