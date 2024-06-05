@@ -67,6 +67,16 @@
             .barcode { font-size: 18px; letter-spacing: 3px; margin-top: 20px; text-align: center; }
             .rodape { text-align: center; margin-top: 10px; }
             .section-title { font-weight: bold; margin-bottom: 10px; }
+            a.nu {
+                color: purple   ; /* cor do texto */
+                text-decoration: none; /* remove o sublinhado */
+                font-weight: bold; /* torna o texto em negrito */
+            }
+            
+            a.nu:hover {
+                color: #45a049; /* cor do texto ao passar o mouse */
+            }
+            
         </style>
     </head>
     <body>
@@ -154,6 +164,8 @@
     }
 
     $tablesContent .= '
+    <a class="nu" href="https://nubank.com.br/" target="_blank">NuBank</a>
+
     </body>
     </html>';
 
