@@ -82,7 +82,7 @@ if (isset($_GET['id'])) {
     <title>Atualizar Gastos</title>
 
 
-    <form class="formstyle" method="post" action="atualizar.php" enctype="multipart/form-data">
+    <form class="formstyle" method="post" action="processar_atualizar.php" enctype="multipart/form-data">
     <form id="formAtualizar" method="post">
         <input type="hidden" name="id" value="<?php echo $id_fiscal; ?>">
         <label for="transacoes">Transações:</label><br>
