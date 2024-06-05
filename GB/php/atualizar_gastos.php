@@ -73,7 +73,7 @@ if (isset($_GET['id'])) {
     <section>
         <div class="sidebar">
             <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
-            <button onclick="window.location.href='../php/controle_estoque.php'">Produtos Cadastrados</button>
+      
         </div>
         <div class="container">
             <div class="form-container">
