@@ -9,10 +9,10 @@ body {
 
   .comeco {
     background-color: #001e27;
-    width: 101%;
+    width: 100%;
     height: 180px;
     position: relative;
-  margin-left:-1px;
+  margin-left:-0px;
   }
 
 .titulo {
@@ -144,7 +144,7 @@ form input[type="submit"]:hover {
 
   .rodape{
 
-    margin-top: 20px;
+    margin-top: 22px;
     background-color: #001e27; 
     padding: 40px 0; 
     text-align: center; 
@@ -182,4 +182,7 @@ form input[type="submit"]:hover {
             width: 103%;
             margin-left:-2%;
         }
+}
+a{
+    text-decoration: none;
 }
