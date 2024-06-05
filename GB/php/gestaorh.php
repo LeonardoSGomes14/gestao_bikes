@@ -158,7 +158,7 @@ if (isset($_POST['submit'])) {
     <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
     <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
   </div>
-
+  <div class="textoo">Gestão de pessoas</div>
   <section class="rhcadastro">
     <div class="container">
       <div class="form-container">

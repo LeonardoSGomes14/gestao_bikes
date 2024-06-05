@@ -39,9 +39,14 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    margin-top:-15%;
 }
-
+@media screen and (max-width: 796px) {
+    /* Oculta o texto do banner em telas menores que 768px */
+    .formstyle {
+    margin-top:-2%;
+    }
+}
 
 .footer {
     background-color: white;
@@ -351,7 +356,7 @@ table tbody tr.active-row {
 }
 
 .rodape {
-    margin-top: 30%;
+    margin-top: 10%;
     background-color: #001e27;
     padding: 40px 0;
     text-align: center;
