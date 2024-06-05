@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
-        echo "Registro atualizado com sucesso!";
+      header('Location: controle_estoque.php');
     } catch (PDOException $e) {
         die("Erro ao atualizar o registro: " . $e->getMessage());
     }
@@ -93,34 +93,55 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-    <title>Atualizar Produto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
     <link rel="stylesheet" href="../Css/estoque.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
-    <h2 class="h2center">Atualizar Produto</h2>
-    <form method="post" action="atualizar.php" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id_estoque']); ?>">
-        <label for="nomedoproduto">Nome do Produto:</label>
-        <input type="text" name="nomedoproduto" value="<?php echo htmlspecialchars($row['nomedoproduto']); ?>"><br>
-        <label for="quantidade">Quantidade:</label>
-        <input type="text" name="quantidade" value="<?php echo htmlspecialchars($row['quantidade']); ?>"><br>
-        <label for="preco">Preço:</label>
-        <input type="text" name="preco" value="<?php echo htmlspecialchars($row['preco']); ?>"><br>
-        <label for="tipo">Tipo:</label>
-        <input type="text" name="tipo" value="<?php echo htmlspecialchars($row['tipo']); ?>"><br>
-        <label for="data">Data:</label>
-        <input type="text" name="data" value="<?php echo htmlspecialchars($row['data']); ?>"><br>
-        <label for="fornecedor">Fornecedor:</label>
-        <input type="text" name="fornecedor" value="<?php echo htmlspecialchars($row['fornecedor']); ?>"><br>
-        <label for="imagem">Imagem:</label>
-        <input type="file" name="imagem"><br>
-        <input type="submit" value="Atualizar">
-    </form>
-
-    <button><a href="controle_estoque.php">Voltar</a></button>
+<div class="comeco">
+        <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
+        <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
+    </div><br><br>
+<div class="text">Cadastrar Produtos</div>
+    <section>
+        <div class="sidebar">
+            <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
+            <button onclick="window.location.href='../php/controle_estoque.php'">Produtos Cadastrados</button>
+        </div>
+        <div class="container">
+            <div class="form-container">
+     
+<h2 class="h2center">Atualizar Produto</h2>
+<form class="formstyle" method="post" action="atualizar.php" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id_estoque']); ?>">
+    <label for="nomedoproduto">Nome do Produto:</label>
+    <input type="text" name="nomedoproduto" value="<?php echo htmlspecialchars($row['nomedoproduto']); ?>"><br>
+    <label for="quantidade">Quantidade:</label>
+    <input type="text" name="quantidade" value="<?php echo htmlspecialchars($row['quantidade']); ?>"><br>
+    <label for="preco">Preço:</label>
+    <input type="text" name="preco" value="<?php echo htmlspecialchars($row['preco']); ?>"><br>
+    <label for="tipo">Tipo:</label>
+    <input type="text" name="tipo" value="<?php echo htmlspecialchars($row['tipo']); ?>"><br>
+    <label for="data">Data:</label>
+    <input type="text" name="data" value="<?php echo htmlspecialchars($row['data']); ?>"><br>
+    <label for="fornecedor">Fornecedor:</label>
+    <input type="text" name="fornecedor" value="<?php echo htmlspecialchars($row['fornecedor']); ?>"><br>
+    <label for="imagem">Imagem:</label>
+    <input type="file" name="imagem"><br>
+    <input type="submit" value="Atualizar">
+</form>
+            </div>
+        </div>
+    </section>
 
 </body>
+
 </html>

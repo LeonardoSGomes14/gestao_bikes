@@ -37,6 +37,7 @@ class ControleEstoqueController {
 
         if($this->model->cadastrarProduto($nome_produto, $quantidade, $preco, $tipo, $data, $fornecedor, $imagem)) {
             echo "<h1> Cadastro realizado com sucesso! </h1>";
+            header('Location: ../../Views/EstoqueViews.php');
         } else {
             echo "<h1> Erro ao cadastrar produto! </h1>";
         }

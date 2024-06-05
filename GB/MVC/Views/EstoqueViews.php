@@ -30,7 +30,7 @@ verificarPermissao([1, 2, 3]);
         </div>
         <div class="container">
             <div class="form-container">
-                <form action="../public/Estoque/Resultado.php" method="POST" enctype="multipart/form-data">
+                <form class="formstyle" action="../public/Estoque/Resultado.php" method="POST" enctype="multipart/form-data">
                     <label for="nome_produto">Nome do Produto:</label>
                     <input type="text" id="nome_produto" name="nome_produto" required>
                     <label for="quantidade">Quantidade:</label>

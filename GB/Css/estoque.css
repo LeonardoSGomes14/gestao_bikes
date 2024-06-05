@@ -31,17 +31,17 @@ body {
 
 }
 
-form {
+.formstyle {
     display: flex;
     flex-direction: column;
-    margin: 60px;
+    align-items: center;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: -4%;
-    margin-left: -8%;
+
 }
+
 
 .footer {
     background-color: white;
@@ -119,7 +119,6 @@ form {
 
     .comeco {
         margin-left: -1%;
-        width: 102%;
         margin-top: -2%;
     }
 
@@ -288,14 +287,13 @@ table tbody tr.active-row {
 
 .comeco {
     background-color: #001e27;
-    width: 100%;
     height: 180px;
     margin-left: -1px;
 }
 
 .sidebar {
     background-color: #001e27;
-    ;
+    
     padding-top: 4%;
     display: flex;
     width: 15vw;
@@ -353,10 +351,9 @@ table tbody tr.active-row {
 }
 
 .rodape {
-    margin-top: 20%;
+    margin-top: 30%;
     background-color: #001e27;
     padding: 40px 0;
-    width: 100%;
     text-align: center;
 }
 
@@ -365,6 +362,7 @@ table tbody tr.active-row {
     /* Adicione margem esquerda aos campos do formulário */
     form {
         margin-left: 3%;
+
         /* Ou qualquer valor adequado */
     }
 }

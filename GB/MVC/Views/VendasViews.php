@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,49 @@
             align-items: center;
             height: 100vh;
         }
+
+        section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        button {
+            width: fit-content;
+            margin: 5% 0% 5% 0%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #8CC7A1, #43ABC9);
+            font-size: 15px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button :hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #66BAB7, #3987A3);
+        }
+
+        .bttnback {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
 
         .form-container {
             background-color: rgba(255, 255, 255, 0.9);
@@ -77,18 +121,25 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="form-container">
-        <h1>Registrar Venda</h1>
-        <form action="../public/Fiscal/criar_venda.php" method="post">
-            <label for="produto">Produto:</label>
-            <input type="text" id="produto" name="produto" required>
-            <label for="valor">Valor Unitário:</label>
-            <input type="number" step="0.01" id="valor" name="valor" required>
-            <label for="quantidade">Quantidade:</label>
-            <input type="number" id="quantidade" name="quantidade" required>
-            <button type="submit">Cadastrar</button>
-        </form>
-    </div>
+    <section>
+        <div class="bttnback">
+            <button><a href="../../Portifolio/index.php">Voltar à página inicial</a></button>
+        </div>
+        <div class="form-container">
+            <h1>Registrar Venda</h1>
+            <form action="../public/Fiscal/criar_venda.php" method="post">
+                <label for="produto">Produto:</label>
+                <input type="text" id="produto" name="produto" required>
+                <label for="valor">Valor Unitário:</label>
+                <input type="number" step="0.01" id="valor" name="valor" required>
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </section>
 </body>
+
 </html>

@@ -5,6 +5,7 @@ verificarPermissao([1, 2, 3]);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,39 @@ verificarPermissao([1, 2, 3]);
             justify-content: center;
             align-items: center;
             height: 100vh;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        button {
+            width: fit-content;
+            margin: 5% 0% 5% 0%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #8CC7A1, #43ABC9);
+            font-size: 15px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button :hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #66BAB7, #3987A3);
+        }
+
+        .bttnback {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
         }
 
         .form-container {
@@ -82,37 +116,44 @@ verificarPermissao([1, 2, 3]);
         }
     </style>
 </head>
+
 <body>
-    <div class="form-container">
-        <h1>Fatura</h1>
-        <form method="post" action="../Controller/FiscalController.php" oninput="calcularCampos()">
-            <label for="transacoes">Transações:</label>
-            <input type="text" id="transacoes" name="transacoes" required><br>
+    <section>
+        <div class="bttnback">
+            <button><a href="../../Portifolio/index.php">Voltar à página inicial</a></button>
+        </div>
+        <div class="form-container">
+            <h1>Fatura</h1>
+            <form method="post" action="../Controller/FiscalController.php" oninput="calcularCampos()">
+                <label for="transacoes">Transações:</label>
+                <input type="text" id="transacoes" name="transacoes" required><br>
 
-            <label for="fatura">Fatura:</label>
-            <input type="text" id="fatura" name="fatura" required><br>
+                <label for="fatura">Fatura:</label>
+                <input type="text" id="fatura" name="fatura" required><br>
 
-            <label for="imposto">Imposto:</label>
-            <input type="text" id="imposto" name="imposto" required><br>
+                <label for="imposto">Imposto:</label>
+                <input type="text" id="imposto" name="imposto" required><br>
 
-            <label for="orcamentos">Gasto Total:</label>
-            <input type="text" id="orcamentos" name="orcamentos" required readonly><br>
+                <label for="orcamentos">Gasto Total:</label>
+                <input type="text" id="orcamentos" name="orcamentos" required readonly><br>
 
-            <input type="submit" value="Enviar">
-        </form>
-    </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
 </body>
+
 </html>
 <script>
-        function calcularCampos() {
-            let transacoes = document.getElementById('transacoes').value;
-            let fatura = document.getElementById('fatura').value;
-            let imposto = document.getElementById('imposto').value;
+    function calcularCampos() {
+        let transacoes = document.getElementById('transacoes').value;
+        let fatura = document.getElementById('fatura').value;
+        let imposto = document.getElementById('imposto').value;
 
-            // Exemplo de cálculo automático
-            if(transacoes && fatura && imposto) {
-                let orcamentos = (parseFloat(transacoes) + parseFloat(fatura) + parseFloat(imposto)).toFixed(2);
-                document.getElementById('orcamentos').value = orcamentos;
-            }
+        // Exemplo de cálculo automático
+        if (transacoes && fatura && imposto) {
+            let orcamentos = (parseFloat(transacoes) + parseFloat(fatura) + parseFloat(imposto)).toFixed(2);
+            document.getElementById('orcamentos').value = orcamentos;
         }
-    </script>
+    }
+</script>

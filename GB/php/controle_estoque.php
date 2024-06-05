@@ -81,7 +81,7 @@ verificarPermissao([1,2,3]);
 
                     echo "<td><img src='../MVC/public/Estoque/uploads/{$row['imagem']}' width='100'></td>";
                     echo "<td><a class='conect' href='atualizar_estoque.php?id=" . $row['id_estoque'] . "'>Atualizar</a></td>";
-                    echo "<td><a class='conect' href='deletar_produto.php?id=" . $row['id_estoque'] . "'>Deletar</a></td>";
+                    echo "<td><a  class='conect' href='deletar_produto.php?id=" .   htmlspecialchars($row['id_estoque'])  . "' onclick='return confirm(\"Tem certeza que deseja deletar este produto?\")'>Deletar</a></td>";
 
 
                 }

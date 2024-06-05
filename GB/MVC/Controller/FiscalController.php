@@ -34,6 +34,7 @@ $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $passw
 $model = new ControleFiscalModel($pdo);
 $controller = new ControleFiscalController($model);
 $controller->processarFormulario();
+header('Location: ../Views/FiscalViews.php');
 ?>
 
 <!----------------------------------------------------------------->

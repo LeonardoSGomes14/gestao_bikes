@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $stmt = $pdo->prepare("UPDATE cadastro_empresa SET nome = ?, servicos = ?, cnpj = ?, cep = ?, estado = ?, rua = ?, numero = ? WHERE id_empresa = ?");
         $stmt->execute([$nome, $servicos, $cnpj, $cep, $estado, $rua, $numero, $id_empresa]);
-        echo "<p>Empresa atualizada com sucesso!</p>";
+        header('Location:controle_empresa.php');
     } catch (PDOException $e) {
         echo "<p>Erro ao atualizar empresa: " . $e->getMessage() . "</p>";
     }
