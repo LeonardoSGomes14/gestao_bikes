@@ -32,6 +32,10 @@ try {
 } catch (PDOException $e) {
     die("Erro ao recuperar dados: " . $e->getMessage());
 }
+
+
+?>
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +84,9 @@ try {
             <td colspan="4"><strong>Total de Gastos:</strong></td>
             <td><strong>R$<?php echo htmlspecialchars(number_format($totalGastos, 2, ',', '.')); ?></strong></td>
             <td colspan="2"></td>
-            <td> <a href="boleto-pdf.php">Gerar Boleto</a>  </td>
+          
+            <td><a class="button" href="boleto-pdf.php?id=<?php echo $dado['id_fiscal']; ?>">Gerar Boleto</a></td>
+
         </tr>
     </table>
     <a href="controle_vendas.php"> Ver Vendas </a>
