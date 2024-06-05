@@ -27,7 +27,7 @@ form {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top:-2%;
+    margin-top:5%;
 }
 
 label {
@@ -163,10 +163,9 @@ button[type="submit"]:hover {
 
     .form {
         width: 500px;
+       
     }
-    h1 {
-        margin-left:12%;
-    }
+    
 
 }
 
@@ -207,12 +206,12 @@ button[type="submit"]:hover {
     text-decoration: none;
     color: white;
 }
-.text {
+.textoo {
     font-size: 200%;
     font-weight: bold;
     text-align: center; /* Para centralizar o texto */
     margin-left: -2%; /* Ou qualquer porcentagem adequada */
-    margin-top:-25%;
+    margin-top:-30%;
 }
 @media screen and (max-width: 796px) {
     /* Adicione margem esquerda aos campos do formulário */
@@ -222,6 +221,9 @@ button[type="submit"]:hover {
     }
     .text {
         margin-top:5%;
+        margin-left:-25%;
+    }
+    .textoo {
         margin-left:-25%;
     }
 }
