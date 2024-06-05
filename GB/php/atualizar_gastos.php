@@ -86,11 +86,11 @@ if (isset($_GET['id'])) {
     <form id="formAtualizar" method="post">
         <input type="hidden" name="id" value="<?php echo $id_fiscal; ?>">
         <label for="transacoes">Transações:</label><br>
-        <input type="text" id="transacoes" name="transacoes" value="<?php echo $dados_fiscais['transacoes']; ?>"><br>
+        <input type="number" id="transacoes" name="transacoes" value="<?php echo $dados_fiscais['transacoes']; ?>"><br>
         <label for="fatura">Fatura:</label><br>
-        <input type="text" id="fatura" name="fatura" value="<?php echo $dados_fiscais['fatura']; ?>"><br>
+        <input type="number" id="fatura" name="fatura" value="<?php echo $dados_fiscais['fatura']; ?>"><br>
         <label for="imposto">Imposto:</label><br>
-        <input type="text" id="imposto" name="imposto" value="<?php echo $dados_fiscais['imposto']; ?>"><br>
+        <input type="number" id="imposto" name="imposto" value="<?php echo $dados_fiscais['imposto']; ?>"><br>
         <label for="orcamentos">Gasto Total:</label><br>
         <input type="text" id="orcamentos" name="orcamentos" value="<?php echo $dados_fiscais['orcamentos']; ?>"><br><br>
         <input type="submit" value="Atualizar" onclick="submitForm()">
