@@ -157,7 +157,7 @@ verificarPermissao([1]);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Empresas</title>
-    <link rel="stylesheet" href="../Css/estoque.css">
+    <link rel="stylesheet" href="../Css/cadastros_empresa.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -210,6 +210,10 @@ verificarPermissao([1]);
         </div>
     </section>
 
+    
+    <div class="rodape">
+    <a class="entra" href="index.php">Voltar</a>
+<div>
 </body>
 
 <script>
