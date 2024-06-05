@@ -125,10 +125,10 @@ verificarPermissao([1, 2, 3]);
         <div class="form-container">
             <h1>Fatura</h1>
             <form method="post" action="../Controller/FiscalController.php" oninput="calcularCampos()">
-                <label for="transacoes">Transações:</label>
+                <label for="transacoes">Número de transações:</label>
                 <input type="text" id="transacoes" name="transacoes" required><br>
 
-                <label for="fatura">Fatura:</label>
+                <label for="fatura">Valor da fatura:</label>
                 <input type="text" id="fatura" name="fatura" required><br>
 
                 <label for="imposto">Imposto:</label>

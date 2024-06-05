@@ -20,7 +20,7 @@ verificarPermissao([1, 2, 3]);
 <body>
 <div class="comeco">
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
-        <a href="../Portifolio/index.php"><img class="logo" src="../../Img/bitrix-removebg-preview.png"></a>
+        <a href="../../Portifolio/index.php"><img class="logo" src="../../Img/bitrix-removebg-preview.png"></a>
     </div><br><br>
 <div class="text">Cadastrar Produtos</div>
     <section>
