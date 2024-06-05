@@ -1,4 +1,5 @@
 body {
+    height: 100vh;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -50,9 +51,6 @@ button[type="submit"] {
 
 section {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-width: 50%;
 }
 
 
@@ -79,13 +77,14 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
-
 .comeco {
     background-color: #001e27;
+    width: 101%;
     height: 180px;
+    position: relative;
   margin-left:-1px;
   }
-
+  
   .titulo {
     color: white;
       font-family: Arial, Helvetica, sans-serif;
@@ -102,14 +101,15 @@ button[type="submit"]:hover {
     width: 200px;
   }
   .rodape{
-    margin-top: 50px;
+    margin-top: 200px;
     background-color: #001e27; 
     padding: 40px 0; 
+    width: 101%;
     margin-left:-8px;
     text-align: center; 
-    margin:0;
     
     }
+
 .entra {
     text-decoration: none;
     background-color: transparent;
@@ -133,11 +133,13 @@ button[type="submit"]:hover {
 .text-cadastro {
     color: black;
     font-weight: bold;
-    font-size: 26px; 
+    font-size: 26px;
+    margin-top: -45px;
+    margin-left: 41%;
     font-weight: 700;
 }
 
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 768px) {
 
     /* Oculta o texto do banner em telas menores que 768px */
     .titulo {
@@ -162,7 +164,7 @@ button[type="submit"]:hover {
         margin-left: 27%;
     }
     .form {
-        width: 500px;
+        width: 500 px;
     }
 
 }
@@ -171,7 +173,7 @@ button[type="submit"]:hover {
     background-color:  #001e27;;
     padding-top: 4%;
     display: flex;
-    height: 210vh;
+    height: 110vh;
     width: 13vw;
     top: 200px;
     left: 10px;
@@ -203,22 +205,4 @@ button[type="submit"]:hover {
 .conect {
     text-decoration: none;
     color: white;
-}
-.text {
-    font-size: 200%;
-    font-weight: bold;
-    text-align: center; /* Para centralizar o texto */
-    margin-left: -2%; /* Ou qualquer porcentagem adequada */
-    margin-top:-25%;
-}
-@media screen and (max-width: 796px) {
-    /* Adicione margem esquerda aos campos do formulário */
-    form {
-        margin-left: -6%; /* Ou qualquer valor adequado */
-        margin-top:10%;
-    }
-    .text {
-        margin-top:5%;
-        margin-left:-25%;
-    }
 }
