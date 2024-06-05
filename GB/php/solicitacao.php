@@ -30,8 +30,8 @@ verificarPermissao([1,2,3,4,5]);
   
 <div class="comeco">
 
+    <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a> 
         <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
-      <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a> 
     </div>
 
     <section>
@@ -41,11 +41,7 @@ verificarPermissao([1,2,3,4,5]);
         <button onclick="window.location.href='../php/solicitacaoatendidas.php'">Recibos Das Solicitações </button>
     </div>
 
-        </div> 
-       
-     
-
-        <div class="texto-centralizado ">
+        </div>
           
             <div class="container">
       
