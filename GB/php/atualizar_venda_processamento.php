@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
 
         // Redirecionar de volta para a página de listagem de vendas após a atualização
-        header("Location: controle_vendas.php.php");
+        header("Location: controle_vendas.php");
         exit();
     } else {
         echo "Erro: Informações incompletas.";
