@@ -188,7 +188,7 @@ margin-top:-33%;
 }
 
 
-@media screen and (max-width: 796px) {
+@media screen and (max-width: 980px) {
 
   /* Oculta o texto do banner em telas menores que 768px */
   .titulo {
@@ -223,7 +223,7 @@ margin-top:-33%;
   .container img {
     margin-left:5%;
   }
-  
+
 }
 
 @media screen and (max-width: 796px) {

@@ -11,17 +11,27 @@ if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Função para atualizar veículo
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_vehicle'])) {
-    $id_frota = $_POST['id_frota'];
-    $marca = $conn->real_escape_string($_POST['marca']);
-    $ano_fabricado = $conn->real_escape_string($_POST['ano_fabricado']);
-    $modelo = $conn->real_escape_string($_POST['modelo']);
-    $tipodeveiculo = $conn->real_escape_string($_POST['tipodeveiculo']);
+// Verificar se o formulário foi enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $marca = isset($_POST['marca']) ? $conn->real_escape_string($_POST['marca']) : '';
+    $ano_fabricado = isset($_POST['ano_fabricado']) ? $conn->real_escape_string($_POST['ano_fabricado']) : '';
+    $modelo = isset($_POST['modelo']) ? $conn->real_escape_string($_POST['modelo']) : '';
+    $tipodeveiculo = isset($_POST['tipodeveiculo']) ? $conn->real_escape_string($_POST['tipodeveiculo']) : '';
+    $id_frota = isset($_POST['id_frota']) ? intval($_POST['id_frota']) : 0;
 
-    if ($_FILES['imagem']['tmp_name']) {
-        $imagem = $conn->real_escape_string(file_get_contents($_FILES['imagem']['tmp_name']));
-        $sql = "UPDATE controlefrota SET marca='$marca', ano_fabricado='$ano_fabricado', modelo='$modelo', tipodeveiculo='$tipodeveiculo', imagem='$imagem' WHERE id_frota=$id_frota";
+    if (isset($_FILES['imagem']) && $_FILES['imagem']['tmp_name']) {
+        $imagem_nome = $_FILES['imagem']['name'];
+        $imagem_temp = $_FILES['imagem']['tmp_name'];
+        $imagem_caminho = "../uploads/" . $imagem_nome;
+
+        if (move_uploaded_file($imagem_temp, $imagem_caminho)) {
+            // Usar apenas o caminho da imagem no banco de dados
+            $imagem_caminho_db = $conn->real_escape_string($imagem_caminho);
+            $sql = "UPDATE controlefrota SET marca='$marca', ano_fabricado='$ano_fabricado', modelo='$modelo', tipodeveiculo='$tipodeveiculo', imagem='$imagem_caminho_db' WHERE id_frota=$id_frota";
+        } else {
+            echo "Erro ao fazer upload da imagem.";
+            exit; // Se houver um erro no upload da imagem, sair do script.
+        }
     } else {
         $sql = "UPDATE controlefrota SET marca='$marca', ano_fabricado='$ano_fabricado', modelo='$modelo', tipodeveiculo='$tipodeveiculo' WHERE id_frota=$id_frota";
     }
@@ -36,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_vehicle'])) {
 // Função para pegar dados do veículo a ser editado
 $vehicle_to_edit = null;
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id_frota'])) {
-    $id_frota = $_GET['id_frota'];
+    $id_frota = intval($_GET['id_frota']);
     $sql = "SELECT * FROM controlefrota WHERE id_frota=$id_frota";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -76,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id_frota'])) {
                     <input type="submit" value="Atualizar Veículo">
                 </form>
             <?php else: ?>
-                <p>Veículo atualizado com sucesso!  <a href="controle_frota.php">Voltar</a></p>
+                <p>Veículo atualizado com sucesso! <a href="controle_frota.php">Voltar</a></p>
             <?php endif; ?>
         </div>
     </div>
