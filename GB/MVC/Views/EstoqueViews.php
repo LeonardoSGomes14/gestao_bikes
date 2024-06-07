@@ -51,7 +51,7 @@ verificarPermissao([1, 2, 3]);
         </div>
     </section>
     <div class="rodape">
-    <a class="entra" href="../Portifolio/index.php">Voltar</a>
+    <a class="entra" href="../../Portifolio/index.php">Voltar</a>
 </body>
 
 </html>

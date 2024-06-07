@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produtos</title>
-    <link rel="stylesheet" href="../Css/estoque.css">
+    <link rel="stylesheet" href="../Css/atualizar_estoque.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
         <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png"></a>
     </div><br><br>
-<div class="text">Cadastrar Produtos</div>
+
     <section>
         <div class="sidebar">
             <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
