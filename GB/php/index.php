@@ -94,7 +94,7 @@ p {
         <h1 class="titulo"> Sistema De Gestão ERP+controle de empresas e de pessoas </h1>
         
         <div class="dois">
-            <a class="conhecer" href="sobre.php">Quero Conhecer</a>
+            <a class="conhecer" href="tutorial.php">Tutorial</a>
             <a class="entra" href="login_empresa.php">Entrar</a>
         </div>
     </section>
