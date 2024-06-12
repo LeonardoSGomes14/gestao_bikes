@@ -137,7 +137,7 @@
 
     <footer class="container">
     <div>
-            <h3>@ 2024 Copyright Bitrixx</h3>
+         
         </div>
         <div class="column">
             <h4>Sobre nós</h4>
@@ -145,7 +145,7 @@
         </div>
         <div class="column">
             <h4>Contato</h4>
-            <a href="../php/contato.php">Página de Contato</a>
+            <a href="../php/contato.php">Página de Contato</a> <br><br>
             <a href="../php/politica.php">Politica de Privacidade</a>
         </div>
 
@@ -163,7 +163,7 @@
             <a href="https://www.tiktok.com/pt-BR/" target="_blank">
                 <img class="face" src="../Img/tiktok-logo.png" width="30"></a>
         </div>
-
+        <h3>@ 2024 Copyright Bitrixx</h3>
 
     </footer>
 
