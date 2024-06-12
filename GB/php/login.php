@@ -163,9 +163,20 @@ if (isset($_POST['submit'])) {
                 <input class="form__input" type="email" id="email" placeholder="Email" name="email" required>
 
                 <input class="form__input" type="password" id="senha" placeholder="Senha" name="senha" required>
+                <?php
 
-                <input type="hidden" id="tipo_funcionario" name="tipo_funcionario" value="5">
+                $query = 'SELECT COUNT(*) FROM usuarios';
+                $stmt = $pdo->prepare($query);
+                $stmt->execute();
+                $count = $stmt->fetchColumn();
 
+                if ($count == 0) {
+                    echo '<input type="hidden" id="tipo_funcionario" name="tipo_funcionario" value="1">';
+                } else {
+                    echo '<input type="hidden" id="tipo_funcionario" name="tipo_funcionario" value="5">';
+                }
+
+                ?>
                 <input type="hidden" class="form__input" type="text" id="cep" placeholder="" name="cep" value="0">
 
                 <input type="hidden" class="form__input" type="text" id="cidade" placeholder=" " name="cidade" value="0">

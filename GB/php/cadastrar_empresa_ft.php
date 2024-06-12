@@ -1,3 +1,38 @@
+<?php
+require_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
+
+// Recebe os dados do formulário e processa o cadastro
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST['nome'];
+    $servicos = $_POST['servicos'];
+    $cnpj = $_POST['cnpj'];
+    $senha_emp = $_POST['senha_emp'];
+    $cep = $_POST['cep'];
+    $estado = $_POST['estado'];
+    $rua = $_POST['rua'];
+    $numero = $_POST['numero'];
+
+    // Lógica para inserir os dados no banco de dados
+    try {
+        $stmt = $pdo->prepare("INSERT INTO cadastro_empresa (nome, servicos, cnpj, senha_emp, cep, estado, rua, numero) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$nome, $servicos, $cnpj, $senha_emp, $cep, $estado, $rua, $numero]);
+
+
+    } catch (PDOException $e) {
+        echo "Erro ao cadastrar empresa: " . $e->getMessage();
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de empresa</title>
+</head>
+<body>
+    
 <style>
     #loading-screen {
         position: fixed;
@@ -230,32 +265,3 @@
 </script>
 
 </html>
-
-
-
-<?php
-require_once 'C:\xampp\htdocs\gestao_bikes\GB\config\config.php';
-
-// Recebe os dados do formulário e processa o cadastro
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST['nome'];
-    $servicos = $_POST['servicos'];
-    $cnpj = $_POST['cnpj'];
-    $senha_emp = $_POST['senha_emp'];
-    $cep = $_POST['cep'];
-    $estado = $_POST['estado'];
-    $rua = $_POST['rua'];
-    $numero = $_POST['numero'];
-
-    // Lógica para inserir os dados no banco de dados
-    try {
-        $stmt = $pdo->prepare("INSERT INTO cadastro_empresa (nome, servicos, cnpj, senha_emp, cep, estado, rua, numero) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->execute([$nome, $servicos, $cnpj, $senha_emp, $cep, $estado, $rua, $numero]);
-
-        echo "Empresa cadastrada com sucesso!";
-        header('login_empresa.php');
-    } catch (PDOException $e) {
-        echo "Erro ao cadastrar empresa: " . $e->getMessage();
-    }
-}
-?>
