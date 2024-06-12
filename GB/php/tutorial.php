@@ -35,6 +35,9 @@
     <footer>
         <div class="rodape">
             <a class="entra" href="index.php">Voltar</a>
+            <a class="entra" href="tutorial-pdf.php">Baixar Tutorial</a>
+
+         
         </div>
     </footer>
 </body>
