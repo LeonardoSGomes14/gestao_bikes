@@ -62,5 +62,5 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         loadingScreen.style.display = 'none';
         content.style.display = 'block';
-    }, 2000); // Atraso de 3 segundos
+    }, 1000); // Atraso de 3 segundos
 });
