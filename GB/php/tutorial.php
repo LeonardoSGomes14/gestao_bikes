@@ -16,7 +16,7 @@
     </div>
 
     <div class="conteudo">
-        <h2 class="subtitulo">Tutorial de Uso do Sistema de Gestão de Bikes</h2>
+        <h2 class="subtitulo">Tutorial de Uso do Sistema de Gestão</h2>
         
         <iframe width="560" height="315" src="https://www.youtube.com/embed/62PUmYJW6ek?si=CdwNM7APAuFhPNNM"
             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
