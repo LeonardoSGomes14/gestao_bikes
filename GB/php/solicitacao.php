@@ -26,13 +26,14 @@ verificarPermissao([1, 2, 3, 4, 5]);
     <section>
         <div class="sidebar">
             <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
-            <button onclick="window.location.href='../php/controle_estoque.php'">Produtos Cadastrados</button>
+            <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações Pendentes</button>
+            <button onclick="window.location.href='../php/solicitacaoatendidas.php'">Solicitações Atendidas</button>
         </div>
         <div class="container">
             <div class="text">Realizar solicitação</div>
             <div class="form-container">
 
-                <form class="formstyle" action="../MVC/public/Solicitacao/index.php?action=create" method="POST"
+                <form class="formstyle" action="../../GB/MVC/public/Solicitacao/index.php?action=create" method="POST"
                     class="form-solicitacao">
                     <label for="solicitante">Solicitante:</label>
                     <input type="text" id="solicitante" name="solicitante" required><br>
@@ -40,8 +41,8 @@ verificarPermissao([1, 2, 3, 4, 5]);
                     <input type="text" id="responsavel" name="responsavel" required><br>
                     <label for="pedido">Pedido:</label>
                     <input type="text" id="pedido" name="pedido" required><br>
-                    <label for="situacao">Situação:</label>
-                    <input type="text" id="situacao" name="situacao" required><br>
+                    <label for="situacao"></label>
+                    <input type="hidden" id="situacao" name="situacao" value="0" readonly required><br>
                     <input type="submit" value="Criar">
                 </form>
             </div>

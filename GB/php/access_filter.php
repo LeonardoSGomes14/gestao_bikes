@@ -30,6 +30,8 @@ function FiltroAccss()
                 <a href="../php/controle_empresa.php">Controle Empresa</a>
                 <a href="../php/solicitacao.php">Realizar solicitações</a>  
                 <a href="../php/solicitacaoatendidas.php">Solicitações atendidas</a>
+                <a href="../php/ver-situação.php">Ver Solicitações</a>
+                ver-situação.php
                 
             </div>
         </div>
