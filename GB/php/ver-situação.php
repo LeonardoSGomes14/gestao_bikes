@@ -1,5 +1,5 @@
 <?php
-require '../../../php/verificar_permissao.php';
+require '../php/verificar_permissao.php';
 
 verificarPermissao([1]);
  
@@ -12,18 +12,18 @@ verificarPermissao([1]);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Css/solicitacaoatendidas.css">
+    <link rel="stylesheet" href="../Css/solicitacaoatendidas.css">
     
     <title>Solicitação Pendentes</title>
       
 <div class="comeco">
         <div class="retangulo"></div>
         <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
-       <a href="../../../Portifolio/index.php"><img class="logo" src="../../../Img/bitrix-removebg-preview.png" width="300px"></a> 
+       <a href="../../../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
     </div>
     <div class="sidebar">
-    <button onclick="window.location.href='../../../Portifolio/index.php'">Home</button>
-        <button onclick="window.location.href='../../../php/solicitacaoatendidas.php'">Solicitações Atendidas</button>
+    <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
+        <button onclick="window.location.href='../php/solicitacaoatendidas.php'">Solicitações Atendidas</button>
        
     </div>
 </head>
@@ -119,7 +119,7 @@ verificarPermissao([1]);
                 echo "<td>".$row['pedido']."</td>";
                 echo "<td>".$row['situacao']."</td>";
                 echo "<td>".$row['criado']."</td>";
-                echo "<td><a href='../../../php/editar_solicitacao.php?id=".$row['id_soli']."'>Editar</a> | <a href='?delete=".$row['id_soli']."' onclick=\"return confirm('Tem certeza que deseja excluir esta solicitação?');\">Excluir</a></td>";
+                echo "<td><a href='../php/editar_solicitacao.php?id=".$row['id_soli']."'>Editar</a> | <a href='?delete=".$row['id_soli']."' onclick=\"return confirm('Tem certeza que deseja excluir esta solicitação?');\">Excluir</a></td>";
                 echo "</tr>";
             }
         }
