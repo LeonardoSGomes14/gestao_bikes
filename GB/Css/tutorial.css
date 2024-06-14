@@ -65,6 +65,7 @@ section {
     width: 60%;
     text-align: center;
     font-weight: bold;
+   
 }
 
 .dicas {
@@ -77,6 +78,8 @@ section {
 .dicas h3 {
     font-size: 20px;
     color: #9e0000;
+    font-weight: bold;
+
 }
 
 .dicas ul {
@@ -89,6 +92,8 @@ section {
     font-size: 16px;
     color: #000000;
     margin: 5px 0;
+    font-weight: bold;
+
 }
 
 .conteudo2 {
@@ -103,6 +108,7 @@ section {
     display: flex;
     width: 60%;
     margin: 10px;
+    font-weight: bold;
 }
 
 .img_emp {
