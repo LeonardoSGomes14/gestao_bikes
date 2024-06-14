@@ -174,3 +174,36 @@ section {
         justify-content: center;
     }
 }
+@media (max-width: 1200px) {
+    .entra {
+        margin: 11px 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .entra {
+        margin: 11px 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .entra {
+        margin: 11px 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .entra {
+        margin: 11px 50px;
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .entra {
+        margin: 11px 20px;
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+}
