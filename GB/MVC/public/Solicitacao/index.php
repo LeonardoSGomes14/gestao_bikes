@@ -1,3 +1,6 @@
+    
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -110,6 +113,7 @@
                 echo "<td>".$row['pedido']."</td>";
                 echo "<td>".$row['situacao']."</td>";
                 echo "<td>".$row['criado']."</td>";
+                
                 echo "</tr>";
             }
         }

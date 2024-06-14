@@ -1,33 +1,38 @@
+<?php
+require '../php/verificar_permissao.php';
 
+verificarPermissao([1]);
+ 
+?>
 
 
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/solicitacaoatendidas.css">
-    <title>GESTÃO DE BIKES</title>
-</head>
-
-<body>
-    <div class="comeco">
+    
+    <title>Solicitação Pendentes</title>
+      
+<div class="comeco">
         <div class="retangulo"></div>
         <h1 class="titulo">Sistema De Gestão ERP+controle de empresas e de pessoas</h1>
-       <a href="../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
+       <a href="../../../Portifolio/index.php"><img class="logo" src="../Img/bitrix-removebg-preview.png" width="300px"></a> 
     </div>
-
     <div class="sidebar">
     <button onclick="window.location.href='../Portifolio/index.php'">Home</button>
-        <button onclick="window.location.href='../MVC/public/Solicitacao/index.php'">Solicitações Pendentes</button>
-
+        <button onclick="window.location.href='../php/solicitacaoatendidas.php'">Solicitações Atendidas</button>
        
     </div>
-    <div class="main-content">
+</head>
+<body>
+
+
+<div class="main-content">
         <div class="table-container">
-            <h2>Recibo Das Solicitações</h2>
+            <h2>Solicitações Pendentes</h2>
             <table>
                 <thead>
                     <tr>
@@ -107,15 +112,14 @@
         // Consulta as solicitações cadastradas
         $stmt = $pdo->query("SELECT * FROM solicitacao");
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            if ($row['situacao'] == 1) { // Verifica se a situação é 1
-                echo "<tr>";
+            if ($row['situacao'] == 0) { 
                 echo "<td>".$row['id_soli']."</td>";
                 echo "<td>".$row['solicitante']."</td>";
                 echo "<td>".$row['responsavel']."</td>";
                 echo "<td>".$row['pedido']."</td>";
                 echo "<td>".$row['situacao']."</td>";
                 echo "<td>".$row['criado']."</td>";
-               
+                echo "<td><a href='../php/editar_solicitacao.php?id=".$row['id_soli']."'>Editar</a> | <a href='?delete=".$row['id_soli']."' onclick=\"return confirm('Tem certeza que deseja excluir esta solicitação?');\">Excluir</a></td>";
                 echo "</tr>";
             }
         }
@@ -126,5 +130,4 @@
         </div>
     </div>
 </body>
-
 </html>

@@ -114,4 +114,4 @@
         <p>Se você tiver alguma dúvida ou preocupação sobre nossa política de privacidade, entre em contato conosco pelo e-mail: exemplo@exemplo.com</p>
     </div>
     <div class="rodape">
-    <a class="entra" href="../Portifolio/index.php">Voltar</a>
+    <a class="entra" href="index.php">Voltar</a>
