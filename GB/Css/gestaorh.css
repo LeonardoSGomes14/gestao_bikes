@@ -297,7 +297,7 @@ margin-left:-1px;
   justify-content: center; /* Centraliza os elementos horizontalmente */
   align-items: flex-start; /* Alinha os elementos no topo */
   margin: 70px;
-  overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se necessário */
+  overflow-x: auto;
 }
 
 .pessoa {
@@ -305,9 +305,8 @@ margin-left:-1px;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 10px;
-  margin: 10px; /* Adiciona margem entre as pessoas */
-  width: calc(50% - 20px); /* Define a largura das pessoas para 50% do contêiner com uma margem de 20px */
-  max-width: 400px; /* Define a largura máxima das pessoas */
+  margin: 10px; 
+  max-width: 400px; 
 }
 
 .pessoa div {

@@ -125,6 +125,8 @@
         <div class="dois">
         <a class="entra" href="tutorial-pdf.php">Baixar Tutorial PDF </a>
             <a class="conhecer" href="tutorial.php">Tutorial</a>
+        <a class="entra" href="tutorial-pdf.php">Baixar Tutorial PDF </a>
+            <a class="conhecer" href="tutorial.php">Tutorial em vídeo</a>
             <a class="entra" href="login_empresa.php">Entrar</a>
             
         </div>
