@@ -39,7 +39,28 @@ $vendas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
+<style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
+        td {
+            background-color: #ddd;
+        }
+    
+        th,
+        td {
+            border: 5px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    
+        th {
+            background-color:#001e27;
+            color: #ddd;
+        }
+    </style>
 
 <div class="comeco">
         <div class="retangulo"></div>

@@ -135,7 +135,7 @@ verificarPermissao([1, 2, 3]);
                 <input type="text" id="imposto" name="imposto" required><br>
 
                 <label for="orcamentos">Gasto Total:</label>
-                <input type="text" id="orcamentos" name="orcamentos" required readonly><br>
+                <input type="text" id="orcamentos" name="orcamentos" required><br>
 
                 <input type="submit" value="Enviar">
             </form>

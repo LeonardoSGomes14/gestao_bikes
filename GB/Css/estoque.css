@@ -355,7 +355,7 @@ table tbody tr.active-row {
 }
 
 .rodape {
-    margin-top: 10%;
+    margin-top: 25%;
     background-color: #001e27;
     padding: 40px 0;
     text-align: center;
@@ -369,6 +369,10 @@ table tbody tr.active-row {
 
         /* Ou qualquer valor adequado */
     }
+}
+
+.rodape {
+    margin-top: 25%;
 }
 
 .table-container {
