@@ -1,7 +1,6 @@
 <?php
 require_once '../vendor/autoload.php';
 require_once '../config/config.php';
-require 'verificar_permissao.php';
 
 use Dompdf\Dompdf;
 
@@ -134,4 +133,5 @@ $dompdf->render();
 
 // Output the generated PDF to Browser
 $dompdf->stream();
+
 ?>

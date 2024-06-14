@@ -5,7 +5,6 @@ margin:0%;
 }
 .comeco {
   background-color: #001e27;
-  width: 101%;
   height: 180px;
   position: relative;
 margin-left:-1px;
@@ -32,7 +31,6 @@ margin-left:-1px;
   margin-top: 50px;
   background-color: #001e27; 
   padding: 40px 0; 
-  width: 101%;
   margin-left:-8px;
   text-align: center; 
   margin:0;
